@@ -704,6 +704,20 @@ function App() {
     setError(''); // Clear error on navigation
   };
 
+  useEffect(() => {
+    if (brandingAssets.favicon) {
+      const link: HTMLLinkElement | null = document.querySelector("link[rel*='icon']");
+      if (link) {
+        link.href = brandingAssets.favicon;
+      } else {
+        const newLink = document.createElement('link');
+        newLink.rel = 'icon';
+        newLink.href = brandingAssets.favicon;
+        document.head.appendChild(newLink);
+      }
+    }
+  }, [brandingAssets.favicon]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
@@ -743,20 +757,6 @@ function App() {
       }, 3000);
     }
   };
-
-  useEffect(() => {
-    if (brandingAssets.favicon) {
-      const link: HTMLLinkElement | null = document.querySelector("link[rel*='icon']");
-      if (link) {
-        link.href = brandingAssets.favicon;
-      } else {
-        const newLink = document.createElement('link');
-        newLink.rel = 'icon';
-        newLink.href = brandingAssets.favicon;
-        document.head.appendChild(newLink);
-      }
-    }
-  }, [brandingAssets.favicon]);
 
   const renderContent = () => {
     switch (currentPath) {
