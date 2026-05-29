@@ -73,28 +73,33 @@ function App() {
   // 1. Initial Data Fetching from Supabase
   useEffect(() => {
     const initApp = async () => {
-      // Start fetching everything in parallel
-      const sessionPromise = supabase.auth.getSession();
-      const configPromise = fetchSiteConfig();
-      const reviewsPromise = fetchReviews();
-      const notificationsPromise = fetchNotifications();
+      try {
+        // Start fetching everything in parallel
+        const sessionPromise = supabase.auth.getSession();
+        const configPromise = fetchSiteConfig();
+        const reviewsPromise = fetchReviews();
+        const notificationsPromise = fetchNotifications();
 
-      // We only strictly WAIT for the session and basic config to show the UI
-      // This makes the "Loading Academy" screen disappear much faster
-      const [{ data: { session } }] = await Promise.all([
-        sessionPromise,
-        configPromise
-      ]);
-      
-      if (session?.user) {
-        // Profile fetch is fast, but we can even do this in parallel with the rest
-        await fetchUserProfile(session.user.id);
+        // We only strictly WAIT for the session and basic config to show the UI
+        // This makes the "Loading Academy" screen disappear much faster
+        const [{ data: { session } }] = await Promise.all([
+          sessionPromise,
+          configPromise
+        ]);
+        
+        if (session?.user) {
+          // Profile fetch is fast, but we can even do this in parallel with the rest
+          await fetchUserProfile(session.user.id);
+        }
+        
+        // Ensure reviews and notifications are also handled, but they don't block the UI shell
+        await Promise.all([reviewsPromise, notificationsPromise]);
+        
+      } catch (err) {
+        console.error("App initialization failed:", err);
+      } finally {
+        setIsLoading(false);
       }
-      
-      // Ensure reviews and notifications are also handled, but they don't block the UI shell
-      await Promise.all([reviewsPromise, notificationsPromise]);
-      
-      setIsLoading(false);
     };
 
     initApp();
@@ -186,43 +191,21 @@ function App() {
   };
 
   const fetchReviews = async () => {
-    // Attempt 1: Full join with profiles and replies
+    // Attempt 1: Safe fetch with optional profile details
     try {
       const { data, error } = await supabase
         .from('reviews')
-        .select('id, user_id, text, rating, role, likes, created_at, profiles(name, avatar), review_replies(id, name, text, created_at)')
+        .select(`
+          id, 
+          user_id, 
+          text, 
+          rating, 
+          role, 
+          likes, 
+          created_at
+        `)
         .order('created_at', { ascending: false });
         
-      if (!error && data) {
-        const formattedReviews: Review[] = data.map((r: any) => ({
-          id: r.id,
-          name: ((r as any).profiles?.[0]?.name || (r as any).profiles?.name) || (r as any).name || 'Nursing Student',
-          avatar: ((r as any).profiles?.[0]?.avatar || (r as any).profiles?.avatar) || (r as any).avatar || '',
-          text: r.text,
-          rating: r.rating,
-          role: r.role,
-          likes: r.likes || 0,
-          replies: (r.review_replies || []).map((rp: any) => ({
-            id: rp.id,
-            name: rp.name,
-            avatar: '',
-            text: rp.text,
-            createdAt: new Date(rp.created_at)
-          })),
-          createdAt: new Date(r.created_at)
-        }));
-        setReviews(formattedReviews);
-        return;
-      }
-    } catch (e) { console.warn("Attempt 1 failed:", e); }
-
-    // Attempt 2: Simple fetch without joins
-    try {
-      const { data, error } = await supabase
-        .from('reviews')
-        .select('*')
-        .order('created_at', { ascending: false });
-
       if (!error && data) {
         const formattedReviews: Review[] = data.map((r: any) => ({
           id: r.id,
@@ -230,7 +213,7 @@ function App() {
           avatar: r.avatar || '',
           text: r.text,
           rating: r.rating,
-          role: r.role,
+          role: r.role || 'Nursing Student',
           likes: r.likes || 0,
           replies: [],
           createdAt: new Date(r.created_at)
@@ -238,22 +221,23 @@ function App() {
         setReviews(formattedReviews);
         return;
       }
-    } catch (e) { console.warn("Attempt 2 failed:", e); }
+      if (error) console.warn("Primary review fetch error:", error);
+    } catch (e) { console.warn("Attempt 1 failed:", e); }
 
-    // Attempt 3: Minimal fetch
+    // Attempt 2: Minimal fallback
     try {
-      const { data, error } = await supabase
+      const { data } = await supabase
         .from('reviews')
         .select('id, text, rating')
-        .limit(20);
+        .limit(10);
 
-      if (!error && data) {
+      if (data) {
         const formattedReviews: Review[] = data.map((r: any) => ({
           id: r.id,
-          name: 'Nursing Student',
+          name: 'Anonymous',
           avatar: '',
-          text: r.text,
-          rating: r.rating,
+          text: r.text || '',
+          rating: r.rating || 5,
           role: 'Nursing Student',
           likes: 0,
           replies: [],
@@ -261,7 +245,7 @@ function App() {
         }));
         setReviews(formattedReviews);
       }
-    } catch (e) { console.error("All fetch attempts failed:", e); }
+    } catch (e) { console.error("All review fetch attempts failed:", e); }
   };
 
   const handleDeleteReview = async (id: string) => {
@@ -278,45 +262,58 @@ function App() {
   };
 
   const fetchSiteConfig = async () => {
-    // 1. Fetch essential config first (small data)
-    const { data: essentials } = await supabase
-      .from('site_config')
-      .select('*')
-      .in('id', ['branding', 'links', 'exam_date']);
+    try {
+      // 1. Fetch essential config first (small data)
+      const { data: essentials, error: essError } = await supabase
+        .from('site_config')
+        .select('*')
+        .in('id', ['branding', 'links', 'exam_date']);
 
-    if (essentials) {
-      const branding = essentials.find((d: any) => d.id === 'branding')?.data;
-      const links = essentials.find((d: any) => d.id === 'links')?.data;
-      const edate = essentials.find((d: any) => d.id === 'exam_date')?.data;
+      if (essError) throw essError;
 
-      if (branding) setBrandingAssets(branding);
-      if (links) setGlobalLinks(links);
-      if (edate) setExamDate(edate.date);
-    }
+      if (essentials) {
+        const branding = essentials.find((d: any) => d.id === 'branding')?.data;
+        const links = essentials.find((d: any) => d.id === 'links')?.data;
+        const edate = essentials.find((d: any) => d.id === 'exam_date')?.data;
 
-    // 2. Fetch heavier content in background
-    supabase
-      .from('site_config')
-      .select('*')
-      .in('id', ['course_content', 'practice_tests', 'materials', 'gemini_keys'])
-      .then(({ data: content }: { data: any }) => {
-        if (content) {
-          const course = content.find((d: any) => d.id === 'course_content')?.data;
-          const tests = content.find((d: any) => d.id === 'practice_tests')?.data;
-          const mats = content.find((d: any) => d.id === 'materials')?.data;
-          const keys = content.find((d: any) => d.id === 'gemini_keys')?.data;
+        if (branding && typeof branding === 'object') setBrandingAssets(prev => ({ ...prev, ...branding }));
+        if (links) setGlobalLinks(links);
+        if (edate) setExamDate(edate.date || 'April 25, 2026');
+      }
 
-          if (course) setCourseContent(course);
-          if (tests) setPracticeTests(tests);
-          if (mats) setMaterials(mats);
-          if (keys) {
-            const kList = keys.keys || [];
-            setGeminiKeys(kList);
-            geminiService.setKeys(kList);
+      // 2. Fetch heavier content in background
+      (async () => {
+        try {
+          const { data: content } = await supabase
+            .from('site_config')
+            .select('*')
+            .in('id', ['course_content', 'practice_tests', 'materials', 'gemini_keys']);
+
+          if (content) {
+            const course = content.find((d: any) => d.id === 'course_content')?.data;
+            const tests = content.find((d: any) => d.id === 'practice_tests')?.data;
+            const mats = content.find((d: any) => d.id === 'materials')?.data;
+            const keys = content.find((d: any) => d.id === 'gemini_keys')?.data;
+
+            if (course) setCourseContent(course);
+            if (tests) setPracticeTests(tests);
+            if (mats) setMaterials(mats);
+            if (keys) {
+              const kList = keys.keys || [];
+              setGeminiKeys(kList);
+              geminiService.setKeys(kList);
+            }
           }
+        } catch (err) {
+          console.error("Secondary config load failed:", err);
+        } finally {
+          setHasLoadedInitialData(true);
         }
-        setHasLoadedInitialData(true);
-      });
+      })();
+    } catch (err) {
+      console.error("Site config load failed:", err);
+      setHasLoadedInitialData(true); // Don't block UI forever
+    }
   };
 
   const latestConfig = React.useRef({
@@ -767,7 +764,7 @@ function App() {
         return <Home onNavigate={navigate} reviews={reviews} links={globalLinks} branding={brandingAssets} onLike={handleLikeReview} onReply={handleReplyReview} onAddReview={addReview} userLikes={userLikes} currentUser={currentUser} />;
       case '/dashboard':
         return currentUser ? (
-          <StudentDashboard user={currentUser} onLogout={() => setShowLogoutConfirm(true)} addReview={addReview} notifications={notifications.filter(n => n.user_id === 'ALL' || n.user_id === currentUser.id)} onDeleteNotification={async (id) => { await supabase.from('notifications').delete().eq('id', id); fetchNotifications(); }} courseContent={courseContent} practiceTests={practiceTests} materials={materials} links={globalLinks} examDate={examDate} onUpdateProfile={() => fetchUserProfile(currentUser.id)} />
+          <StudentDashboard user={currentUser} branding={brandingAssets} onLogout={() => setShowLogoutConfirm(true)} addReview={addReview} notifications={notifications.filter(n => n.user_id === 'ALL' || n.user_id === currentUser.id)} onDeleteNotification={async (id) => { await supabase.from('notifications').delete().eq('id', id); fetchNotifications(); }} courseContent={courseContent} practiceTests={practiceTests} materials={materials} links={globalLinks} examDate={examDate} onUpdateProfile={() => fetchUserProfile(currentUser.id)} />
         ) : <Home onNavigate={navigate} reviews={reviews} links={globalLinks} branding={brandingAssets} onLike={handleLikeReview} onReply={handleReplyReview} onAddReview={addReview} userLikes={userLikes} currentUser={currentUser} />;
       case '/admin':
         return currentUser?.role === UserRole.ADMIN ? (
@@ -798,6 +795,7 @@ function App() {
             setExamDate={setExamDate} 
             isSaving={isSaving} 
             onSave={saveSiteConfig} 
+            onRefreshReviews={fetchReviews}
           />
         ) : <Home onNavigate={navigate} reviews={reviews} links={globalLinks} branding={brandingAssets} onLike={handleLikeReview} onReply={handleReplyReview} onAddReview={addReview} userLikes={userLikes} currentUser={currentUser} />;
       case '/login':
