@@ -706,15 +706,38 @@ function App() {
 
   useEffect(() => {
     if (brandingAssets.favicon) {
-      const link: HTMLLinkElement | null = document.querySelector("link[rel*='icon']");
-      if (link) {
-        link.href = brandingAssets.favicon;
+      // Find and remove all existing favicon elements to bypass browser caching and mismatch constraints
+      const existingLinks = document.querySelectorAll("link[rel*='icon']");
+      existingLinks.forEach(el => el.parentNode?.removeChild(el));
+
+      const newLink = document.createElement('link');
+      newLink.rel = 'icon';
+
+      // If it is a generic URL (not base64 data-uri), append a cache buster timestamp
+      if (brandingAssets.favicon.startsWith('http')) {
+        const separator = brandingAssets.favicon.includes('?') ? '&' : '?';
+        newLink.href = `${brandingAssets.favicon}${separator}t=${Date.now()}`;
       } else {
-        const newLink = document.createElement('link');
-        newLink.rel = 'icon';
         newLink.href = brandingAssets.favicon;
-        document.head.appendChild(newLink);
       }
+
+      // Detect and assign correct MIME type to assure perfect rendering across modern browsers
+      if (brandingAssets.favicon.startsWith('data:image/')) {
+        const matches = brandingAssets.favicon.match(/data:(image\/[a-zA-Z+.-]+);base64/);
+        if (matches) {
+          newLink.type = matches[1];
+        }
+      } else if (brandingAssets.favicon.endsWith('.png')) {
+        newLink.type = 'image/png';
+      } else if (brandingAssets.favicon.endsWith('.ico')) {
+        newLink.type = 'image/x-icon';
+      } else if (brandingAssets.favicon.endsWith('.svg')) {
+        newLink.type = 'image/svg+xml';
+      } else if (brandingAssets.favicon.endsWith('.jpg') || brandingAssets.favicon.endsWith('.jpeg')) {
+        newLink.type = 'image/jpeg';
+      }
+
+      document.head.appendChild(newLink);
     }
   }, [brandingAssets.favicon]);
 

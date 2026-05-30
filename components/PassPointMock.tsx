@@ -591,7 +591,7 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
       )}
 
       {/* 3. CAT SIMULATOR INTERACTIVE WORKSPACE (NCSBN UI elements) */}
-      {stage === 'simulator' && questions.length > 0 && (
+      {stage === 'simulator' && (
         <div className="max-w-4xl mx-auto py-2">
           {/* NCSBN styled blue board exam bar */}
           <header className="bg-slate-950 text-white rounded-3xl p-6 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border border-slate-800 shadow-md">
@@ -661,6 +661,12 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                     >
                       Retry Connection Channel
                     </button>
+                  </div>
+                ) : questions.length === 0 ? (
+                  <div className="flex flex-col items-center justify-center py-20 text-center">
+                    <div className="w-16 h-16 border-4 border-brand-200 border-t-brand-600 rounded-full animate-spin mb-6"></div>
+                    <p className="font-serif font-semibold text-lg text-slate-900 animate-pulse">Initializing Simulator...</p>
+                    <p className="text-xs text-slate-400 mt-2 font-mono">Calibrating first adaptive question...</p>
                   </div>
                 ) : (
                   <div>

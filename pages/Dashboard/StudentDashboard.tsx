@@ -731,9 +731,9 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                     <p className="text-[10px] font-black text-brand-600 uppercase tracking-widest mb-1">{activeTest.title}</p>
                     <div className="flex items-center gap-2">
                       <div className="h-1.5 w-48 bg-slate-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-brand-500 transition-all duration-300" style={{width: `${((currentQuestionIndex + 1) / (!user.hasPaidLive ? 120 : activeTest.questions.length)) * 100}%`}}></div>
+                        <div className="h-full bg-brand-500 transition-all duration-300" style={{width: `${((currentQuestionIndex + 1) / (!user.hasPaidLive ? Math.min(15, activeTest.questions.length) : activeTest.questions.length)) * 100}%`}}></div>
                       </div>
-                      <span className="text-[10px] font-black text-slate-400">{currentQuestionIndex + 1} / {!user.hasPaidLive ? 120 : activeTest.questions.length}</span>
+                      <span className="text-[10px] font-black text-slate-400">{currentQuestionIndex + 1} / {!user.hasPaidLive ? Math.min(15, activeTest.questions.length) : activeTest.questions.length}</span>
                     </div>
                  </div>
                  <div className="p-3 bg-slate-900 text-white rounded-xl font-mono text-xs flex items-center">
@@ -748,7 +748,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                 </div>
 
                 <div className="grid grid-cols-1 gap-4 mb-12">
-                  {q.options.map((opt, idx) => (
+                  {(q.options || []).map((opt, idx) => (
                     <button 
                       key={idx}
                       onClick={() => handleSelectOption(idx)}
