@@ -6,7 +6,7 @@ import {
   LayoutDashboard, BookOpen, Video, FileText, Calendar, Award, BarChart3, ChevronRight, 
   PlayCircle, Clock, ChevronLeft, Sparkles, ExternalLink, LogOut, Bell, CheckCircle2, 
   Lock, Download, Star, MessageCircle, X, Menu, Trash2, Heart, ShieldCheck, Zap, Globe, CreditCard,
-  User as UserIcon, Camera, Key, Mail, Phone, AtSign, Edit2, Upload as UploadIcon, ChevronDown, CheckCircle
+  User as UserIcon, Camera, Key, Mail, Phone, AtSign, Edit2, Upload as UploadIcon, ChevronDown, CheckCircle, AlertCircle, Info
 } from 'lucide-react';
 import { User, PracticeTest, QuizQuestion, Notification, Module, Lesson, NavLink, GlobalLinks, BrandingAssets } from '../../types';
 import { Logo } from '../../components/Layout';
@@ -142,6 +142,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   const [reviewLoading, setReviewLoading] = useState(false);
   const [profileLoading, setProfileLoading] = useState(false);
   const [profileMessage, setProfileMessage] = useState({ text: '', type: '' });
+  const [customNotification, setCustomNotification] = useState<{ title: string; message: string; type: 'success' | 'error' | 'info' } | null>(null);
   
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -263,7 +264,11 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
       link.click();
     } catch (err) {
       console.error("Download failed:", err);
-      alert("Failed to download certificate. Please try again or use the Print option.");
+      setCustomNotification({
+        title: "Download Issue",
+        message: "Failed to download certificate. Please try again or use the Print Certificate option.",
+        type: "error"
+      });
     } finally {
       setIsDownloading(false);
     }
@@ -425,7 +430,11 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
       setReviewSubmitted(true);
       setReviewText('');
     } else {
-      alert("Failed to submit review. Please try again.");
+      setCustomNotification({
+        title: "Review Submission Failed",
+        message: "Failed to submit review. Please try again later or check your network.",
+        type: "error"
+      });
     }
     setReviewLoading(false);
   };
@@ -1162,7 +1171,11 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                          if (doc.assetData) {
                            openAsset(doc.assetData, doc.title);
                          } else {
-                           alert("No file attached to this material yet.");
+                           setCustomNotification({
+                              title: "No Attachment",
+                              message: "No document file has been uploaded or attached for this material yet. Please contact the administrator.",
+                              type: "info"
+                            });
                          }
                        }} 
                        className="py-4 bg-slate-100 text-slate-900 rounded-2xl hover:bg-slate-200 transition font-black text-[10px] uppercase tracking-widest flex items-center justify-center"
@@ -1387,6 +1400,34 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
           </div>
         </div>
       )}
+
+      {/* Custom styled in-app Notification modal aligned with the system */}
+      {customNotification && (
+        <div className="fixed inset-0 z-[999] bg-slate-900/65 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white w-full max-w-md rounded-[2.5rem] border border-slate-100 p-8 text-center relative shadow-2xl animate-in zoom-in duration-300">
+            <div className={`w-20 h-20 rounded-[2rem] flex items-center justify-center mx-auto mb-6 shadow-sm border ${
+              customNotification.type === 'success' ? 'bg-green-50 border-green-100 text-green-600' :
+              customNotification.type === 'error' ? 'bg-red-50 border-red-100 text-red-500' :
+              'bg-blue-50 border-blue-100 text-blue-500'
+            }`}>
+              {customNotification.type === 'success' && <CheckCircle className="w-10 h-10" />}
+              {customNotification.type === 'error' && <AlertCircle className="w-10 h-10" />}
+              {customNotification.type === 'info' && <Info className="w-10 h-10" />}
+            </div>
+            <h3 className="font-serif font-bold text-2xl text-slate-900 mb-2">{customNotification.title}</h3>
+            <p className="text-slate-500 text-base mb-8 leading-relaxed font-semibold">
+              {customNotification.message}
+            </p>
+            <button 
+              onClick={() => setCustomNotification(null)}
+              className="w-full py-4 bg-slate-950 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-slate-950/10"
+            >
+              Acknowledge
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

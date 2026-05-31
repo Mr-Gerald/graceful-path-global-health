@@ -80,6 +80,7 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
   const [errorText, setErrorText] = useState<string | null>(null);
   const [timerVal, setTimerVal] = useState<number>(9000); // 2 hours 30 mins (in seconds)
   const [isTimerActive, setIsTimerActive] = useState<boolean>(false);
+  const [confirmConfig, setConfirmConfig] = useState<{ message: string; onConfirm: () => void } | null>(null);
 
   // Stats or Review states
   const [viewingResultDay, setViewingResultDay] = useState<number | null>(null);
@@ -613,9 +614,10 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
               </div>
               <button 
                 onClick={() => {
-                  if (confirm("Are you sure you want to end this exam early? If you've answered at least 15 items, your progress will save & generate diagnostic rationales.")) {
-                    handleCompleteExam(false);
-                  }
+                  setConfirmConfig({
+                    message: "Are you sure you want to end this exam early? If you've answered at least 15 items, your progress will save & generate diagnostic rationales.",
+                    onConfirm: () => handleCompleteExam(false)
+                  });
                 }}
                 className="py-2.5 px-4 bg-red-600/10 hover:bg-red-600 hover:text-white border border-red-600/20 text-red-400 font-black text-[10px] uppercase tracking-widest rounded-xl transition"
               >
@@ -766,9 +768,10 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                   {currQNum >= 15 && (
                     <button
                       onClick={() => {
-                        if (confirm("Would you like to finish and submit this mock exam diagnostic early? Your cumulative capability rating will be evaluated based on entries recorded.")) {
-                          handleCompleteExam(false);
-                        }
+                        setConfirmConfig({
+                          message: "Would you like to finish and submit this mock exam diagnostic early? Your cumulative capability rating will be evaluated based on entries recorded.",
+                          onConfirm: () => handleCompleteExam(false)
+                        });
                       }}
                       className="w-full py-3 bg-slate-900 hover:bg-black text-white rounded-xl font-black text-[10px] uppercase tracking-[0.2em] transition"
                     >
@@ -954,6 +957,38 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                 </div>
               );
             })}
+          </div>
+        </div>
+      )}
+
+      {confirmConfig && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[9999] flex items-center justify-center p-4">
+          <div className="bg-white rounded-[2rem] border border-slate-100 p-8 max-w-md w-full shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-500 mb-6">
+              <HelpCircle className="w-6 h-6" />
+            </div>
+            <h4 className="font-serif font-bold text-xl text-slate-950 mb-3">Please Confirm</h4>
+            <p className="text-slate-600 text-sm leading-relaxed mb-6 font-medium">
+              {confirmConfig.message}
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setConfirmConfig(null)}
+                className="flex-grow py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-[10px] font-black uppercase tracking-wider transition"
+              >
+                Go Back
+              </button>
+              <button
+                onClick={() => {
+                  const cb = confirmConfig.onConfirm;
+                  setConfirmConfig(null);
+                  cb();
+                }}
+                className="flex-grow py-3 px-4 bg-slate-950 hover:bg-slate-900 text-white rounded-xl text-[10px] font-black uppercase tracking-wider transition shadow-lg shadow-slate-950/10"
+              >
+                Confirm
+              </button>
+            </div>
           </div>
         </div>
       )}

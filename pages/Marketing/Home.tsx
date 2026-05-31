@@ -30,7 +30,9 @@ import {
   Shield,
   Activity,
   Briefcase,
-  Calendar
+  Calendar,
+  AlertCircle,
+  Info
 } from 'lucide-react';
 import { COURSES } from '../../constants';
 import { Review, BrandingAssets, User, GlobalLinks } from '../../types';
@@ -107,6 +109,7 @@ export const Home: React.FC<HomeProps> = ({
   const [reviewText, setReviewText] = useState('');
   const [rating, setRating] = useState(5);
   const [reviewSubmitted, setReviewSubmitted] = useState(false);
+  const [customNotification, setCustomNotification] = useState<{ title: string; message: string; type: 'success' | 'error' | 'info' } | null>(null);
 
   const faqs = [
     { 
@@ -141,7 +144,11 @@ export const Home: React.FC<HomeProps> = ({
       setReviewSubmitted(true);
       setReviewText('');
     } else {
-      alert("Failed to submit review. Please try again.");
+      setCustomNotification({
+        title: "Review Submission Failed",
+        message: "Failed to submit review. Please check your credentials or network and try again.",
+        type: "error"
+      });
     }
   };
 
@@ -835,6 +842,34 @@ export const Home: React.FC<HomeProps> = ({
       <footer className="bg-slate-900 py-20 text-white text-center border-t border-slate-800">
         <p className="text-slate-400 text-sm">© 2026 Academy. All rights reserved.</p>
       </footer>
+
+      {/* Custom styled in-app Notification modal aligned with the system */}
+      {customNotification && (
+        <div className="fixed inset-0 z-[999] bg-slate-900/65 backdrop-blur-sm flex items-center justify-center p-4 text-slate-900 font-sans">
+          <div className="bg-white w-full max-w-sm rounded-[2.5rem] border border-slate-100 p-8 text-center relative shadow-2xl animate-in zoom-in duration-300">
+            <div className={`w-20 h-20 rounded-[2rem] flex items-center justify-center mx-auto mb-6 shadow-sm border ${
+              customNotification.type === 'success' ? 'bg-green-50 border-green-100 text-green-600' :
+              customNotification.type === 'error' ? 'bg-red-50 border-red-100 text-red-500' :
+              'bg-blue-50 border-blue-100 text-blue-500'
+            }`}>
+              {customNotification.type === 'success' && <CheckCircle2 className="w-10 h-10" />}
+              {customNotification.type === 'error' && <AlertCircle className="w-10 h-10" />}
+              {customNotification.type === 'info' && <Info className="w-10 h-10" />}
+            </div>
+            <h3 className="font-serif font-bold text-2xl text-slate-900 mb-2">{customNotification.title}</h3>
+            <p className="text-slate-500 text-sm mb-6 leading-relaxed font-semibold">
+              {customNotification.message}
+            </p>
+            <button 
+              onClick={() => setCustomNotification(null)}
+              className="w-full py-4 bg-slate-950 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-slate-950/10"
+            >
+              Acknowledge
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
   Users, BookOpen, Settings, Plus, LogOut, LayoutDashboard, Trash2, Send, X, 
-  Upload, Menu, Globe, Phone, MessageCircle, Video, FileText, Calendar, ShieldAlert, Edit2, Check, Image, Key, Lock, Camera, Star, Zap, CheckCircle, CheckCircle2, ChevronRight, Save, File, BarChart3, Sparkles
+  Upload, Menu, Globe, Phone, MessageCircle, Video, FileText, Calendar, ShieldAlert, Edit2, Check, Image, Key, Lock, Camera, Star, Zap, CheckCircle, CheckCircle2, ChevronRight, Save, File, BarChart3, Sparkles, AlertCircle, Info
 } from 'lucide-react';
 import { BrandingAssets, Review, PracticeTest, QuizQuestion, User, Module, Lesson, NavLink, GlobalLinks } from '../../types';
 import { Logo } from '../../components/Layout';
@@ -112,6 +112,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const [notifText, setNotifText] = useState('');
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [customConfirm, setCustomConfirm] = useState<{ message: string; onConfirm: () => void } | null>(null);
+  const [customNotification, setCustomNotification] = useState<{ title: string; message: string; type: 'success' | 'error' | 'info' } | null>(null);
 
   useEffect(() => {
     if (successMessage) {
@@ -259,7 +261,11 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       // but we can show a success state or just let them close it when done.
     } catch (err) {
       console.error("AI Generation failed:", err);
-      alert("Failed to generate questions. Please check your API keys and connection.");
+      setCustomNotification({
+        title: "AI Generation Failed",
+        message: "Failed to generate questions. Please check your API keys, quota, and check your internet connection.",
+        type: "error"
+      });
     } finally {
       setIsGeneratingAI(false);
     }
@@ -307,7 +313,11 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       setEditingReview(null);
     } catch (err) {
       console.error(err);
-      alert('Failed to save review');
+      setCustomNotification({
+        title: "Operation Failed",
+        message: "Failed to save the review. Please try again or examine Supabase logs.",
+        type: "error"
+      });
     } finally {
       setProcessingId(null);
     }
@@ -425,9 +435,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                             <button 
                               disabled={processingId === u.id}
                               onClick={() => {
-                                if (confirm('Are you sure you want to delete this user? This cannot be undone.')) {
-                                  handleAction(u.id, () => onDeleteUser(u.id), 'User deleted successfully');
-                                }
+                                setCustomConfirm({
+                                  message: 'Are you sure you want to delete this user? This cannot be undone.',
+                                  onConfirm: () => handleAction(u.id, () => onDeleteUser(u.id), 'User deleted successfully')
+                                });
                               }} 
                               className="p-2 text-slate-400 hover:text-red-500 transition disabled:opacity-50"
                             >
@@ -555,9 +566,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                               <button 
                                 disabled={processingId === r.id}
                                 onClick={() => {
-                                  if (confirm('Are you sure you want to delete this review?')) {
-                                    handleAction(r.id, () => onDeleteReview(r.id), 'Review deleted successfully');
-                                  }
+                                  setCustomConfirm({
+                                    message: 'Are you sure you want to delete this review?',
+                                    onConfirm: () => handleAction(r.id, () => onDeleteReview(r.id), 'Review deleted successfully')
+                                  });
                                 }} 
                                 className="p-3 text-slate-300 hover:text-red-500 transition hover:bg-red-50 rounded-xl disabled:opacity-50"
                               >
@@ -1201,6 +1213,67 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           </div>
         </div>
       )}
+
+      {/* Custom, polished in-app confirmation modal */}
+      {customConfirm && (
+        <div className="fixed inset-0 z-[9999] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white max-w-sm w-full rounded-[2.5rem] border border-slate-100 p-8 text-center shadow-2xl animate-in zoom-in-95 duration-200">
+            <div className="w-16 h-16 rounded-[1.5rem] bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 mx-auto mb-6 shadow-sm">
+              <ShieldAlert className="w-8 h-8" />
+            </div>
+            <h4 className="font-serif font-bold text-2xl text-slate-900 mb-3">Are you sure?</h4>
+            <p className="text-slate-500 text-sm leading-relaxed mb-8 font-semibold">
+              {customConfirm.message}
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setCustomConfirm(null)}
+                className="flex-grow py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-2xl text-[10px] font-black uppercase tracking-wider transition"
+              >
+                Go Back
+              </button>
+              <button
+                onClick={() => {
+                  const cb = customConfirm.onConfirm;
+                  setCustomConfirm(null);
+                  cb();
+                }}
+                className="flex-grow py-4 bg-red-600 hover:bg-red-700 text-white rounded-2xl text-[10px] font-black uppercase tracking-wider transition shadow-lg shadow-red-600/10"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Custom styled in-app Notification modal */}
+      {customNotification && (
+        <div className="fixed inset-0 z-[9999] bg-slate-900/65 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white w-full max-w-sm rounded-[2.5rem] border border-slate-100 p-8 text-center relative shadow-2xl animate-in zoom-in duration-300">
+            <div className={`w-20 h-20 rounded-[2rem] flex items-center justify-center mx-auto mb-6 shadow-sm border ${
+              customNotification.type === 'success' ? 'bg-green-50 border-green-100 text-green-600' :
+              customNotification.type === 'error' ? 'bg-red-50 border-red-100 text-red-500' :
+              'bg-blue-50 border-blue-100 text-blue-500'
+            }`}>
+              {customNotification.type === 'success' && <CheckCircle className="w-10 h-10" />}
+              {customNotification.type === 'error' && <AlertCircle className="w-10 h-10" />}
+              {customNotification.type === 'info' && <Info className="w-10 h-10" />}
+            </div>
+            <h3 className="font-serif font-bold text-2xl text-slate-900 mb-2">{customNotification.title}</h3>
+            <p className="text-slate-500 text-sm mb-8 leading-relaxed font-semibold">
+              {customNotification.message}
+            </p>
+            <button 
+              onClick={() => setCustomNotification(null)}
+              className="w-full py-4 bg-slate-950 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-slate-950/10"
+            >
+              Acknowledge
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
