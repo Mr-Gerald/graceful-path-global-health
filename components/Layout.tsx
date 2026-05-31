@@ -4,11 +4,14 @@ import { NAV_LINKS } from '../constants';
 import { BrandingAssets, NavLink, UserRole, GlobalLinks } from '../types';
 
 export const Logo = ({ className, src }: { className?: string, src?: string }) => (
-  <div className={`flex flex-col items-center cursor-pointer group scale-95 md:scale-100 ${className || ''}`} onClick={() => window.location.hash = '/'}>
+  <div className={`flex flex-col items-center cursor-pointer group scale-95 md:scale-100 ${className || ''}`} onClick={() => window.location.hash = '/'} id="logo-container">
     <img 
-      src={src || "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=100"} 
+      src={src || "https://scontent.flos3-2.fna.fbcdn.net/v/t1.15752-9/679033424_1340416481327917_3114449704387631566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Xe1RojfjDtMQ7kNvwFgeAWW&_nc_oc=AdrkSQVKX4bo6CKbA9I9A7VJAUQErZy8r_4tt_Tslx0n9ZQbADYW2VygP1KgKKhxyMU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_ss=7baaf&oh=03_Q7cD5gFTudMbAq_sFWs0PxN4ICg2WODXJpGzVDBs7-akwLMiAg&oe=6A41FE4C"} 
       alt="Graceful Path Logo" 
-      className="h-9 w-auto mb-0.5 transform group-hover:scale-110 transition duration-500 rounded-lg" 
+      className="h-9 w-auto mb-0.5 transform group-hover:scale-110 transition duration-500 rounded-lg animate-fade-in" 
+      crossOrigin="anonymous"
+      referrerPolicy="no-referrer"
+      id="logo-image"
       onError={(e) => {
         const target = e.target as HTMLImageElement;
         target.src = "https://ui-avatars.com/api/?name=GP&background=0284c7&color=fff";

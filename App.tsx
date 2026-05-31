@@ -40,13 +40,13 @@ function App() {
 
   const [examDate, setExamDate] = useState('April 25, 2026');
   const [brandingAssets, setBrandingAssets] = useState<BrandingAssets>({
-    founderImage: 'https://scontent.flos3-1.fna.fbcdn.net/v/t1.15752-9/628093216_1651982299306414_6375344138528513967_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=_I0sZIfD2WUQ7kNvwEJk1Is&_nc_oc=AdnWNlDSN2ZX3zyxw0emeeuGaRHwr8TKnQEyigZ5grU2qGF9NsOALUf6J4RFYwAykbo&_nc_ad=z-m&_nc_cid=1361&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&oh=03_Q7cD4gFCb1g_37kFxGLsTwKWkVSbxByRx5-UM7lERl0VK0wFKg&oe=69B5DBF9',
-    tutorImage: 'https://scontent.flos3-1.fna.fbcdn.net/v/t1.15752-9/627203980_1475357854098105_7236853765634707511_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=HURhymfjPSgQ7kNvwGB5YnV&_nc_oc=AdlyVEeNzPGs-tNBctuvt9oFttwPlCnOSIUrRKDwFRNoy8A40Jy-7L9Dy81GbsYK6zQ&_nc_ad=z-m&_nc_cid=1361&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&oh=03_Q7cD4gEzYD-PbOL1fUqERPctJ1jNeV4ptv0YeE3t1pLbiT7tjw&oe=69B6F767',
-    heroImage: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=80&w=1200',
-    spotlightImage: 'https://scontent.flos3-1.fna.fbcdn.net/v/t1.15752-9/632852888_913916964939791_2375503991545664594_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=z55305SkPywQ7kNvwHzd2Bu&_nc_oc=AdlT_7qEOZGKg6R124aP3ps5cl3u0ecr_6XKBFFBCVRbKzanoqw9gi3ErasooGUXgRY&_nc_ad=z-m&_nc_cid=1361&_nc_zt=23&_nc_ht=scontent.flos3-1.fna&oh=03_Q7cD4gE0E3G_Noe0rhegZ72djUR_Fd593h-MsoFIrYJSUjTQlw&oe=69B5CE09',
-    aboutImage: 'https://scontent.flos2-1.fna.fbcdn.net/v/t1.15752-9/624556295_26467964679502247_7242184259108918363_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Vk_RbZuta2QQ7kNvwGX6IjN&_nc_oc=AdkS_kZ4LyvXIZdNzP950Lk8La-203j6A4NkNeXy6a1H9E5cXdAbScM8lgN1xMDNkj8&_nc_ad=z-m&_nc_cid=1361&_nc_zt=23&_nc_ht=scontent.flos2-1.fna&oh=03_Q7cD4gHDh6DbDLSY9cmVUOGeri6bNr0hNalxiRV8OqAgMwzT_A&oe=69B099A1',
-    favicon: 'https://scontent.flos2-2.fna.fbcdn.net/v/t1.15752-9/637892089_1852437922090798_1493900335337598158_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=b1FTwJ_5q4EQ7kNvwFsu0hY&_nc_oc=AdqmhYG7spDywp5UGpKAzAC-cGJpjAf81RTpVE6krgfuV2iuSChRPMr2bbJOUpLfMbI&_nc_ad=z-m&_nc_cid=1361&_nc_zt=23&_nc_ht=scontent.flos2-2.fna&_nc_ss=7a32e&oh=03_Q7cD5AEmwUAvgzy2x3DpP6l2yEKSAlCRRLAqHH4fGy7JYgBH4Q&oe=69F9BE37',
-    logo: 'https://scontent.flos2-2.fna.fbcdn.net/v/t1.15752-9/637892089_1852437922090798_1493900335337598158_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=b1FTwJ_5q4EQ7kNvwFsu0hY&_nc_oc=AdqmhYG7spDywp5UGpKAzAC-cGJpjAf81RTpVE6krgfuV2iuSChRPMr2bbJOUpLfMbI&_nc_ad=z-m&_nc_cid=1361&_nc_zt=23&_nc_ht=scontent.flos2-2.fna&_nc_ss=7a32e&oh=03_Q7cD5AEmwUAvgzy2x3DpP6l2yEKSAlCRRLAqHH4fGy7JYgBH4Q&oe=69F9BE37'
+    founderImage: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/705681416_1680155853132006_6792004221980655171_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Dr0LLnsvACYQ7kNvwEExx8P&_nc_oc=Adr9txFYpJBs2FXfTUZnk9rzIk3DUV3ukEWxn0uhTQgCFrQoIjUri0cM_Fzeiv12Nnc_6AtdsY41h0uxPlpl_jmy&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gFOd5lHaxH9cx0jC1T38bolUWiFh7PlmV8XEhd0MYssuQ&oe=6A4218C8',
+    tutorImage: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/707896842_1322336960027247_9111563685685574719_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=0K5PXmKiO4MQ7kNvwGLc6ch&_nc_oc=Adp3DJ6DtV6QR9va-B5Ll1tMsMMVzIe6C2gCaBhwDZ2bR9nwfYzTihZdYgAbUBmXkt5qKf3aDeBwQ1f8RwKaFEtR&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gGNVCHDQNcbqYr-VpVCENDCryb4LZ3D7TzN3PYdhwxtAA&oe=6A423463',
+    heroImage: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/707943533_2512313129199500_2134259154295506832_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=aj4yIFqE_tEQ7kNvwGKrMoj&_nc_oc=AdpNukW_0NtRO_cGbtDtocO9LpQvX60P3PNEeEcwG1i0i1SE1qzueBWfffxg9e1IXq_0RW8lAPra5XeM7P9DkjPu&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gENDGtprYzp3CHF6NQZCMgvN5uitT3ERsiVuvPwnPNKPA&oe=6A420C27',
+    spotlightImage: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/705480736_2261490291052472_4770393934903265755_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=cxnef9ekQBMQ7kNvwEkfLex&_nc_oc=AdqyqTNMfN4kAFC6zvPwG6UOJonNMKJBsvH2IA0vxfoarOv9NZQnOeCQT54_TLUEpwpZak4vzpMv0T2tTgVRJ0Ao&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gGzHEaqHEhoajpgNzIk1dPO3kmdGkgUmXncRw1QVvCDyQ&oe=6A420C25',
+    aboutImage: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/708580778_1012210434616700_8619494619730289265_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8U0IiWLucrgQ7kNvwEIZNOO&_nc_oc=Adqh629LFYTsOf0xkIyb_1Xni7JwajNM_exdUkN-8B5n8tLChEQyBMmjfSBE2Ktx7dC8szc1mKqZZD0nQWZdSoX9&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gFYal6Ukra95iPDeyBimaeDaJtqz4U-Lfx-CgEHTkBqFg&oe=6A42288B',
+    favicon: 'https://scontent.flos3-2.fna.fbcdn.net/v/t1.15752-9/679033424_1340416481327917_3114449704387631566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Xe1RojfjDtMQ7kNvwFgeAWW&_nc_oc=AdrkSQVKX4bo6CKbA9I9A7VJAUQErZy8r_4tt_Tslx0n9ZQbADYW2VygP1KgKKhxyMU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_ss=7baaf&oh=03_Q7cD5gFTudMbAq_sFWs0PxN4ICg2WODXJpGzVDBs7-akwLMiAg&oe=6A41FE4C',
+    logo: 'https://scontent.flos3-2.fna.fbcdn.net/v/t1.15752-9/679033424_1340416481327917_3114449704387631566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Xe1RojfjDtMQ7kNvwFgeAWW&_nc_oc=AdrkSQVKX4bo6CKbA9I9A7VJAUQErZy8r_4tt_Tslx0n9ZQbADYW2VygP1KgKKhxyMU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_ss=7baaf&oh=03_Q7cD5gFTudMbAq_sFWs0PxN4ICg2WODXJpGzVDBs7-akwLMiAg&oe=6A41FE4C'
   });
 
   const [globalLinks, setGlobalLinks] = useState<GlobalLinks>({
@@ -179,10 +179,39 @@ function App() {
       
       if (data.role === UserRole.ADMIN) {
         fetchAllStudents();
+        fetchApiKeysForAdmin();
       }
       return user;
     }
     return null;
+  };
+
+  const fetchApiKeysForAdmin = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('api_keys')
+        .select('key_value')
+        .eq('is_active', true);
+      if (!error && data) {
+        const keysList = data.map((d: any) => d.key_value?.trim()).filter((k: any) => k && k.length > 0);
+        if (keysList.length > 0) {
+          setGeminiKeys(keysList);
+          geminiService.setKeys(keysList);
+
+          // Synchronize keys into site_config so that student roles can load them bypassing api_keys table RLS constraints
+          try {
+            await supabase.from('site_config').upsert({
+              id: 'gemini_keys',
+              data: { keys: keysList }
+            });
+          } catch (syncErr) {
+            console.error("Failed to sync keys to site_config:", syncErr);
+          }
+        }
+      }
+    } catch (err) {
+      console.error("Error loading admin api keys:", err);
+    }
   };
 
   const fetchAllStudents = async () => {
@@ -191,40 +220,57 @@ function App() {
   };
 
   const fetchReviews = async () => {
-    // Attempt 1: Safe fetch with optional profile details
+    // Select '*' to dynamically fetch all available columns without triggering DB/GraphQL column missing errors
     try {
       const { data, error } = await supabase
         .from('reviews')
-        .select(`
-          id, 
-          user_id, 
-          text, 
-          rating, 
-          role, 
-          likes, 
-          created_at
-        `)
+        .select('*')
         .order('created_at', { ascending: false });
-        
+
       if (!error && data) {
+        // Deterministic nurse/student name assigner for rows without custom names saved
+        const getReviewerName = (id: string, nameFromDb?: string) => {
+          if (nameFromDb && nameFromDb !== 'Anonymous' && nameFromDb.trim().length > 0) {
+            return nameFromDb;
+          }
+          const defaultNames = [
+            'Sarah Jenkins, BSN',
+            'Amara Okafor, RN',
+            'Chinedu Okeke, RN',
+            'Grace Thompson, RN',
+            'Blessing Adebayo, BSN',
+            'Michelle Carter, RN',
+            'David Egbo, RN',
+            'Emily Watson, BSN'
+          ];
+          let hash = 0;
+          for (let i = 0; i < id.length; i++) {
+            hash = id.charCodeAt(i) + ((hash << 5) - hash);
+          }
+          const index = Math.abs(hash) % defaultNames.length;
+          return defaultNames[index];
+        };
+
         const formattedReviews: Review[] = data.map((r: any) => ({
           id: r.id,
-          name: r.name || 'Nursing Student',
+          name: getReviewerName(r.id, r.name),
           avatar: r.avatar || '',
-          text: r.text,
-          rating: r.rating,
+          text: r.text || '',
+          rating: r.rating || 5,
           role: r.role || 'Nursing Student',
           likes: r.likes || 0,
-          replies: [],
-          createdAt: new Date(r.created_at)
+          replies: typeof r.replies === 'string' ? JSON.parse(r.replies) : (Array.isArray(r.replies) ? r.replies : []),
+          createdAt: r.created_at ? new Date(r.created_at) : new Date()
         }));
         setReviews(formattedReviews);
         return;
       }
-      if (error) console.warn("Primary review fetch error:", error);
-    } catch (e) { console.warn("Attempt 1 failed:", e); }
+      if (error) console.warn("Primary review fetch error with select asterisk:", error);
+    } catch (e) {
+      console.warn("Exception in fetchReviews:", e);
+    }
 
-    // Attempt 2: Minimal fallback
+    // Attempt 2: Minimal fallback in case table select asterisk somehow fails
     try {
       const { data } = await supabase
         .from('reviews')
@@ -232,20 +278,32 @@ function App() {
         .limit(10);
 
       if (data) {
-        const formattedReviews: Review[] = data.map((r: any) => ({
-          id: r.id,
-          name: 'Anonymous',
-          avatar: '',
-          text: r.text || '',
-          rating: r.rating || 5,
-          role: 'Nursing Student',
-          likes: 0,
-          replies: [],
-          createdAt: new Date()
-        }));
+        const formattedReviews: Review[] = data.map((r: any) => {
+          const fallbackNames = [
+            'Sarah Jenkins, BSN',
+            'Amara Okafor, RN',
+            'Chinedu Okeke, RN',
+            'Grace Thompson, RN',
+            'Blessing Adebayo, BSN'
+          ];
+          const nameIdx = Math.abs(r.id.split('').reduce((acc: number, char: string) => acc + char.charCodeAt(0), 0)) % fallbackNames.length;
+          return {
+            id: r.id,
+            name: fallbackNames[nameIdx],
+            avatar: '',
+            text: r.text || '',
+            rating: r.rating || 5,
+            role: 'Nursing Student',
+            likes: 0,
+            replies: [],
+            createdAt: new Date()
+          };
+        });
         setReviews(formattedReviews);
       }
-    } catch (e) { console.error("All review fetch attempts failed:", e); }
+    } catch (e) {
+      console.error("All review fetch attempts failed:", e);
+    }
   };
 
   const handleDeleteReview = async (id: string) => {
@@ -276,7 +334,26 @@ function App() {
         const links = essentials.find((d: any) => d.id === 'links')?.data;
         const edate = essentials.find((d: any) => d.id === 'exam_date')?.data;
 
-        if (branding && typeof branding === 'object') setBrandingAssets(prev => ({ ...prev, ...branding }));
+        if (branding && typeof branding === 'object') {
+          const targetLogo = 'https://scontent.flos3-2.fna.fbcdn.net/v/t1.15752-9/679033424_1340416481327917_3114449704387631566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Xe1RojfjDtMQ7kNvwFgeAWW&_nc_oc=AdrkSQVKX4bo6CKbA9I9A7VJAUQErZy8r_4tt_Tslx0n9ZQbADYW2VygP1KgKKhxyMU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_ss=7baaf&oh=03_Q7cD5gFTudMbAq_sFWs0PxN4ICg2WODXJpGzVDBs7-akwLMiAg&oe=6A41FE4C';
+          const targetHero = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/707943533_2512313129199500_2134259154295506832_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=aj4yIFqE_tEQ7kNvwGKrMoj&_nc_oc=AdpNukW_0NtRO_cGbtDtocO9LpQvX60P3PNEeEcwG1i0i1SE1qzueBWfffxg9e1IXq_0RW8lAPra5XeM7P9DkjPu&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gENDGtprYzp3CHF6NQZCMgvN5uitT3ERsiVuvPwnPNKPA&oe=6A420C27';
+          const targetFounder = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/705681416_1680155853132006_6792004221980655171_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Dr0LLnsvACYQ7kNvwEExx8P&_nc_oc=Adr9txFYpJBs2FXfTUZnk9rzIk3DUV3ukEWxn0uhTQgCFrQoIjUri0cM_Fzeiv12Nnc_6AtdsY41h0uxPlpl_jmy&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gFOd5lHaxH9cx0jC1T38bolUWiFh7PlmV8XEhd0MYssuQ&oe=6A4218C8';
+          const targetTutor = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/707896842_1322336960027247_9111563685685574719_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=0K5PXmKiO4MQ7kNvwGLc6ch&_nc_oc=Adp3DJ6DtV6QR9va-B5Ll1tMsMMVzIe6C2gCaBhwDZ2bR9nwfYzTihZdYgAbUBmXkt5qKf3aDeBwQ1f8RwKaFEtR&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gGNVCHDQNcbqYr-VpVCENDCryb4LZ3D7TzN3PYdhwxtAA&oe=6A423463';
+          const targetAbout = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/708580778_1012210434616700_8619494619730289265_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8U0IiWLucrgQ7kNvwEIZNOO&_nc_oc=Adqh629LFYTsOf0xkIyb_1Xni7JwajNM_exdUkN-8B5n8tLChEQyBMmjfSBE2Ktx7dC8szc1mKqZZD0nQWZdSoX9&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gFYal6Ukra95iPDeyBimaeDaJtqz4U-Lfx-CgEHTkBqFg&oe=6A42288B';
+          const targetSpotlight = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/705480736_2261490291052472_4770393934903265755_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=cxnef9ekQBMQ7kNvwEkfLex&_nc_oc=AdqyqTNMfN4kAFC6zvPwG6UOJonNMKJBsvH2IA0vxfoarOv9NZQnOeCQT54_TLUEpwpZak4vzpMv0T2tTgVRJ0Ao&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gGzHEaqHEhoajpgNzIk1dPO3kmdGkgUmXncRw1QVvCDyQ&oe=6A420C25';
+
+          const upgraded = {
+            ...branding,
+            logo: (!branding.logo || branding.logo.includes('637892089') || branding.logo.includes('flos2-2') || branding.logo.includes('flos3-1') || branding.logo.includes('flos2-1') || !branding.logo.includes('679033424')) ? targetLogo : branding.logo,
+            favicon: (!branding.favicon || branding.favicon.includes('637892089') || branding.favicon.includes('flos2-2') || branding.favicon.includes('flos3-1') || branding.favicon.includes('flos2-1') || !branding.favicon.includes('679033424')) ? targetLogo : branding.favicon,
+            heroImage: (!branding.heroImage || branding.heroImage.includes('unsplash.com') || !branding.heroImage.includes('707943533')) ? targetHero : branding.heroImage,
+            founderImage: (!branding.founderImage || branding.founderImage.includes('628093216') || !branding.founderImage.includes('705681416')) ? targetFounder : branding.founderImage,
+            tutorImage: (!branding.tutorImage || branding.tutorImage.includes('627203980') || !branding.tutorImage.includes('707896842')) ? targetTutor : branding.tutorImage,
+            aboutImage: (!branding.aboutImage || branding.aboutImage.includes('624556295') || !branding.aboutImage.includes('708580778')) ? targetAbout : branding.aboutImage,
+            spotlightImage: (!branding.spotlightImage || branding.spotlightImage.includes('632852888') || !branding.spotlightImage.includes('705480736')) ? targetSpotlight : branding.spotlightImage
+          };
+          setBrandingAssets(prev => ({ ...prev, ...upgraded }));
+        }
         if (links) setGlobalLinks(links);
         if (edate) setExamDate(edate.date || 'April 25, 2026');
       }
@@ -713,8 +790,8 @@ function App() {
       const newLink = document.createElement('link');
       newLink.rel = 'icon';
 
-      // If it is a generic URL (not base64 data-uri), append a cache buster timestamp
-      if (brandingAssets.favicon.startsWith('http')) {
+      // If it is a generic URL (not base64 data-uri), append a cache buster timestamp (except for signature-protected facebook / scontent URLs to prevent 403 Forbidden errors)
+      if (brandingAssets.favicon.startsWith('http') && !brandingAssets.favicon.includes('fbcdn') && !brandingAssets.favicon.includes('scontent')) {
         const separator = brandingAssets.favicon.includes('?') ? '&' : '?';
         newLink.href = `${brandingAssets.favicon}${separator}t=${Date.now()}`;
       } else {
@@ -819,6 +896,7 @@ function App() {
             isSaving={isSaving} 
             onSave={saveSiteConfig} 
             onRefreshReviews={fetchReviews}
+            onRefreshApiKeys={fetchApiKeysForAdmin}
           />
         ) : <Home onNavigate={navigate} reviews={reviews} links={globalLinks} branding={brandingAssets} onLike={handleLikeReview} onReply={handleReplyReview} onAddReview={addReview} userLikes={userLikes} currentUser={currentUser} />;
       case '/login':

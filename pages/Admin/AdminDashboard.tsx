@@ -38,6 +38,7 @@ interface AdminDashboardProps {
   reviews: Review[];
   onDeleteReview: (id: string) => Promise<void>;
   onRefreshReviews?: () => Promise<void>;
+  onRefreshApiKeys?: () => Promise<void>;
 }
 
 const FileUploadButton: React.FC<{ 
@@ -83,7 +84,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   courseContent, setCourseContent, practiceTests, setPracticeTests, 
   materials, setMaterials, globalLinks, setGlobalLinks, branding, setBranding, examDate, setExamDate,
 
-  reviews, onDeleteReview, onRefreshReviews, isSaving, onSave
+  reviews, onDeleteReview, onRefreshReviews, isSaving, onSave, onRefreshApiKeys
 }) => {
   const [activeTab, setActiveTab] = useState('Overview');
   const [showNotifyModal, setShowNotifyModal] = useState(false);
@@ -150,18 +151,27 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
   const handleAddApiKey = async () => {
     const { data, error } = await supabase.from('api_keys').insert({ key_value: '', is_active: true }).select();
-    if (data) setApiKeys(prev => [...prev, data[0]]);
+    if (data) {
+      setApiKeys(prev => [...prev, data[0]]);
+      onRefreshApiKeys?.();
+    }
     if (error) console.error('Error adding API key:', error);
   };
 
   const handleUpdateApiKey = async (id: string, value: string) => {
     const { error } = await supabase.from('api_keys').update({ key_value: value.trim() }).eq('id', id);
+    if (!error) {
+      onRefreshApiKeys?.();
+    }
     if (error) console.error('Error updating API key:', error);
   };
 
   const handleDeleteApiKey = async (id: string) => {
     const { error } = await supabase.from('api_keys').delete().eq('id', id);
-    if (!error) setApiKeys(prev => prev.filter(key => key.id !== id));
+    if (!error) {
+      setApiKeys(prev => prev.filter(key => key.id !== id));
+      onRefreshApiKeys?.();
+    }
     if (error) console.error('Error deleting API key:', error);
   };
 

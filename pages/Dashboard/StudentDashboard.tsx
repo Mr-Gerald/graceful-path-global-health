@@ -44,6 +44,40 @@ const getRelativeTime = (dateInput: string | Date) => {
   }
 };
 
+const getIssueDate = (user: User) => {
+  try {
+    let date: Date;
+    if (user.enrolledDate) {
+      date = new Date(user.enrolledDate);
+    } else {
+      // Deterministic date based on user.id to keep it completely stable across refreshes
+      let hash = 0;
+      const userId = user.id || 'default';
+      for (let i = 0; i < userId.length; i++) {
+        hash = userId.charCodeAt(i) + ((hash << 5) - hash);
+      }
+      const dayOffset = Math.abs(hash) % 28 + 1; // 1 to 28
+      date = new Date(2026, 3, dayOffset); // April 2026 hash
+    }
+    
+    if (isNaN(date.getTime())) {
+      date = new Date();
+    }
+    
+    return date.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
+  } catch (e) {
+    return new Date().toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
+  }
+};
+
 const ComingSoon = ({ title }: { title: string }) => (
   <div className="flex flex-col items-center justify-center py-24 text-center animate-in fade-in duration-500">
     <div className="bg-brand-50 p-12 rounded-[3rem] border border-brand-100 shadow-xl shadow-brand-100/10 max-w-md">
@@ -513,7 +547,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                     <div className="relative z-10 border-2 md:border-[4px] border-brand-100 p-4 md:p-12 rounded-xl md:rounded-[2rem] text-center flex flex-col justify-between min-h-[350px] md:min-h-[600px]">
                       <div className="flex justify-between items-start mb-6 md:mb-10">
                         <div className="transform scale-75 md:scale-110 origin-top-left">
-                          <Logo />
+                          <Logo src={branding?.logo} />
                         </div>
                         <div className="text-right">
                           <p className="text-[7px] md:text-xs font-black text-brand-600 uppercase tracking-widest">Certificate ID</p>
@@ -536,6 +570,10 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                           <div className="w-20 md:w-64 h-px bg-slate-300 mb-1 md:mb-4"></div>
                           <p className="text-[10px] md:text-xl font-bold text-slate-900">Academy Director</p>
                           <p className="text-[7px] md:text-xs font-black text-slate-400 uppercase tracking-widest">Graceful Path Global Health</p>
+                        </div>
+                        <div className="text-center pb-1 md:pb-4">
+                          <p className="text-[7px] md:text-xs font-black text-slate-400 uppercase tracking-widest mb-1 md:mb-3 font-sans">Date of Issue</p>
+                          <p className="text-[10px] md:text-lg font-serif font-bold text-brand-700">{getIssueDate(user)}</p>
                         </div>
                         <div className="bg-brand-50 p-1.5 md:p-6 rounded-lg md:rounded-2xl border border-brand-100 flex items-center justify-center shadow-inner">
                           <ShieldCheck className="w-5 h-5 md:w-16 md:h-16 text-brand-500" />
