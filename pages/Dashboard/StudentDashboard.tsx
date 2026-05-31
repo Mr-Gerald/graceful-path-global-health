@@ -534,6 +534,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
               {user.hasCertificate ? (
                 <div className="space-y-12">
                   <div 
+                    id="print-certificate-area"
                     ref={certificateRef}
                     className="bg-white p-4 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] border border-gray-100 shadow-2xl relative flex flex-col justify-center w-full mx-auto overflow-visible"
                   >

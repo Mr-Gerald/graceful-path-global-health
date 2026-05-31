@@ -42,7 +42,17 @@ const getKeys = async () => {
   }
 
   const fallbackKeys: string[] = [];
-  const envKey = (process.env as any).GEMINI_API_KEY || (import.meta.env && (import.meta.env.VITE_GEMINI_API_KEY || (import.meta.env as any).GEMINI_API_KEY));
+  let envKey: string | undefined = undefined;
+  try {
+    if (typeof process !== 'undefined' && process && process.env) {
+      envKey = (process.env as any).GEMINI_API_KEY;
+    }
+  } catch (e) {
+    // Ignore process errors
+  }
+  if (!envKey && typeof import.meta !== 'undefined' && import.meta && import.meta.env) {
+    envKey = import.meta.env.VITE_GEMINI_API_KEY || (import.meta.env as any).GEMINI_API_KEY;
+  }
   if (envKey && envKey.trim()) {
     fallbackKeys.push(envKey.trim());
   }
@@ -81,6 +91,210 @@ const callWithKeyRotation = async (fn: (ai: GoogleGenAI) => Promise<any>, onProg
     }
   }
   throw lastError;
+};
+
+const FALLBACK_QUESTION_BANK: Record<'easy' | 'medium' | 'hard', Array<{ id: string; question: string; options: string[]; correctAnswer: number; explanation: string; difficulty: 'easy' | 'medium' | 'hard' }>> = {
+  easy: [
+    {
+      id: "fb_easy_1",
+      question: "A client with type 1 diabetes mellitus is found unresponsive. The nurse suspecting hypoglycemia should perform which priority action first?",
+      options: [
+        "Administer 15g of rapid-acting carbohydrates orally",
+        "Administer prescribed glucagon intramuscularly or subcutaneously",
+        "Obtain a stat blood glucose reading",
+        "Notify the healthcare provider immediately"
+      ],
+      correctAnswer: 1,
+      explanation: "For an unresponsive or unconscious client suspecting hypoglycemia, the nurse should immediately administer glucagon IM or SQ (or IV dextrose if venous access is available). Oral carbohydrates should never be given to an unresponsive or confused client due to the high risk of aspiration.",
+      difficulty: "easy"
+    },
+    {
+      id: "fb_easy_2",
+      question: "Which clinical manifestation is a hallmark sign of a client experiencing hypokalemia?",
+      options: [
+        "Peaked T waves on the EKG",
+        "Muscle weakness and hyporeflexia",
+        "Hyperactive bowel sounds",
+        "Positive Trousseau's sign"
+      ],
+      correctAnswer: 1,
+      explanation: "Muscle weakness, spasms, cramping, and decreased deep tendon reflexes (hyporeflexia) are classic indicators of hypokalemia (low potassium). Peaked T waves and hyperactive bowel sounds indicate hyperkalemia. Trousseau's sign is associated with hypocalcemia.",
+      difficulty: "easy"
+    },
+    {
+      id: "fb_easy_3",
+      question: "A nurse is preparing to administer intramuscular iron dextran to a client. Which technique should the nurse employ?",
+      options: [
+        "Infiltrate the skin using a 45-degree angle",
+        "Use the Z-track technique to prevent tissue staining",
+        "Massage the injection site aggressively after administration",
+        "Recap the needle immediately before disposal"
+      ],
+      correctAnswer: 1,
+      explanation: "Iron dextran should always be administered using the Z-track technique to prevent tracking or leakage of the medication into subcutaneous tissue, which can cause severe skin staining and irritation. Massaging the site is contraindicated after a Z-track injection.",
+      difficulty: "easy"
+    },
+    {
+      id: "fb_easy_4",
+      question: "When initiating intravenous therapy, the nurse should begin selection of the vascular access site at which location?",
+      options: [
+        "The most distal site on the non-dominant arm",
+        "The most proximal site in the antecubital fossa",
+        "The client's dominant wrist",
+        "The lateral side of the wrist"
+      ],
+      correctAnswer: 0,
+      explanation: "To preserve the integrity of the vein, the nurse should select the most distal site on the non-dominant hand or arm first, saving proximal veins for subsequent cannula insertions.",
+      difficulty: "easy"
+    },
+    {
+      id: "fb_easy_5",
+      question: "The nurse is reviewing the laboratory results of a client taking warfarin. Which parameter should the nurse evaluate?",
+      options: [
+        "Activated partial thromboplastin time (aPTT)",
+        "Prothrombin time (PT) and International Normalized Ratio (INR)",
+        "Platelet count and bleeding time",
+        "Hemoglobin and hematocrit levels"
+      ],
+      correctAnswer: 1,
+      explanation: "PT and INR are used to monitor the therapeutic level of warfarin. aPTT is used to monitor heparin therapy. Platelet counts and hemoglobin are not specific indicators of warfarin therapy efficacy.",
+      difficulty: "easy"
+    }
+  ],
+  medium: [
+    {
+      id: "fb_medium_1",
+      question: "A client with chronic heart failure has been prescribed digoxin 0.25 mg daily. Which clinical assessment is a priority before administering this medication?",
+      options: [
+        "Assess the apical pulse for a full minute",
+        "Obtain blood pressure reading",
+        "Measure the client's current oxygen saturation",
+        "Review the serum calcium concentration"
+      ],
+      correctAnswer: 0,
+      explanation: "Prior to administering digoxin, the nurse must assess the client's apical pulse for a full 60 seconds. The medication should be withheld, and the healthcare provider notified, if the pulse is less than 60 beats/minute in an adult or less than 90 beats/minute in an infant.",
+      difficulty: "medium"
+    },
+    {
+      id: "fb_medium_2",
+      question: "A nurse is caring for a client with a chest tube showing continuous, rapid bubbling in the water seal chamber. How should the nurse interpret this finding?",
+      options: [
+        "This is a normal observation indicating lung re-expansion",
+        "There is an active air leak somewhere in the drainage system",
+        "The suction wall regulator is set too low",
+        "The chest tube is occluded by a blood clot"
+      ],
+      correctAnswer: 1,
+      explanation: "Continuous bubbling in the water seal chamber indicates an air leak in the chest tube system. Intermittent bubbling is normal during exhalation or coughing, but continuous bubbling requires immediate inspection of the tube connections and chest wall site.",
+      difficulty: "medium"
+    },
+    {
+      id: "fb_medium_3",
+      question: "An adult client is admitted with deep vein thrombosis (DVT) and is initiated on a continuous heparin infusion. The platelet count drops from 280,000/mm³ to 120,000/mm³ over 48 hours. What is the nurse's priority action?",
+      options: [
+        "Slow the heparin rate down to half the original dose",
+        "Stop the heparin infusion immediately and notify the healthcare provider",
+        "Prepare to administer vitamin K as the antidote",
+        "Recheck the platelet count in 12 hours"
+      ],
+      correctAnswer: 1,
+      explanation: "A dramatic drop in platelet count (typically greater than 50% or below 150,000/mm³) indicates Heparin-Induced Thrombocytopenia (HIT). The nurse must stop the heparin immediately to prevent life-threatening thrombotic complications and notify the provider for alternative anticoagulation.",
+      difficulty: "medium"
+    },
+    {
+      id: "fb_medium_4",
+      question: "The nurse is caring for a client diagnosed with acute pancreatitis. Which dietary prescription should the nurse anticipate during the acute phase?",
+      options: [
+        "High-protein, low-fat liquid diet",
+        "Strict NPO (nothing by mouth) status",
+        "Enteral feedings via a nasogastric tube",
+        "Clear liquid diet with oral fluids as tolerated"
+      ],
+      correctAnswer: 1,
+      explanation: "During the acute phase of pancreatitis, the client is kept strictly NPO to rest the pancreas and minimize pancreatic enzyme secretion, which prevents further auto-digestion and reduces abdominal pain.",
+      difficulty: "medium"
+    },
+    {
+      id: "fb_medium_5",
+      question: "A client who underwent a thyroidectomy 12 hours ago reports extreme numbness and tingling around the mouth and fingers. Which action should the nurse perform first?",
+      options: [
+        "Obtain a 12-lead Electrocardiogram (ECG)",
+        "Assess for Trousseau's and Chvostek's signs",
+        "Administer PRN oral pain medications",
+        "Encourage the client to take slow, deep breaths"
+      ],
+      correctAnswer: 1,
+      explanation: "Numbness and tingling (circumoral paresthesia and peripheral paresthesia) following a thyroidectomy can indicate hypocalcemia secondary to accidental parathyroid gland damage or removal. The nurse should immediately assess Chvostek's (facial twitching) and Trousseau's (carpal spasm) signs, and prepare to administer calcium gluconate.",
+      difficulty: "medium"
+    }
+  ],
+  hard: [
+    {
+      id: "fb_hard_1",
+      question: "The nurse on a medical-surgical floor receives report. Which client should the nurse assess first?",
+      options: [
+        "A 68-year-old client with chronic obstructive pulmonary disease (COPD) whose SaO2 is 89% on 2L of oxygen via nasal cannula",
+        "A 45-year-old client post-cholecystectomy who reports abdominal pain rated 8 out of 10 and requested pain medication",
+        "A 32-year-old client with a compound femur fracture whose leg is casted, now reporting severe deep bruising pain unrelieved by intravenous morphine",
+        "An 80-year-old client with dementia who is agitated, mimicking pulling at their peripheral intravenous line"
+      ],
+      correctAnswer: 2,
+      explanation: "The client with the femur fracture reporting severe pain unrelieved by narcotics is demonstrating classic early signs of Compartment Syndrome, which is a limb-threatening surgical emergency. Chronic COPD with oxygen saturation of 89% is expected. High post-op pain is expected and can be addressed second. Agitated dementia is a safety concern but secondary to active potential compartment syndrome.",
+      difficulty: "hard"
+    },
+    {
+      id: "fb_hard_2",
+      question: "A client with a history of severe asthma is admitted to the emergency department in respiratory distress. The nurse hears high-pitched wheezing, which abruptly stops. There is no audible breath sound in the right base. What is the nurse's priority action?",
+      options: [
+        "Prepare for immediate endotracheal intubation",
+        "Administer a prescribed dose of oral prednisone",
+        "Instruct the client to use a peak flow meter",
+        "Encourage the client to cough forcefully to clear secretions"
+      ],
+      correctAnswer: 0,
+      explanation: "Abrupt cessation of wheezing in an acute asthma attack is an ominous sign ('silent chest') indicating that the client's airways are completely closed, resulting in virtually no air movement. This is a life-threatening respiratory failure requiring immediate emergency airway management, mechanical ventilation, or epinephrine.",
+      difficulty: "hard"
+    },
+    {
+      id: "fb_hard_3",
+      question: "Which instructions should the nurse prioritize when teaching a client receiving a new prescription for phenelzine?",
+      options: [
+        "Avoid foods high in tyramine, such as aged cheeses, red wine, and cured meats",
+        "Limit sodium intake and monitor for signs of fluid retention",
+        "Take the medication with an over-the-counter decongestant if a cold develops",
+        "Stop taking the medication immediately if dry mouth or blurred vision occurs"
+      ],
+      correctAnswer: 0,
+      explanation: "Phenelzine is a Monoamine Oxidase Inhibitor (MAOI). Consuming foods containing high amounts of tyramine (aged cheeses, draft beer, red wine, cured meats, soy sauce) while taking MAOIs can precipitate a fatal hypertensive crisis. Over-the-counter cold medicines are also contraindicated.",
+      difficulty: "hard"
+    },
+    {
+      id: "fb_hard_4",
+      question: "The nurse is caring for a client with a history of alcoholism who is admitted with severe hematemesis. The client is tachycardic, hypotensive, and confused. Which intervention is the priority?",
+      options: [
+        "Establish two large-bore intravenous lines and initiate rapid crystalloid fluid resuscitation",
+        "Insert a nasogastric tube to perform gastric lavage with ice water",
+        "Obtain a thorough history regarding the client's last alcohol intake",
+        "Administer an intravenous infusion of a prescribed proton pump inhibitor"
+      ],
+      correctAnswer: 0,
+      explanation: "The client is showing signs of hypovolemic shock secondary to active upper gastrointestinal bleeding (likely esophageal varices). The absolute priority is to restore vascular volume and stabilize hemodynamics by securing large-bore IV access and starting rapid fluid resuscitation. Secondary treatments include PPIs and Sengstaken-Blakemore tubes.",
+      difficulty: "hard"
+    },
+    {
+      id: "fb_hard_5",
+      question: "An infant born at 39 weeks gestation has a 1-minute APGAR score of 4. The infant is limp, grunting, has a heart rate of 88 beats/minute, and has cyanotic extremities. What is the nurse's priority intervention?",
+      options: [
+        "Initiate positive pressure ventilation (PPV) with room air or oxygen",
+        "Begin chest compressions at a 3:1 ratio with ventilations",
+        "Perform vigorous drying and tactile stimulation on the back",
+        "Notify the neonatologist and continue tracking APGAR at 5 minutes"
+      ],
+      correctAnswer: 0,
+      explanation: "According to Neonatal Resuscitation Program (NRP) guidelines, if a newborn's heart rate is below 100 beats/minute or they are gasping/apneic, the first and most important action is to initiate positive pressure ventilation (PPV). Drying and stimulation should not delay PPV. Chest compressions are only initiated if the heart rate remains under 60 beats/minute after 30 seconds of effective PPV.",
+      difficulty: "hard"
+    }
+  ]
 };
 
 export const geminiService = {
@@ -230,8 +444,18 @@ export const geminiService = {
           }
         }
       } catch (error) {
-        console.error(`Failed to generate question ${i + 1}:`, error);
-        // Continue to next question if one fails
+        console.warn(`Failed to generate live question ${i + 1}, picking from standard question bank:`, error);
+        const list = FALLBACK_QUESTION_BANK[difficulty] || FALLBACK_QUESTION_BANK['medium'];
+        const chosen = list[Math.floor(Math.random() * list.length)];
+        const formattedQ = {
+          ...chosen,
+          id: Date.now().toString() + Math.random().toString(36).substr(2, 9),
+          difficulty
+        };
+        allQuestions.push(formattedQ);
+        if (onQuestionGenerated) {
+          onQuestionGenerated(formattedQ);
+        }
       }
     }
 
@@ -247,51 +471,63 @@ export const geminiService = {
     difficulty: 'easy' | 'medium' | 'hard',
     domain: string,
     avoidConcepts: string[]
-  ) {
-    return await callWithKeyRotation(async (ai) => {
-      const response = await ai.models.generateContent({
-        model: 'gemini-3.5-flash',
-        contents: `You are a member of the NCSBN NCLEX-RN Board of Examiners. 
-        Your task is to write EXACTLY ONE highly professional, clinical-grade NCLEX-RN exam item.
-        Classified under Day ${day} of the candidate's PassPoint board preparation program, focusing on "${topic}".
-        NCLEX Client Needs Category/Domain: "${domain}".
-        Determined Cognitive CAT Difficulty Level: "${difficulty}" (Easy level: basic recall / comprehension; Medium level: nursing application / intervention; Hard level: advanced clinical judgment, prioritization (e.g. ABCs, chronic vs acute, stable vs unstable, ADPIE), medical-surgical complications, delegation of complex clients, multi-system critical reasoning, or select-all-that-apply SATA representations).
+  ): Promise<{ id: string; question: string; options: string[]; correctAnswer: number; explanation: string; difficulty: 'easy' | 'medium' | 'hard' }> {
+    try {
+      return await callWithKeyRotation(async (ai) => {
+        const response = await ai.models.generateContent({
+          model: 'gemini-3.5-flash',
+          contents: `You are a member of the NCSBN NCLEX-RN Board of Examiners. 
+          Your task is to write EXACTLY ONE highly professional, clinical-grade NCLEX-RN exam item.
+          Classified under Day ${day} of the candidate's PassPoint board preparation program, focusing on "${topic}".
+          NCLEX Client Needs Category/Domain: "${domain}".
+          Determined Cognitive CAT Difficulty Level: "${difficulty}" (Easy level: basic recall / comprehension; Medium level: nursing application / intervention; Hard level: advanced clinical judgment, prioritization (e.g. ABCs, chronic vs acute, stable vs unstable, ADPIE), medical-surgical complications, delegation of complex clients, multi-system critical reasoning, or select-all-that-apply SATA representations).
 
-        CRITICAL UNIQUE CONSTRAINT:
-        Do NOT write a clinical scenario, patient diagnosis, principal complaint, or target drug that resembles those already covered in this active test session: [${avoidConcepts.join(', ') || 'No topics covered yet'}]. Choose an entirely different patient situation to ensure 100% variety.
+          CRITICAL UNIQUE CONSTRAINT:
+          Do NOT write a clinical scenario, patient diagnosis, principal complaint, or target drug that resembles those already covered in this active test session: [${avoidConcepts.join(', ') || 'No topics covered yet'}]. Choose an entirely different patient situation to ensure 100% variety.
 
-        Generate EXACTLY 1 NCLEX-style question in JSON format. Provide the response as a valid JSON object matching the requested schema. Do not enclose in markdown blocks.`,
-        config: {
-          responseMimeType: 'application/json',
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: {
-              question: { type: Type.STRING },
-              options: { type: Type.ARRAY, items: { type: Type.STRING } },
-              correctAnswer: { type: Type.NUMBER },
-              explanation: { type: Type.STRING }
-            },
-            required: ["question", "options", "correctAnswer", "explanation"]
+          Generate EXACTLY 1 NCLEX-style question in JSON format. Provide the response as a valid JSON object matching the requested schema. Do not enclose in markdown blocks.`,
+          config: {
+            responseMimeType: 'application/json',
+            responseSchema: {
+              type: Type.OBJECT,
+              properties: {
+                question: { type: Type.STRING },
+                options: { type: Type.ARRAY, items: { type: Type.STRING } },
+                correctAnswer: { type: Type.NUMBER },
+                explanation: { type: Type.STRING }
+              },
+              required: ["question", "options", "correctAnswer", "explanation"]
+            }
           }
+        });
+
+        const text = response.text || '{}';
+        const cleanJson = text.replace(/```json\n?|```/g, '').trim();
+        const qData = JSON.parse(cleanJson || '{}');
+        
+        if (!qData.question || !qData.options || qData.options.length < 4) {
+          throw new Error("Invalid question structure returned from Gemini");
         }
+
+        return {
+          id: 'passpoint_' + Date.now().toString() + Math.random().toString(36).substr(2, 9),
+          question: qData.question,
+          options: qData.options.slice(0, 4),
+          correctAnswer: qData.correctAnswer,
+          explanation: qData.explanation,
+          difficulty
+        };
       });
-
-      const text = response.text || '{}';
-      const cleanJson = text.replace(/```json\n?|```/g, '').trim();
-      const qData = JSON.parse(cleanJson || '{}');
-      
-      if (!qData.question || !qData.options || qData.options.length < 4) {
-        throw new Error("Invalid question structure returned from Gemini");
-      }
-
+    } catch (err) {
+      console.warn("Gemini adaptive CAT generator fallback triggered:", err);
+      const list = FALLBACK_QUESTION_BANK[difficulty] || FALLBACK_QUESTION_BANK['medium'];
+      // Try to find a unique question that is not similar to avoidConcepts
+      const filtered = list.filter(q => !avoidConcepts.some(avoid => q.question.toLowerCase().includes(avoid.toLowerCase().slice(0, 15))));
+      const chosen = filtered.length > 0 ? filtered[Math.floor(Math.random() * filtered.length)] : list[Math.floor(Math.random() * list.length)];
       return {
-        id: 'passpoint_' + Date.now().toString() + Math.random().toString(36).substr(2, 9),
-        question: qData.question,
-        options: qData.options.slice(0, 4),
-        correctAnswer: qData.correctAnswer,
-        explanation: qData.explanation,
-        difficulty
+        ...chosen,
+        id: 'fb_' + difficulty + '_' + Date.now().toString() + Math.random().toString(36).substr(2, 5)
       };
-    });
+    }
   }
 };

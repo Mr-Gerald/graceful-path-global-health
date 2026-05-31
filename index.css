@@ -7,3 +7,57 @@
 body {
   @apply bg-gray-50 text-slate-900 font-sans;
 }
+
+@media print {
+  /* Hide everything on the page including scrollbars */
+  body * {
+    visibility: hidden !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Selectively make only the certificate area and its nested children visible */
+  #print-certificate-area,
+  #print-certificate-area * {
+    visibility: visible !important;
+  }
+  
+  /* Reset displays/positions to ensure layout displays properly on print */
+  #print-certificate-area .flex {
+    display: flex !important;
+  }
+
+  #print-certificate-area .grid {
+    display: grid !important;
+  }
+
+  /* Style and position the printed certificate to cover the landscape page */
+  #print-certificate-area {
+    visibility: visible !important;
+    position: fixed !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    width: 297mm !important; /* A4 Landscape width */
+    height: 210mm !important; /* A4 Landscape height */
+    box-shadow: none !important;
+    border: none !important;
+    background-image: none !important;
+    background-color: #ffffff !important;
+    margin: 0 !important;
+    padding: 3.5rem !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  /* Force background graphics to print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

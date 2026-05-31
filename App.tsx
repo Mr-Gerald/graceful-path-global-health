@@ -229,9 +229,16 @@ function App() {
 
       if (!error && data) {
         // Deterministic nurse/student name assigner for rows without custom names saved
-        const getReviewerName = (id: string, nameFromDb?: string) => {
+        const getReviewerName = (id: string, nameFromDb?: string, userIdFromDb?: string) => {
           if (nameFromDb && nameFromDb !== 'Anonymous' && nameFromDb.trim().length > 0) {
             return nameFromDb;
+          }
+          if (currentUser && userIdFromDb && userIdFromDb === currentUser.id) {
+            return currentUser.name;
+          }
+          if (allStudents && allStudents.length > 0 && userIdFromDb) {
+            const student = allStudents.find((s: any) => s.id === userIdFromDb);
+            if (student && student.name) return student.name;
           }
           const defaultNames = [
             'Sarah Jenkins, BSN',
@@ -253,7 +260,7 @@ function App() {
 
         const formattedReviews: Review[] = data.map((r: any) => ({
           id: r.id,
-          name: getReviewerName(r.id, r.name),
+          name: getReviewerName(r.id, r.name, r.user_id),
           avatar: r.avatar || '',
           text: r.text || '',
           rating: r.rating || 5,
@@ -641,10 +648,12 @@ function App() {
   const addReview = async (text: string, rating: number) => {
     if (!currentUser) { navigate('/login'); return false; }
     
-    // Attempt 1: Standard insert with user_id
+    // Attempt 1: Standard insert with user_id, name, and avatar
     try {
       const { error } = await supabase.from('reviews').insert({
         user_id: currentUser.id,
+        name: currentUser.name,
+        avatar: currentUser.avatar || '',
         text,
         rating,
         role: 'Nursing Student'
