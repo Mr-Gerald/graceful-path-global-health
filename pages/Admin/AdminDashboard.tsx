@@ -35,6 +35,8 @@ interface AdminDashboardProps {
 
   isSaving?: boolean;
   onSave?: () => Promise<void>;
+  saveError?: string | null;
+  onClearSaveError?: () => void;
   reviews: Review[];
   onDeleteReview: (id: string) => Promise<void>;
   onRefreshReviews?: () => Promise<void>;
@@ -84,7 +86,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   courseContent, setCourseContent, practiceTests, setPracticeTests, 
   materials, setMaterials, globalLinks, setGlobalLinks, branding, setBranding, examDate, setExamDate,
 
-  reviews, onDeleteReview, onRefreshReviews, isSaving, onSave, onRefreshApiKeys
+  reviews, onDeleteReview, onRefreshReviews, isSaving, onSave, onRefreshApiKeys,
+  saveError, onClearSaveError
 }) => {
   const [activeTab, setActiveTab] = useState('Overview');
   const [showNotifyModal, setShowNotifyModal] = useState(false);
@@ -1106,7 +1109,24 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
           <div className="flex items-center gap-4 w-full sm:w-auto">
             {onSave && (
               <button 
-                onClick={onSave}
+                onClick={async () => {
+                  try {
+                    await onSave();
+                    onClearSaveError?.();
+                    setSuccessMessage('Site configurations saved successfully');
+                    setCustomNotification({
+                      title: "Changes Saved",
+                      message: "All branding and site configurations have been successfully saved to your Supabase cloud database.",
+                      type: "success"
+                    });
+                  } catch (err: any) {
+                    setCustomNotification({
+                      title: "Database Save Failed",
+                      message: `We could not write your changes to the Supabase database. Reason: ${err.message || 'Verification of site_config schema or connection error.'}`,
+                      type: "error"
+                    });
+                  }
+                }}
                 disabled={isSaving}
                 className={`flex-grow sm:flex-grow-0 flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] transition shadow-xl ${isSaving ? 'bg-slate-100 text-slate-400' : 'bg-brand-600 text-white hover:bg-brand-700 shadow-brand-100'}`}
               >
@@ -1117,6 +1137,41 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             <button onClick={() => setShowNotifyModal(true)} className="flex-grow sm:flex-grow-0 bg-slate-900 text-white px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-[0.2em] flex items-center justify-center shadow-xl hover:bg-slate-800 transition transform hover:-translate-y-1"><Send className="w-4 h-4 mr-3" /> Broadcast Alert</button>
           </div>
         </header>
+
+        {saveError && (
+          <div className="mb-8 p-6 bg-red-50 border border-red-200 rounded-[2rem] flex items-start gap-4 animate-in fade-in slide-in-from-top-4 duration-300">
+            <AlertCircle className="w-6 h-6 text-red-500 shrink-0 mt-0.5" />
+            <div className="flex-grow">
+              <h3 className="font-bold text-red-800 text-sm mb-1">Database Auto-Save Error</h3>
+              <p className="text-xs text-red-600 font-medium leading-relaxed">
+                Changes could not be auto-saved to your Supabase tables. Your updates are temporarily saved in the current browser memory, but will be lost if you refresh. 
+                <span className="block mt-1 font-bold">Error Detail: {saveError}</span>
+              </p>
+              <div className="mt-3 flex gap-3">
+                <button 
+                  onClick={async () => {
+                    try {
+                      await onSave?.();
+                      onClearSaveError?.();
+                    } catch (e) {
+                      // Handled
+                    }
+                  }} 
+                  className="bg-red-600 hover:bg-red-700 text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl transition"
+                >
+                  Retry Intergrated Connection
+                </button>
+                <button 
+                  onClick={onClearSaveError} 
+                  className="bg-white border border-red-200 text-red-600 hover:bg-red-100 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-xl transition"
+                >
+                  Dismiss Warning
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
         {renderTabContent()}
       </main>
 

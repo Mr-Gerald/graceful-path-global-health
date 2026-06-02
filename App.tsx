@@ -31,6 +31,7 @@ function App() {
   const [confirmNewPassword, setConfirmNewPassword] = useState('');
   const [resetSuccess, setResetSuccess] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [userLikes, setUserLikes] = useState<string[]>([]);
   const [otpCode, setOtpCode] = useState('');
   const [isVerifying, setIsVerifying] = useState(false);
@@ -349,15 +350,27 @@ function App() {
           const targetAbout = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/708580778_1012210434616700_8619494619730289265_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8U0IiWLucrgQ7kNvwEIZNOO&_nc_oc=Adqh629LFYTsOf0xkIyb_1Xni7JwajNM_exdUkN-8B5n8tLChEQyBMmjfSBE2Ktx7dC8szc1mKqZZD0nQWZdSoX9&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gFYal6Ukra95iPDeyBimaeDaJtqz4U-Lfx-CgEHTkBqFg&oe=6A42288B';
           const targetSpotlight = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/705480736_2261490291052472_4770393934903265755_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=cxnef9ekQBMQ7kNvwEkfLex&_nc_oc=AdqyqTNMfN4kAFC6zvPwG6UOJonNMKJBsvH2IA0vxfoarOv9NZQnOeCQT54_TLUEpwpZak4vzpMv0T2tTgVRJ0Ao&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gGzHEaqHEhoajpgNzIk1dPO3kmdGkgUmXncRw1QVvCDyQ&oe=6A420C25';
 
+          const resolveCustomOrFallback = (val: string | undefined, targetDefault: string, oldIdKeywords: string[]) => {
+            if (!val || val.trim() === '') return targetDefault;
+            if (val.startsWith('data:')) return val; // Base64 data strings are strictly custom user configs
+            
+            // Check if it's a known expired default URL from older template instances
+            const isOldTemplateAsset = oldIdKeywords.some(kw => val.includes(kw));
+            if (isOldTemplateAsset) {
+              return targetDefault;
+            }
+            return val;
+          };
+
           const upgraded = {
             ...branding,
-            logo: (!branding.logo || branding.logo.includes('637892089') || branding.logo.includes('flos2-2') || branding.logo.includes('flos3-1') || branding.logo.includes('flos2-1') || !branding.logo.includes('679033424')) ? targetLogo : branding.logo,
-            favicon: (!branding.favicon || branding.favicon.includes('637892089') || branding.favicon.includes('flos2-2') || branding.favicon.includes('flos3-1') || branding.favicon.includes('flos2-1') || !branding.favicon.includes('679033424')) ? targetLogo : branding.favicon,
-            heroImage: (!branding.heroImage || branding.heroImage.includes('unsplash.com') || !branding.heroImage.includes('707943533')) ? targetHero : branding.heroImage,
-            founderImage: (!branding.founderImage || branding.founderImage.includes('628093216') || !branding.founderImage.includes('705681416')) ? targetFounder : branding.founderImage,
-            tutorImage: (!branding.tutorImage || branding.tutorImage.includes('627203980') || !branding.tutorImage.includes('707896842')) ? targetTutor : branding.tutorImage,
-            aboutImage: (!branding.aboutImage || branding.aboutImage.includes('624556295') || !branding.aboutImage.includes('708580778')) ? targetAbout : branding.aboutImage,
-            spotlightImage: (!branding.spotlightImage || branding.spotlightImage.includes('632852888') || !branding.spotlightImage.includes('705480736')) ? targetSpotlight : branding.spotlightImage
+            logo: resolveCustomOrFallback(branding.logo, targetLogo, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1']),
+            favicon: resolveCustomOrFallback(branding.favicon, targetLogo, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1']),
+            heroImage: resolveCustomOrFallback(branding.heroImage, targetHero, ['unsplash.com']),
+            founderImage: resolveCustomOrFallback(branding.founderImage, targetFounder, ['628093216']),
+            tutorImage: resolveCustomOrFallback(branding.tutorImage, targetTutor, ['627203980']),
+            aboutImage: resolveCustomOrFallback(branding.aboutImage, targetAbout, ['624556295']),
+            spotlightImage: resolveCustomOrFallback(branding.spotlightImage, targetSpotlight, ['632852888'])
           };
           setBrandingAssets(prev => ({ ...prev, ...upgraded }));
         }
@@ -426,6 +439,7 @@ function App() {
     if (currentUser?.role !== UserRole.ADMIN || !hasLoadedInitialData) return;
     setIsSaving(true);
     try {
+      setSaveError(null);
       const currentConfig = latestConfig.current;
       const configs = [
         { id: 'branding', data: currentConfig.brandingAssets },
@@ -459,9 +473,13 @@ function App() {
       }
       
       console.log("Site configuration persisted successfully.");
+      setSaveError(null);
     } catch (err: any) {
       console.error("Failed to persist site configuration:", err);
-      setError(`Failed to save changes: ${err.message || 'Unknown error'}`);
+      const friendlyMsg = err.message || 'Unknown network or schema error';
+      setError(`Failed to save changes: ${friendlyMsg}`);
+      setSaveError(friendlyMsg);
+      throw err; // re-throw so the caller can handle it in the UI and show alerts
     } finally {
       setIsSaving(false);
     }
@@ -470,11 +488,30 @@ function App() {
   useEffect(() => {
     if (currentUser?.role === UserRole.ADMIN && hasLoadedInitialData) {
       const timer = setTimeout(() => {
-        saveSiteConfig();
+        saveSiteConfig().catch(err => {
+          console.warn("Background site-config auto-save failed but caught gracefully:", err);
+        });
       }, 2000); // Debounce auto-save
       return () => clearTimeout(timer);
     }
   }, [brandingAssets, globalLinks, courseContent, practiceTests, materials, examDate, geminiKeys, currentUser, hasLoadedInitialData]);
+
+  // Synchronously update browser tab favicon whenever the loaded branding assets config changes
+  useEffect(() => {
+    if (brandingAssets.favicon) {
+      const linkTags = document.querySelectorAll("link[rel*='icon']");
+      if (linkTags.length > 0) {
+        linkTags.forEach((tag: any) => {
+          tag.href = brandingAssets.favicon;
+        });
+      } else {
+        const newLink = document.createElement('link');
+        newLink.rel = 'icon';
+        newLink.href = brandingAssets.favicon;
+        document.head.appendChild(newLink);
+      }
+    }
+  }, [brandingAssets.favicon]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -904,6 +941,8 @@ function App() {
             setExamDate={setExamDate} 
             isSaving={isSaving} 
             onSave={saveSiteConfig} 
+            saveError={saveError}
+            onClearSaveError={() => setSaveError(null)}
             onRefreshReviews={fetchReviews}
             onRefreshApiKeys={fetchApiKeysForAdmin}
           />

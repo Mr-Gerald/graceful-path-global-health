@@ -2,6 +2,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { supabase } from './supabaseClient';
 
+import { PERMANENT_QUESTION_BANK, getDomainForDay } from './questionBank';
+
 // Use multiple possible environment variables for the API key to ensure compatibility
 // Use multiple possible environment variables for the API key to ensure compatibility
 let cachedKeys: string[] = [];
@@ -473,6 +475,59 @@ export const geminiService = {
     avoidConcepts: string[]
   ): Promise<{ id: string; question: string; options: string[]; correctAnswer: number; explanation: string; difficulty: 'easy' | 'medium' | 'hard' }> {
     try {
+      // 1. Attempt lookup in the permanent offline Question Bank first to prevent any repetition and ensure zero latency
+      const targetDomain = getDomainForDay(day);
+      let candidates = PERMANENT_QUESTION_BANK.filter(q => 
+        q.domain === targetDomain && 
+        q.difficulty === difficulty
+      );
+
+      if (candidates.length === 0) {
+        // Fall back to just matching the desired difficulty level
+        candidates = PERMANENT_QUESTION_BANK.filter(q => q.difficulty === difficulty);
+      }
+
+      // Filter out already attempted questions to avoid repetition
+      const unattempted = candidates.filter(q => 
+        !avoidConcepts.some(avoid => 
+          q.question.toLowerCase().includes(avoid.toLowerCase().slice(0, 15)) || 
+          avoid.toLowerCase().includes(q.question.toLowerCase().slice(0, 15))
+        )
+      );
+
+      if (unattempted.length > 0) {
+        const chosen = unattempted[Math.floor(Math.random() * unattempted.length)];
+        return {
+          id: chosen.id,
+          question: chosen.question,
+          options: [...chosen.options],
+          correctAnswer: chosen.correctAnswer,
+          explanation: chosen.explanation,
+          difficulty: chosen.difficulty
+        };
+      }
+
+      // If matches of that specific difficulty are exhausted, look for ANY unattempted question in our 30+ question bank
+      const generalUnattempted = PERMANENT_QUESTION_BANK.filter(q => 
+        !avoidConcepts.some(avoid => 
+          q.question.toLowerCase().includes(avoid.toLowerCase().slice(0, 15)) || 
+          avoid.toLowerCase().includes(q.question.toLowerCase().slice(0, 15))
+        )
+      );
+
+      if (generalUnattempted.length > 0) {
+        const chosen = generalUnattempted[Math.floor(Math.random() * generalUnattempted.length)];
+        return {
+          id: chosen.id,
+          question: chosen.question,
+          options: [...chosen.options],
+          correctAnswer: chosen.correctAnswer,
+          explanation: chosen.explanation,
+          difficulty: chosen.difficulty
+        };
+      }
+
+      // 2. If the permanent bank is fully exhausted, query live Gemini API as secondary dynamic source
       return await callWithKeyRotation(async (ai) => {
         const response = await ai.models.generateContent({
           model: 'gemini-3.5-flash',
@@ -520,8 +575,8 @@ export const geminiService = {
       });
     } catch (err) {
       console.warn("Gemini adaptive CAT generator fallback triggered:", err);
+      // Last-resort fallback to the basic fallback bank
       const list = FALLBACK_QUESTION_BANK[difficulty] || FALLBACK_QUESTION_BANK['medium'];
-      // Try to find a unique question that is not similar to avoidConcepts
       const filtered = list.filter(q => !avoidConcepts.some(avoid => q.question.toLowerCase().includes(avoid.toLowerCase().slice(0, 15))));
       const chosen = filtered.length > 0 ? filtered[Math.floor(Math.random() * filtered.length)] : list[Math.floor(Math.random() * list.length)];
       return {
