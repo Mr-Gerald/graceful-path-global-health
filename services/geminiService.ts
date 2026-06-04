@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { supabase } from './supabaseClient';
 
-import { PERMANENT_QUESTION_BANK, getDomainForDay } from './questionBank';
+import { PERMANENT_QUESTION_BANK, getDomainForDay, generateDynamicQuestion } from './questionBank';
 
 // Use multiple possible environment variables for the API key to ensure compatibility
 // Use multiple possible environment variables for the API key to ensure compatibility
@@ -527,62 +527,11 @@ export const geminiService = {
         };
       }
 
-      // 2. If the permanent bank is fully exhausted, query live Gemini API as secondary dynamic source
-      return await callWithKeyRotation(async (ai) => {
-        const response = await ai.models.generateContent({
-          model: 'gemini-3.5-flash',
-          contents: `You are a member of the NCSBN NCLEX-RN Board of Examiners. 
-          Your task is to write EXACTLY ONE highly professional, clinical-grade NCLEX-RN exam item.
-          Classified under Day ${day} of the candidate's PassPoint board preparation program, focusing on "${topic}".
-          NCLEX Client Needs Category/Domain: "${domain}".
-          Determined Cognitive CAT Difficulty Level: "${difficulty}" (Easy level: basic recall / comprehension; Medium level: nursing application / intervention; Hard level: advanced clinical judgment, prioritization (e.g. ABCs, chronic vs acute, stable vs unstable, ADPIE), medical-surgical complications, delegation of complex clients, multi-system critical reasoning, or select-all-that-apply SATA representations).
-
-          CRITICAL UNIQUE CONSTRAINT:
-          Do NOT write a clinical scenario, patient diagnosis, principal complaint, or target drug that resembles those already covered in this active test session: [${avoidConcepts.join(', ') || 'No topics covered yet'}]. Choose an entirely different patient situation to ensure 100% variety.
-
-          Generate EXACTLY 1 NCLEX-style question in JSON format. Provide the response as a valid JSON object matching the requested schema. Do not enclose in markdown blocks.`,
-          config: {
-            responseMimeType: 'application/json',
-            responseSchema: {
-              type: Type.OBJECT,
-              properties: {
-                question: { type: Type.STRING },
-                options: { type: Type.ARRAY, items: { type: Type.STRING } },
-                correctAnswer: { type: Type.NUMBER },
-                explanation: { type: Type.STRING }
-              },
-              required: ["question", "options", "correctAnswer", "explanation"]
-            }
-          }
-        });
-
-        const text = response.text || '{}';
-        const cleanJson = text.replace(/```json\n?|```/g, '').trim();
-        const qData = JSON.parse(cleanJson || '{}');
-        
-        if (!qData.question || !qData.options || qData.options.length < 4) {
-          throw new Error("Invalid question structure returned from Gemini");
-        }
-
-        return {
-          id: 'passpoint_' + Date.now().toString() + Math.random().toString(36).substr(2, 9),
-          question: qData.question,
-          options: qData.options.slice(0, 4),
-          correctAnswer: qData.correctAnswer,
-          explanation: qData.explanation,
-          difficulty
-        };
-      });
+      // 2. If the permanent bank is fully exhausted, generate a tailored clinic-grade question instantly offline
+      return generateDynamicQuestion(day, difficulty, avoidConcepts);
     } catch (err) {
       console.warn("Gemini adaptive CAT generator fallback triggered:", err);
-      // Last-resort fallback to the basic fallback bank
-      const list = FALLBACK_QUESTION_BANK[difficulty] || FALLBACK_QUESTION_BANK['medium'];
-      const filtered = list.filter(q => !avoidConcepts.some(avoid => q.question.toLowerCase().includes(avoid.toLowerCase().slice(0, 15))));
-      const chosen = filtered.length > 0 ? filtered[Math.floor(Math.random() * filtered.length)] : list[Math.floor(Math.random() * list.length)];
-      return {
-        ...chosen,
-        id: 'fb_' + difficulty + '_' + Date.now().toString() + Math.random().toString(36).substr(2, 5)
-      };
+      return generateDynamicQuestion(day, difficulty, avoidConcepts);
     }
   }
 };

@@ -68,6 +68,7 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
   const [stage, setStage] = useState<'dashboard' | 'introduction' | 'simulator' | 'result' | 'review_answers'>('dashboard');
   const [selectedDay, setSelectedDay] = useState<number | null>(null);
   const [attempts, setAttempts] = useState<Record<number, AttemptResult>>({});
+  const [activeSession, setActiveSession] = useState<any | null>(null);
   
   // Simulator states
   const [questions, setQuestions] = useState<any[]>([]);
@@ -96,6 +97,17 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
         console.error("Failed to parse cached PassPoint attempts", e);
       }
     }
+
+    // Check for unfinished active CAT sessions
+    const activeKey = `passpoint_active_session_v1_${user.id}`;
+    const savedActive = localStorage.getItem(activeKey);
+    if (savedActive) {
+      try {
+        setActiveSession(JSON.parse(savedActive));
+      } catch (e) {
+        console.error("Failed to parse saved active session", e);
+      }
+    }
   }, [user.id]);
 
   const saveAttempts = (updated: Record<number, AttemptResult>) => {
@@ -116,6 +128,25 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
     }
     return () => clearInterval(interval);
   }, [isTimerActive, timerVal]);
+
+  // Auto-save active simulation progress to prevent refresh loss
+  useEffect(() => {
+    if (stage === 'simulator' && selectedDay !== null) {
+      const activeKey = `passpoint_active_session_v1_${user.id}`;
+      const targetDay = PASSPOINT_DAYS.find(d => d.day === selectedDay);
+      const session = {
+        selectedDay,
+        topic: targetDay?.topic || "Comprehensive NCLEX Practice",
+        questions,
+        currQNum,
+        currDifficulty,
+        userAnswers,
+        abilityTheta,
+        timerVal
+      };
+      localStorage.setItem(activeKey, JSON.stringify(session));
+    }
+  }, [stage, selectedDay, questions, currQNum, currDifficulty, userAnswers, abilityTheta, timerVal, user.id]);
 
   const resetSimulatorState = () => {
     setQuestions([]);
@@ -195,6 +226,14 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
     setUserAnswers(nextAnswers);
     setAbilityTheta(newTheta);
     setSelectedOpt(null);
+
+    // Save progression count to global analytics counter
+    try {
+      const currentCount = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
+      localStorage.setItem('questions_solved_v1_count', (currentCount + 1).toString());
+    } catch (err) {
+      console.warn("Could not write solved question progression counter:", err);
+    }
 
     // 2. Check clinical ending rules of CAT!
     // NCLEX style CAT ends dynamically:
@@ -312,6 +351,8 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
 
     saveAttempts(updatedAttempts);
     setViewingResultDay(selectedDay);
+    localStorage.removeItem(`passpoint_active_session_v1_${user.id}`);
+    setActiveSession(null);
     setStage('result');
 
     if (isPass) {
@@ -435,6 +476,53 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
               <ChevronLeft className="w-4 h-4" /> Exit Mock Hub
             </button>
           </div>
+
+          {activeSession && (
+            <div className="bg-gradient-to-r from-teal-600 to-indigo-600 text-white p-8 rounded-[2.5rem] shadow-xl mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-2 border-white/20 animate-in fade-in slide-in-from-top-4 duration-300">
+              <div className="flex-1">
+                <span className="bg-white/20 text-white text-[9px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full">
+                  Incomplete Test Detected
+                </span>
+                <h3 className="font-serif font-bold text-2xl mt-3 flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  Day {activeSession.selectedDay}: {activeSession.topic}
+                </h3>
+                <p className="text-sm text-teal-50 ml-0.5 mt-2 max-w-xl leading-relaxed font-semibold">
+                  You completed <span className="font-black text-white underline decoration-wavy decoration-emerald-300">{activeSession.currQNum} questions</span> before leaving. We have saved your active clinical judgment score (Theta: {activeSession.abilityTheta.toFixed(2)}) and remaining duration!
+                </p>
+              </div>
+              <div className="flex items-center gap-3 w-full md:w-auto mt-2 md:mt-0">
+                <button 
+                  onClick={() => {
+                    // Restore state
+                    setSelectedDay(activeSession.selectedDay);
+                    setQuestions(activeSession.questions);
+                    setCurrQNum(activeSession.currQNum);
+                    setCurrDifficulty(activeSession.currDifficulty);
+                    setUserAnswers(activeSession.userAnswers);
+                    setAbilityTheta(activeSession.abilityTheta);
+                    setTimerVal(activeSession.timerVal);
+                    setStage('simulator');
+                    setIsTimerActive(true);
+                  }}
+                  className="flex-1 md:flex-none py-4 px-8 bg-white hover:bg-emerald-50 text-indigo-700 font-extrabold text-xs uppercase tracking-widest shadow-lg rounded-2xl transition transform hover:scale-105"
+                >
+                  Resume Attempt
+                </button>
+                <button 
+                  onClick={() => {
+                    if (confirm("Are you sure you want to discard your saved session progress? This cannot be undone.")) {
+                      localStorage.removeItem(`passpoint_active_session_v1_${user.id}`);
+                      setActiveSession(null);
+                    }
+                  }}
+                  className="py-4 px-5 bg-transparent border border-white/30 text-white hover:bg-white/10 font-bold text-xs uppercase tracking-widest rounded-2xl transition"
+                >
+                  Discard
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Quick instructions panel */}
           <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm flex items-start gap-4 mb-10">

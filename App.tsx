@@ -8,6 +8,7 @@ import { UserRole, User, Review, BrandingAssets, Notification, GlobalLinks } fro
 import { COURSES, COUNTRY_LIST } from './constants';
 import { supabase } from './services/supabaseClient';
 import { geminiService } from './services/geminiService';
+import { DEFAULT_PRACTICE_TESTS } from './services/questionBank';
 import { Mail, CheckCircle2, Globe, LogOut } from 'lucide-react';
 
 function App() {
@@ -67,7 +68,7 @@ function App() {
     MASTERY: []
   });
 
-  const [practiceTests, setPracticeTests] = useState<any[]>([]);
+  const [practiceTests, setPracticeTests] = useState<any[]>(DEFAULT_PRACTICE_TESTS);
   const [materials, setMaterials] = useState<any[]>([]);
   const [geminiKeys, setGeminiKeys] = useState<string[]>([]);
 
@@ -393,7 +394,11 @@ function App() {
             const keys = content.find((d: any) => d.id === 'gemini_keys')?.data;
 
             if (course) setCourseContent(course);
-            if (tests) setPracticeTests(tests);
+            if (tests && Array.isArray(tests) && tests.length > 0) {
+              setPracticeTests(tests);
+            } else {
+              setPracticeTests(DEFAULT_PRACTICE_TESTS);
+            }
             if (mats) setMaterials(mats);
             if (keys) {
               const kList = keys.keys || [];

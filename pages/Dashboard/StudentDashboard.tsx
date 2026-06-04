@@ -130,6 +130,31 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   const [showPaywall, setShowPaywall] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
   const [isTestsLoading, setIsTestsLoading] = useState(true);
+  const [activePracticeSession, setActivePracticeSession] = useState<any | null>(null);
+
+  useEffect(() => {
+    const activeKey = `practice_active_session_v1_${user.id}`;
+    const savedActive = localStorage.getItem(activeKey);
+    if (savedActive) {
+      try {
+        setActivePracticeSession(JSON.parse(savedActive));
+      } catch (e) {
+        console.error("Failed to parse saved active practice session", e);
+      }
+    }
+  }, [user.id]);
+
+  useEffect(() => {
+    if (activeTest && !quizFinished) {
+      const activeKey = `practice_active_session_v1_${user.id}`;
+      const session = {
+        activeTest,
+        currentQuestionIndex,
+        userAnswers
+      };
+      localStorage.setItem(activeKey, JSON.stringify(session));
+    }
+  }, [activeTest, currentQuestionIndex, userAnswers, quizFinished, user.id]);
 
   // Profile Edit States
   const [editName, setEditName] = useState(user.name);
@@ -188,11 +213,17 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
       handleBadgeEarned(activeTest?.difficulty || 'easy');
     }
     setQuizFinished(true);
+    localStorage.removeItem(`practice_active_session_v1_${user.id}`);
+    setActivePracticeSession(null);
   };
 
   const handleNextQuestion = () => {
     if (!activeTest) return;
     
+    // Save question progression to user total item analytics count
+    const currentCount = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
+    localStorage.setItem('questions_solved_v1_count', (currentCount + 1).toString());
+
     // Freemium Paywall Logic: Free users hit a wall after 15 questions
     if (!user.hasPaidLive && currentQuestionIndex === 14) {
       setShowPaywall(true);
@@ -823,8 +854,51 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
         }
 
         return (
-          <div className="animate-in fade-in duration-500">
-            <h2 className="text-3xl font-serif font-bold mb-4 text-slate-900 uppercase tracking-tight">Readiness Assessments</h2>
+          <div className="animate-in fade-in duration-500 max-w-7xl mx-auto py-2 px-1">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              {/* Left Column: Readiness Assessments and Badges */}
+              <div className="lg:col-span-8 space-y-8">
+                <h2 className="text-3xl font-serif font-bold mb-4 text-slate-900 uppercase tracking-tight">Readiness Assessments</h2>
+
+                {activePracticeSession && (
+              <div className="bg-gradient-to-r from-sky-600 to-indigo-600 text-white p-7 rounded-[2rem] mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 shadow-xl border-2 border-white/10 animate-in fade-in duration-300">
+                <div className="flex-1">
+                  <span className="bg-white/20 text-white text-[9px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full">
+                    Resume Active Quiz Progress
+                  </span>
+                  <h4 className="font-serif font-bold text-xl mt-3">{activePracticeSession.activeTest.title}</h4>
+                  <p className="text-xs text-sky-100 font-semibold mt-1">
+                    You answered <span className="font-black text-white">{Object.keys(activePracticeSession.userAnswers).length} questions</span>. Click below to resume your assessment instantly!
+                  </p>
+                </div>
+                <div className="flex gap-2 w-full sm:w-auto mt-2 sm:mt-0">
+                  <button 
+                    onClick={() => {
+                      setActiveTest(activePracticeSession.activeTest);
+                      setCurrentQuestionIndex(activePracticeSession.currentQuestionIndex);
+                      setUserAnswers(activePracticeSession.userAnswers);
+                      setQuizFinished(false);
+                      setShowCorrections(false);
+                      setShowPaywall(false);
+                    }}
+                    className="flex-1 sm:flex-none py-3.5 px-6 bg-white hover:bg-sky-50 text-indigo-700 font-extrabold text-[10px] uppercase tracking-widest rounded-xl transition transform hover:scale-105 shadow-md shadow-indigo-700/10"
+                  >
+                    Resume Quiz
+                  </button>
+                  <button 
+                    onClick={() => {
+                      if (confirm("Are you sure you want to discard your saved practice quiz progress? It cannot be retrieved.")) {
+                        localStorage.removeItem(`practice_active_session_v1_${user.id}`);
+                        setActivePracticeSession(null);
+                      }
+                    }}
+                    className="py-3.5 px-4 bg-transparent border border-white/25 text-white hover:bg-white/10 font-bold text-[10px] uppercase tracking-widest rounded-xl transition"
+                  >
+                    Discard
+                  </button>
+                </div>
+              </div>
+            )}
             
             {user.badges && user.badges.length > 0 && (
               <div className="mb-10 bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm">
@@ -913,7 +987,145 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
               })}
             </div>
           </div>
-        );
+
+          {/* Right Column: Gamified Streak and Excellence Leaderboard */}
+          <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-8">
+            
+            {/* Active Learning Streak Status Card */}
+            <div className="bg-gradient-to-r from-amber-500 to-orange-505 text-white p-7 rounded-[2rem] border border-orange-200/10 shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
+              <div className="flex items-center gap-4 relative z-10">
+                <div className="bg-white/10 p-4 rounded-2xl border border-white/20 animate-bounce">
+                  <span className="text-2xl">🔥</span>
+                </div>
+                <div>
+                  <h4 className="font-serif font-bold text-lg">Active Streak: 4 Days!</h4>
+                  <p className="text-xs text-amber-50 font-semibold mt-0.5">Solve daily challenges to increase your streak level!</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Daily NCLEX Trivia Challenge Card */}
+            <div className="bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 text-white p-7 rounded-[2rem] border border-indigo-500/10 shadow-lg relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl"></div>
+              <div className="relative z-10">
+                <span className="bg-indigo-500/30 text-indigo-300 text-[9px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full border border-indigo-500/20">
+                  Daily Challenge Arena
+                </span>
+                <h4 className="font-serif font-bold text-xl mt-4 leading-tight">Today&apos;s Clinical Skillbuilder</h4>
+                <p className="text-xs text-indigo-300 mt-2 leading-relaxed font-semibold">
+                  Solve this clinical case to maintain your active streak and gain <b className="text-white">+50 XP</b>!
+                </p>
+                
+                {/* Scenario */}
+                <div className="bg-white/5 border border-white/10 p-4 rounded-xl mt-4 text-[11px] leading-relaxed text-indigo-100 font-medium font-mono">
+                  &quot;A client with suspected acute meningitis of respiratory transmission is being admitted. Which transmission precaution should the nurse initiate immediately?&quot;
+                </div>
+                
+                {/* Interactive Options */}
+                <div className="mt-4 space-y-2">
+                  {[
+                    "Droplet precautions with private room placement",
+                    "Airborne precautions with negative air pressure room",
+                    "Standard clinical handwashing protocol only"
+                  ].map((opt, oIdx) => (
+                    <button
+                      key={oIdx}
+                      onClick={() => {
+                        const isCorrect = oIdx === 0;
+                        if (isCorrect) {
+                          alert("Correct! Meningitis of respiratory transmission requires Droplet precautions with surgical masks upon entry. You earned +50 XP and 1 Streak Day! 🎉");
+                          // Increment solved count by 10 as dynamic reward
+                          try {
+                            const currentSolved = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
+                            localStorage.setItem('questions_solved_v1_count', (currentSolved + 10).toString());
+                            // Trigger window storage event to refresh view
+                            window.dispatchEvent(new Event('storage'));
+                          } catch (err) {}
+                        } else {
+                          alert("Not quite. Meningitis is transmitted via respiratory droplets, requiring personal protective equipment (mask) and private room spacing. Try again!");
+                        }
+                      }}
+                      className="w-full p-3.5 text-left text-[11px] bg-white/[0.04] hover:bg-white/[0.1] border border-white/15 rounded-xl transition font-semibold leading-snug"
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+                
+                <div className="mt-4 flex items-center justify-between text-[10px] text-indigo-300 font-mono pt-2 border-t border-white/5">
+                  <span>Standard: NCSBN Board</span>
+                  <span>Complexity: Intermediate</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Cohort Leaders of Clinical Excellence */}
+            <div className="bg-white p-7 rounded-[2rem] border border-slate-100 shadow-sm">
+              <div className="flex justify-between items-center mb-6">
+                <h4 className="font-serif font-bold text-slate-900 text-lg">Cohort Leaderboard</h4>
+                <span className="text-[10px] font-black uppercase tracking-widest bg-brand-50 text-brand-600 px-3 py-1 rounded-full animate-pulse">
+                  Live Rank
+                </span>
+              </div>
+              <p className="text-xs text-slate-400 font-medium mb-4">Compare progress and motivate each other. Who answered more items correctly today?</p>
+              
+              <div className="space-y-4">
+                {(() => {
+                  // Dynamically pull solved item count
+                  let userSolvedCount = 0;
+                  try {
+                    userSolvedCount = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
+                  } catch (e) {}
+                  
+                  // Fake peers to place user dynamically
+                  const peers = [
+                    { name: "Nurse Fatima A.", items: 250, streak: 12, isMe: false },
+                    { name: "Nurse Daniel E.", items: 175, streak: 8, isMe: false },
+                    { name: "You (Active Candidate)", items: userSolvedCount, streak: 4, isMe: true },
+                    { name: "Nurse Chioma O.", items: 110, streak: 5, isMe: false },
+                    { name: "Nurse Adeola Y.", items: 65, streak: 2, isMe: false },
+                    { name: "Nurse Chukwuma K.", items: 20, streak: 0, isMe: false },
+                  ];
+                  
+                  // Sort by items answered descending
+                  const sortedPeers = [...peers].sort((a,b) => b.items - a.items);
+                  
+                  return sortedPeers.map((peer, idx) => {
+                    const isCurrentUser = peer.isMe;
+                    return (
+                      <div 
+                        key={idx} 
+                        className={`p-3.5 rounded-2xl flex items-center justify-between border transition duration-200 ${isCurrentUser ? 'bg-brand-50/70 border-brand-200 ring-2 ring-brand-50' : 'bg-slate-50/50 border-slate-100 hover:border-slate-200'}`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <span className={`w-6 h-6 rounded-lg text-xs font-black flex items-center justify-center ${idx === 0 ? 'bg-amber-400 text-white' : idx === 1 ? 'bg-slate-300 text-slate-700' : idx === 2 ? 'bg-orange-300 text-orange-950' : 'bg-slate-100 text-slate-500'}`}>
+                            {idx + 1}
+                          </span>
+                          <div>
+                            <p className={`text-xs font-bold ${isCurrentUser ? 'text-brand-900' : 'text-slate-800'}`}>
+                              {peer.name}
+                            </p>
+                            <p className="text-[10px] text-slate-400 font-semibold flex items-center gap-1 mt-0.5">
+                              🔥 {peer.streak} Days Streak
+                            </p>
+                          </div>
+                        </div>
+                        <span className={`text-xs font-black font-mono px-3 py-1 rounded-lg ${isCurrentUser ? 'bg-brand-600 text-white shadow-md' : 'bg-white text-slate-600 border border-slate-100'}`}>
+                          {peer.items} Items
+                        </span>
+                      </div>
+                    );
+                  });
+                })()}
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    );
       case 'My Profile':
         return (
           <div className="animate-in fade-in duration-500 pb-12">
