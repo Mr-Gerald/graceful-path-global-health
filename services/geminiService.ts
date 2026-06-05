@@ -489,10 +489,21 @@ export const geminiService = {
 
       // Filter out already attempted questions to avoid repetition
       const unattempted = candidates.filter(q => 
-        !avoidConcepts.some(avoid => 
-          q.question.toLowerCase().includes(avoid.toLowerCase().slice(0, 15)) || 
-          avoid.toLowerCase().includes(q.question.toLowerCase().slice(0, 15))
-        )
+        !avoidConcepts.some(avoid => {
+          const cleanAvoid = avoid.trim().toLowerCase();
+          const cleanQ = q.question.trim().toLowerCase();
+          if (cleanAvoid === q.id.toLowerCase()) return true;
+          if (cleanQ === cleanAvoid) return true;
+          // Apply a realistic threshold only if avoid length is sufficient
+          if (cleanAvoid.length >= 35) {
+            return cleanQ.includes(cleanAvoid) || cleanAvoid.includes(cleanQ);
+          }
+          // Fall back to 20 character exact stems if length is medium
+          if (cleanAvoid.length >= 20) {
+            return cleanQ.startsWith(cleanAvoid) || cleanAvoid.startsWith(cleanQ);
+          }
+          return false;
+        })
       );
 
       if (unattempted.length > 0) {
@@ -509,10 +520,19 @@ export const geminiService = {
 
       // If matches of that specific difficulty are exhausted, look for ANY unattempted question in our 30+ question bank
       const generalUnattempted = PERMANENT_QUESTION_BANK.filter(q => 
-        !avoidConcepts.some(avoid => 
-          q.question.toLowerCase().includes(avoid.toLowerCase().slice(0, 15)) || 
-          avoid.toLowerCase().includes(q.question.toLowerCase().slice(0, 15))
-        )
+        !avoidConcepts.some(avoid => {
+          const cleanAvoid = avoid.trim().toLowerCase();
+          const cleanQ = q.question.trim().toLowerCase();
+          if (cleanAvoid === q.id.toLowerCase()) return true;
+          if (cleanQ === cleanAvoid) return true;
+          if (cleanAvoid.length >= 35) {
+            return cleanQ.includes(cleanAvoid) || cleanAvoid.includes(cleanQ);
+          }
+          if (cleanAvoid.length >= 20) {
+            return cleanQ.startsWith(cleanAvoid) || cleanAvoid.startsWith(cleanQ);
+          }
+          return false;
+        })
       );
 
       if (generalUnattempted.length > 0) {

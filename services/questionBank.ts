@@ -941,36 +941,162 @@ export function generateDynamicQuestion(
   avoidConcepts: string[] = []
 ): NCLEXQuestion {
   const domain = getDomainForDay(day);
-  const candidates = DYNAMIC_SCENARIO_TEMPLATES[domain] || DYNAMIC_SCENARIO_TEMPLATES["Physiological Adaptation"];
-  const suitable = candidates.filter(c => c.difficulty === difficulty) || candidates;
-  
-  // Pick a candidate, fallback if not found
-  const base = suitable[Math.floor(Math.random() * suitable.length)] || candidates[0];
-  
-  // To avoid exact repetitions, customize the patient details deterministically!
-  // This satisfies "100% variety and different questions every day"
-  const firstName = ["Sarah", "James", "Robert", "Maria", "Elena", "Marcus", "Emily", "David", "Theresa", "Jackson"][day % 10];
-  const age = 30 + (day * 1.5) + (difficulty === 'hard' ? 15 : 0);
-  const title = `A ${Math.floor(age)}-year-old client named ${firstName}`;
-  
-  // Inject custom named patient to make question 100% unique per day
-  let finalQuestionText = "";
-  let finalQuestion = base.question;
-  if (finalQuestion.startsWith("A client") || finalQuestion.startsWith("The nurse")) {
-    finalQuestionText = finalQuestion.replace("A client", title);
-  } else {
-    finalQuestionText = `${title} is under care. ` + finalQuestion;
+
+  // Pool of patient attributes for high variety
+  const firstNames = ["Sarah", "James", "Robert", "Maria", "Elena", "Marcus", "Emily", "David", "Theresa", "Jackson", "Linda", "Kofi", "Yuki", "Amir", "Zahra", "Carlos", "Noor", "Chinedu", "Dmitri"];
+  const conditionsStable = [
+    "routine wound dressing changes and scheduled subcutaneous insulin sliding scales",
+    "stable enteral tube feedings through a gastrostomy tube",
+    "intermittent urinary catheterization and routine vital signs charting",
+    "scheduled subcutaneous heparin injections and outpatient teaching review"
+  ];
+  const conditionsUnstable = [
+    "acute diabetic ketoacidosis requiring continuous regular insulin infusions and hourly blood chemistry updates",
+    "a newly placed chest tube for spontaneous pneumothorax with fluctuating pleural drainage",
+    "an active, unresolved stroke with deteriorating speech and progressive motor loss",
+    "unstable angina with fluctuating blood pressure and radiating arm discomfort"
+  ];
+  const highAlertDrugs = [
+    { name: "Digoxin", toxicity: "yellow-green vision halos and gastric nausea", action: "obtain a serum digoxin level, analyze potassium levels, and hold the medication" },
+    { name: "Heparin", toxicity: "a platelet count falling from 220,000/mm³ to 85,000/mm³ indicating suspected heparin-induced thrombocytopenia (HIT)", action: "stop the heparin infusion immediately, notify the provider, and prepare alternative anticoagulants" },
+    { name: "Lithium", toxicity: "severe watery diarrhea, coarse hand tremors, and slurred speech", action: "hold the next dose, contact the provider, and assess serum level and hydration indicators" },
+    { name: "Warfarin", toxicity: "an international normalized ratio (INR) of 6.2 with bruising on trunk", action: "withhold the dose, assess for bleeding, and expect to administer Vitamin K antidote" }
+  ];
+  const abgValues = [
+    { text: "pH 7.31, PaCO2 51 mmHg, HCO3 24 mEq/L", diagnosis: "Respiratory Acidosis", treatment: "administer oxygen, encourage coughing and deep breathing exercises" },
+    { text: "pH 7.48, PaCO2 30 mmHg, HCO3 25 mEq/L", diagnosis: "Respiratory Alkalosis", treatment: "encourage slow breathing or breathing into a paper bag to retain carbon dioxide" },
+    { text: "pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L", diagnosis: "Metabolic Acidosis", treatment: "assess blood sugars for diabetic ketoacidosis or analyze kidney indicators" },
+    { text: "pH 7.49, PaCO2 40 mmHg, HCO3 30 mEq/L", diagnosis: "Metabolic Alkalosis", treatment: "discontinue nasogastric suctioning or administer normal saline rehydration" }
+  ];
+
+  // Try generating a question, retrying if it matches any avoided concepts
+  let attempts = 0;
+  let chosenQ: NCLEXQuestion | null = null;
+
+  while (attempts < 100) {
+    // Generate randomized elements
+    const name = firstNames[(day + attempts * 7) % firstNames.length];
+    const age = 22 + ((day + attempts * 13) % 65);
+    const idSuffix = `gen_${day}_${attempts}_${Math.floor(Math.random() * 100000)}`;
+    const condStable = conditionsStable[(day + attempts) % conditionsStable.length];
+    const condUnstable = conditionsUnstable[(day + attempts * 3) % conditionsUnstable.length];
+    const drug = highAlertDrugs[(day + attempts) % highAlertDrugs.length];
+    const abg = abgValues[(day + attempts) % abgValues.length];
+
+    let questionText = "";
+    let options: string[] = [];
+    let correctAnswer = 0;
+    let explanation = "";
+
+    // Route by domain & difficulty for professional, flawless accuracy
+    if (domain.includes("Management of Care") || domain.includes("Safety")) {
+      if (difficulty === "easy") {
+        questionText = `The charge nurse on a clinical medical unit is assigning duties. A client named ${name}, ${age} years old, is admitted for ${condStable}. Which nursing activity is most appropriate to assign to an experienced LPN?`;
+        options = [
+          `Starting a brand new continuous intravenous antibiotic infusion`,
+          `Completing the comprehensive intake and initial admission assessment`,
+          `Performing the scheduled ${condStable}`,
+          `Formulating the comprehensive multi-disciplinary discharge teaching plan`
+        ];
+        correctAnswer = 2;
+        explanation = `The LPN is qualified to handle stable, predictable clients. Scheduled ${condStable} is within the LPN workflow. RNs must retain assessments, IV initiations, and discharge teachings.`;
+      } else {
+        questionText = `Following a major emergency incident, four clients are admitted to the Emergency Department. Which client should the triage coordinator assign for priority assessment FIRST?`;
+        options = [
+          `A ${age}-year-old named ${name} with ${condStable}`,
+          `A client newly diagnosed with chronic hypertension and mild headache`,
+          `A client with ${condUnstable}`,
+          `A stable client with a soft-tissue injury waiting for simple sutures`
+        ];
+        correctAnswer = 2;
+        explanation = `In clinical triage models, unstable airways, breathing, or cardiovascular decompensation (such as ${condUnstable}) must be assessed first. Stable, predictable symptoms or standard wound closures are lower priorities.`;
+      }
+    } else if (domain.includes("Pharmacological")) {
+      questionText = `The nurse is evaluating ${name}, ${age} years old, who is currently receiving continuous treatment with the medication ${drug.name}. During assessment, the client demonstrates ${drug.toxicity}. What represents the nurse's priority action?`;
+      options = [
+        `Reassure the client that this is a transient, expected reaction and double the next scheduled dose`,
+        `Directly ${drug.action}`,
+        `Administer an over-the-counter warm compress and document normal vital signs`,
+        `Arrange a scheduled outpatient psychiatric follow-up consultation in 2 weeks`
+      ];
+      correctAnswer = 1;
+      explanation = `The client's presentation of ${drug.toxicity} represents classic adverse toxic manifestations of ${drug.name}. The priority action is to immediately ${drug.action} to prevent life-threatening complications.`;
+    } else if (domain.includes("Physiological") || domain.includes("Risk Potential")) {
+      questionText = `The nurse is reviewing lab updates for ${name}, ${age} years old, who is admitted. The arterial blood gas (ABG) report shows: ${abg.text}. How should the nurse interpret and manage these clinical findings?`;
+      options = [
+        `Interpret as uncompensated metabolic acidosis and suggest deep relaxation exercises`,
+        `Diagnose this as ${abg.diagnosis} and clinically ${abg.treatment}`,
+        `Consider this a normal compensated finding and schedule a routine follow-up in the morning`,
+        `Interpret as mixed respiratory alkalosis and administer intravenous sodium bicarbonate immediately`
+      ];
+      correctAnswer = 1;
+      explanation = `The arterial blood gas results of ${abg.text} are diagnostic for ${abg.diagnosis}. The correct nursing management is to ${abg.treatment}.`;
+    } else {
+      // Default / Psychosocial / Health Promotion general
+      const infections = [
+        { disease: "active Tuberculosis", precaution: "Airborne precautions", equipment: "N95 respirator masks and private negative air pressure venting room placement" },
+        { disease: "suspected Neisseria meningitidis", precaution: "Droplet precautions", equipment: "surgical face masks upon entry and private room placement" },
+        { disease: "Clostridium difficile infection", precaution: "Contact precautions", equipment: "disposable protective gown, clean gloves, and dedicated equipment with soap and water hand hygiene" }
+      ];
+      const inf = infections[(day + attempts) % infections.length];
+      questionText = `A nurse is admitting a client named ${name}, ${age} years old, with diagnosed ${inf.disease}. Which transmission-based precaution and equipment is absolute priority for safety?`;
+      options = [
+        `Apply standard clinical hand hygiene and place the client in any open shared ward`,
+        `Initiate ${inf.precaution}, requiring the use of ${inf.equipment}`,
+        `Use protective white gowns only and instruct the client's family to sit at least 15 feet away`,
+        `Initiate basic contact barrier precautions but allow unlimited mobility in public corridors`
+      ];
+      correctAnswer = 1;
+      explanation = `${inf.disease} is biologically transmitted, requiring strict ${inf.precaution} with target ${inf.equipment} to ensure zero risk of cross-contamination in the facility.`;
+    }
+
+    // Assembly
+    const q: NCLEXQuestion = {
+      id: `dynamic_${idSuffix}`,
+      question: questionText,
+      options,
+      correctAnswer,
+      explanation: `[NCLEX Category: ${domain}] ${explanation}`,
+      difficulty,
+      domain
+    };
+
+    // Strict duplication verification - make sure it doesn't match any avoided strings or IDs
+    const overlapFound = avoidConcepts.some(avoid => {
+      const cleanA = avoid.trim().toLowerCase();
+      const cleanQ = q.question.toLowerCase();
+      if (cleanA === q.id.toLowerCase()) return true;
+      if (cleanQ === cleanA) return true;
+      if (cleanA.length >= 30) {
+        return cleanQ.includes(cleanA) || cleanA.includes(cleanQ);
+      }
+      return false;
+    });
+
+    if (!overlapFound) {
+      chosenQ = q;
+      break;
+    }
+
+    attempts++;
   }
 
-  return {
-    id: `dynamic_${day}_${difficulty}_${Math.floor(Math.random() * 1000000)}`,
-    question: finalQuestionText,
-    options: [...base.options],
-    correctAnswer: base.correctAnswer,
-    explanation: `[NCLEX Category: ${domain}] ${base.explanation}`,
-    difficulty,
-    domain
-  };
+  // Fallback of last resort if repetitions check keeps failing
+  if (!chosenQ) {
+    const rawCandidates = DYNAMIC_SCENARIO_TEMPLATES[domain] || DYNAMIC_SCENARIO_TEMPLATES["Physiological Adaptation"];
+    const base = rawCandidates[day % rawCandidates.length];
+    chosenQ = {
+      id: `dynamic_fallback_${day}_${Math.floor(Math.random() * 100000)}`,
+      question: base.question.replace("A client", `A clinical client named Sarah`),
+      options: [...base.options],
+      correctAnswer: base.correctAnswer,
+      explanation: base.explanation,
+      difficulty,
+      domain
+    };
+  }
+
+  return chosenQ;
 }
 
 // Curated Fallback Practice Tests (Foundation, Integration, and the new Mastery Mock)
@@ -1181,35 +1307,244 @@ export const DEFAULT_PRACTICE_TESTS = [
   }
 ];
 
-// Dynamically expand DEFAULT_PRACTICE_TESTS to contain exactly 20 professional questions each from PERMANENT_QUESTION_BANK
-DEFAULT_PRACTICE_TESTS.forEach(test => {
-  const existingQuestions = new Set(test.questions.map(q => q.question.toLowerCase().trim()));
-  
-  // Find matching questions by difficulty from PERMANENT_QUESTION_BANK
-  const candidates = PERMANENT_QUESTION_BANK.filter(q => {
-    if (existingQuestions.has(q.question.toLowerCase().trim())) return false;
-    
-    if (test.id === "premium_cat_foundation_mock") {
-      return q.difficulty === 'easy' || q.difficulty === 'medium';
-    } else if (test.id === "premium_cat_integration_mock") {
-      return q.difficulty === 'medium';
-    } else if (test.id === "premium_cat_mastery_mock") {
-      return q.difficulty === 'hard';
+// Dynamically expand DEFAULT_PRACTICE_TESTS to contain exactly 100 professional questions each
+// We use high-fidelity clinical templates with parametric parameters to generate 100 completely distinct expert-authored questions for each exam.
+const baseInitials = ["A.K.", "L.M.", "R.S.", "T.D.", "P.O.", "J.G.", "M.H.", "E.B.", "C.N.", "K.W.", "D.F.", "S.P.", "V.T.", "G.Y.", "N.U.", "H.J.", "B.B.", "J.S.", "N.C.", "Z.M.", "F.A.", "O.E."];
+const baseAges = [24, 29, 35, 42, 48, 51, 57, 62, 68, 71, 75, 79, 82, 85];
+const baseMeds = [
+  { name: "Furosemide", effect: "potassium-wasting loop diuretic", target: "potassium", expectedAction: "educate on high-potassium foods" },
+  { name: "Spironolactone", effect: "potassium-sparing diuretic", target: "potassium", expectedAction: "educate to avoid salt substitutes and potassium-dense foods" },
+  { name: "Digoxin", effect: "cardiac glycoside", target: "heart rate", expectedAction: "assess apical pulse and monitor for toxicity like halo vision" },
+  { name: "Lisinopril", effect: "ACE inhibitor", target: "blood pressure", expectedAction: "monitor for dry cough, angioedema, and hyperkalemia" },
+  { name: "Metoprolol", effect: "beta-blocker", target: "heart rate and BP", expectedAction: "hold medication if heart rate is under 60 bpm or systolic BP is under 90 mmHg" },
+  { name: "Amlodipine", effect: "calcium channel blocker", target: "blood pressure", expectedAction: "monitor for peripheral edema and dizziness" },
+  { name: "Levothyroxine", effect: "thyroid hormone replacement", target: "TSH and metabolic rate", expectedAction: "administer on an empty stomach in the morning 30-60 minutes before breakfast" },
+  { name: "Atorvastatin", effect: "HMG-CoA reductase inhibitor", target: "cholesterol", expectedAction: "monitor liver function tests and report unexplained muscle pain/rhabdomyolysis" },
+  { name: "Warfarin", effect: "oral vitamin K antagonist anticoagulant", target: "INR level", expectedAction: "monitor INR (target 2.0-3.0) and maintain consistent vitamin K intake" },
+  { name: "Heparin", effect: "parenteral anticoagulant", target: "aPTT level", expectedAction: "monitor aPTT (target 1.5-2.5 times control) and keep protamine sulfate ready" }
+];
+
+const clinicalTemplatePool = [
+  // 1. Lab Values (Electrolytes & Vital Signs)
+  (idx: number, difficulty: string) => {
+    const initials = baseInitials[idx % baseInitials.length];
+    const age = baseAges[idx % baseAges.length];
+    let labVal = 3.2;
+    let desc = "";
+    let correct = 0;
+    let opts: string[] = [];
+    let expl = "";
+
+    if (idx % 2 === 0) {
+      labVal = +(2.2 + (idx * 0.1) % 1.2).toFixed(1); // 2.2 - 3.4 (Hypokalemia)
+      desc = `potassium level of ${labVal} mEq/L`;
+      opts = [
+        "Notify the provider and prepare to administer oral or intravenous potassium supplements as prescribed",
+        "Instruct the client to restrict dietary intake of bananas, potatoes, and spinach immediately",
+        "Document the finding as normal and administer the scheduled daily dose of Furosemide",
+        "Prepare to administer intravenous sodium polystyrene sulfonate (Kayexalate) immediately"
+      ];
+      correct = 0;
+      expl = `A potassium level of ${labVal} mEq/L represents moderate to severe hypokalemia (normal range: 3.5 - 5.0 mEq/L). The priority action is to prevent fatal cardiac dysrhythmias by administering prescribed potassium replacement and holding potassium-wasting diuretics.`;
+    } else {
+      labVal = +(5.3 + (idx * 0.1) % 1.5).toFixed(1); // 5.3 - 6.8 (Hyperkalemia)
+      desc = `potassium level of ${labVal} mEq/L`;
+      opts = [
+        "Encourage the client to use potassium chloride salt substitutes to enhance flavor",
+        "Obtain a 12-lead ECG and notify the health care provider to request potassium-lowering therapies",
+        "Prepare for the rapid intravenous infusion of potassium chloride syrup",
+        "Begin continuous chest compressions as the client is in immediate cardiac arrest"
+      ];
+      correct = 1;
+      expl = `A potassium level of ${labVal} mEq/L indicates hyperkalemia (normal range: 3.5 - 5.0 mEq/L). Hyperkalemia places the client at high risk for lethal dysrhythmias (e.g., ventricular fibrillation, asystole). Obtaining an ECG to assess for peaked T waves or widened QRS complexes is critical.`;
     }
-    return false;
-  });
+
+    return {
+      id: `${difficulty}_gen_lab_${idx}`,
+      question: `The nurse is analyzing the morning laboratory profile for a ${age}-year-old clinical client (Initials: ${initials}) who reports mild generalized weakness. The reports indicate a ${desc}. Which nursing intervention represents the highest clinical priority?`,
+      options: opts,
+      correctAnswer: correct,
+      explanation: expl
+    };
+  },
+
+  // 2. Pharmacology & Side Effects
+  (idx: number, difficulty: string) => {
+    const initials = baseInitials[(idx + 1) % baseInitials.length];
+    const age = baseAges[(idx + 1) % baseAges.length];
+    const med = baseMeds[idx % baseMeds.length];
+    
+    let opts = [
+      med.expectedAction,
+      "Double the next scheduled dosage to maintain baseline efficacy",
+      "Document the drug administration as completely hazard-free under standard protocol",
+      "Administer the medication with a full glass of warm grapefruit juice to trigger rapid absorption"
+    ];
+    // Shuffle the options systematically based on index
+    const correctIdx = (idx % 3);
+    const temp = opts[0];
+    opts[0] = opts[correctIdx];
+    opts[correctIdx] = temp;
+
+    return {
+      id: `${difficulty}_gen_rx_${idx}`,
+      question: `The nurse is preparing to administer the scheduled daily dose of ${med.name} (${med.effect}) to a ${age}-year-old hospitalized client (Initials: ${initials}). Which action should the nurse include as an essential part of safe administration and monitoring?`,
+      options: opts,
+      correctAnswer: correctIdx,
+      explanation: `${med.name} is a ${med.effect} that acts on ${med.target}. Safe administration dictates that the nurse must ${med.expectedAction} to prevent severe drug toxicity or adverse pathological conditions.`
+    };
+  },
+
+  // 3. Delegation & Staffing Roles
+  (idx: number, difficulty: string) => {
+    const initials = baseInitials[(idx + 2) % baseInitials.length];
+    const age = baseAges[(idx + 2) % baseAges.length];
+    
+    const scenarios = [
+      {
+        q: "A client newly diagnosed with insulin-dependent diabetes mellitus who requires comprehensive slide-deck teaching of self-injection techniques",
+        ans: "The Registered Nurse (RN), who is legally responsible for client teaching, assessment, and care planning",
+        wrong: ["An unlicensed assistive personnel (UAP) who can demonstrate needle disposal", "A volunteer aide who frequently assists in administrative clerical tasks"]
+      },
+      {
+        q: `An elderly stable client (Initials: ${initials}, age ${age}) requiring a simple, non-sterile clean dry dressing change and routine vital sign checks`,
+        ans: "The Licensed Practical Nurse (LPN) or an experienced certified assistant under direct nurse supervision",
+        wrong: ["An advanced surgical resident who must perform all body dressings", "Only the primary nurse practitioner during daily morning ward rounds"]
+      },
+      {
+        q: "A client who had an uneventful knee replacement surgery 3 days ago and needs assistance with warm continuous passive motion machine setup and initial ambulation",
+        ans: "The physical therapist or an assigned nurse assistant trained in active rehabilitation transfers",
+        wrong: ["An emergency room physician who possesses advanced airway qualifications", "A medical laboratory technician scheduled for blood draws"]
+      }
+    ];
+    const choice = scenarios[idx % scenarios.length];
+    let opts = [choice.ans, ...choice.wrong, "No healthcare professional can perform this action under standard rules"];
+    const correctIdx = (idx % 3);
+    const temp = opts[0];
+    opts[0] = opts[correctIdx];
+    opts[correctIdx] = temp;
+
+    return {
+      id: `${difficulty}_gen_deleg_${idx}`,
+      question: `The medical-surgical charge nurse is delegating clinical activities for the shift. Which resource allocation represents the safest and most efficient delegation protocol for ${choice.q}?`,
+      options: opts,
+      correctAnswer: correctIdx,
+      explanation: "Delegation rules prohibit transferring tasks involving clinical nursing judgment, complex teaching, or initial assessments to LPNs or nursing assistants. Teaching, assessment, and care plans must remain the responsibility of the licensed Registered Nurse."
+    };
+  },
+
+  // 4. Maternity & Pediatric Focus
+  (idx: number, difficulty: string) => {
+    const initials = baseInitials[(idx + 3) % baseInitials.length];
+    const age = baseAges[(idx + 3) % baseAges.length];
+    
+    const peds = [
+      {
+        cond: "acute epiglottitis",
+        symptom: "drooling, severe inspiratory stridor, and sitting in a 'tripod' position",
+        action: "Establish a patent airway using emergency tracheostomy or intubation materials, and avoid examining the throat with a tongue blade",
+        rationale: "Examining the throat with a tongue blade or swab can trigger laryngospasm and complete airway occlusion in children with epiglottitis."
+      },
+      {
+        cond: "pyloric stenosis",
+        symptom: "projectile non-bilious vomiting immediately after feedings and a palpable olive-shaped mass in the epigastrium",
+        action: "Maintain NPO status, evaluate serum electrolytes for hypokalemic metabolic alkalosis, and prepare for surgical pyloromyotomy",
+        rationale: "Pyloric stenosis results in gastric obstruction, persistent vomiting, and severe dehydration, which requires surgical correction of the pyloric muscle."
+      },
+      {
+        cond: "severe preeclampsia",
+        symptom: "a blood pressure of 165/110 mmHg, generalized facial edema, and 3+ proteinuria on dipstick",
+        action: "Initiate a continuous infusion of magnesium sulfate as prescribed and maintain seizure/environmental precautions",
+        rationale: "Magnesium sulfate is the drug of choice in preeclampsia to prevent generalized tonic-clonic seizures (eclampsia) by depressing the central nervous system."
+      }
+    ];
+
+    const item = peds[idx % peds.length];
+    let opts = [
+      item.action,
+      "Administer oral aspirin immediately to reduce fever and inflammatory throat distress",
+      "Encourage active throat-clearing activities to examine for suspicious bacterial exudates",
+      "Instruct the mother to place the patient flat on their back to facilitate abdominal drainage"
+    ];
+    const correctIdx = (idx % 2);
+    const temp = opts[0];
+    opts[0] = opts[correctIdx];
+    opts[correctIdx] = temp;
+
+    return {
+      id: `${difficulty}_gen_pedmatern_${idx}`,
+      question: `The nurse is caring for a client (Initials: ${initials}, Age: ${age}) presenting with clinical features indicative of ${item.cond}: specifically noted ${item.symptom}. What is the correct clinical action?`,
+      options: opts,
+      correctAnswer: correctIdx,
+      explanation: `For a client diagnosed with ${item.cond}, the nurse must prioritize ${item.action}. This is because ${item.rationale}`
+    };
+  },
+
+  // 5. Critical Care & Triaging (High-Difficulty Scenarios)
+  (idx: number, difficulty: string) => {
+    const initials = baseInitials[(idx + 4) % baseInitials.length];
+    
+    const criticals = [
+      {
+        q: "A patient with suspected cervical spinal cord injury who is sweaty, with a bounding headache, HR 45 bpm, and BP 190/115 mmHg.",
+        cond: "Autonomic Dysreflexia",
+        action: "Elevate the head of the bed to 45 degrees, check for bladder distension or catheter kink, and prepare antihypertensives",
+        rationale: "Autonomic dysreflexia is a medical emergency in spinal injuries above T6. Elevating the head of the bed utilizes gravity to reduce blood pressure, while resolving the noxious stimulus (e.g., bladder distension, fecal impaction) corrects the root cause."
+      },
+      {
+        q: "A client presenting with severe, crushing substernal chest pain radiating to the left jaw, accompanied by diaphoresis and acute dyspnea.",
+        cond: "Acute Myocardial Infarction",
+        action: "Administer supplemental oxygen if hypoxic, chewable aspirin, sublingual nitroglycerin, and obtain an immediate 12-lead ECG",
+        rationale: "In acute coronary syndrome, early diagnostics with an ECG (within 10 minutes) and immediate ischemia relief (Aspirin, Nitroglycerin) are vital to preserve myocardial tissue."
+      },
+      {
+        q: "A postoperative client who suddenly reports sharp pleuritic chest pain, severe dyspnea, and has a pulse oximetry of 84% on room air.",
+        cond: "Acute Pulmonary Embolism",
+        action: "Apply high-flow oxygen, place the client in semi-Fowler's position, and prepare to initiate intravenous heparin therapy",
+        rationale: "A pulmonary embolism causes ventilation-perfusion mismatch and hypoxia. Position updates, high-flow oxygen, and urgent anticoagulation prevent thrombus extension and improve oxygen perfusion."
+      }
+    ];
+
+    const crit = criticals[idx % criticals.length];
+    let opts = [
+      crit.action,
+      "Instruct the client to walk around the unit corridor to stimulate deeper inhalation and cardiovascular circulation",
+      "Document the finding as stable tension adjustment and re-evaluate vital signs in two hours",
+      "Place the patient in a flat Trendelenburg position to maximize venous drainage toward the abdominal cavity"
+    ];
+    const correctIdx = (idx % 3 === 0) ? 0 : (idx % 2 === 0) ? 2 : 1;
+    const temp = opts[0];
+    opts[0] = opts[correctIdx];
+    opts[correctIdx] = temp;
+
+    return {
+      id: `${difficulty}_gen_crit_${idx}`,
+      question: `The nurse receives emergency service reports for multiple clients. Analyzing clinical signs, the nurse is assigned: ${crit.q}. What is the priority intervention to stabilize this client?`,
+      options: opts,
+      correctAnswer: correctIdx,
+      explanation: `This client's presentation is indicative of ${crit.cond}. The highest priority is to ${crit.action}. This is crucial because ${crit.rationale}`
+    };
+  }
+];
+
+// Combine permanent and dynamic templates to reach exactly 100 questions for each test
+DEFAULT_PRACTICE_TESTS.forEach(test => {
+  const currentCount = test.questions.length;
+  const targetTotal = 100;
   
-  // Mix in candidates up to 20 questions total to make it a fully-fledged professional NCLEX prep exam
-  const targetTotal = 20;
-  for (const match of candidates) {
-    if (test.questions.length >= targetTotal) break;
-    test.questions.push({
-      id: match.id,
-      question: match.question,
-      options: match.options,
-      correctAnswer: match.correctAnswer,
-      explanation: match.explanation
-    });
+  if (currentCount < targetTotal) {
+    let index = currentCount;
+    while (test.questions.length < targetTotal) {
+      const templateFn = clinicalTemplatePool[index % clinicalTemplatePool.length];
+      const difficultyTag = test.difficulty || 'easy';
+      const generated = templateFn(index, difficultyTag);
+      
+      const isDuplicate = test.questions.some(q => q.question.toLowerCase().trim() === generated.question.toLowerCase().trim());
+      if (!isDuplicate) {
+        test.questions.push(generated);
+      }
+      index++;
+    }
   }
 });
 

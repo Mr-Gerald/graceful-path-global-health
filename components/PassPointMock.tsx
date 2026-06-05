@@ -160,6 +160,44 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
     setErrorText(null);
   };
 
+  const handleRestartCurrentExam = () => {
+    if (!selectedDay) return;
+    const activeKey = `passpoint_active_v1_${user.id}_day_${selectedDay}`;
+    localStorage.removeItem(activeKey);
+    localStorage.removeItem(`passpoint_active_session_v1_${user.id}`);
+    setActiveSession(null);
+    setQuestions([]);
+    setCurrQNum(1);
+    setCurrDifficulty('medium');
+    setUserAnswers({});
+    setSelectedOpt(null);
+    setAbilityTheta(0);
+    setTimerVal(9000);
+    setIsTimerActive(true);
+    setLoadingQuestion(true);
+    setErrorText(null);
+    
+    setTimeout(() => {
+      const targetDay = PASSPOINT_DAYS.find(d => d.day === selectedDay);
+      const topic = targetDay?.topic || "Comprehensive NCLEX Practice";
+      const domain = targetDay?.domain || "Physiological Adaptation";
+      geminiService.generatePassPointQuestion(
+        selectedDay,
+        topic,
+        'medium',
+        domain,
+        []
+      ).then(nextQ => {
+        setQuestions([nextQ]);
+        setLoadingQuestion(false);
+      }).catch(err => {
+        console.error("Restart question generation failed:", err);
+        setErrorText("Failed to initialize clean restart. Please check internet connection.");
+        setLoadingQuestion(false);
+      });
+    }, 50);
+  };
+
   const startDayExam = async (dayNum: number) => {
     setSelectedDay(dayNum);
     resetSimulatorState();
@@ -265,7 +303,7 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
       const domain = targetDay?.domain || "Physiological Adaptation";
 
       // Collect existing concepts to deny repeats
-      const topicsToAvoid = questions.map(q => q.question.slice(0, 30));
+      const topicsToAvoid = questions.map(q => q.id || q.question);
 
       const nextQ = await geminiService.generatePassPointQuestion(
         selectedDay,
@@ -283,12 +321,13 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
         const targetDay = PASSPOINT_DAYS.find(d => d.day === selectedDay);
         const topic = targetDay?.topic || "Comprehensive NCLEX Practice";
         const domain = targetDay?.domain || "Physiological Adaptation";
+        const topicsToAvoid = questions.map(q => q.id || q.question);
         const nextQ = await geminiService.generatePassPointQuestion(
           selectedDay,
           topic,
           nextDifficulty,
           domain,
-          []
+          topicsToAvoid
         );
         setQuestions(prev => [...prev, nextQ]);
         setLoadingQuestion(false);
@@ -693,8 +732,8 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
               </h3>
             </div>
             
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2.5 bg-slate-900 border border-slate-800 py-2 px-4 rounded-xl">
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5 bg-slate-900 border border-slate-800 py-2 px-3 rounded-xl">
                 <Clock className="w-4 h-4 text-slate-400" />
                 <span className="font-mono text-sm tracking-widest font-bold">
                   {formatTimerValue(timerVal)}
@@ -703,11 +742,22 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
               <button 
                 onClick={() => {
                   setConfirmConfig({
+                    message: "Are you sure you want to restart this exam from scratch? Your current answers for Day " + selectedDay + " will be reset.",
+                    onConfirm: handleRestartCurrentExam
+                  });
+                }}
+                className="py-2.5 px-3 bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 font-black text-[10px] uppercase tracking-widest rounded-xl flex items-center gap-1.5 transition"
+              >
+                <RefreshCw className="w-3 h-3" /> Restart Exam
+              </button>
+              <button 
+                onClick={() => {
+                  setConfirmConfig({
                     message: "Are you sure you want to end this exam early? If you've answered at least 15 items, your progress will save & generate diagnostic rationales.",
                     onConfirm: () => handleCompleteExam(false)
                   });
                 }}
-                className="py-2.5 px-4 bg-red-600/10 hover:bg-red-600 hover:text-white border border-red-600/20 text-red-400 font-black text-[10px] uppercase tracking-widest rounded-xl transition"
+                className="py-2.5 px-3 bg-red-600/10 hover:bg-red-600 hover:text-white border border-red-600/20 text-red-400 font-extrabold text-[10px] uppercase tracking-widest rounded-xl transition"
               >
                 Close Exam
               </button>

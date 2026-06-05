@@ -6,7 +6,7 @@ import {
   LayoutDashboard, BookOpen, Video, FileText, Calendar, Award, BarChart3, ChevronRight, 
   PlayCircle, Clock, ChevronLeft, Sparkles, ExternalLink, LogOut, Bell, CheckCircle2, 
   Lock, Download, Star, MessageCircle, X, Menu, Trash2, Heart, ShieldCheck, Zap, Globe, CreditCard,
-  User as UserIcon, Camera, Key, Mail, Phone, AtSign, Edit2, Upload as UploadIcon, ChevronDown, CheckCircle, AlertCircle, Info
+  User as UserIcon, Camera, Key, Mail, Phone, AtSign, Edit2, Upload as UploadIcon, ChevronDown, CheckCircle, AlertCircle, Info, RefreshCw
 } from 'lucide-react';
 import { User, PracticeTest, QuizQuestion, Notification, Module, Lesson, NavLink, GlobalLinks, BrandingAssets } from '../../types';
 import { Logo } from '../../components/Layout';
@@ -29,6 +29,93 @@ interface StudentDashboardProps {
   onUpdateProfile: () => void;
   branding?: BrandingAssets;
 }
+
+const DAILY_CHALLENGE_POOL = [
+  {
+    prefix: "Clinical Case Study: Transmissions",
+    question: "A client with suspected acute bacterial meningitis of respiratory transmission is being admitted. Which transmission precaution should the nurse initiate immediately?",
+    options: [
+      "Droplet precautions with private room placement",
+      "Airborne precautions with negative air pressure venting",
+      "Standard client contact precaution and gloves only",
+      "Protective isolation with HEPA filtration mask"
+    ],
+    correctAnswer: 0,
+    explanation: "Meningitis caused by Neisseria meningitidis or Haemophilus influenzae is transmitted via large respiratory droplets. The nurse must implement droplet precautions immediately, requiring surgical masks upon entering the room and private room placement. Airborne precautions are reserved for pathogens like tuberculosis (TB), which are carried on small nuclei."
+  },
+  {
+    prefix: "Pharmacology & IV Safety",
+    question: "The nurse is reviewing orders for a client admitted with acute decompensated heart failure and severe peripheral edema. Which prescription should the nurse clarify with the primary care provider?",
+    options: [
+      "Intravenous Furosemide 40 mg twice daily",
+      "Continuous bedside cardiac rhythm telemetry monitoring",
+      "Continuous infusion of 0.9% Normal Saline at 125 mL/hour",
+      "Daily mornings weights prior to breakfast with strict charting"
+    ],
+    correctAnswer: 2,
+    explanation: "Administering a continuous infusion of 0.9% Normal Saline (isotonic fluid) at a rapid rate of 125 mL/hour to a client experiencing acute decompensated heart failure will cause severe volume overload, worsening pulmonary congestion. Loop diuretics and fluid restrictions are standard treatments instead."
+  },
+  {
+    prefix: "Clinical Chemistry Indicators",
+    question: "The nurse reviews laboratory values for an adult client receiving oral lithium carbonate for bipolar disorder and notices a serum lithium level of 2.2 mEq/L. Which symptom should the nurse expect to find?",
+    options: [
+      "Mild fine hand tremors and occasional dry mouth",
+      "Severe coarse muscle tremors, abdominal pain, diarrhea, and slurred speech",
+      "Sudden severe hypotension, rapid weight gain, and lower leg hematoma",
+      "Profuse generalized sweating, acute fever, and lead-pipe rigidity"
+    ],
+    correctAnswer: 1,
+    explanation: "A lithium level of 2.2 mEq/L indicates severe lithium toxicity (therapeutic range is 0.6 to 1.2 mEq/L). Signs of toxic levels include severe coarse tremors, persistent vomiting, severe watery diarrhea, ataxia, and slurred speech. Mild hand tremors are normal side effects within the therapeutic range."
+  },
+  {
+    prefix: "Orthopedic Care Management",
+    question: "A nurse is caring for a client who underwent a total hip arthroplasty (posterior approach) 12 hours ago. Which positioning intervention is essential to prevent prosthetic dislocation?",
+    options: [
+      "Keep the affected leg in a position of adduction using a foam pillow",
+      "Maintain the affected leg in abduction using an abductor wedge or pillow between the legs",
+      "Ensure the head of the bed is elevated to a full 90-degree angle during meals",
+      "Encourage the client to cross their legs at the ankles for comfortable positioning"
+    ],
+    correctAnswer: 1,
+    explanation: "Following total hip arthroplasty via a posterior approach, the leg must be kept in abduction to keep the femoral head securely within the acetabular cup. Adduction, leg-crossing, and flexing the hip past 90 degrees are strictly contraindicated as they heavily increase dislocation risk."
+  },
+  {
+    prefix: "Endocrine Bedside Risks",
+    question: "The nurse is preparing to care for a client returning to the surgical floor after a total thyroidectomy. Which bedside monitoring equipment is the absolute priority for the nurse to verify?",
+    options: [
+      "A sterile abdominal paracentesis tray",
+      "An emergency tracheostomy set and a functioning calcium gluconate vial",
+      "An automated external cardiac defibrillator (AED)",
+      "An incentive spirometer and high-flow reservoir oxygen mask"
+    ],
+    correctAnswer: 1,
+    explanation: "Following a thyroidectomy, major clinical risks include acute respiratory distress from tracheal compression (from surgical hemorrhage) and hypocalcemic tetany (spasm) due to accidental trauma or removal of the parathyroid glands. Bedside safety requires a tracheostomy set for emergency airway access, and IV calcium gluconate to immediately reverse tetany."
+  },
+  {
+    prefix: "Maternal Health & Safety",
+    question: "A pregnant client at 34 weeks gestation is admitted with severe preeclampsia. The nurse is administering an intravenous infusion of magnesium sulfate. Which assessment finding requires immediate halting of the infusion?",
+    options: [
+      "A deep tendon reflex score of 1+ (hyporeflexia) or absent reflexes",
+      "A respiratory rate of 14 breaths/minute and mild facial flushing",
+      "A serum magnesium level of 5.5 mEq/L",
+      "Urine output totaling 120 mL over the last 4 hours"
+    ],
+    correctAnswer: 0,
+    explanation: "Magnesium sulfate is a central nervous system depressant used to prevent seizures in preeclampsia. Loss of deep tendon reflexes (hyporeflexia) is the earliest cardinal sign of magnesium toxicity, which can quickly lead to respiratory depression and cardiac arrest. If reflexes are diminished/absent, the infusion must be stopped."
+  },
+  {
+    prefix: "Pediatric Triage Management",
+    question: "A child diagnosed with acute spasmodic croup is brought to the clinic. Which non-pharmacological caregiver advice should the nurse reinforce to manage acute stridor episodes at home?",
+    options: [
+      "Place the child in a room with a hot, humid steam-filled shower, or expose them to cool night air",
+      "Administer warm honey water immediately to coat the laryngeal structures",
+      "Encourage rapid fluid intake of acidic citrus juices",
+      "Have the child lie in a completely flat, prone position to expand respiratory muscles"
+    ],
+    correctAnswer: 0,
+    explanation: "Spasmodic croup involves sudden laryngeal spasms. Breathing in warm, moist steam (e.g. from a running shower) or exposure to cold, crisp ambient air helps rapidly relax laryngeal spasms and reduce mucosal edema. Honey is contraindicated in children under 1 year of age due to botulism risks."
+  }
+];
 
 const getRelativeTime = (dateInput: string | Date) => {
   try {
@@ -136,8 +223,50 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   const [dailyChallengeSelected, setDailyChallengeSelected] = useState<number | null>(null);
   const [dailyChallengeFeedback, setDailyChallengeFeedback] = useState<{ isCorrect: boolean; text: string } | null>(null);
   const [dailyChallengeCompleted, setDailyChallengeCompleted] = useState<boolean>(() => {
-    return localStorage.getItem(`daily_completed_v1_${user.id}`) === 'true';
+    const currentUTCDay = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+    const storedCompletedDay = localStorage.getItem(`daily_completed_day_v1_${user.id}`);
+    return storedCompletedDay === String(currentUTCDay);
   });
+
+  useEffect(() => {
+    const currentUTCDay = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+    const storedCompletedDay = localStorage.getItem(`daily_completed_day_v1_${user.id}`);
+    if (storedCompletedDay !== String(currentUTCDay)) {
+      setDailyChallengeCompleted(false);
+      setDailyChallengeSelected(null);
+      setDailyChallengeFeedback(null);
+    } else {
+      setDailyChallengeCompleted(true);
+      const challengeIdx = currentUTCDay % DAILY_CHALLENGE_POOL.length;
+      const challenge = DAILY_CHALLENGE_POOL[challengeIdx];
+      setDailyChallengeSelected(challenge.correctAnswer);
+      setDailyChallengeFeedback({
+        isCorrect: true,
+        text: `Correct! ${challenge.explanation}`
+      });
+    }
+  }, [user.id]);
+
+  // Mobile Tabs for responsive Practice Hub layout
+  const [practiceTab, setPracticeTab] = useState<'exams' | 'arena'>('exams');
+  const [leaderboardUsers, setLeaderboardUsers] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchStudentsForRank = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('profiles')
+          .select('id, name, username, progress, badges')
+          .eq('role', 'STUDENT');
+        if (data) {
+          setLeaderboardUsers(data);
+        }
+      } catch (err) {
+        console.error("Failed to load students for live leaderboard:", err);
+      }
+    };
+    fetchStudentsForRank();
+  }, [user.progress, user.badges]);
 
   useEffect(() => {
     const activeKey = `practice_active_session_v1_${user.id}`;
@@ -723,7 +852,19 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button onClick={() => setShowCorrections(true)} className="flex-1 bg-brand-600 text-white px-8 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-brand-700 transition">View Corrections</button>
-                    <button onClick={() => setActiveTest(null)} className="flex-1 bg-slate-900 text-white px-8 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-black transition">Back to Hub</button>
+                    <button 
+                      onClick={() => {
+                        setCurrentQuestionIndex(0);
+                        setUserAnswers({});
+                        setQuizFinished(false);
+                        setShowCorrections(false);
+                        localStorage.removeItem(`practice_active_session_v1_${user.id}`);
+                      }} 
+                      className="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 px-8 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-md transition"
+                    >
+                      <RefreshCw className="w-3.5 h-3.5 inline-block mr-1.5" /> Retake / Restart
+                    </button>
+                    <button onClick={() => setActiveTest(null)} className="flex-grow-0 sm:flex-1 bg-slate-900 text-white px-8 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-black transition">Back to Hub</button>
                   </div>
                 </div>
 
@@ -844,7 +985,22 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
           return (
             <div className="animate-in fade-in duration-500 max-w-4xl mx-auto py-6">
               <header className="flex items-center justify-between mb-12">
-                 <button onClick={() => setActiveTest(null)} className="p-3 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition"><X className="w-5 h-5 text-slate-500" /></button>
+                 <div className="flex items-center gap-2">
+                    <button onClick={() => setActiveTest(null)} className="p-3 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition" title="Close"><X className="w-5 h-5 text-slate-500" /></button>
+                    <button 
+                      onClick={() => {
+                        if (confirm("Are you sure you want to restart this practice exam from question 1? All current answers will be reset.")) {
+                          setCurrentQuestionIndex(0);
+                          setUserAnswers({});
+                          setQuizFinished(false);
+                          localStorage.removeItem(`practice_active_session_v1_${user.id}`);
+                        }
+                      }}
+                      className="flex items-center gap-1.5 p-3 bg-white border border-slate-200 text-slate-600 rounded-xl hover:bg-slate-50 font-bold text-xs uppercase tracking-wider transition"
+                    >
+                      <RefreshCw className="w-3.5 h-3.5" /> Restart
+                    </button>
+                 </div>
                  <div className="text-center">
                     <p className="text-[10px] font-black text-brand-600 uppercase tracking-widest mb-1">{activeTest.title}</p>
                     <div className="flex items-center gap-2">
@@ -918,12 +1074,15 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
               </div>
               <button 
                 onClick={() => {
-                  const arenaCard = document.querySelector('.Daily-Challenge-Arena');
-                  if (arenaCard) {
-                    arenaCard.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-                  }
+                  setPracticeTab('arena');
+                  setTimeout(() => {
+                    const arenaCard = document.querySelector('.Daily-Challenge-Arena');
+                    if (arenaCard) {
+                      arenaCard.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                    }
+                  }, 150);
                 }}
                 className="bg-slate-900 hover:bg-black text-white text-[10px] uppercase tracking-widest font-black px-5 py-3.5 rounded-xl transition shadow-md shrink-0 w-full md:w-auto text-center"
               >
@@ -931,9 +1090,28 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
               </button>
             </div>
 
+            {/* Mobile Tab Switcher */}
+            <div className="flex lg:hidden bg-slate-100 p-1.5 rounded-2xl mb-8 border border-slate-200/50">
+              <button
+                onClick={() => setPracticeTab('exams')}
+                className={`flex-1 py-3 text-center rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-300 ${practiceTab === 'exams' ? 'bg-white text-slate-900 shadow-md scale-[1.02]' : 'text-slate-400 hover:text-slate-600'}`}
+              >
+                📝 Exams & Stats
+              </button>
+              <button
+                onClick={() => setPracticeTab('arena')}
+                className={`flex-1 py-3 text-center rounded-xl font-bold text-xs uppercase tracking-wider transition-all duration-300 relative ${practiceTab === 'arena' ? 'bg-white text-slate-900 shadow-md scale-[1.02]' : 'text-slate-400 hover:text-slate-600'}`}
+              >
+                🔥 Arena & Live Rank
+                {!dailyChallengeCompleted && (
+                  <span className="absolute top-2.5 right-4 w-2 h-2 bg-rose-500 rounded-full animate-ping"></span>
+                )}
+              </button>
+            </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               {/* Left Column: Readiness Assessments and Badges */}
-              <div className="lg:col-span-8 space-y-8">
+              <div className={`lg:col-span-8 space-y-8 ${practiceTab === 'exams' ? 'block' : 'hidden lg:block'}`}>
                 
                 {/* NCLEX Board Eligibility Scorecard Tracker */}
                 <div className="bg-white p-7 sm:p-8 rounded-[3rem] border border-slate-100 shadow-sm mb-6 overflow-hidden relative">
@@ -1157,7 +1335,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
           </div>
 
           {/* Right Column: Gamified Streak and Excellence Leaderboard */}
-          <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-8">
+          <div className={`lg:col-span-4 space-y-8 lg:sticky lg:top-8 ${practiceTab === 'arena' ? 'block' : 'hidden lg:block'}`}>
             
             {/* Active Learning Streak Status Card */}
             <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white p-7 rounded-[2rem] border border-orange-200/10 shadow-lg relative overflow-hidden">
@@ -1174,110 +1352,124 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             </div>
 
             {/* Daily NCLEX Trivia Challenge Card */}
-            <div className="Daily-Challenge-Arena bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 text-white p-7 rounded-[2rem] border border-indigo-500/10 shadow-lg relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl"></div>
-              <div className="relative z-10">
-                <span className="bg-indigo-500/30 text-indigo-300 text-[9px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full border border-indigo-500/20">
-                  Daily Challenge Arena
-                </span>
-                <h4 className="font-serif font-bold text-xl mt-4 leading-tight">Today&apos;s Clinical Skillbuilder</h4>
-                <p className="text-xs text-indigo-300 mt-2 leading-relaxed font-semibold">
-                  Solve this clinical case to maintain your active streak and gain <b className="text-white">+50 XP</b>!
-                </p>
-                
-                {/* Scenario */}
-                <div className="bg-white/5 border border-white/10 p-4 rounded-xl mt-4 text-[11px] leading-relaxed text-indigo-100 font-medium font-mono">
-                  &quot;A client with suspected acute meningitis of respiratory transmission is being admitted. Which transmission precaution should the nurse initiate immediately?&quot;
-                </div>
-                
-                {/* Interactive Options */}
-                {dailyChallengeCompleted ? (
-                  <div className="bg-emerald-500/15 border border-emerald-500/30 p-5 rounded-2xl mt-4 text-center">
-                    <CheckCircle className="w-8 h-8 text-emerald-400 mx-auto mb-2 animate-bounce" />
-                    <p className="text-xs text-emerald-200 font-bold">Excellent work! Daily Clinical Challenge Solved.</p>
-                    <p className="text-[10px] text-emerald-300 mt-1 font-semibold">Meningitis requires Droplet precautions with surgical masks.</p>
-                    <p className="text-[9px] text-emerald-400/90 mt-2 font-black uppercase tracking-widest">+50 XP & Streak Saved to Profile</p>
-                  </div>
-                ) : (
-                  <div className="mt-4 space-y-2">
-                    {[
-                      "Droplet precautions with private room placement",
-                      "Airborne precautions with negative air pressure room",
-                      "Standard clinical handwashing protocol only"
-                    ].map((opt, oIdx) => {
-                      const isSelected = dailyChallengeSelected === oIdx;
-                      return (
-                        <button
-                          key={oIdx}
-                          disabled={dailyChallengeFeedback?.isCorrect}
-                          onClick={async () => {
-                            setDailyChallengeSelected(oIdx);
-                            const isCorrect = oIdx === 0;
-                            if (isCorrect) {
-                              setDailyChallengeFeedback({
-                                isCorrect: true,
-                                text: "Correct! Meningitis of respiratory transmission requires Droplet precautions with surgical masks upon entry. You earned +50 XP and 1 Streak Day! 🎉"
-                              });
-                              setDailyChallengeCompleted(true);
-                              localStorage.setItem(`daily_completed_v1_${user.id}`, 'true');
-                              
-                              // Persist Daily Challenge Completion in the cloud database by giving dynamic progress bonus!
-                              try {
-                                const targetProgress = Math.min(100, (user.progress || 0) + 5);
-                                await supabase.from('profiles').update({ progress: targetProgress }).eq('id', user.id);
-                                onUpdateProfile();
-                              } catch (dbErr) {
-                                console.error("Failed to update daily progress to Supabase:", dbErr);
-                              }
-
-                              // Confetti reward
-                              confetti({
-                                particleCount: 80,
-                                spread: 60,
-                                origin: { y: 0.85 }
-                              });
-                              
-                              try {
-                                const currentSolved = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
-                                localStorage.setItem('questions_solved_v1_count', (currentSolved + 10).toString());
-                                window.dispatchEvent(new Event('storage'));
-                              } catch (err) {}
-                            } else {
-                              setDailyChallengeFeedback({
-                                isCorrect: false,
-                                text: "Not quite. Meningitis is transmitted via respiratory droplets, requiring personal protective equipment (mask) and private room spacing. Try again!"
-                              });
+            {(() => {
+              const currentUTCDayValue = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+              const challenge = DAILY_CHALLENGE_POOL[currentUTCDayValue % DAILY_CHALLENGE_POOL.length];
+              return (
+                <div className="Daily-Challenge-Arena bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 text-white p-7 rounded-[2rem] border border-indigo-500/10 shadow-lg relative overflow-hidden" id="daily_challenge_arena_container">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl"></div>
+                  <div className="relative z-10">
+                    <span className="bg-indigo-500/30 text-indigo-300 text-[9px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full border border-indigo-500/20">
+                      {challenge.prefix || "Daily Challenge Arena"}
+                    </span>
+                    <h4 className="font-serif font-bold text-xl mt-4 leading-tight">Today&apos;s Clinical Skillbuilder</h4>
+                    <p className="text-xs text-indigo-300 mt-2 leading-relaxed font-semibold">
+                      Solve this clinical case to maintain your active streak and gain <b className="text-white">+50 XP</b>!
+                    </p>
+                    
+                    {/* Scenario */}
+                    <div className="bg-white/5 border border-white/10 p-4 rounded-xl mt-4 text-[11px] leading-relaxed text-indigo-100 font-medium font-mono">
+                      &quot;{challenge.question}&quot;
+                    </div>
+                    
+                    {/* Interactive Options */}
+                    {dailyChallengeCompleted ? (
+                      <div className="bg-emerald-500/15 border border-emerald-500/30 p-5 rounded-2xl mt-4 text-center">
+                        <CheckCircle className="w-8 h-8 text-emerald-400 mx-auto mb-2 animate-pulse" />
+                        <p className="text-xs text-emerald-200 font-bold">Excellent work! Daily Clinical Challenge Solved.</p>
+                        <p className="text-[10px] text-emerald-300 mt-1 font-semibold">{challenge.explanation}</p>
+                        <p className="text-[9px] text-emerald-400/90 mt-2 font-black uppercase tracking-widest">+50 XP & Streak Saved to Profile</p>
+                        <button 
+                          onClick={() => {
+                            if (confirm("Would you like to reset today's challenge and try answering it again?")) {
+                              setDailyChallengeCompleted(false);
+                              setDailyChallengeSelected(null);
+                              setDailyChallengeFeedback(null);
+                              localStorage.removeItem(`daily_completed_day_v1_${user.id}`);
                             }
                           }}
-                          className={`w-full p-4 text-left text-[11px] rounded-xl transition font-semibold leading-snug flex items-center gap-3 border ${isSelected ? (dailyChallengeFeedback?.isCorrect ? 'bg-emerald-500/10 border-emerald-500 text-emerald-200' : 'bg-red-500/10 border-red-500 text-red-200') : 'bg-white/[0.04] hover:bg-white/[0.1] border-white/15 text-slate-300'}`}
+                          className="mt-3 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-bold text-[9px] uppercase tracking-widest transition flex items-center gap-1 mx-auto"
                         >
-                          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] uppercase font-black shrink-0 ${isSelected ? 'bg-white/20 text-white' : 'bg-white/10 text-slate-400'}`}>
-                            {String.fromCharCode(65 + oIdx)}
-                          </span>
-                          <span className="flex-grow">{opt}</span>
+                          <RefreshCw className="w-2.5 h-2.5" /> Restart Challenge
                         </button>
-                      );
-                    })}
-                  </div>
-                )}
+                      </div>
+                    ) : (
+                      <div className="mt-4 space-y-2">
+                        {challenge.options.map((opt, oIdx) => {
+                          const isSelected = dailyChallengeSelected === oIdx;
+                          return (
+                            <button
+                              key={oIdx}
+                              disabled={dailyChallengeFeedback?.isCorrect}
+                              onClick={async () => {
+                                setDailyChallengeSelected(oIdx);
+                                const isCorrect = oIdx === challenge.correctAnswer;
+                                if (isCorrect) {
+                                  setDailyChallengeFeedback({
+                                    isCorrect: true,
+                                    text: `Correct! ${challenge.explanation}`
+                                  });
+                                  setDailyChallengeCompleted(true);
+                                  localStorage.setItem(`daily_completed_day_v1_${user.id}`, String(currentUTCDayValue));
+                                  
+                                  // Persist Daily Challenge Completion in the cloud database by giving dynamic progress bonus!
+                                  try {
+                                    const targetProgress = Math.min(100, (user.progress || 0) + 5);
+                                    await supabase.from('profiles').update({ progress: targetProgress }).eq('id', user.id);
+                                    onUpdateProfile();
+                                  } catch (dbErr) {
+                                    console.error("Failed to update daily progress to Supabase:", dbErr);
+                                  }
 
-                {/* Beautified Inline Feedback Overlay */}
-                {dailyChallengeFeedback && !dailyChallengeCompleted && (
-                  <div className={`mt-4 p-4 rounded-xl text-[11px] leading-relaxed font-bold border animate-in slide-in-from-bottom-2 duration-300 ${dailyChallengeFeedback.isCorrect ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-200' : 'bg-rose-500/15 border-rose-500/30 text-rose-300'}`}>
-                    <div className="flex items-center gap-2 mb-1.5">
-                      {dailyChallengeFeedback.isCorrect ? <CheckCircle className="w-4 h-4 text-emerald-400" /> : <AlertCircle className="w-4 h-4 text-rose-400" />}
-                      <span>{dailyChallengeFeedback.isCorrect ? 'Correct! Clinically Sound' : 'Clinical Correction Needed'}</span>
-                    </div>
-                    <p className="font-medium text-white/95 leading-normal">{dailyChallengeFeedback.text}</p>
+                                  // Confetti reward
+                                  confetti({
+                                    particleCount: 80,
+                                    spread: 60,
+                                    origin: { y: 0.85 }
+                                  });
+                                  
+                                  try {
+                                    const currentSolved = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
+                                    localStorage.setItem('questions_solved_v1_count', (currentSolved + 10).toString());
+                                    window.dispatchEvent(new Event('storage'));
+                                  } catch (err) {}
+                                } else {
+                                  setDailyChallengeFeedback({
+                                    isCorrect: false,
+                                    text: "Not quite. That answer option is not the ideal clinical protocol. Review the rationales and try again!"
+                                  });
+                                }
+                              }}
+                              className={`w-full p-4 text-left text-[11px] rounded-xl transition font-semibold leading-snug flex items-center gap-3 border ${isSelected ? (dailyChallengeFeedback?.isCorrect ? 'bg-emerald-500/10 border-emerald-500 text-emerald-200' : 'bg-red-500/10 border-red-500 text-red-200') : 'bg-white/[0.04] hover:bg-white/[0.1] border-white/15 text-slate-300'}`}
+                            >
+                              <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] uppercase font-black shrink-0 ${isSelected ? 'bg-white/20 text-white' : 'bg-white/10 text-slate-400'}`}>
+                                {String.fromCharCode(65 + oIdx)}
+                              </span>
+                              <span className="flex-grow">{opt}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+                    
+                    {dailyChallengeFeedback && !dailyChallengeFeedback.isCorrect && (
+                      <div className="bg-red-500/10 border border-red-500/20 p-4 rounded-xl mt-3 text-[10px] text-red-200 font-semibold leading-relaxed flex justify-between items-center">
+                        <span>{dailyChallengeFeedback.text}</span>
+                        <button 
+                          onClick={() => {
+                            setDailyChallengeSelected(null);
+                            setDailyChallengeFeedback(null);
+                          }}
+                          className="px-2 py-1 bg-red-500/20 text-red-200 hover:bg-red-500/40 rounded text-[9px] uppercase tracking-wider font-bold shrink-0 ml-2"
+                        >
+                          Retry
+                        </button>
+                      </div>
+                    )}
                   </div>
-                )}
-                
-                <div className="mt-4 flex items-center justify-between text-[10px] text-indigo-300 font-mono pt-2 border-t border-white/5">
-                  <span>Standard: NCSBN Board</span>
-                  <span>Complexity: Intermediate</span>
                 </div>
-              </div>
-            </div>
+              );
+            })()}
 
             {/* Cohort Leaders of Clinical Excellence */}
             <div className="bg-white p-7 rounded-[2rem] border border-slate-100 shadow-sm">
@@ -1297,18 +1489,37 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                     userSolvedCount = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
                   } catch (e) {}
                   
-                  // Fake peers to place user dynamically
-                  const peers = [
+                  // Mix real students who have "participated" (progress > 0 or badges length > 0)
+                  const realActivePeers = leaderboardUsers
+                    .filter(u => u.id !== user.id && ((u.progress || 0) > 0 || (u.badges?.length || 0) > 0))
+                    .map(u => {
+                      const estItems = Math.max(10, Math.round((u.progress || 0) * 1.8) + (u.badges?.length || 0) * 12);
+                      const estStreak = Math.max(1, Math.round((u.progress || 0) / 12) + (u.badges?.length || 0) * 2);
+                      return {
+                        name: u.name || u.username || "Candidate Student",
+                        items: estItems,
+                        streak: estStreak,
+                        isMe: false
+                      };
+                    });
+
+                  // Default cohort peers as baseline
+                  const defaultPeers = [
                     { name: "Nurse Fatima A.", items: 250, streak: 12, isMe: false },
                     { name: "Nurse Daniel E.", items: 175, streak: 8, isMe: false },
-                    { name: "You (Active Candidate)", items: userSolvedCount, streak: 4, isMe: true },
                     { name: "Nurse Chioma O.", items: 110, streak: 5, isMe: false },
                     { name: "Nurse Adeola Y.", items: 65, streak: 2, isMe: false },
-                    { name: "Nurse Chukwuma K.", items: 20, streak: 0, isMe: false },
+                    { name: "Nurse Chukwuma K.", items: 20, streak: 1, isMe: false },
+                  ];
+                  
+                  const combinedPeers = [
+                    { name: `${user.name || user.username} (You)`, items: userSolvedCount, streak: Math.max(1, Math.round((user.progress || 0) / 12) + (user.badges?.length || 0) * 2), isMe: true },
+                    ...realActivePeers,
+                    ...defaultPeers
                   ];
                   
                   // Sort by items answered descending
-                  const sortedPeers = [...peers].sort((a,b) => b.items - a.items);
+                  const sortedPeers = [...combinedPeers].sort((a,b) => b.items - a.items);
                   
                   return sortedPeers.map((peer, idx) => {
                     const isCurrentUser = peer.isMe;
