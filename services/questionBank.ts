@@ -1181,5 +1181,37 @@ export const DEFAULT_PRACTICE_TESTS = [
   }
 ];
 
+// Dynamically expand DEFAULT_PRACTICE_TESTS to contain exactly 20 professional questions each from PERMANENT_QUESTION_BANK
+DEFAULT_PRACTICE_TESTS.forEach(test => {
+  const existingQuestions = new Set(test.questions.map(q => q.question.toLowerCase().trim()));
+  
+  // Find matching questions by difficulty from PERMANENT_QUESTION_BANK
+  const candidates = PERMANENT_QUESTION_BANK.filter(q => {
+    if (existingQuestions.has(q.question.toLowerCase().trim())) return false;
+    
+    if (test.id === "premium_cat_foundation_mock") {
+      return q.difficulty === 'easy' || q.difficulty === 'medium';
+    } else if (test.id === "premium_cat_integration_mock") {
+      return q.difficulty === 'medium';
+    } else if (test.id === "premium_cat_mastery_mock") {
+      return q.difficulty === 'hard';
+    }
+    return false;
+  });
+  
+  // Mix in candidates up to 20 questions total to make it a fully-fledged professional NCLEX prep exam
+  const targetTotal = 20;
+  for (const match of candidates) {
+    if (test.questions.length >= targetTotal) break;
+    test.questions.push({
+      id: match.id,
+      question: match.question,
+      options: match.options,
+      correctAnswer: match.correctAnswer,
+      explanation: match.explanation
+    });
+  }
+});
+
 let finalQuestionText = "";
 

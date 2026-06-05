@@ -132,6 +132,13 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   const [isTestsLoading, setIsTestsLoading] = useState(true);
   const [activePracticeSession, setActivePracticeSession] = useState<any | null>(null);
 
+  // Daily Challenge State
+  const [dailyChallengeSelected, setDailyChallengeSelected] = useState<number | null>(null);
+  const [dailyChallengeFeedback, setDailyChallengeFeedback] = useState<{ isCorrect: boolean; text: string } | null>(null);
+  const [dailyChallengeCompleted, setDailyChallengeCompleted] = useState<boolean>(() => {
+    return localStorage.getItem(`daily_completed_v1_${user.id}`) === 'true';
+  });
+
   useEffect(() => {
     const activeKey = `practice_active_session_v1_${user.id}`;
     const savedActive = localStorage.getItem(activeKey);
@@ -207,14 +214,39 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
     setUserAnswers({ ...userAnswers, [q.id]: optionIndex });
   };
 
-  const finishQuiz = () => {
+  const finishQuiz = async () => {
     const score = calculateScore();
-    if (score >= 75) {
+    const isPassing = score >= 75;
+    if (isPassing) {
       handleBadgeEarned(activeTest?.difficulty || 'easy');
     }
     setQuizFinished(true);
     localStorage.removeItem(`practice_active_session_v1_${user.id}`);
     setActivePracticeSession(null);
+
+    // Save test performance progression directly to Supabase cloud database
+    try {
+      let targetProgress = user.progress || 0;
+      if (isPassing) {
+        if (activeTest?.difficulty === 'easy') {
+          targetProgress = Math.max(targetProgress, 40);
+        } else if (activeTest?.difficulty === 'medium') {
+          targetProgress = Math.max(targetProgress, 75);
+        } else if (activeTest?.difficulty === 'hard') {
+          targetProgress = Math.max(targetProgress, 100);
+        }
+      } else {
+        // Give a minor effort-based bump for finishing a practice test
+        targetProgress = Math.min(100, targetProgress + 5);
+      }
+      
+      const { error } = await supabase.from('profiles').update({ progress: targetProgress }).eq('id', user.id);
+      if (!error) {
+        onUpdateProfile();
+      }
+    } catch (dbErr) {
+      console.error("Failed to commit progress to DB on quiz completion:", dbErr);
+    }
   };
 
   const handleNextQuestion = () => {
@@ -223,6 +255,13 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
     // Save question progression to user total item analytics count
     const currentCount = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
     localStorage.setItem('questions_solved_v1_count', (currentCount + 1).toString());
+
+    // Auto scroll the window to the very top so the user can easily focus on the next clinical question
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const mainDashboardContainer = document.querySelector('.overflow-y-auto');
+    if (mainDashboardContainer) {
+      mainDashboardContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     // Freemium Paywall Logic: Free users hit a wall after 15 questions
     if (!user.hasPaidLive && currentQuestionIndex === 14) {
@@ -853,11 +892,140 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
           );
         }
 
+        const hasEasy = user.badges?.includes("Easy Mastery Badge");
+        const hasMedium = user.badges?.includes("Medium Mastery Badge");
+        const hasHard = user.badges?.includes("Hard Mastery Badge");
+        const completedCount = [hasEasy, hasMedium, hasHard].filter(Boolean).length;
+        const readinessPercent = Math.round((completedCount / 3) * 100);
+
         return (
           <div className="animate-in fade-in duration-500 max-w-7xl mx-auto py-2 px-1">
+            {/* Elegant Notice Banner for Daily Challenge */}
+            <div className="bg-gradient-to-r from-teal-500/10 via-brand-500/5 to-indigo-500/10 border-2 border-brand-100 p-6 rounded-[2rem] mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-sm animate-in slide-in-from-top duration-500">
+              <div className="flex items-center gap-4">
+                <div className="bg-brand-500 text-white p-3 rounded-2xl hidden sm:block shadow-md">
+                  <Sparkles className="w-5 h-5 text-amber-300" />
+                </div>
+                <div>
+                  <h4 className="font-serif font-bold text-slate-900 text-base flex items-center gap-2">
+                    💡 Streak Booster Available
+                    <span className="text-[9px] bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full uppercase tracking-widest font-black animate-pulse">Bonus</span>
+                  </h4>
+                  <p className="text-xs text-slate-500 font-semibold mt-0.5">
+                    Maintain your active learning streak and earn <b className="text-slate-800">+50 XP</b> by answering today's <b className="text-brand-600">Clinical Skillbuilder</b> in the right-side Arena!
+                  </p>
+                </div>
+              </div>
+              <button 
+                onClick={() => {
+                  const arenaCard = document.querySelector('.Daily-Challenge-Arena');
+                  if (arenaCard) {
+                    arenaCard.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                  }
+                }}
+                className="bg-slate-900 hover:bg-black text-white text-[10px] uppercase tracking-widest font-black px-5 py-3.5 rounded-xl transition shadow-md shrink-0 w-full md:w-auto text-center"
+              >
+                Go to Arena &rarr;
+              </button>
+            </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               {/* Left Column: Readiness Assessments and Badges */}
               <div className="lg:col-span-8 space-y-8">
+                
+                {/* NCLEX Board Eligibility Scorecard Tracker */}
+                <div className="bg-white p-7 sm:p-8 rounded-[3rem] border border-slate-100 shadow-sm mb-6 overflow-hidden relative">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-brand-500/5 rounded-full blur-3xl"></div>
+                  
+                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-6 border-b border-slate-100">
+                    <div>
+                      <span className="text-[10px] bg-brand-50 text-brand-600 border border-brand-100 px-3.5 py-1.5 rounded-full uppercase tracking-widest font-black inline-block">
+                         Official NCLEX Board Readiness Status
+                      </span>
+                      <h3 className="font-serif font-bold text-2xl text-slate-900 mt-2">NCSBN Exam Scorecard</h3>
+                      <p className="text-slate-400 text-xs font-semibold mt-0.5">Complete and pass all three mock examinations to certify your NCLEX credentials.</p>
+                    </div>
+                    
+                    <div className="text-left md:text-right shrink-0">
+                      <div className="text-4xl font-serif font-black text-brand-600">{readinessPercent}%</div>
+                      <p className="text-[9px] font-black uppercase text-slate-400 tracking-widest mt-1">Ready Level</p>
+                    </div>
+                  </div>
+
+                  {/* Steps Progress Checklist */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+                    
+                    {/* 1. FOUNDATION STEP */}
+                    <div className={`p-4 rounded-2xl border-2 transition ${hasEasy ? 'bg-emerald-500/[0.02] border-emerald-500/20 text-emerald-900' : 'bg-slate-50 border-slate-100 text-slate-500'}`}>
+                      <div className="flex justify-between items-center mb-3">
+                        <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">Stage 1: Foundation</span>
+                        {hasEasy ? (
+                          <CheckCircle className="w-5 h-5 text-emerald-500" />
+                        ) : (
+                          <span className="w-5 h-5 rounded-full border-2 border-slate-300 flex items-center justify-center text-[10px] font-black uppercase text-slate-400">1</span>
+                        )}
+                      </div>
+                      <h5 className="font-bold text-sm text-slate-800">Foundation Mock</h5>
+                      <p className="text-[10px] mt-1 leading-relaxed font-semibold">
+                        {hasEasy ? '✅ Complete (75%+)' : '⏳ Score 75%+ to unlock'}
+                      </p>
+                    </div>
+
+                    {/* 2. INTERDISCIPLINARY STEP */}
+                    <div className={`p-4 rounded-2xl border-2 transition ${hasMedium ? 'bg-emerald-500/[0.02] border-emerald-500/20 text-emerald-900' : 'bg-slate-50 border-slate-100 text-slate-500'}`}>
+                      <div className="flex justify-between items-center mb-3">
+                        <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">Stage 2: Core Matrix</span>
+                        {hasMedium ? (
+                          <CheckCircle className="w-5 h-5 text-emerald-500" />
+                        ) : (
+                          <span className="w-5 h-5 rounded-full border-2 border-slate-300 flex items-center justify-center text-[10px] font-black uppercase text-slate-400">2</span>
+                        )}
+                      </div>
+                      <h5 className="font-bold text-sm text-slate-800">Interdisciplinary Mock</h5>
+                      <p className="text-[10px] mt-1 leading-relaxed font-semibold">
+                        {hasMedium ? '✅ Complete (75%+)' : '⏳ Score 75%+ to unlock'}
+                      </p>
+                    </div>
+
+                    {/* 3. MASTERY STEP */}
+                    <div className={`p-4 rounded-2xl border-2 transition ${hasHard ? 'bg-emerald-500/[0.02] border-emerald-500/20 text-emerald-900' : 'bg-slate-50 border-slate-100 text-slate-500'}`}>
+                      <div className="flex justify-between items-center mb-3">
+                        <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400">Stage 3: Board Mastery</span>
+                        {hasHard ? (
+                          <CheckCircle className="w-5 h-5 text-emerald-500" />
+                        ) : (
+                          <span className="w-5 h-5 rounded-full border-2 border-slate-300 flex items-center justify-center text-[10px] font-black uppercase text-slate-400">3</span>
+                        )}
+                      </div>
+                      <h5 className="font-bold text-sm text-slate-800">Clinical Mastery Mock</h5>
+                      <p className="text-[10px] mt-1 leading-relaxed font-semibold">
+                        {hasHard ? '✅ Complete (75%+)' : '⏳ Score 75%+ to unlock'}
+                      </p>
+                    </div>
+
+                  </div>
+
+                  {/* Readiness Status Notification line */}
+                  <div className="mt-6 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <p className="text-[11px] text-slate-500 font-bold flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-brand-500" />
+                      {completedCount === 3 ? (
+                        <span className="text-emerald-600 font-black">🎓 CONGRATULATIONS! You are 100% preparation ready. Click My Credentials tab to request review!</span>
+                      ) : (
+                        <span>Progress to 100% readiness to qualify for your official Board Academy Certificate.</span>
+                      )}
+                    </p>
+                    
+                    {completedCount === 3 && (
+                      <div className="text-[9px] bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full uppercase tracking-widest font-black animate-pulse">
+                         Certificate Earned
+                      </div>
+                    )}
+                  </div>
+                </div>
+
                 <h2 className="text-3xl font-serif font-bold mb-4 text-slate-900 uppercase tracking-tight">Readiness Assessments</h2>
 
                 {activePracticeSession && (
@@ -1006,7 +1174,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             </div>
 
             {/* Daily NCLEX Trivia Challenge Card */}
-            <div className="bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 text-white p-7 rounded-[2rem] border border-indigo-500/10 shadow-lg relative overflow-hidden">
+            <div className="Daily-Challenge-Arena bg-gradient-to-br from-indigo-900 via-indigo-950 to-slate-950 text-white p-7 rounded-[2rem] border border-indigo-500/10 shadow-lg relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl"></div>
               <div className="relative z-10">
                 <span className="bg-indigo-500/30 text-indigo-300 text-[9px] font-black tracking-widest uppercase px-3 py-1.5 rounded-full border border-indigo-500/20">
@@ -1023,35 +1191,86 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                 </div>
                 
                 {/* Interactive Options */}
-                <div className="mt-4 space-y-2">
-                  {[
-                    "Droplet precautions with private room placement",
-                    "Airborne precautions with negative air pressure room",
-                    "Standard clinical handwashing protocol only"
-                  ].map((opt, oIdx) => (
-                    <button
-                      key={oIdx}
-                      onClick={() => {
-                        const isCorrect = oIdx === 0;
-                        if (isCorrect) {
-                          alert("Correct! Meningitis of respiratory transmission requires Droplet precautions with surgical masks upon entry. You earned +50 XP and 1 Streak Day! 🎉");
-                          // Increment solved count by 10 as dynamic reward
-                          try {
-                            const currentSolved = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
-                            localStorage.setItem('questions_solved_v1_count', (currentSolved + 10).toString());
-                            // Trigger window storage event to refresh view
-                            window.dispatchEvent(new Event('storage'));
-                          } catch (err) {}
-                        } else {
-                          alert("Not quite. Meningitis is transmitted via respiratory droplets, requiring personal protective equipment (mask) and private room spacing. Try again!");
-                        }
-                      }}
-                      className="w-full p-3.5 text-left text-[11px] bg-white/[0.04] hover:bg-white/[0.1] border border-white/15 rounded-xl transition font-semibold leading-snug"
-                    >
-                      {opt}
-                    </button>
-                  ))}
-                </div>
+                {dailyChallengeCompleted ? (
+                  <div className="bg-emerald-500/15 border border-emerald-500/30 p-5 rounded-2xl mt-4 text-center">
+                    <CheckCircle className="w-8 h-8 text-emerald-400 mx-auto mb-2 animate-bounce" />
+                    <p className="text-xs text-emerald-200 font-bold">Excellent work! Daily Clinical Challenge Solved.</p>
+                    <p className="text-[10px] text-emerald-300 mt-1 font-semibold">Meningitis requires Droplet precautions with surgical masks.</p>
+                    <p className="text-[9px] text-emerald-400/90 mt-2 font-black uppercase tracking-widest">+50 XP & Streak Saved to Profile</p>
+                  </div>
+                ) : (
+                  <div className="mt-4 space-y-2">
+                    {[
+                      "Droplet precautions with private room placement",
+                      "Airborne precautions with negative air pressure room",
+                      "Standard clinical handwashing protocol only"
+                    ].map((opt, oIdx) => {
+                      const isSelected = dailyChallengeSelected === oIdx;
+                      return (
+                        <button
+                          key={oIdx}
+                          disabled={dailyChallengeFeedback?.isCorrect}
+                          onClick={async () => {
+                            setDailyChallengeSelected(oIdx);
+                            const isCorrect = oIdx === 0;
+                            if (isCorrect) {
+                              setDailyChallengeFeedback({
+                                isCorrect: true,
+                                text: "Correct! Meningitis of respiratory transmission requires Droplet precautions with surgical masks upon entry. You earned +50 XP and 1 Streak Day! 🎉"
+                              });
+                              setDailyChallengeCompleted(true);
+                              localStorage.setItem(`daily_completed_v1_${user.id}`, 'true');
+                              
+                              // Persist Daily Challenge Completion in the cloud database by giving dynamic progress bonus!
+                              try {
+                                const targetProgress = Math.min(100, (user.progress || 0) + 5);
+                                await supabase.from('profiles').update({ progress: targetProgress }).eq('id', user.id);
+                                onUpdateProfile();
+                              } catch (dbErr) {
+                                console.error("Failed to update daily progress to Supabase:", dbErr);
+                              }
+
+                              // Confetti reward
+                              confetti({
+                                particleCount: 80,
+                                spread: 60,
+                                origin: { y: 0.85 }
+                              });
+                              
+                              try {
+                                const currentSolved = parseInt(localStorage.getItem('questions_solved_v1_count') || '0', 10);
+                                localStorage.setItem('questions_solved_v1_count', (currentSolved + 10).toString());
+                                window.dispatchEvent(new Event('storage'));
+                              } catch (err) {}
+                            } else {
+                              setDailyChallengeFeedback({
+                                isCorrect: false,
+                                text: "Not quite. Meningitis is transmitted via respiratory droplets, requiring personal protective equipment (mask) and private room spacing. Try again!"
+                              });
+                            }
+                          }}
+                          className={`w-full p-4 text-left text-[11px] rounded-xl transition font-semibold leading-snug flex items-center gap-3 border ${isSelected ? (dailyChallengeFeedback?.isCorrect ? 'bg-emerald-500/10 border-emerald-500 text-emerald-200' : 'bg-red-500/10 border-red-500 text-red-200') : 'bg-white/[0.04] hover:bg-white/[0.1] border-white/15 text-slate-300'}`}
+                        >
+                          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] uppercase font-black shrink-0 ${isSelected ? 'bg-white/20 text-white' : 'bg-white/10 text-slate-400'}`}>
+                            {String.fromCharCode(65 + oIdx)}
+                          </span>
+                          <span className="flex-grow">{opt}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+
+                {/* Beautified Inline Feedback Overlay */}
+                {dailyChallengeFeedback && !dailyChallengeCompleted && (
+                  <div className={`mt-4 p-4 rounded-xl text-[11px] leading-relaxed font-bold border animate-in slide-in-from-bottom-2 duration-300 ${dailyChallengeFeedback.isCorrect ? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-200' : 'bg-rose-500/15 border-rose-500/30 text-rose-300'}`}>
+                    <div className="flex items-center gap-2 mb-1.5">
+                      {dailyChallengeFeedback.isCorrect ? <CheckCircle className="w-4 h-4 text-emerald-400" /> : <AlertCircle className="w-4 h-4 text-rose-400" />}
+                      <span>{dailyChallengeFeedback.isCorrect ? 'Correct! Clinically Sound' : 'Clinical Correction Needed'}</span>
+                    </div>
+                    <p className="font-medium text-white/95 leading-normal">{dailyChallengeFeedback.text}</p>
+                  </div>
+                )}
                 
                 <div className="mt-4 flex items-center justify-between text-[10px] text-indigo-300 font-mono pt-2 border-t border-white/5">
                   <span>Standard: NCSBN Board</span>
