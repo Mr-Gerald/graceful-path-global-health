@@ -387,7 +387,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
 
     // Auto scroll the window to the very top so the user can easily focus on the next clinical question
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    const mainDashboardContainer = document.querySelector('.overflow-y-auto');
+    const mainDashboardContainer = document.querySelector('main');
     if (mainDashboardContainer) {
       mainDashboardContainer.scrollTo({ top: 0, behavior: 'smooth' });
     }

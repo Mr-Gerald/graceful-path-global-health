@@ -296,6 +296,13 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
     setLoadingQuestion(true);
     setErrorText(null);
 
+    // Auto scroll the window and container to the very top to focus on the next question
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const scrollContainer = document.querySelector('main');
+    if (scrollContainer) {
+      scrollContainer.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     try {
       // Collect target day parameters
       const targetDay = PASSPOINT_DAYS.find(d => d.day === selectedDay);
