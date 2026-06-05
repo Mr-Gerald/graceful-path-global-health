@@ -954,31 +954,31 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
               ) : practiceTests.filter(test => selectedDifficulty === 'all' || test.difficulty === selectedDifficulty).map((test, i) => {
                 const isLocked = !user.hasPaidLive && (test.difficulty === 'medium' || test.difficulty === 'hard');
                 return (
-                  <div key={i} className={`bg-white p-8 rounded-[2.5rem] border border-gray-100 flex flex-col sm:flex-row items-center justify-between group hover:border-brand-500 transition-all duration-300 gap-6 shadow-sm ${isLocked ? 'opacity-80' : ''}`}>
-                    <div className="flex items-center w-full">
-                      <div className="bg-slate-50 p-6 rounded-[2rem] mr-8 shadow-inner relative">
-                        <BarChart3 className="w-10 h-10 text-brand-400 group-hover:text-brand-600 transition" />
+                  <div key={i} className={`bg-white p-5 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] border border-gray-100 flex flex-col xl:flex-row items-stretch xl:items-center justify-between group hover:border-brand-500 transition-all duration-300 gap-6 shadow-sm ${isLocked ? 'opacity-80' : ''}`}>
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full">
+                      <div className="bg-slate-50 p-4 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] shadow-inner relative shrink-0">
+                        <BarChart3 className="w-8 h-8 sm:w-10 sm:h-10 text-brand-400 group-hover:text-brand-600 transition" />
                         {isLocked && (
-                          <div className="absolute -top-2 -right-2 bg-amber-100 text-amber-600 p-2 rounded-full shadow-sm">
-                            <Lock className="w-4 h-4" />
+                          <div className="absolute -top-2 -right-2 bg-amber-100 text-amber-600 p-1.5 rounded-full shadow-sm">
+                            <Lock className="w-3.5 h-3.5" />
                           </div>
                         )}
                       </div>
-                      <div>
-                        <h4 className="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                      <div className="min-w-0 flex-1">
+                        <h4 className="text-lg sm:text-2xl font-bold text-slate-900 flex flex-wrap items-center gap-2 leading-tight">
                           {test.title}
-                          {isLocked && <span className="text-[10px] bg-amber-100 text-amber-700 px-3 py-1 rounded-full uppercase tracking-widest font-black">Premium</span>}
+                          {isLocked && <span className="text-[9px] bg-amber-100 text-amber-700 px-2.5 py-0.5 rounded-full uppercase tracking-widest font-black inline-block">Premium</span>}
                         </h4>
-                        <p className="text-sm text-slate-400 font-black uppercase tracking-widest mt-1 flex items-center gap-4">
+                        <p className="text-xs sm:text-sm text-slate-400 font-black uppercase tracking-widest mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
                           <span>{test.questions?.length || 0} Professional Questions</span>
-                          <span className="w-1 h-1 bg-slate-200 rounded-full"></span>
-                          <span className="flex items-center"><Clock className="w-3.5 h-3.5 mr-1" /> {test.duration} Limit</span>
+                          <span className="hidden sm:inline w-1 h-1 bg-slate-200 rounded-full"></span>
+                          <span className="flex items-center"><Clock className="w-3.5 h-3.5 mr-1 shrink-0" /> {test.duration} Limit</span>
                         </p>
                       </div>
                     </div>
                     <button 
                       onClick={() => isLocked ? handleUpgradeToPremium() : handleStartTest(test)} 
-                      className={`${isLocked ? 'bg-amber-500 hover:bg-amber-600' : 'bg-brand-600 hover:bg-brand-700'} text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl transition w-full sm:w-auto transform hover:scale-105`}
+                      className={`${isLocked ? 'bg-amber-500 hover:bg-amber-600' : 'bg-brand-600 hover:bg-brand-700'} text-white px-6 sm:px-10 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl transition w-full xl:w-auto transform hover:scale-[1.02] shrink-0`}
                     >
                       {isLocked ? 'Unlock Premium' : 'Start Professional Exam'}
                     </button>
@@ -992,7 +992,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
           <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-8">
             
             {/* Active Learning Streak Status Card */}
-            <div className="bg-gradient-to-r from-amber-500 to-orange-505 text-white p-7 rounded-[2rem] border border-orange-200/10 shadow-lg relative overflow-hidden">
+            <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white p-7 rounded-[2rem] border border-orange-200/10 shadow-lg relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
               <div className="flex items-center gap-4 relative z-10">
                 <div className="bg-white/10 p-4 rounded-2xl border border-white/20 animate-bounce">
@@ -1535,7 +1535,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
         </div>
       </aside>
 
-      <main className="flex-grow pt-10 px-6 sm:px-12 pb-24 overflow-y-auto h-screen transition-all duration-500"><div className="max-w-6xl mx-auto">{renderView()}</div></main>
+      <main className="flex-grow pt-6 sm:pt-10 px-4 sm:px-12 pb-24 lg:overflow-y-auto lg:h-screen transition-all duration-500"><div className="max-w-6xl mx-auto">{renderView()}</div></main>
 
       {/* Profile Picture Zoom Modal */}
       {zoomedAvatar && (
