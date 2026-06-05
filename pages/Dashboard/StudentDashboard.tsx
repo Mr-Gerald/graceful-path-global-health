@@ -289,6 +289,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
         userAnswers
       };
       localStorage.setItem(activeKey, JSON.stringify(session));
+      setActivePracticeSession(session);
     }
   }, [activeTest, currentQuestionIndex, userAnswers, quizFinished, user.id]);
 
@@ -329,6 +330,25 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   }, [practiceTests, courseContent]);
 
   const handleStartTest = (test: PracticeTest) => {
+    const activeKey = `practice_active_session_v1_${user.id}`;
+    const savedActive = localStorage.getItem(activeKey);
+    if (savedActive) {
+      try {
+        const parsed = JSON.parse(savedActive);
+        if (parsed && parsed.activeTest?.id === test.id) {
+          setActiveTest(parsed.activeTest);
+          setCurrentQuestionIndex(parsed.currentQuestionIndex);
+          setUserAnswers(parsed.userAnswers);
+          setQuizFinished(false);
+          setShowCorrections(false);
+          setShowPaywall(false);
+          return;
+        }
+      } catch (e) {
+        console.error("Failed to parse saved active practice session on start", e);
+      }
+    }
+
     setActiveTest(test);
     setCurrentQuestionIndex(0);
     setUserAnswers({});

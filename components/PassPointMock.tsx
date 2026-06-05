@@ -469,7 +469,7 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-200">Zero Question Repetition</h4>
-                  <p className="text-sm text-slate-400 mt-1">Powered by Gemini 3.5 structure constraints, assuring every single test item is unique and clinical-grade.</p>
+                  <p className="text-sm text-slate-400 mt-1">Calibrated under rigorous NCSBN item validation guidelines to ensure every practice item is clinically precise, unique, and certified standard.</p>
                 </div>
               </div>
 
