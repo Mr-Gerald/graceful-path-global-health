@@ -218,7 +218,25 @@ function App() {
 
   const fetchAllStudents = async () => {
     const { data } = await supabase.from('profiles').select('*').eq('role', 'STUDENT');
-    if (data) setAllStudents(data as any);
+    if (data) {
+      const mapped: User[] = data.map((d: any) => ({
+        id: d.id,
+        username: d.username,
+        name: d.name,
+        email: d.email || '',
+        phoneNumber: d.phone_number,
+        country: d.country,
+        role: d.role as UserRole,
+        progress: d.progress || 0,
+        avatar: d.avatar,
+        hasPaidLive: d.has_paid_live,
+        isApproved: d.is_approved,
+        hasCertificate: d.has_certificate,
+        badges: d.badges || [],
+        enrolledDate: d.enrolled_date
+      }));
+      setAllStudents(mapped);
+    }
   };
 
   const fetchReviews = async () => {
@@ -825,6 +843,12 @@ function App() {
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  useEffect(() => {
+    if (currentPath === '/admin' && currentUser?.role === UserRole.ADMIN) {
+      fetchAllStudents();
+    }
+  }, [currentPath, currentUser]);
 
   const navigate = (path: string) => {
     window.location.hash = path;

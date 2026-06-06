@@ -1806,6 +1806,495 @@ export const DEFAULT_PRACTICE_TESTS = [
         explanation: "Clutching the neck and being unable to speak or cough indicates complete airway obstruction. The immediate, standard treatment is performing abdominal thrusts (Heimlich maneuver) on a conscious adult.",
         difficulty: "easy",
         domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "found_51",
+        question: "When performing surgical wound cleaning, in which direction should the nurse wipe?",
+        options: [
+          "From the outer edges of the wound toward the center",
+          "From the center of the wound toward the periphery",
+          "From the bottom of the wound to the top in a zigzag pattern",
+          "In circular motions starting from the most contaminated area"
+        ],
+        correctAnswer: 1,
+        explanation: "Wound cleaning should proceed from the least contaminated area (the center/incision) toward the most contaminated area (periphery) to prevent introducing outer pathogens into the healing surgical site.",
+        difficulty: "easy",
+        domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "found_52",
+        question: "The nurse is preparing to assess the apical pulse of an active 10-month-old infant. How should the nurse proceed?",
+        options: [
+          "Palpate the radial artery for 15 seconds and multiply by 4",
+          "Auscultate the fifth intercostal space at the midclavicular line for a full 60 seconds",
+          "Auscultate the apical pulse for 15 seconds while the infant is crying",
+          "Palpate the brachial artery for 30 seconds"
+        ],
+        correctAnswer: 1,
+        explanation: "To obtain an accurate pulse rate in infants, the nurse must auscultate the apical heart rate at the fifth intercostal space, left midclavicular line for a full minute when the infant is in a quiet state.",
+        difficulty: "easy",
+        domain: "Health Promotion and Maintenance"
+      },
+      {
+        id: "found_53",
+        question: "Which of the following clinical findings should lead the nurse to suspect that a client is experiencing hypokalemia?",
+        options: [
+          "Hyperactive tendon reflexes and muscle twitching",
+          "Muscle weakness, fatigue, and leg cramps",
+          "Extreme thirst, dry mucous membranes, and swollen tongue",
+          "Numbness and tingling around the lips"
+        ],
+        correctAnswer: 1,
+        explanation: "Common signs of hypokalemia (low potassium levels) include muscle weakness, fatigue, decreased reflexes, and severe nocturnal leg cramps. Severe cases can trigger cardiac dysrhythmias.",
+        difficulty: "easy",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "found_54",
+        question: "A client with weak right-sided motor function needs to be transferred from the bed to a wheelchair. Where should the nurse position the wheelchair?",
+        options: [
+          "On the client's weak (right) side, facing toward the head of the bed",
+          "On the client's strong (left) side, facing toward the foot of the bed",
+          "On the client's strong (left) side, angled slightly toward the bed"
+        ],
+        correctAnswer: 2,
+        explanation: "The wheelchair should be positioned on the client's strong (left) side, angled slightly toward the bed. This allows the client to bear weight and lead with their stronger leg for a safer transport pivot.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_55",
+        question: "The nurse is ordered to collect a sterile urine specimen from a client with an indwelling Foley catheter. What is the correct method?",
+        options: [
+          "Disconnect the catheter tube from the drainage bag and catch the outflow",
+          "Drain 30 mL of urine directly from the spigot at the bottom of the collection bag",
+          "Cleanse the catheter sampling port with alcohol and draw urine with a sterile syringe",
+          "Instill sterile water into the bladder first, then drain from the bag"
+        ],
+        correctAnswer: 2,
+        explanation: "A sterile urinalysis specimen must be drawn directly from the dedicated catheter sampling port using a sterile syringe after cleansing. Urine inside the collection bag sits at room temperature and is highly contaminated with multiplying bacteria.",
+        difficulty: "easy",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "found_56",
+        question: "A client under mild respiratory distress requires low-concentration oxygen therapy. What is the safe flow-rate range for administering oxygen via nasal cannula?",
+        options: [
+          "1 to 6 liters per minute, delivering roughly 24% to 44% fraction of inspired oxygen",
+          "8 to 15 liters per minute, delivering 100% pure oxygen",
+          "5 to 10 liters per minute with a humidified reservoir bag",
+          "15 to 20 liters per minute using a specialized wide-bore tube"
+        ],
+        correctAnswer: 0,
+        explanation: "A standard nasal cannula is safe to run at 1 to 6 L/min. Anything higher than 6 L/min dries out and irritates nasal mucosa without providing a higher percentage of oxygen.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_57",
+        question: "The nurse is preparing to administer a liquid medication to a pediatric patient. How should the nurse ensure the correct dose is measured in a medicine cup?",
+        options: [
+          "Hold the cup in the air and read the fluid level from above",
+          "Set the cup on a flat, level surface and read the dosage mark at the bottom of the meniscus at eye level",
+          "Fill the cup completely to the brim and assume the excess will drain off",
+          "Read the fluid line from the top of the curved liquid surface"
+        ],
+        correctAnswer: 1,
+        explanation: "To measure liquid doses accurately, the cup must sit on a flat surface. The fluid level must be evaluated at eye level, taking the measurement at the bottom of the curved crescent (meniscus).",
+        difficulty: "easy",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "found_58",
+        question: "What is the maximum recommended time to leave a cold compress therapeutic pack on an injured joint, and why?",
+        options: [
+          "10 minutes; to maintain core central temperature",
+          "20 minutes; to prevent reflex rebound vasodilation and tissue ischemia",
+          "60 minutes; to maximize local anesthetic numbing benefits",
+          "4 hours; to permanently reduce inflammation"
+        ],
+        correctAnswer: 1,
+        explanation: "Cold therapy should be limited to 15-20 minutes. Exceeding this duration triggers a reflex cellular phenomenon known as the Lewis hunting reaction, where blood vessels dilate to prevent freezing, reversing the desired swelling reduction.",
+        difficulty: "easy",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "found_59",
+        question: "Which collection of safety interventions must the nurse implement for a client on active seizure precautions?",
+        options: [
+          "Soft leather wrist restraints, bedside tracheostomy kit, and bright ambient lighting",
+          "Padded side rails, suction equipment set up at bedside, oxygen source, and oral airway tongue blade in reach",
+          "Padded side rails, functioning suction and oxygen supplies, and a clear floor space with the bed locked in its lowest position",
+          "Complete bilateral limb restraints, soft foam collar, and tongue depressor taped to the wall"
+        ],
+        correctAnswer: 2,
+        explanation: "Seizure safety protocols focus on avoiding physical injury. Sidewalks should be padded, bed kept in its lowest setting, and oxygen and suction must be tested and ready. Do NOT insert anything (like a tongue blade) into the client's mouth during active convulsions.",
+        difficulty: "easy",
+        domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "found_60",
+        question: "Why should a nurse use warm water instead of hot water when performing hand hygiene?",
+        options: [
+          "Hot water deactivates the chemical properties of antibacterial soap",
+          "Warm water washes away bacteria twice as fast as hot water",
+          "Hot water increases skin dryness, leading to microtears that serve as portals for pathogens",
+          "Cool water promotes peripheral vasoconstriction and prevents sweating"
+        ],
+        correctAnswer: 2,
+        explanation: "Washing with hot water repeatedly strips protective natural lipid barriers from the skin, causing extreme dryness, cracking, and dermatitis. Cracked skin poses a major infection risk to caregivers.",
+        difficulty: "easy",
+        domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "found_61",
+        question: "The healthcare provider prescribes a clear liquid diet for a client recovering from gastrointestinal surgery. Which item represents an acceptable choice?",
+        options: [
+          "Chocolate pudding and vanilla ice cream",
+          "Apple juice, beef broth, plain gelatin, and black tea",
+          "Orange juice with pulp, tomato soup, and yogurt",
+          "Pureed squash and oatmeal porridge with whole milk"
+        ],
+        correctAnswer: 1,
+        explanation: "A clear liquid diet consists solely of fluids that are transparent at room temperature, such as water, clear broth, gelatin, plain coffee, tea, and apple or cranberry juice without pulp.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_62",
+        question: "The nurse is providing sleep safety instructions to the parents of a 3-month-old infant. Which statement represents safe practice?",
+        options: [
+          "Place the baby to sleep on their stomach to prevent saliva choking",
+          "Always place the infant on their back (supine) on a firm mattress without loose blankets, bumper pads, or stuffed toys",
+          "Keep the baby on a soft waterbed pillow in the parent's bed to monitor breathing",
+          "Position the baby on their side nestled with a heavy plush comforter"
+        ],
+        correctAnswer: 1,
+        explanation: "To prevent Sudden Infant Death Syndrome (SIDS), babies should always sleep flat on their backs (supine) on a firm, decluttered crib mattress. Loose toys, pillows, bumper pads, and blankets are major suffocation hazards.",
+        difficulty: "easy",
+        domain: "Health Promotion and Maintenance"
+      },
+      {
+        id: "found_63",
+        question: "To administer a cleansing enema safely to an adult client, how should the nurse position the client on the bed?",
+        options: [
+          "Semi-Fowler's position sitting upright at 45 degrees",
+          "Prone position flat on the stomach with knees extended",
+          "Sims' position (left lateral side-lying with the right knee and hip flexed)",
+          "Lithotomy position with both legs placed in stirrups"
+        ],
+        correctAnswer: 2,
+        explanation: "The left Sims' position allows the enema fluid to flow via gravity in the natural direction of the descending colon and sigmoid colon, enhancing retention and overall safety.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_64",
+        question: "When prioritizing assessments under standard triage frameworks, which system parameter should the nurse examine first?",
+        options: [
+          "The client's level of physical comfort and pain",
+          "The client's surgical incision status and drain volumes",
+          "The client's airway patency and respiratory adequacy",
+          "The client's urinary output and electrolyte levels"
+        ],
+        correctAnswer: 2,
+        explanation: "Under the standard Airway-Breathing-Circulation (ABC) framework, maintaining a patent and safe airway is first priority. Any compromise to the airway leads rapidly to cellular hypoxia and mortality.",
+        difficulty: "easy",
+        domain: "Safe and Effective Care Environment - Management of Care"
+      },
+      {
+        id: "found_65",
+        question: "What is the best technique to measure a client's respiratory rate accurately without inducing conscious alterations?",
+        options: [
+          "State clearly to the client, 'Please stay completely still while I count your breaths'",
+          "Hold the client's wrist as if counting the radial pulse and silently observe chest rises",
+          "Place a stethoscope on the chest and count loud heartbeats",
+          "Measure breathing immediately after having the client walk around the room"
+        ],
+        correctAnswer: 1,
+        explanation: "Clients are prone to volitionally changing their respiratory pattern (breathing faster or slower) if they are aware breathing is being counted. Keeping the hand on the radial pulse acts as a benign distraction.",
+        difficulty: "easy",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "found_66",
+        question: "The nurse is modifying a nutritional plan for a geriatric client experiencing chronic constipation. Which menu option will provide the highest dietary fiber?",
+        options: [
+          "Scrambled eggs, skinless turkey bacon, and white toast",
+          "Oatmeal topped with fresh raspberries, paired with whole-wheat toast and kidney beans",
+          "White rice with boiled chicken breast and canned tomato sauce",
+          "Vanilla yogurt, applesauce, and a glass of milk"
+        ],
+        correctAnswer: 1,
+        explanation: "Whole grains (oatmeal, whole wheat), fresh fruits with seeds (raspberries), and legumes (kidney beans) contain substantial concentrations of insoluble fiber, which bulks stool and accelerates colon motility.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_67",
+        question: "The nurse is preparing to perform post-mortem care on a client on a general medical unit. What is the correct initial action to preserve normal facial appearance?",
+        options: [
+          "Keep the head of the bed completely flat to encourage fluid return",
+          "Place the client's body in a prone position",
+          "Close the client's eyes, insert dentures if applicable, and elevate the head of the bed on a pillow",
+          "Pack the oral cavity heavily with damp gauze strips"
+        ],
+        correctAnswer: 2,
+        explanation: "Elevating the head of the bed on a pillow prevents pooling of blood in the head and face (which causes severe discoloration). Closing the eyes and placing dentures before rigor mortis sets in preserves natural features.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_68",
+        question: "To verify correct fitting of axillary crutches, how many finger widths should exist between the crutch pad and the client's armpit?",
+        options: [
+          "Exactly 1 inch or 1 finger width",
+          "2 to 3 finger widths below the axillary fold",
+          "6 finger widths, ensuring the arm is bent at a 90-degree angle",
+          "No space; the pad should fit snugly deep in the axilla to rest weight"
+        ],
+        correctAnswer: 1,
+        explanation: "To prevent crutch paralysis (nerve damage to the brachial plexus), a gap of 2 to 3 finger widths (about 1-2 inches) must exist under the armpit. Weight should be supported by the hand grips, never the axillae.",
+        difficulty: "easy",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "found_69",
+        question: "The nurse is teaching a client who has a new prescription for oral Warfarin. Which dietary instruction is most critical?",
+        options: [
+          "Completely eliminate all green leafy vegetables from your diet",
+          "Consume a high amount of high-potassium foods like bananas and potatoes",
+          "Maintain a consistent daily intake of green leafy vegetables rich in Vitamin K",
+          "Drink 8 ounces of dark grapefruit juice daily"
+        ],
+        correctAnswer: 2,
+        explanation: "Vitamin K is the biological antidote to Warfarin. Sudden fluctuations (eating too much or too little green vegetables) will alter clotting times (PT/INR). Consistency is key, rather than total elimination.",
+        difficulty: "easy",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "found_70",
+        question: "The nurse is preparing to instill ear drops into an adult client's left ear. What is the correct nursing action?",
+        options: [
+          "Pull the auricle down and back",
+          "Pull the pinna upward and backward",
+          "Hold the pinna forward and flat against the temple",
+          "Insert the dropper tip deep into the auditory canal"
+        ],
+        correctAnswer: 1,
+        explanation: "For adults and children over 3 years old, pull the pinna (or auricle) upward and backward to straighten the ear canal. For children under 3, pull the ear pinna downward and backward.",
+        difficulty: "easy",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "found_71",
+        question: "To prevent systemic absorption of eye drops, which technique should the nurse employ after instilling the drops?",
+        options: [
+          "Instruct the client to squeeze their eyes shut tightly for 10 seconds",
+          "Apply gentle pressure over the nasolacrimal duct (inner canthus) for 1 to 2 minutes",
+          "Wipe the eye immediately with a dry sterile cotton ball",
+          "Apply a cold wet patch over the eye for 15 minutes"
+        ],
+        correctAnswer: 1,
+        explanation: "Occluding the tear duct (nasolacrimal duct) via gentle digital pressure prevents the liquid from entering the nasal cavity and systemic circulation, minimizing systemic drug effects.",
+        difficulty: "easy",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "found_72",
+        question: "A client is placed on a strict low-sodium restriction diet. Which food choice should the nurse teach the client to avoid?",
+        options: [
+          "Fresh grilled chicken breast with steamed broccoli",
+          "Canned vegetable soup and cured delicatessen turkey slices",
+          "Fresh berries with low-fat plain Greek yogurt",
+          "Baked sweet potato with a dash of olive oil"
+        ],
+        correctAnswer: 1,
+        explanation: "Canned soups, processed meats, cured sausages, and prepackaged meals contain massive amounts of sodium as a curing agent or preservative, whereas raw vegetables and fresh meats have minimal sodium.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_73",
+        question: "The nurse is addressing dry, flaky skin in an elderly client. Which intervention should be implemented?",
+        options: [
+          "Bathe the client twice daily in hot water using harsh alcohol soaps",
+          "Bathe the client in warm water, use super-fatted mild soap, and apply alcohol-free moisturizer immediately after drying",
+          "Vigorously rub the client's skin dry with a heavy rough towel",
+          "Apply highly scented perfume oils directly to dry lesions"
+        ],
+        correctAnswer: 1,
+        explanation: "Elderly skin has fewer active sebaceous glands. Warm water and super-fatted soaps prevent further dry damage, and applying skin emollients while the skin is still slightly damp locks in hydration.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_74",
+        question: "The nurse suspects that a client is a victim of intimate partner violence. Which environment is necessary for a screening assessment?",
+        options: [
+          "In the presence of the partner, so they can verify facts",
+          "In a private, safe room alone with the client, ensuring the partner is kept in the waiting area",
+          "In the busy corridor with multiple staff around to witness",
+          "The nurse should avoid asking to prevent legal liabilities"
+        ],
+        correctAnswer: 1,
+        explanation: "Clients experiencing domestic abuse will almost never disclose abuse or answer truthfully if the abusive partner is present in the room. Safety and privacy are absolute prerequisites.",
+        difficulty: "easy",
+        domain: "Psychosocial Integrity"
+      },
+      {
+        id: "found_75",
+        question: "A client has weak left-sided mobility. What is the correct way to instruct the client to use a single-ended cane?",
+        options: [
+          "Hold the cane in the left hand and advance it simultaneously with the right foot",
+          "Hold the cane in the right hand (strong side) and advance it together with the weak left leg",
+          "Hold the cane in the left hand and step forward with the left foot first",
+          "Ensure the cane is held in both hands directly in front of the groin"
+        ],
+        correctAnswer: 1,
+        explanation: "A cane must always be held on the client's strong, unaffected side (right). This provides a wider triangle support base and reduces weight loading on the affected left hip or knee.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_76",
+        question: "In the event of a hospital fire, in which sequential order should the nurse act under the RACE protocols?",
+        options: [
+          "Extinguish, Alarm, Confine, Rescue",
+          "Rescue clients, Activate Alarm, Confine fire (close doors), Extinguish/Evacuate",
+          "Call 911, Evacuate bedridden clients, Fight fire, Rest",
+          "Alarm first, Run for exits, Contain gases, Exit building"
+        ],
+        correctAnswer: 1,
+        explanation: "The RACE acronym defines priority fire response: R = Rescue/Remove clients in immediate danger; A = Activate alarm; C = Confine fire (close doors); E = Extinguish the fire (or Evacuate).",
+        difficulty: "easy",
+        domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "found_77",
+        question: "In which situation is a nurse legally and clinically required to use soap and water instead of alcohol-based hand rub?",
+        options: [
+          "Before taking a client's tympanic temperature",
+          "After taking a client's pulse and leaving their room",
+          "When hands are visibly soiled with blood or organic fluids, or after caring for a client with Clostridioides difficile (C. diff)",
+          "Immediately prior to donning sterile gloves for surgical fields"
+        ],
+        correctAnswer: 2,
+        explanation: "Alcohol-based gels do not kill bacterial spores (like C. difficile) and do not physically cleanse debris or blood. Vigorous physical scrubbing with friction, soap, and running water is mandatory.",
+        difficulty: "easy",
+        domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "found_78",
+        question: "When measuring liquid medication in an oral syringe, which part of the plunger should align with the dosage mark?",
+        options: [
+          "The absolute tip of the black plunger's rubber dome",
+          "The flat edge of the black rubber plunger's top ring",
+          "The bottom edge of the black rubber plunger skirt",
+          "The center line of the plastic thumb press"
+        ],
+        correctAnswer: 1,
+        explanation: "Oral syringes are calibrated by volume; read and align the dose line with the flat edge of the top rubber ring of the plunger.",
+        difficulty: "easy",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "found_79",
+        question: "Which communication technique is best for a client diagnosed with late-stage dementia who is highly disoriented?",
+        options: [
+          "Ask complex open-ended abstract questions to stimulate baseline memory",
+          "Use simple, direct, closed-ended questions and clear, short phrases paired with hand gestures",
+          "Present the client with multiple complex tasks to complete",
+          "Avoid talking altogether to reduce cognitive overstimulation"
+        ],
+        correctAnswer: 1,
+        explanation: "Cognitively compromised clients cannot process complex multi-step reasoning. Short, simple phrases and single closed questions reduce cognitive burden and alleviate anxiety.",
+        difficulty: "easy",
+        domain: "Psychosocial Integrity"
+      },
+      {
+        id: "found_80",
+        question: "What represents correct surgical asepsis (sterile field) practice?",
+        options: [
+          "Washing hands with standard soap and putting on clean non-sterile gloves",
+          "Holding sterile items above the level of the waist and never turning one's back to the field",
+          "Placing sterile items within 0.5 inches of the absolute outer border of the paper drape",
+          "Reaching across the open sterile field to retrieve a sterile dressing"
+        ],
+        correctAnswer: 1,
+        explanation: "Sterile fields must always remain directly in view. Anything below the waist level is automatically considered contaminated. A 1-inch border around the edge of the sterile drape is also considered unsterile, and reaching across a sterile field introduces microbial shedding.",
+        difficulty: "easy",
+        domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "found_81",
+        question: "To prevent gravity reflux and aspiration during intermittent enteral tube feedings, how should the nurse position the client?",
+        options: [
+          "Placed in a resting flat supine position",
+          "Elevated in a semi-Fowler's or high-Fowler's position (head of bed elevated at least 30 to 45 degrees)",
+          "Positioned in a right-sided Sims position with head neutral",
+          "Trendelenburg position with elevated feet"
+        ],
+        correctAnswer: 1,
+        explanation: "During and for at least 30-60 minutes after enteral tube feedings, the client's head must be elevated to prevent gastric reflux from flowing into the trachea, causing aspiration pneumonia.",
+        difficulty: "easy",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "found_82",
+        question: "When teaching a client the correct use of an incentive spirometer, what is the goal of the breathing motion?",
+        options: [
+          "To exhale as rapidly and forcefully as possible into the tube",
+          "To slowly inhale with a steady deep breath to lift the ball or piston upward and hold",
+          "To blow brief, sharp puffs of air through the mouthpiece",
+          "To hold the breath for 30 seconds before coughing into the machine"
+        ],
+        correctAnswer: 1,
+        explanation: "Incentive spirometers measure inspiratory volume. The client must seal their lips and slowly, deeply inhale. This creates negative thoracic pressure, inflating collapsed alveoli and preventing atelectasis.",
+        difficulty: "easy",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "found_83",
+        question: "A postoperative abdominal surgery client reports acute pain when coughing. What should the nurse instruct the client to do?",
+        options: [
+          "Take shallow breaths and avoid coughing completely",
+          "Hold a pillow firmly against the abdomen (splinting) during coughing and deep breathing",
+          "Lie completely flat during coughing exercises",
+          "Perform hyperventilation breathing patterns"
+        ],
+        correctAnswer: 1,
+        explanation: "Splinting the incision with a pillow or blanket supports the abdominal wall muscles, reduces physical tissue shear stress/tension, decreases pain, and prevents dehiscence.",
+        difficulty: "easy",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "found_84",
+        question: "The nurse is securing a client's wrist restraints. What is a critical safety guideline for securing the straps?",
+        options: [
+          "Tie the straps tightly in a double knot directly to the side rail",
+          "Tie the straps to the movable bed frame using a quick-release slipknot",
+          "Ensure that no fingers can fit between the client's skin and the restraint cuff",
+          "Affix the straps to the highest point of the headboard"
+        ],
+        correctAnswer: 1,
+        explanation: "Restraints must NEVER be tied to side rails, as raising/lowering them can cause severe joint dislocation or injury. Using a quick-release knot tied to the movable bed frame ensures they can be removed instantly in an emergency.",
+        difficulty: "easy",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "found_85",
+        question: "A client repeatedly refuses to take an ordered morning dose of antihypertensive medication. What represents the nurse's first action?",
+        options: [
+          "Crush the tablet and hide it in the client's applesauce",
+          "Inform the client of the health risks, explore reasons for refusal, document the refusal, and notify the prescribing healthcare provider",
+          "Have security staff hold the client down to administer the pill",
+          "Ignore the baseline refusal entirely and throw the pill in the trash"
+        ],
+        correctAnswer: 1,
+        explanation: "Autonomy dictates that a competent patient has the right to refuse care. The nurse must assess the client's reasons (e.g., side effects, cost, confusion), provide education on risks, document the occurrence, and alert the provider.",
+        difficulty: "easy",
+        domain: "Safe and Effective Care Environment - Management of Care"
       }
     ]
   },
@@ -2514,6 +3003,496 @@ export const DEFAULT_PRACTICE_TESTS = [
         explanation: "Pacemaker discharge teaching includes: taking pulse daily; avoiding raising the arm on the pacemaker side above shoulders for 1-2 weeks (to prevent lead dislodgement); carrying a pacemaker card; and avoiding MRI scans. Modern microwaves are safe.",
         difficulty: "medium",
         domain: "Health Promotion and Maintenance"
+      },
+      {
+        id: "integ_51",
+        question: "A client on long-term Lithium therapy reports persistent watery diarrhea, muscular weakness, and blurry vision. What is the nurse's priority action?",
+        options: [
+          "Reassure the client that these are standard benign side effects and continue taking the doses",
+          "Instruct the client to immediately withhold the next lithium dose and prepare for a serum lithium level draw",
+          "Increase the oral lithium dose to compensate for GI malabsorption",
+          "Advise the client to restrict all dietary sodium and fluid intake"
+        ],
+        correctAnswer: 1,
+        explanation: "Watery diarrhea, muscular weakness, hand tremors, slurred speech, and blurred vision are classic clinical signs of early Lithium toxicity (typically >1.5 mEq/L). The priority is holding the drug and validating serum lithium levels.",
+        difficulty: "medium",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "integ_52",
+        question: "A client who takes daily Digoxin is admitted with anorexia, nausea, and changes in color vision (yellow-green halos). Which laboratory result is most critical for the nurse to evaluate?",
+        options: [
+          "Serum sodium level",
+          "Serum potassium level",
+          "Arterial blood gases",
+          "Serum creatinine level"
+        ],
+        correctAnswer: 1,
+        explanation: "Hypokalemia (low potassium) does not increase digoxin levels itself, but it significantly sensitizes the myocardium to Digoxin, drastically raising the risk of life-threatening digitalis-induced arrhythmias. Monitoring potassium is vital.",
+        difficulty: "medium",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "integ_53",
+        question: "A client is admitted to the emergency department experiencing an acute, severe asthma exacerbation. Peak flow is 45% of baseline. Which medication order should the nurse execute first?",
+        options: [
+          "Inhaled fluticasone propionate (corticosteroid) via metered-dose inhaler",
+          "Salmeterol (long-acting beta-agonist) via dry-powder inhaler",
+          "Inhaled albuterol (short-acting beta-agonist) via nebulizer",
+          "Oral prednisone tablets"
+        ],
+        correctAnswer: 2,
+        explanation: "Acute asthma spasm requires immediate bronchoid dilation. Albuterol is a rapid-acting rescue beta-agonist. Inhaled corticosteroids and oral steroids are used to resolve underlying swelling, but they take hours to exert clinical efficacy.",
+        difficulty: "medium",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "integ_54",
+        question: "The nurse is preparing to assess a client who underwent total parathyroidectomy 12 hours ago. To check for latent tetany secondary to hypocalcemia, how should the nurse elicit Trousseau's sign?",
+        options: [
+          "Tap on the facial nerve in front of the earlobe and watch for asymmetrical muscular contraction",
+          "Inflate a blood pressure cuff on the upper arm above the systolic pressure for 3 minutes and monitor for carpal spasm",
+          "Strike the patellar tendon with a reflex hammer and assess for hyper-responsiveness",
+          "Instruct the client to hyperventilate rapidly for 1 minute"
+        ],
+        correctAnswer: 1,
+        explanation: "Trousseau's sign is elicited by inflating a blood pressure cuff above systolic pressure for 3 minutes. Ischemia triggers carpopedal spasm (flexion of wrist and joints) in the presence of hypocalcemia. Face tapping elicits Chvostek's sign.",
+        difficulty: "medium",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "integ_55",
+        question: "Why should the nurse exercise caution when administering high-flow oxygen via simple face mask to a client with end-stage COPD?",
+        options: [
+          "High flow rates will induce severe nitrogen narcosis and neurological collapse",
+          "COPD clients depend on low arterial oxygen levels (hypoxic drive) to stimulate their breathing; excessive oxygen can abolish their drive to breathe",
+          "It can rupture dry pulmonary blebs and cause a tension pneumothorax",
+          "It triggers severe respiratory alkalosis and cellular potassium loading"
+        ],
+        correctAnswer: 1,
+        explanation: "In clients with chronic hypercapnia (like COPD), the respiratory center becomes desensitized to carbon dioxide. Breathing becomes driven mainly by oxygen levels (hypoxic drive). Excessive oxygen destroys this biological trigger, leading to hypoventilation and carbon dioxide narcosis.",
+        difficulty: "medium",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "integ_56",
+        question: "The nurse is providing home management discharge instructions to a client with stage III chronic Heart Failure. Which directive is most critical for preventing acute fluid decompensation?",
+        options: [
+          "Walk at least 5 miles every morning regardless of fatigue",
+          "Weight yourself every morning at the same time, and notify your provider if you gain more than 3 pounds in 24 hours or 5 pounds in 1 week",
+          "Restrict your fluid intake to less than 200 mL per day",
+          "Increase your intake of high-sodium red meats to maintain physical endurance"
+        ],
+        correctAnswer: 1,
+        explanation: "Sudden weight gain is the most reliable clinical sign of latent fluid accumulation. Reporting a gain of 3 lbs in 1 day or 5 lbs in a week allows providers to adjust oral diuretic dosages before acute pulmonary edema develops.",
+        difficulty: "medium",
+        domain: "Health Promotion and Maintenance"
+      },
+      {
+        id: "integ_57",
+        question: "A postoperative client's abdominal incision suddenly dehisces, and a loop of bowel protrudes. After calling for emergency assistance, what should the nurse do next?",
+        options: [
+          "Gently push the exposed abdominal bowel contents back into the cavity using clean hands",
+          "Place the client in high-Fowler's position and leave the wound open to the air to dry",
+          "Cover the protruding organs with a sterile dressing moistened with warm sterile normal saline",
+          "Apply a tight abdominal binder with maximum mechanical pressure"
+        ],
+        correctAnswer: 2,
+        explanation: "If evisceration occurs, do NOT attempt to re-insert the bowel. Cover the organs with sterile gauze soaked in warm sterile saline to keep them hydrated and sterile. Keep the client in low semi-Fowler's with knees bent to minimize abdominal muscle wall tension.",
+        difficulty: "medium",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "integ_58",
+        question: "A client is prescribed daily oral Ferrous Sulfate (iron supplements) for severe iron-deficiency anemia. How should the nurse teach the client to take this medication?",
+        options: [
+          "Take it with a warm glass of milk or an antacid immediately after lunch",
+          "Take it on an empty stomach with a glass of orange juice or other Vitamin C source to enhance absorption",
+          "Take it with hot black tea or espresso",
+          "Double the prescribed dose if feelings of fatigue increase"
+        ],
+        correctAnswer: 1,
+        explanation: "Iron absorption is significantly enhanced in an acidic stomach environment. Vitamin C (ascorbic acid) assists this process. Calcium (milk, antacids) and tea (tannins) bind iron and prevent absorption.",
+        difficulty: "medium",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "integ_59",
+        question: "The nurse is educating a client who has a newly applied plaster cast on their right forearm. Which precaution is correct?",
+        options: [
+          "If the skin underneath the cast is itching, use a long wire hanger to scratch it",
+          "Keep the plaster cast resting on a hard, flat table surface with ice during the first 24 hours",
+          "Assess fingers for warmth, sensation, and movement; use a cool hair dryer to relieve itching, and do not stick any objects inside the cast",
+          "Keep the right arm dangling down below the level of the pelvis at all times"
+        ],
+        correctAnswer: 2,
+        explanation: "Inserting plastic or metal hangers, pens, or rulers into a cast can tear skin integrity, creating hidden portals for severe bacterial infections. Cool air from a hair dryer is safe.",
+        difficulty: "medium",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "integ_60",
+        question: "A client with type 1 diabetes is admitted in Diabetic Ketoacidosis (DKA) with a blood glucose of 550 mg/dL and severe dehydration. What is the nurse's priority initial treatment action?",
+        options: [
+          "Administer a massive subcutaneous bolus of long-acting glargine insulin",
+          "Initiate rapid intravenous fluid resuscitation with 0.9% Normal Saline",
+          "Administer intravenous sodium bicarbonate to correct metabolic acidosis",
+          "Begin an immediate intravenous infusion of regular insulin at 0.5 units/kg/hour"
+        ],
+        correctAnswer: 1,
+        explanation: "Although insulin is necessary to halt ketone production, the immediate life-threatening issue in DKA is profound hypovolemic shock. Fluid resuscitation with Normal Saline is the absolute priority to restore organ perfusion.",
+        difficulty: "medium",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "integ_61",
+        question: "Which morning instruction should the nurse provide to a client with Rheumatoid Arthritis (RA) who reports severe, exhausting early-morning joint stiffness?",
+        options: [
+          "Take a warm bath or hot shower immediately upon waking to loosen joints, followed by gentle range-of-motion stretching",
+          "Remain completely immobile in bed until noon to let joint swelling resolve naturally",
+          "Apply large direct ice packs on stiff joints for 2 hours",
+          "Avoid any movement or exercises of the upper extremities"
+        ],
+        correctAnswer: 0,
+        explanation: "Morning joint stiffness in Rheumatoid Arthritis is inflammatory and relieved by warmth. A warm shower or bath promotes vascular circulation, relaxes surrounding muscles, and makes stretch exercises safer and less painful.",
+        difficulty: "medium",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "integ_62",
+        question: "A client is prescribed oral Phenytoin (Dilantin) for epilepsy control. Which long-term side effect requires specific preventive client education?",
+        options: [
+          "Gingival hyperplasia, requiring meticulous oral hygiene, soft brushing, and regular dental visits",
+          "Severe permanent loss of hearing",
+          "Severe urinary retention and orange-colored urine",
+          "Continuous visual double vision"
+        ],
+        correctAnswer: 0,
+        explanation: "Phenytoin is famous for inducing gingival hyperplasia (overgrowth of gum tissue). Excellent dental hygiene, flossing, soft-bristled brushes, and regular dental cleanings help minimize this complication.",
+        difficulty: "medium",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "integ_63",
+        question: "A client with a spinal cord injury at T4 reports a sudden, splitting headache. The nurse notes severe facial flushing, a blood pressure of 190/98 mmHg, and bradycardia at 48 beats/minute. What is the nurse's immediate priority action?",
+        options: [
+          "Keep the client completely flat on their back and check their pupillary response",
+          "Place the client in a high-sitting upright position (high-Fowler's) and remove constrictive clothing",
+          "Administer a rapid subcutaneous injection of epinephrine",
+          "Prepare to perform an immediate lumbar puncture"
+        ],
+        correctAnswer: 1,
+        explanation: "The client is experiencing autonomic dysreflexia, an emergency. Sitting the client upright (high-Fowler's) utilizes gravity to naturally decrease intracranial pressure and blood pressure. The next steps are checking for bladder distension or fecal impaction.",
+        difficulty: "medium",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "integ_64",
+        question: "The nurse is providing home care safety teaching to the parents of an 8-year-old child diagnosed with Hemophilia A. Which instruction is correct?",
+        options: [
+          "Use aspirin or ibuprofen tablets whenever the child reports joint pain",
+          "Encourage participation in high-impact contact sports like American football",
+          "Employ a soft-bristled toothbrush, avoid contact sports, and ensure the child wears a medical alert bracelet",
+          "Restrict the child's fluid intake to prevent vascular swelling"
+        ],
+        correctAnswer: 2,
+        explanation: "Hemophilia A is a bleeding disorder caused by deficiency of Factor VIII. Safety consists of preventing bleeding: soft toothbrushes, non-contact exercise, avoiding aspirin or NSAIDs (which impair clotting), and medical alert identification.",
+        difficulty: "medium",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "integ_65",
+        question: "A client is receiving continuous bladder irrigation (CBI) following a transurethral resection of the prostate (TURP). The nurse notes that the irrigation fluid is running rapidly, but the catheter output has completely stopped. What is the nurse's priority action?",
+        options: [
+          "Increase the speed of the irrigation stream to push out any barriers",
+          "Assess the client's lower abdomen for distension and irrigate the catheter manually with sterile saline if prescribed",
+          "Administer a strong intravenous dose of loop diuretics",
+          "Document this as a normal variation during TURP recovery"
+        ],
+        correctAnswer: 1,
+        explanation: "An abrupt halt of CBI drainage with ongoing inflow is an emergency that risks acute bladder rupture. The nurse must check the tube for kinks, assess for lower abdomen distension (bladder spasms), and manually irrigate to clear obstructing blood clots.",
+        difficulty: "medium",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "integ_66",
+        question: "The nurse is managing fluid resuscitation for a client with 45% total body surface area burns. Which clinical parameter is the single best indicator of adequate organ perfusion?",
+        options: [
+          "A systolic blood pressure fluctuating around 140 mmHg",
+          "Urine output of at least 30 to 50 mL/hour (or 0.5 mL/kg/hour)",
+          "A steady heart rate below 110 beats/minute",
+          "Clear lungs upon chest auscultation"
+        ],
+        correctAnswer: 1,
+        explanation: "Urine output is the most reliable, objective clinical marker of renal and visceral organ perfusion. Ideal targets during burn resuscitation are 30-50 mL/hour for adults.",
+        difficulty: "medium",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "integ_67",
+        question: "A client is diagnosed with acute gouty arthritis. What dietary instruction should the nurse include in the client's education?",
+        options: [
+          "Increase intake of organ meats like liver and kidneys",
+          "Avoid alcoholic beverages and restrict high-purine foods such as anchovies, sardines, and sweetbreads",
+          "Restrict daily fluid intake to less than 1 Liter to prevent joint swelling",
+          "Increase consumption of shellfish and red wine"
+        ],
+        correctAnswer: 1,
+        explanation: "Gout is caused by hyperuricemia (excess uric acid). Purines break down into uric acid. Clients must avoid high-purine items (organ meats, yeast, shellfish, sardines) and alcohol, and consume plenty of fluids to flush out uric acid.",
+        difficulty: "medium",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "integ_68",
+        question: "The nurse is providing self-care teaching to a client diagnosed with severe Peripheral Arterial Disease (PAD) of the lower extremities. Which instruction is correct?",
+        options: [
+          "Elevate your legs on multiple soft pillows high above the level of your heart when resting",
+          "Dangle your legs over the edge of the bed or keep them dependent to encourage arterial blood flow",
+          "Apply an electric hot heating pad directly onto your bare toes daily",
+          "Cross your legs at the knees when sitting to stabilize blood pressure"
+        ],
+        correctAnswer: 1,
+        explanation: "In PAD, arterial blood flow is compromised. Elevating legs increases ischemia. Keeping limbs dependent (dangling) utilizes gravity to pull blood down into lower tissues. Hot pads are strictly contraindicated due to sensory depletion and burn risk.",
+        difficulty: "medium",
+        domain: "Health Promotion and Maintenance"
+      },
+      {
+        id: "integ_69",
+        question: "A client reports burning epigastric pain that is temporarily relieved by eating food but worsens 2 to 3 hours after meals and often wakes the client up in the middle of the night. Which disease process is most consistent with these clinical findings?",
+        options: [
+          "Gastric ulcer disease",
+          "Duodenal ulcer disease",
+          "Acute pancreatitis",
+          "Chronic gastroesophageal reflux disease"
+        ],
+        correctAnswer: 1,
+        explanation: "Duodenal ulcers present with pain 2-3 hours post-meals. Food buffers stomach acid, temporarily relieving the pain. Gastric ulcers, by contrast, present with pain 30-60 minutes post-meals that is worsened by eating food.",
+        difficulty: "medium",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "integ_70",
+        question: "The nurse is caring for a client receiving total parenteral nutrition (TPN) via a central venous catheter. The current TPN bag is empty, but the next bag has not arrived from the pharmacy. What is the nurse's priority action?",
+        options: [
+          "Turn off the infusion pump and wait until the next TPN bag arrives",
+          "Hang a bag of 10% Dextrose in water (D10W) at the same infusion rate",
+          "Flush the central line with heparin and lock it",
+          "Infuse standard 0.9% Normal Saline at twice the rate"
+        ],
+        correctAnswer: 1,
+        explanation: "TPN contains massive concentrations of glucose. Abruptly terminating TPN can trigger reactive rebound hypoglycemia as endogenous insulin levels are highly elevated. Hanging D10W maintains glycemic stability until TPN arrives.",
+        difficulty: "medium",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "integ_71",
+        question: "The nurse notes that a client's chest tube has become accidentally disconnected from the water seal drainage system. What is the immediate priority nursing action?",
+        options: [
+          "Clamp the chest tube close to the chest wall with sterile forceps",
+          "Submerge the distal end of the chest tube 1 to 2 inches into a bottle of sterile water or saline",
+          "Instruct the client to take deep, rapid breaths to inflate the lung",
+          "Cover the chest tube tip with sterile gauze and tape it securely"
+        ],
+        correctAnswer: 1,
+        explanation: "Under water seal failure, submerging the tube tip in sterile water provides a temporary emergency seal, preventing air from rushing up the tube and causing a tension pneumothorax. Clamping should be restricted to brief procedural checks.",
+        difficulty: "medium",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "integ_72",
+        question: "The nurse is preparing to administer enteral feeding through a newly placed nasogastric (NG) tube. Which method is most reliable for validating correct tube placement at the bedside?",
+        options: [
+          "Auscultating a whooshing sound over the stomach when injecting 30 mL of air",
+          "Verifying that the aspirate pH is less than or equal to 5",
+          "Obtaining a prescription for and reviewing a portable chest X-ray",
+          "Checking if the client is able to speak without coughing"
+        ],
+        correctAnswer: 2,
+        explanation: "An abdominal/chest X-ray is the gold-standard, most reliable method of verifying NG tube positioning before starting feeds. Checking aspirate pH (<= 5) is the primary bedside validation method, while the air-whoosh sound is unreliable.",
+        difficulty: "medium",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "integ_73",
+        question: "What persistent clinical warning sign is most characteristic of early laryngeal cancer?",
+        options: [
+          "Acute onset of productive blood-tinged sputum",
+          "Persistent hoarseness or change in voice quality lasting more than 2 weeks",
+          "Sharp stabbing chest pain radiating to the back",
+          "Severe neck stiffness and high fever"
+        ],
+        correctAnswer: 1,
+        explanation: "Laryngeal tumors directly impair vocal cord apposition. Any persistent hoarseness or voice changes lasting longer than 2 weeks must be investigated immediately for malignancies.",
+        difficulty: "medium",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "integ_74",
+        question: "A client is admitted with suspected acute appendicitis. What intervention should the nurse expect to be strictly contraindicated?",
+        options: [
+          "Administering intravenous fluid hydration",
+          "Applying a warm heating pad to the right lower quadrant of the abdomen",
+          "Applying an ice pack to the abdomen",
+          "Keeping the client on NPO status"
+        ],
+        correctAnswer: 1,
+        explanation: "Applying heat to an inflamed appendix is contraindicated because vasodilation increases localized pressure, drastically raising the risk of appendix rupture and subsequent peritonitis.",
+        difficulty: "medium",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "integ_75",
+        question: "A child is admitted to the pediatric unit in acute vaso-occlusive sickle cell crisis. What represents the nurse's primary therapeutic goals?",
+        options: [
+          "Begin high-dose chemotherapy and strict fluid restriction",
+          "Maintain vigorous fluid hydration and adequate systemic oxygenation, paired with scheduled analgesics",
+          "Restrict all movement and keep the child on a high-protein diet",
+          "Apply ice packs to all swollen joints"
+        ],
+        correctAnswer: 1,
+        explanation: "In vaso-occlusive crisis, sickled cells clump and obstruct perfusion, causing ischemic pain. Hydration thins blood viscosity and flushes the cells, oxygenation halts further sickling, and pain control resolves severe distress.",
+        difficulty: "medium",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "integ_76",
+        question: "A Parkinson's disease client frequently experiences 'freezing' episodes when trying to walk. Which tip should the nurse include in home safety education?",
+        options: [
+          "Instruct the client to push forward forcefully and hurry their steps",
+          "Tell the client to step over an imaginary line on the floor, or rock side-to-side to push past the freeze",
+          "Enforce strict bedrest to prevent fall injury",
+          "Wear heavy rubber-soled combat boots to anchor walking traction"
+        ],
+        correctAnswer: 1,
+        explanation: "Freezing of gait (FOG) in Parkinson's is a motor block. Behavioral cues, such as pretending to step over a line, marching, or rocking rhythmically from side-to-side, help trigger the basal ganglia to resume a walking pathway.",
+        difficulty: "medium",
+        domain: "Health Promotion and Maintenance"
+      },
+      {
+        id: "integ_77",
+        question: "The nurse is assessing a 4-week-old infant with suspected hypertrophic pyloric stenosis. Which clinical finding is a classic presentation of this disease?",
+        options: [
+          "Copious watery diarrhea containing bright green bile",
+          "Projectile, non-bilious vomiting immediately after feeding, accompanied by an olive-shaped mass in the right upper quadrant",
+          "Currant jelly-like stools containing blood and mucus",
+          "Abrupt onset of low-grade fever and severe drooling"
+        ],
+        correctAnswer: 1,
+        explanation: "Pyloric stenosis features progressive muscular narrowing of the pyloric sphincter. Projectile vomiting, constant hunger, visible gastric peristalsis, and an olive-sized right upper quadrant mass are primary diagnostic findings.",
+        difficulty: "medium",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "integ_78",
+        question: "Which collection of grain products is acceptable for a child diagnosed with Celiac Disease?",
+        options: [
+          "Wheat bread, rye crackers, and barley soup",
+          "Corn tortillas, white rice, buckwheat flour, and quinoa",
+          "Whole-wheat pasta and bran muffins",
+          "Oatmeal cookies and flour tortillas"
+        ],
+        correctAnswer: 1,
+        explanation: "Celiac disease is an autoimmune intolerance to gluten. Gluten is found in: barley, rye, oats, and wheat (BROW). Safe alternatives are: corn, rice, buckwheat, tapioca, and quinoa.",
+        difficulty: "medium",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "integ_79",
+        question: "A client receiving a blood transfusion suddenly develops severe lower back pain, fever, chills, and dark-colored urine. What represents the nurse's priority action sequence?",
+        options: [
+          "Slow down the transfusion rate and check the client's temperature",
+          "Stop the transfusion immediately, disconnect the tubing at the hub, run normal saline through newly hung tubing, and notify the provider and blood bank",
+          "Administer a dose of intravenous diphenhydramine and continue monitoring",
+          "Instruct the client to take deep breaths while the blood finishes infusing"
+        ],
+        correctAnswer: 1,
+        explanation: "This describes an acute hemolytic transfusion reaction, a life-threatening emergency caused by ABO incompatibility. The transfusion must be stopped immediately to halt further hemolysis, the line flushed with new saline to maintain patency, and the provider notified.",
+        difficulty: "medium",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "integ_80",
+        question: "The nurse is providing self-care discharge teaching to a client with Systemic Lupus Erythematosus (SLE). Which recommendation is correct?",
+        options: [
+          "Spend at least 2 hours daily sunbathing to boost Vitamin D levels",
+          "Wear broad-spectrum sunscreen daily, avoid direct UV light exposure, and inspect skin for lesions",
+          "Apply strong topical alcohol astringents to active facial rashes",
+          "Discontinue systemic corticosteroids immediately when symptoms fade"
+        ],
+        correctAnswer: 1,
+        explanation: "SLE is an autoimmune disease characterized by photo-reactivity. UV light triggers disease flares and skin rashes (butterfly rash). Daily broad-spectrum sunscreen and physical protective barriers (hats, long sleeves) are mandatory.",
+        difficulty: "medium",
+        domain: "Health Promotion and Maintenance"
+      },
+      {
+        id: "integ_81",
+        question: "Which dietary and lifestyle instruction should the nurse provide to a client with Gastroesophageal Reflux Disease (GERD)?",
+        options: [
+          "Eat a heavy, fatty dinner immediately before going to sleep flat",
+          "Avoid eating within 3 hours of bedtime, elevate the head of the bed 6 to 8 inches, and avoid spicy foods, peppermint, and caffeine",
+          "Drink multiple carbonated soft drinks to help digest food",
+          "Lie completely flat on your stomach for 1 hour after every meal"
+        ],
+        correctAnswer: 1,
+        explanation: "GERD management focuses on preventing acid reflux back into the esophagus. Elevating the head of the bed, avoiding horizontal postures for 3 hours post-meals, and avoiding lower esophageal sphincter relaxants (peppermint, caffeine, fat, alcohol) are primary interventions.",
+        difficulty: "medium",
+        domain: "Basic Care and Comfort"
+      },
+      {
+        id: "integ_82",
+        question: "A client is admitted with active systemic Tuberculosis (TB). Which infection precaution protocols must the nurse implement?",
+        options: [
+          "Standard precautions only in a general semi-private room",
+          "Airborne precautions including a negative-pressure private room, keeping the door closed, and wearing an N95 respirator mask",
+          "Droplet precautions with a simple surgical mask worn at all times",
+          "Contact precautions including disposable gowns and shoe covers"
+        ],
+        correctAnswer: 1,
+        explanation: "Mycobacterium tuberculosis is transmitted via micro-droplets that remain suspended in air. Airborne precautions are mandatory, which require a negative-pressure isolation room and an N95 or HEPA particulate respirator mask.",
+        difficulty: "medium",
+        domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "integ_83",
+        question: "A client with hepatic ascites is prescribed Spironolactone. Which laboratory parameter is most critical for the nurse to monitor regularly?",
+        options: [
+          "Serum glucose levels",
+          "Serum potassium, watching for hyperkalemia",
+          "Prothrombin time and INR",
+          "Total serum calcium levels"
+        ],
+        correctAnswer: 1,
+        explanation: "Spironolactone is an aldosterone antagonist and a potassium-sparing diuretic. It can cause serious hyperkalemia, particularly in clients with renal impairment or those taking potassium supplements.",
+        difficulty: "medium",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "integ_84",
+        question: "A client is diagnosed with primary open-angle glaucoma and is prescribed daily timolol eye drops. Which education point is correct?",
+        options: [
+          "Only use the drops when you feel severe eye pain",
+          "These eye drops must be used consistently every day for life; do not abruptly stop them as it can cause blind-spots on the optic nerve",
+          "These drops will cure the disease forever in 2 weeks",
+          "Expect your pupil to dilate completely for 4 hours after every drop"
+        ],
+        correctAnswer: 1,
+        explanation: "Glaucoma is a progressive, chronic disease of high intraocular pressure. Medications must be taken daily for life to prevent irreversible damage to the optic nerve. Glaucoma is usually painless in its early stages.",
+        difficulty: "medium",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "integ_85",
+        question: "A client with advanced liver cirrhosis develops Hepatic Encephalopathy. Which medication should the nurse expect to administer, and what represents the therapeutic goal?",
+        options: [
+          "Spironolactone; to reduce sodium weight retention in the abdomen",
+          "Lactulose; to reduce blood ammonia levels by promoting ammonia excretion via 2 to 3 soft stools per day",
+          "Neomycin; to completely sterilize the urinary tract",
+          "Propranolol; to lower high systemic blood pressure"
+        ],
+        correctAnswer: 1,
+        explanation: "Lactulose acidifies colon contents, trapping toxic ammonia (NH3) as ammonium (NH4+), which is excreted in feces. The dose is titrated to produce 2 to 3 soft bowel movements daily; excessive diarrhea can cause dehydration and hypokalemia.",
+        difficulty: "medium",
+        domain: "Pharmacological and Parenteral Therapies"
       }
     ]
   },
@@ -3222,6 +4201,496 @@ export const DEFAULT_PRACTICE_TESTS = [
         explanation: "Chemical eye splashes are medical emergencies requiring immediate chemical dilution. The highest priority is continuous, direct irrigation for a minimum of 15-30 minutes before performing any other assessments.",
         difficulty: "hard",
         domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "mast_51",
+        question: "The nurse is caring for four clients in the endocrine unit. Which client should be evaluated first?",
+        options: [
+          "A client with hypothyroidism reporting mild constipation and cold intolerance",
+          "A client with Cushing's syndrome who has purple abdominal striae and a round face",
+          "A client with Graves' disease newly admitted with a temperature of 103.8°F (39.9°C), heart rate of 144 beats/minute, and extreme restlessness",
+          "A client with diabetes insipidus whose urine output is 250 mL over the last hour"
+        ],
+        correctAnswer: 2,
+        explanation: "The client with Graves' disease is showing classic signs of a thyroid storm, which is a life-threatening, hypermetabolic cardiovascular endocrine emergency leading to high fever, extreme tachycardia, confusion, heart failure, and shock.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_52",
+        question: "The nurse is responding to a low-pressure alarm on a mechanical ventilator of a client who is intubated. What represents the nurse's priority action?",
+        options: [
+          "Increase the tidal volume setting on the ventilator panel by 100 mL",
+          "Immediately check for a disconnection between the ventilator tubing and the tracheostomy or endotracheal tube",
+          "Administer an immediate intravenous sedative to the client",
+          "Perform deep tracheal suctioning immediately"
+        ],
+        correctAnswer: 1,
+        explanation: "Low-pressure ventilator alarms signal a loss of resistance, which is typically caused by a tubing disconnection, leak, or cuff deflation. Decompression or extubation should be ruled out first. High-pressure alarms, by contrast, indicate obstructions such as biting, kinking, or secretions.",
+        difficulty: "hard",
+        domain: "Safe and Effective Care Environment - Management of Care"
+      },
+      {
+        id: "mast_53",
+        question: "The medical-surgical charge nurse is assigning tasks. Which clinical action is most appropriate to delegate to a licensed practical nurse (LPN) who has 2 years of clinical experience?",
+        options: [
+          "Performing the initial admission head-to-toe assessment of a newly admitted post-op client",
+          "Administering a routine subcutaneous dose of insulin glargine to a stable diabetic client",
+          "Formulating the post-discharge education plan for a client with a new colostomy",
+          "Managing an active intravenous drip of nitroprusside for an unstable hypertensive crisis client"
+        ],
+        correctAnswer: 1,
+        explanation: "LPN scope of practice permits the administration of routine oral, subcutaneous, and intramuscular medications to stable clients. Initial assessments, formulating teaching plans, and managing complex intravenous vasoactive infusions (nitroprusside) require RN supervision.",
+        difficulty: "hard",
+        domain: "Safe and Effective Care Environment - Management of Care"
+      },
+      {
+        id: "mast_54",
+        question: "The nurse is caring for an emergency department client who is suspected of having severe sepsis. According to the Surviving Sepsis Campaign bundle guidelines, which order of interventions is correct?",
+        options: [
+          "Administer broad-spectrum antibiotics, draw blood cultures, evaluate serum lactate levels, then administer IV fluids",
+          "Measure serum lactate, draw blood cultures, administer broad-spectrum antibiotics, then initiate rapid crystalloid fluid resuscitation if hypotension is present",
+          "Administer high-dose vasopressors, obtain blood cultures, give antibiotics, then check lactate levels",
+          "Initiate fluid restriction, draw blood cultures, and administer oral analgesics"
+        ],
+        correctAnswer: 1,
+        explanation: "In sepsis management, the 1-hour bundle entails: (1) measure lactate level, (2) obtain blood cultures *prior* to administering therapeutic antibiotics, (3) administer broad-spectrum antibiotics, and (4) rapidly infuse 30 mL/kg of crystalloid fluids if hypotensive or lactate is >= 4 mmol/L.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_55",
+        question: "The nurse is assessing a client with a pleural chest tube who is on active water-seal drainage (no suction). The nurse notes that the fluid level in the water-seal chamber fluctuates cleanly 2 to 4 inches with respiratory movement, but there is no bubbling. What is the nurse's clinical interpretation of this finding?",
+        options: [
+          "The chest tube has a massive air leak somewhere in the drainage system",
+          "The chest tube is functioning normally, demonstrating expected tidaling, and there is no active air leak in the lung space",
+          "The chest tube is completely occluded or the lung is fully collapsed",
+          "The drainage system has lost its water seal integrity"
+        ],
+        correctAnswer: 1,
+        explanation: "expected fluid fluctuation (otherwise known as tidaling) represents the pressure changes in the pleural space during inspiration and expiration, signifying normal chest tube patency. A lack of bubbling means there is no active air leak, which is a key milestone toward tube removal.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "mast_56",
+        question: "The nurse is caring for a client who just woke up from a craniotomy to excise a cerebellar tumor. To check for impairment of Cranial Nerves IX (Glossopharyngeal) and X (Vagus), which physical assessment must the nurse perform?",
+        options: [
+          "Assess facial symmetry when the client smiles and frowns",
+          "Check for the presence of a symmetrical gag reflex and verify the client's ability to swallow fluids safely",
+          "Assess visual acuity and lateral extraocular eye movements",
+          "Strike a tuning fork and place it on the client's forehead"
+        ],
+        correctAnswer: 1,
+        explanation: "Cranial Nerve IX (Glossopharyngeal) and Cranial Nerve X (Vagus) collectively control the pharyngeal muscles, gag reflex, voice quality, and swallowing. Checking these protects the postoperative client from severe silent aspiration.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "mast_57",
+        question: "An 18-month-old child is admitted to the emergency department after accidentally ingesting a liquid bottle of acetaminophen about 2 hours ago. Which antidote medication should the nurse prepare to administer?",
+        options: [
+          "Intravenous Deferoxamine",
+          "Oral or Intravenous Acetylcysteine",
+          "Intravenous Phytonadione (Vitamin K)",
+          "Subcutaneous Protamine Sulfate"
+        ],
+        correctAnswer: 1,
+        explanation: "Acetylcysteine (Mucomyst) is the specific, highly effective antidote for acetaminophen overdose. It acts as an organic supplier of glutathione, protecting hepatocytes from liver injury caused by the toxic metabolite NAPQI.",
+        difficulty: "hard",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "mast_58",
+        question: "A client who is hooked to a cardiac monitor suddenly loses consciousness and displays a rapid, chaotic rhythm containing no identifiable QRS complexes or P waves. What represents the nurse's priority action?",
+        options: [
+          "Prepare to perform synchronized cardioversion at 50 Joules",
+          "Initiate cardiopulmonary resuscitation (CPR) and prepare for immediate unsynchronized defibrillation",
+          "Administer an immediate intravenous bolus of atropine",
+          "Draw a stat potassium level and check the radial pulse"
+        ],
+        correctAnswer: 1,
+        explanation: "The rhythm described is Ventricular Fibrillation (V-Fib), a pulseless cardiac arrest. The absolute priority is immediate high-quality CPR coupled with rapid unsynchronized defibrillation. Synchronized cardioversion is strictly contraindicated, as there is no QRS complex to synch with.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_59",
+        question: "A client with Myasthenia Gravis is receiving an Edrophonium (Tensilon) test to differentiate between a Myasthenic Crisis and a Cholinergic Crisis. Immediately after the drug is injected, the client develops severe respiratory distress, profuse sweating, extreme salivation, and bradycardia. What is the nurse's priority action?",
+        options: [
+          "Administer an additional dose of Edrophonium to achieve therapeutic effects",
+          "Immediately administer Intravenous Atropine Sulfate, keeping emergency airway resuscitation equipment at the bedside",
+          "Incur a fluid restriction of less than 500 mL",
+          "Document this as a normal diagnostic outcome of the Tensilon test"
+        ],
+        correctAnswer: 1,
+        explanation: "An Edrophonium (Tensilon) test that worsens muscle weakness and triggers cholinergic symptoms (severe sweating, drooling, bradycardia, visual miosis) indicates a Cholinergic Crisis (medication overdose). Atropine is the direct chemical antidote for cholinergic excess.",
+        difficulty: "hard",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "mast_60",
+        question: "A client in cardiogenic shock has a pulmonary artery catheter in place. The nurse notes that the Pulmonary Artery Wedge Pressure (PAWP) has risen steadily to 24 mmHg. What represents the physiological interpretation of this monitor reading?",
+        options: [
+          "Profound arterial hypovolemia and dehydration",
+          "Left-sided heart failure, pulmonary congestion, or fluid volume overload",
+          "Normal cardiovascular functioning with adequate systemic margins",
+          "Severe right ventricular failure with clear pulmonary fields"
+        ],
+        correctAnswer: 1,
+        explanation: "Normal Pulmonary Artery Wedge Pressure (PAWP) ranges from 6 to 12 mmHg. An elevated PAWP (>18-20 mmHg) indicates left ventricular volume overload or failure, pushing hydrostatic pressure back into the lungs and causing pulmonary edema.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_61",
+        question: "Under which condition should the nurse implement physical restraints for an agitated psychiatric client arriving in the emergency department?",
+        options: [
+          "Because the unit is understaffed and the nurse cannot monitor the client constantly",
+          "As a direct substitute for therapeutic behavioral management or verbal de-escalation",
+          "Only when the client poses an imminent, high-risk physical threat to their own safety or the safety of others, and all non-restrictive interventions have failed",
+          "To punish the client for using profane, offensive language toward the clinical staff"
+        ],
+        correctAnswer: 2,
+        explanation: "Restraints must be used strictly as a last resort when the client presents an immediate physical danger to self or others. Staff patterns, convenience, or behavioral noncompliance are never legal justifications.",
+        difficulty: "hard",
+        domain: "Safe and Effective Care Environment - Management of Care"
+      },
+      {
+        id: "mast_62",
+        question: "During a vaginal delivery, the infant's head is born, but the shoulders become tightly wedge-coupled behind the mother's pubic symphysis (shoulder dystocia). Which clinical intervention must the nurse execute?",
+        options: [
+          "Apply heavy fundal pressure to help push the infant's shoulders out",
+          "Hyperflex the mother's thighs tightly against her abdomen (McRoberts maneuver) and apply steady downward suprabubic pressure",
+          "Instruct the mother to blow and pant, and immediately apply a vacuum extraction cup",
+          "Perform a rapid, forceful cesarean incision at the bedside"
+        ],
+        correctAnswer: 1,
+        explanation: "Shoulder dystocia is resolved by hyperflexing the maternal hips (McRoberts maneuver) to widen the pelvic inlet, paired with suprapubic pressure to displace the anterior fetal shoulder. Fundal pressure is strictly contraindicated as it impacts the shoulder deeper into the bone and risks uterine rupture.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_63",
+        question: "A client with severe preeclampsia is receiving a continuous intravenous Magnesium Sulfate infusion. Which assessment finding is a critical warning sign indicating acute Magnesium toxicity?",
+        options: [
+          "A therapeutic maternal serum magnesium level of 5.5 mEq/L",
+          "Hyperactive patellar deep tendon reflexes (grade 4+)",
+          "An abrupt loss of deep tendon reflexes, a respiratory rate of 9 breaths/minute, and urine output of 15 mL/hour",
+          "A mild warming flushing sensation throughout the body during the initial bolus"
+        ],
+        correctAnswer: 2,
+        explanation: "Symptomatic signs of Magnesium Sulfate toxicity include: loss of deep tendon reflexes (DTRs) (typically the earliest sign), severe respiratory depression (<12), hypotension, and decreased output (<30 mL/hr) as magnesium is excreted renally. Antidote is Calcium Gluconate.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "mast_64",
+        question: "A client with diabetic ketoacidosis (DKA) has the following arterial blood gas (ABG) results: pH 7.15, PaCO2 25 mmHg, HCO3 12 mEq/L, and PaO2 95 mmHg. How should the nurse interpret these laboratory values?",
+        options: [
+          "Fully compensated respiratory acidosis",
+          "Partially compensated metabolic acidosis",
+          "Uncompensated metabolic alkalosis",
+          "Partially compensated metabolic alkalosis"
+        ],
+        correctAnswer: 1,
+        explanation: "The values are: low pH (7.15; acidosis), low HCO3 (12; metabolic origin), and low PaCO2 (25; respiratory compensation / hyperventilation via Kussmaul breathing). Since the pH is still abnormal but the lungs are actively working to compensate by blowing off CO2, it is partially compensated metabolic acidosis.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "mast_65",
+        question: "An adult client weighing 100 kg is admitted to the burn unit with second and third-degree burns covering 40% of the total body surface area (TBSA). Utilizing the Parkland Formula, what is the total volumes of lactated Ringer's required, and how fast should it be administered?",
+        options: [
+          "8,000 mL total; infusing 1,000 mL/hour continuously for 8 hours",
+          "16,000 mL total; infusing 8,000 mL over the first 8 hours (starting from the exact time of the burn injury), and the remaining 8,000 mL over the next 16 hours",
+          "16,000 mL total; infusing 4,000 mL over the first 12 hours, and 12,000 mL over the next 12 hours",
+          "4,000 mL total; infusing 2,500 mL over the first 8 hours"
+        ],
+        correctAnswer: 1,
+        explanation: "The Parkland formula is: 4 mL x kg x %TBSA. So: 4 mL x 100 kg x 40 = 16,000 mL. Half of the calculated volume (8,000 mL) must be infused within the first 8 hours *commencing from the time of the burn occurrence*, and the second half over the subsequent 16 hours.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "mast_66",
+        question: "The oncology nurse is caring for a client diagnosed with metastatic lung cancer. The client reports a new, sharp pain in their mid-back that intensifies when in a supine position, paired with mild weakness in both legs. Which oncological emergency should the nurse suspect?",
+        options: [
+          "Superior Vena Cava Syndrome (SVCS)",
+          "Spinal Cord Compression (SCC)",
+          "Tumor Lysis Syndrome (TLS)",
+          "Syndrome of Inappropriate Antidiuretic Hormone (SIADH)"
+        ],
+        correctAnswer: 1,
+        explanation: "Metastatic spinal cord compression is a major neurological oncology emergency. Symptoms include back pain that worsens when lying flat or coughing, coupled with progressive neurological weakness or paresthesia of the legs. Immediate corticosteroid boluses and radiation are mandated to prevent permanent paraplegia.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_67",
+        question: "A pediatric client is admitted with suspected Neisseria meningitidis bacterial meningitis. Which infection precaution policy should the nurse implement first?",
+        options: [
+          "Standard precautions once daily lab values return",
+          "Initiate droplet precautions immediately, place the child in a private room, and wear a surgical mask for close care until 24 hours of effective antibiotic therapy are completed",
+          "Implement negative pressure airborne isolation and wear an N95 respirator",
+          "Implement contact precautions only and wear a gown and gloves"
+        ],
+        correctAnswer: 1,
+        explanation: "Meningococcal meningitis is highly contagious and spreads via heavy respiratory droplets. Strict Droplet Precautions are required immediately upon suspicion of meningitis, and maintained for 24 hours post-initiation of appropriate antibiotic therapy.",
+        difficulty: "hard",
+        domain: "Safe and Effective Care Environment - Safety and Infection Control"
+      },
+      {
+        id: "mast_68",
+        question: "A client who was recently prescribed haloperidol (Haldol) for schizophrenia control is admitted to the medical unit with a temperature of 104.2°F (40.1°C), extreme muscle rigidity ('lead-pipe' rigidity), profuse diaphoresis, and altered consciousness. What is the nurse's priority action?",
+        options: [
+          "Administer a second dose of haloperidol to manage the schizophrenia flare",
+          "Immediately hold the haloperidol, initiate active cooling measures (ice packs, cooling blankets), and notify the provider for emergency administration of Dantrolene or Bromocriptine",
+          "Encourage high-dose oral fluid hydration with water",
+          "Document this as a common extrapyramidal symptom (EPS) requiring no treatment modifications"
+        ],
+        correctAnswer: 1,
+        explanation: "The client's presentation indicates Neuroleptic Malignant Syndrome (NMS), a life-threatening, idiosyncratic reaction to dopamine antagonists (antipsychotics). NMS features severe hyperthermia, muscle rigidity, labile vitals, and high CK levels. Treatment requires drug withdrawal, active cooling, and pharmacological agents (Dantrolene/Bromocriptine).",
+        difficulty: "hard",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "mast_69",
+        question: "A client who has a history of Addison's disease is admitted with a severe urinary tract infection, a blood pressure of 78/42 mmHg, severe hypoglycemia, and extreme muscular weakness. What represents the nurse's priority pharmacological interventions?",
+        options: [
+          "Administer subcutaneous insulin glargine and a low-dose loop diuretic",
+          "Administer intravenous hydrocortisone sodium succinate, followed by rapid infusion of 0.9% Normal Saline with 5% Dextrose",
+          "Administer oral fludrocortisone tablets only with small sips of water",
+          "Administer intravenous potassium chloride at 40 mEq/hour"
+        ],
+        correctAnswer: 1,
+        explanation: "The client is experiencing an Addisonian Crisis (adrenal crisis), a life-threatening lack of glucocorticoids. Under physical stress (such as a UTI), the client develops hypovolemic shock, hypoglycemia, and hyperkalemia. Immediate IV hydrocortisone and rapid saline hydration are vital.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_70",
+        question: "A client is in the recovery phase after receiving a kidney transplant. Ten minutes after anastomosis is completed, the kidney on the sterile field becomes mottled, pale, and dark purple, and urine production ceases. How should the surgical transplant team proceed?",
+        options: [
+          "Administer high-dose immunosuppressive antibodies and wait 24 hours",
+          "Recognize this as irreversible Hyperacute Rejection and prepare for immediate surgical removal of the rejected kidney graft to prevent systemic systemic shock",
+          "Irrigate the renal pelvis with high-pressure warm saline",
+          "Incur a fluid restriction to less than 200 mL"
+        ],
+        correctAnswer: 1,
+        explanation: "Hyperacute rejection happens within minutes of transplant due to pre-existing host antibodies against the donor organ. It causes immediate thrombosis, occlusion, and tissue necrosis. The organ cannot be saved; immediate surgical removal is required.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_71",
+        question: "A client with a suspected pheochromocytoma is admitted to the diagnostic unit. What precaution must the nurse observe when performing physical examinations?",
+        options: [
+          "Perform deep clinical palpation of the abdomen once every shift to assess for adrenal enlargement",
+          "Avoid abdominal palpation entirely, as physical pressure on the tumor can trigger a massive release of catecholamines, causing a life-threatening hypertensive crisis",
+          "Keep the client in a continuous prone position for 24 hours",
+          "Maintain a severe sodium-restricted liquid diet"
+        ],
+        correctAnswer: 1,
+        explanation: "A pheochromocytoma is a catecholamine-secreting tumor of the adrenal medulla. Abdominal palpation can compress the tumor and trigger a sudden, life-threatening surge of epinephrine/norepinephrine, spiking blood pressure to extreme crisis levels.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "mast_72",
+        question: "The nurse is caring for a newborn diagnosed with severe Neonatal Abstinence Syndrome (NAS) secondary to maternal opioid dependence. Which nursing care measure is correct?",
+        options: [
+          "Expose the infant to bright, colorful toys and continuous light to stimulate brain development",
+          "Provide a quiet, dark environment, swaddle the infant snugly to prevent tremors, and offer frequent, small high-calorie formula feedings",
+          "Keep the infant in a prone position on a hard, flat mattress without swaddling",
+          "Administer a high-dose oral amphetamine as prescribed"
+        ],
+        correctAnswer: 1,
+        explanation: "Neonates with NAS have hyper-resonant nervous systems, leading to high-pitched crying, tremors, sneezing, hypertonicity, and poor feeding. Care centers on soothing: low light, quiet environment, swaddling to prevent tremors, and high-calorie feeds.",
+        difficulty: "hard",
+        domain: "Health Promotion and Maintenance"
+      },
+      {
+        id: "mast_73",
+        question: "A client who sustained a head injury from a motor vehicle accident is admitted to the trauma unit. The emergency report notes that the client lost consciousness at the scene for 5 minutes, regained full alertness on the ride over, but is now showing a rapidly dilating left pupil, bradycardia, and decreased responsiveness. What is the nurse's clinical interpretation?",
+        options: [
+          "The client has a mild concussion that will resolve with sleep",
+          "The client is experiencing an epidural hematoma with a classic 'lucid interval' followed by rapid intracranial herniation, which is a neurosurgical emergency",
+          "The client is showing symptoms of a stable subarachnoid bleed",
+          "The client's symptoms represent standard behavioral post-concussive irritation"
+        ],
+        correctAnswer: 1,
+        explanation: "The clinical sequence of a head injury, a brief unconscious phase, a period of cognitive lucidity ('lucid interval'), followed by a rapid mental drop and pupillary dilation indicates an Epidural Hematoma (arterial bleeding, often meningeal artery). Herniating tissue requires immediate decompression burr holes.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_74",
+        question: "A client is admitted to the neurological ICU with progressive ascending sensory-motor muscle weakness of both legs following a viral gastrointestinal illness (Guillain-Barré Syndrome). What represents the nurse's highest-priority physical assessment?",
+        options: [
+          "Assessing deep tendon reflexes in the ankles",
+          "Monitoring the client's forced vital capacity (FVC), negative inspiratory force (NIF), and respiratory rate/depth",
+          "Checking the client's cranial nerve VII function",
+          "Measuring cumulative hourly fluid balance"
+        ],
+        correctAnswer: 1,
+        explanation: "The primary life-threatening complication of Guillain-Barré Syndrome is the ascending paralysis reaching the thoracic intercostal muscles and diaphragm, leading to respiratory failure. Constant assessment of ventilatory support parameters (FVC, NIF) is critical.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "mast_75",
+        question: "The nurse is assessing a client who has a history of severe pericarditis. The nurse notes muffled, distant heart tones, jugular venous distension (JVD) with dry lung fields, and a blood pressure of 86/42 mmHg with a drop of 14 mmHg in systolic pressure during inspiration. What is the nurse's immediate priority action?",
+        options: [
+          "Perform a deep clinical palpation of the liver to check for tenderness",
+          "Immediately notify the healthcare provider of suspected cardiac tamponade and prepare for an emergency pericardiocentesis",
+          "Place the client in a flat, supine position with legs elevated 30 degrees",
+          "Administer a rapid subcutaneous injection of atenolol"
+        ],
+        correctAnswer: 1,
+        explanation: "The symptoms described represent Beck's Triad (muffled heart sounds, JVD, hypotension) accompanied by pulsus paradoxus (systolic drop >10 mmHg during inspiration). This points to Cardiac Tamponade, a fatal medical emergency requiring immediate pericardiocentesis.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_76",
+        question: "A client scheduled for an elective knee replacement tomorrow signs the surgical informed consent form in front of the nurse. However, the client then asks: 'Is it true that I might lose my leg? The doctor didn't explain the risks very well.' What is the correct nursing action?",
+        options: [
+          "Reassure the client that limb loss is highly unlikely and countersign the form",
+          "Explain the detailed surgical risks of the orthopedic procedure to the client ourselves and document the teaching",
+          "Withhold the client's signature, keep the consent form unsigned, and contact the surgeon to return and explain the risks, benefits, and alternatives to the client",
+          "Instruct the client to look up the orthopedic procedure on the internet before tomorrow"
+        ],
+        correctAnswer: 2,
+        explanation: "The nurse's signature on a consent form signifies only that the signature is voluntary, the client is competent, and the signature is authentic. If the client does not understand a procedure or lists fear of unexplained risks, the nurse must halt the process and have the provider explain.",
+        difficulty: "hard",
+        domain: "Safe and Effective Care Environment - Management of Care"
+      },
+      {
+        id: "mast_77",
+        question: "A client is brought to the emergency department after sustaining a severe crush pelvic injury from an industrial accident. What represents the nurse's priority assessment focus?",
+        options: [
+          "Immobilizing the client's left leg using a traction splint",
+          "Continuously monitoring for signs of massive internal bleeding, hemorrhage, and hypovolemic shock (hypotension, tachycardia, cold skin)",
+          "Collecting a clean-catch urine specimen for laboratory urinalysis",
+          "Assessing for a positive Babinski reflex"
+        ],
+        correctAnswer: 1,
+        explanation: "The pelvis contains multiple major vascular networks (such as the internal iliac arteries). Pelvic fractures carries a high risk of life-threatening internal hemorrhage and hypovolemic shock. Prioritizing hemodynamics is critical.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_78",
+        question: "The nurse is providing discharge safety teaching to a client who underwent outpatient cataract extraction surgery 2 hours ago. Which precaution is correct?",
+        options: [
+          "Sleep on the operative side facing the pillow to keep pressure steady",
+          "Avoid coughing, lifting objects over 10 pounds, vomiting, hyper-bending over at the waist, or straining during bowel movements to prevent intraocular pressure elevation",
+          "Keep the eye open to dry air and wash the eye daily with clean tap water",
+          "Engage in heavy physical cardiovascular training within 24 hours"
+        ],
+        correctAnswer: 1,
+        explanation: "Cataract postoperative care focuses on preventing elevated intraocular pressure (IOP), which can rupture delicate optical sutures and dislodge the lens implant. Straining, bending, vomiting, and coughing increase IOP.",
+        difficulty: "hard",
+        domain: "Health Promotion and Maintenance"
+      },
+      {
+        id: "mast_79",
+        question: "A 4-year-old child is brought to the clinic presenting with a high fever, severe sore throat, drooling, distress, and keeping their head in a forward 'tripod' posture. Which clinical intervention is strictly contraindicated for this child?",
+        options: [
+          "Administering humidified supplemental oxygen via a blow-by method",
+          "Obtaining an immediate throat swab culture or using a tongue blade to visualize the epiglottis",
+          "Keeping the child in a high-sitting upright posture",
+          "Preparing for immediate emergency intubation or tracheostomy if the airway closes"
+        ],
+        correctAnswer: 1,
+        explanation: "The child displays classic signs of acute epiglottitis (fever, tripod posture, drooling, distress). Inserting a tongue blade or throat swab can cause severe laryngospasm, resulting in complete airway occlusion. Throat assessments are restricted to controlled environments with airway equipment.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "mast_80",
+        question: "A third-trimester pregnant client is admitted reporting sudden-onset, severe, continuous abdominal pain and a board-like, rigid abdomen with dark red vaginal bleeding. What is the nurse's interpretation of this presentation?",
+        options: [
+          "Placenta previa; require immediate vaginal exam",
+          "Abruptio placentae; requiring immediate fetal monitoring and preparation for emergency cesarean section",
+          "Normal pre-labor Braxton Hicks contractions",
+          "Mild uterine scar stretching that is non-emergent"
+        ],
+        correctAnswer: 1,
+        explanation: "Abruptio Placentae (premature separation of the placenta) features extremely painful, dark red bleeding, high uterine resting tone, and a board-like/rigid abdomen. Painless, bright-red bleeding features Placenta Previa. Abruptio is a critical obstetric emergency.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_81",
+        question: "The nurse is monitoring a client who is undergoing their first session of hemodialysis. The client suddenly reports a severe throbbing headache, becomes extremely nauseated, and experiences a generalized tonic-clonic seizure. What represents the most likely cause, and what is the nurse's immediate action?",
+        options: [
+          "The client has severe iron deficiency anemia; administer intravenous iron dextran",
+          "The client has Dialysis Disequilibrium Syndrome (DDS); slow down or stop the hemodialysis rate immediately, contact the provider, and prepare to administer anticonvulsants or hypertonic fluids as prescribed",
+          "The client is showing classic symptoms of a stable blood transfusion reaction",
+          "The client's blood glucose is elevated; administer a large subcutaneous dose of regular insulin"
+        ],
+        correctAnswer: 1,
+        explanation: "Dialysis Disequilibrium Syndrome (DDS) is caused by the rapid removal of urea from the blood while it remains in cerebral cells, driving high osmotic fluid shifts into the brain (causing cerebral edema). Slowing down or stopping dialysis, notifying the provider, and neuro-support are critical.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
+      },
+      {
+        id: "mast_82",
+        question: "A client who sustained multiple closed fractures of both the tibia and femur 48 hours ago develops a sudden onset of tachypnea, dyspnea, and confusion. Upon inspection, the nurse notes fine, red-purple petechiae across the client's anterior neck and chest. What is the nurse's priority action?",
+        options: [
+          "Apply dry ice packs directly to both fractures",
+          "Immediately apply high-flow oxygen, check arterial oxygen levels, and notify the healthcare provider of suspected Fat Embolism Syndrome (FES)",
+          "Administer a rapid subcutaneous injection of heparin",
+          "Teach the client deep breathing exercises and reassess in 4 hours"
+        ],
+        correctAnswer: 1,
+        explanation: "Fat Embolism Syndrome is a complications of long-bone fractures, where marrow globules are released into circulation, causing pulmonary artery occlusion and systemic emboli (causing skin petechiae, confusion, hypoxemic distress). Oxygenation is the immediate priority.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_83",
+        question: "A 9-month-old infant is brought to the emergency department with suspected intussusception. Which diagnostic finding is a classic presentation of this bowel disorder?",
+        options: [
+          "A hard, drum-like distended abdomen and severe persistent vomiting",
+          "A sausage-shaped mass in the right upper quadrant of the abdomen, paired with episodes of loud screaming where the infant draws their knees to their chest, and 'currant-jelly' stools containing blood and mucus",
+          "Scurvy rash and massive watery yellow diarrhea",
+          "An olive-shaped mass in the left lower quadrant and persistent constipation"
+        ],
+        correctAnswer: 1,
+        explanation: "Intussusception occurs when a segment of the bowel folds into another segment. Classic triad features: screaming with knees-to-chest, abdominal sausage-shaped mass, and jelly-like bloody stools. Hydrostatic enemas are standard diagnostics.",
+        difficulty: "hard",
+        domain: "Physiological Adaptation"
+      },
+      {
+        id: "mast_84",
+        question: "The oncology nurse is administering an intravenous infusion of a potent chemotherapeutic vesicant (doxorubicin) via a peripheral IV catheter. The client suddenly reports burning at the injection site, and the nurse notes mild swelling and erythema around the insertion hub. What must the nurse do first?",
+        options: [
+          "Flush the IV catheter immediately with 10 mL of Normal Saline to dilute the irritant",
+          "Stop the infusion immediately, do not remove the catheter, disconnect the bag, and attempt to aspirate any residual drug from the hub before following antidote protocols",
+          "Slow down the infusion rate and apply a hot warming pad",
+          "Remove the peripheral IV catheter immediately and apply dry pressure"
+        ],
+        correctAnswer: 1,
+        explanation: "If extravasation of a vesicant occurs, the infusion must be halted immediately to prevent tissue necrosis. Disconnecting the bag and aspirating remaining drug from the catheter is crucial before removal, as the catheter might be used to deliver local antidotes.",
+        difficulty: "hard",
+        domain: "Pharmacological and Parenteral Therapies"
+      },
+      {
+        id: "mast_85",
+        question: "A client who underwent coronary artery bypass graft (CABG) surgery 8 hours ago has a mediastinal chest tube. The nurse notes that the chest tube was draining 120 mL/hour of blood, but suddenly has produced 0 mL over the last hour. The client's blood pressure drops to 82/46 mmHg, heart rate rises to 120 beats/minute, and heart sounds have become muffled. What is the nurse's priority action?",
+        options: [
+          "Increase the continuous infusion rate of the client's intravenous sedative",
+          "Immediately notify the cardiovascular surgical team of suspected cardiac tamponade secondary to chest tube obstruction",
+          "Perform deep tracheal suctioning immediately",
+          "Document this as a positive milestone indicating cessation of surgical bleeding"
+        ],
+        correctAnswer: 1,
+        explanation: "A sudden cessation of chest tube fluid after CABG combined with JVD/muffled sounds and hypotensive tachycardia indicates cardiac tamponade due to blocked drainage. The heart is compressed, causing severe hemodynamic decline. Emergency surgical intervention is required.",
+        difficulty: "hard",
+        domain: "Reduction of Risk Potential"
       }
     ]
   }
