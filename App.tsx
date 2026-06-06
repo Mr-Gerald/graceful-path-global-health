@@ -47,8 +47,8 @@ function App() {
     heroImage: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/707943533_2512313129199500_2134259154295506832_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=aj4yIFqE_tEQ7kNvwGKrMoj&_nc_oc=AdpNukW_0NtRO_cGbtDtocO9LpQvX60P3PNEeEcwG1i0i1SE1qzueBWfffxg9e1IXq_0RW8lAPra5XeM7P9DkjPu&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gENDGtprYzp3CHF6NQZCMgvN5uitT3ERsiVuvPwnPNKPA&oe=6A420C27',
     spotlightImage: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/705480736_2261490291052472_4770393934903265755_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=cxnef9ekQBMQ7kNvwEkfLex&_nc_oc=AdqyqTNMfN4kAFC6zvPwG6UOJonNMKJBsvH2IA0vxfoarOv9NZQnOeCQT54_TLUEpwpZak4vzpMv0T2tTgVRJ0Ao&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gGzHEaqHEhoajpgNzIk1dPO3kmdGkgUmXncRw1QVvCDyQ&oe=6A420C25',
     aboutImage: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/708580778_1012210434616700_8619494619730289265_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8U0IiWLucrgQ7kNvwEIZNOO&_nc_oc=Adqh629LFYTsOf0xkIyb_1Xni7JwajNM_exdUkN-8B5n8tLChEQyBMmjfSBE2Ktx7dC8szc1mKqZZD0nQWZdSoX9&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gFYal6Ukra95iPDeyBimaeDaJtqz4U-Lfx-CgEHTkBqFg&oe=6A42288B',
-    favicon: 'https://scontent.flos3-2.fna.fbcdn.net/v/t1.15752-9/679033424_1340416481327917_3114449704387631566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Xe1RojfjDtMQ7kNvwFgeAWW&_nc_oc=AdrkSQVKX4bo6CKbA9I9A7VJAUQErZy8r_4tt_Tslx0n9ZQbADYW2VygP1KgKKhxyMU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_ss=7baaf&oh=03_Q7cD5gFTudMbAq_sFWs0PxN4ICg2WODXJpGzVDBs7-akwLMiAg&oe=6A41FE4C',
-    logo: 'https://scontent.flos3-2.fna.fbcdn.net/v/t1.15752-9/679033424_1340416481327917_3114449704387631566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Xe1RojfjDtMQ7kNvwFgeAWW&_nc_oc=AdrkSQVKX4bo6CKbA9I9A7VJAUQErZy8r_4tt_Tslx0n9ZQbADYW2VygP1KgKKhxyMU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_ss=7baaf&oh=03_Q7cD5gFTudMbAq_sFWs0PxN4ICg2WODXJpGzVDBs7-akwLMiAg&oe=6A41FE4C'
+    favicon: '/favicon.png',
+    logo: '/logo.png'
   });
 
   const [globalLinks, setGlobalLinks] = useState<GlobalLinks>({
@@ -362,7 +362,8 @@ function App() {
         const edate = essentials.find((d: any) => d.id === 'exam_date')?.data;
 
         if (branding && typeof branding === 'object') {
-          const targetLogo = 'https://scontent.flos3-2.fna.fbcdn.net/v/t1.15752-9/679033424_1340416481327917_3114449704387631566_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Xe1RojfjDtMQ7kNvwFgeAWW&_nc_oc=AdrkSQVKX4bo6CKbA9I9A7VJAUQErZy8r_4tt_Tslx0n9ZQbADYW2VygP1KgKKhxyMU&_nc_zt=23&_nc_ht=scontent.flos3-2.fna&_nc_ss=7baaf&oh=03_Q7cD5gFTudMbAq_sFWs0PxN4ICg2WODXJpGzVDBs7-akwLMiAg&oe=6A41FE4C';
+          const targetLogo = '/logo.png';
+          const targetFavicon = '/favicon.png';
           const targetHero = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/707943533_2512313129199500_2134259154295506832_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=aj4yIFqE_tEQ7kNvwGKrMoj&_nc_oc=AdpNukW_0NtRO_cGbtDtocO9LpQvX60P3PNEeEcwG1i0i1SE1qzueBWfffxg9e1IXq_0RW8lAPra5XeM7P9DkjPu&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gENDGtprYzp3CHF6NQZCMgvN5uitT3ERsiVuvPwnPNKPA&oe=6A420C27';
           const targetFounder = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/705681416_1680155853132006_6792004221980655171_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Dr0LLnsvACYQ7kNvwEExx8P&_nc_oc=Adr9txFYpJBs2FXfTUZnk9rzIk3DUV3ukEWxn0uhTQgCFrQoIjUri0cM_Fzeiv12Nnc_6AtdsY41h0uxPlpl_jmy&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gFOd5lHaxH9cx0jC1T38bolUWiFh7PlmV8XEhd0MYssuQ&oe=6A4218C8';
           const targetTutor = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/707896842_1322336960027247_9111563685685574719_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=0K5PXmKiO4MQ7kNvwGLc6ch&_nc_oc=Adp3DJ6DtV6QR9va-B5Ll1tMsMMVzIe6C2gCaBhwDZ2bR9nwfYzTihZdYgAbUBmXkt5qKf3aDeBwQ1f8RwKaFEtR&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gGNVCHDQNcbqYr-VpVCENDCryb4LZ3D7TzN3PYdhwxtAA&oe=6A423463';
@@ -383,8 +384,8 @@ function App() {
 
           const upgraded = {
             ...branding,
-            logo: resolveCustomOrFallback(branding.logo, targetLogo, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1']),
-            favicon: resolveCustomOrFallback(branding.favicon, targetLogo, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1']),
+            logo: resolveCustomOrFallback(branding.logo, targetLogo, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1', 'flos3-2', 'fbcdn', 'scontent']),
+            favicon: resolveCustomOrFallback(branding.favicon, targetFavicon, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1', 'flos3-2', 'fbcdn', 'scontent']),
             heroImage: resolveCustomOrFallback(branding.heroImage, targetHero, ['unsplash.com']),
             founderImage: resolveCustomOrFallback(branding.founderImage, targetFounder, ['628093216']),
             tutorImage: resolveCustomOrFallback(branding.tutorImage, targetTutor, ['627203980']),
