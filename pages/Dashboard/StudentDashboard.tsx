@@ -273,12 +273,19 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
     const savedActive = localStorage.getItem(activeKey);
     if (savedActive) {
       try {
-        setActivePracticeSession(JSON.parse(savedActive));
+        const parsed = JSON.parse(savedActive);
+        if (parsed && parsed.activeTest) {
+          const freshTest = practiceTests.find(t => t.id === parsed.activeTest.id);
+          if (freshTest) {
+            parsed.activeTest = freshTest;
+          }
+        }
+        setActivePracticeSession(parsed);
       } catch (e) {
         console.error("Failed to parse saved active practice session", e);
       }
     }
-  }, [user.id]);
+  }, [user.id, practiceTests]);
 
   useEffect(() => {
     if (activeTest && !quizFinished) {
@@ -336,7 +343,8 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
       try {
         const parsed = JSON.parse(savedActive);
         if (parsed && parsed.activeTest?.id === test.id) {
-          setActiveTest(parsed.activeTest);
+          // ALWAYS use the upgraded/freshest test from the dashboard state rather than relying on cached older questions length
+          setActiveTest(test);
           setCurrentQuestionIndex(parsed.currentQuestionIndex);
           setUserAnswers(parsed.userAnswers);
           setQuizFinished(false);
@@ -1240,7 +1248,8 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                 <div className="flex gap-2 w-full sm:w-auto mt-2 sm:mt-0">
                   <button 
                     onClick={() => {
-                      setActiveTest(activePracticeSession.activeTest);
+                      const freshTest = practiceTests.find(t => t.id === activePracticeSession.activeTest.id) || activePracticeSession.activeTest;
+                      setActiveTest(freshTest);
                       setCurrentQuestionIndex(activePracticeSession.currentQuestionIndex);
                       setUserAnswers(activePracticeSession.userAnswers);
                       setQuizFinished(false);
