@@ -370,9 +370,16 @@ function App() {
           const targetAbout = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/708580778_1012210434616700_8619494619730289265_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8U0IiWLucrgQ7kNvwEIZNOO&_nc_oc=Adqh629LFYTsOf0xkIyb_1Xni7JwajNM_exdUkN-8B5n8tLChEQyBMmjfSBE2Ktx7dC8szc1mKqZZD0nQWZdSoX9&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gFYal6Ukra95iPDeyBimaeDaJtqz4U-Lfx-CgEHTkBqFg&oe=6A42288B';
           const targetSpotlight = 'https://scontent.xx.fbcdn.net/v/t1.15752-9/705480736_2261490291052472_4770393934903265755_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=cxnef9ekQBMQ7kNvwEkfLex&_nc_oc=AdqyqTNMfN4kAFC6zvPwG6UOJonNMKJBsvH2IA0vxfoarOv9NZQnOeCQT54_TLUEpwpZak4vzpMv0T2tTgVRJ0Ao&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD5gGzHEaqHEhoajpgNzIk1dPO3kmdGkgUmXncRw1QVvCDyQ&oe=6A420C25';
 
-          const resolveCustomOrFallback = (val: string | undefined, targetDefault: string, oldIdKeywords: string[]) => {
+          const resolveCustomOrFallback = (val: string | undefined, targetDefault: string, oldIdKeywords: string[], isImportantBrandAsset?: boolean) => {
             if (!val || val.trim() === '') return targetDefault;
             if (val.startsWith('data:')) return val; // Base64 data strings are strictly custom user configs
+            
+            if (isImportantBrandAsset) {
+              if (val === '/logo.png' || val === '/favicon.png' || val === '/favicon.ico') {
+                return val;
+              }
+              return targetDefault;
+            }
             
             // Check if it's a known expired default URL from older template instances
             const isOldTemplateAsset = oldIdKeywords.some(kw => val.includes(kw));
@@ -384,8 +391,8 @@ function App() {
 
           const upgraded = {
             ...branding,
-            logo: resolveCustomOrFallback(branding.logo, targetLogo, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1', 'flos3-2', 'fbcdn', 'scontent']),
-            favicon: resolveCustomOrFallback(branding.favicon, targetFavicon, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1', 'flos3-2', 'fbcdn', 'scontent']),
+            logo: resolveCustomOrFallback(branding.logo, targetLogo, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1', 'flos3-2', 'fbcdn', 'scontent'], true),
+            favicon: resolveCustomOrFallback(branding.favicon, targetFavicon, ['637892089', 'flos2-2', 'flos3-1', 'flos2-1', 'flos3-2', 'fbcdn', 'scontent'], true),
             heroImage: resolveCustomOrFallback(branding.heroImage, targetHero, ['unsplash.com']),
             founderImage: resolveCustomOrFallback(branding.founderImage, targetFounder, ['628093216']),
             tutorImage: resolveCustomOrFallback(branding.tutorImage, targetTutor, ['627203980']),
@@ -414,7 +421,23 @@ function App() {
 
             if (course) setCourseContent(course);
             if (tests && Array.isArray(tests) && tests.length > 0) {
-              setPracticeTests(tests);
+              const upgradedTests = tests.map((dbTest: any) => {
+                const defaultTest = DEFAULT_PRACTICE_TESTS.find(t => t.id === dbTest.id);
+                if (defaultTest) {
+                  if (!dbTest.questions || dbTest.questions.length < defaultTest.questions.length) {
+                    console.log(`Auto-upgrading test ${dbTest.id} to curated DEFAULT_PRACTICE_TESTS list (${defaultTest.questions.length} items)`);
+                    return {
+                      ...dbTest,
+                      questions: defaultTest.questions,
+                      duration: defaultTest.duration || dbTest.duration,
+                      difficulty: defaultTest.difficulty || dbTest.difficulty
+                    };
+                  }
+                }
+                return dbTest;
+              });
+              const brandNewTests = DEFAULT_PRACTICE_TESTS.filter(dt => !upgradedTests.some(ut => ut.id === dt.id));
+              setPracticeTests([...upgradedTests, ...brandNewTests]);
             } else {
               setPracticeTests(DEFAULT_PRACTICE_TESTS);
             }
