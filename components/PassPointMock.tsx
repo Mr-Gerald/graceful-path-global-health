@@ -774,11 +774,11 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Main Interactive CAT Question Column */}
             <div className="lg:col-span-3 space-y-6">
-              <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-xl relative min-h-[400px] flex flex-col justify-between">
+              <div className="bg-white p-4 sm:p-8 md:p-12 rounded-3xl sm:rounded-[2.5rem] border border-slate-100 shadow-xl relative min-h-[300px] sm:min-h-[400px] flex flex-col justify-between">
                 
                 {/* Question Info Header */}
-                <div className="flex justify-between items-center pb-6 border-b border-slate-100 mb-8">
-                  <div className="flex items-center gap-3">
+                <div className="flex flex-col sm:flex-row gap-2.5 justify-between sm:items-center pb-4 sm:pb-6 border-b border-slate-100 mb-4 sm:mb-8">
+                  <div className="flex items-center justify-between sm:justify-start gap-3">
                     <span className="bg-slate-900 text-white font-mono text-xs font-bold py-1.5 px-3 rounded-lg">
                       Question {currQNum}
                     </span>
@@ -787,7 +787,7 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                     </span>
                   </div>
 
-                  <span className="text-slate-400 font-mono text-xs flex items-center gap-1">
+                  <span className="text-slate-400 font-mono text-[10px] sm:text-xs flex items-center gap-1">
                     <HelpCircle className="w-4 h-4" /> True adaptive feedback
                   </span>
                 </div>
@@ -818,33 +818,33 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                 ) : (
                   <div>
                     {/* Stem text */}
-                    <div className="mb-10">
-                      <p className="text-slate-900 font-serif font-bold text-lg md:text-xl leading-relaxed">
+                    <div className="mb-4 sm:mb-10 animate-in fade-in duration-300">
+                      <p className="text-slate-900 font-serif font-bold text-base sm:text-lg md:text-xl leading-relaxed">
                         {questions[questions.length - 1]?.question}
                       </p>
                     </div>
 
                     {/* MC Options */}
-                    <div className="space-y-4 mb-10">
+                    <div className="space-y-2.5 sm:space-y-4 mb-4 sm:mb-10">
                       {questions[questions.length - 1]?.options?.map((opt: string, idx: number) => {
                         const isSelected = selectedOpt === idx;
                         return (
                           <button
                             key={idx}
                             onClick={() => setSelectedOpt(idx)}
-                            className={`w-full text-left p-5 rounded-2xl border-2 font-semibold text-slate-800 text-base flex justify-between items-center transition-all duration-200 ${
+                            className={`w-full text-left py-2.5 px-3 sm:p-5 rounded-xl sm:rounded-2xl border-2 transition-all duration-200 flex items-center justify-between group ${
                               isSelected 
                                 ? 'border-brand-600 bg-brand-50/50 shadow-inner translate-x-1 font-bold' 
                                 : 'border-slate-100 bg-slate-50/40 hover:bg-slate-50'
                             }`}
                           >
-                            <span className="flex gap-4 items-start">
-                              <span className={`w-6 h-6 rounded-lg flex items-center justify-center text-xs font-black shrink-0 ${
-                                isSelected ? 'bg-brand-600 text-white' : 'bg-slate-200 text-slate-600'
+                            <span className="flex gap-2.5 sm:gap-4 items-center w-full">
+                              <span className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center text-xs sm:text-sm font-black shrink-0 transition ${
+                                isSelected ? 'bg-brand-600 text-white' : 'font-mono bg-white text-slate-600 border border-slate-200 shadow-sm group-hover:bg-brand-50'
                               }`}>
                                 {String.fromCharCode(65 + idx)}
                               </span>
-                              {opt}
+                              <span className="text-xs sm:text-base font-bold leading-snug break-words flex-grow text-slate-700 group-hover:text-slate-900">{opt}</span>
                             </span>
                           </button>
                         );
@@ -852,15 +852,15 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                     </div>
 
                     {/* Bottom buttons panel */}
-                    <div className="flex justify-between items-center border-t border-slate-50 pt-6">
-                      <span className="text-xs text-slate-400 font-mono">
+                    <div className="flex flex-col sm:flex-row gap-3 justify-between sm:items-center border-t border-slate-50 pt-4 sm:pt-6">
+                      <span className="text-[10px] sm:text-xs text-slate-400 font-mono text-center sm:text-left">
                         Select a response, then submit to adapt
                       </span>
 
                       <button
                         onClick={handleNextAdaptiveQuestion}
                         disabled={selectedOpt === null}
-                        className="py-4 px-10 bg-brand-600 disabled:opacity-45 disabled:pointer-events-none text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-brand-700 transition-all shadow-md shadow-brand-100 flex items-center gap-2"
+                        className="py-3 sm:py-4 px-6 sm:px-10 bg-brand-600 disabled:opacity-45 disabled:pointer-events-none text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-brand-700 transition-all shadow-md shadow-brand-100 flex items-center justify-center gap-2 w-full sm:w-auto"
                       >
                         Confirm & Next <ArrowRight className="w-4 h-4" />
                       </button>
