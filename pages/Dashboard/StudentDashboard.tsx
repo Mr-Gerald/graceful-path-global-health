@@ -209,6 +209,42 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   const certificateRef = useRef<HTMLDivElement>(null);
   const correctionsRef = useRef<HTMLDivElement>(null);
 
+  const scrollToCorrections = () => {
+    if (!correctionsRef.current) return;
+    const element = correctionsRef.current;
+    const container = document.getElementById('student-main-content');
+    
+    // Safety offset: 110px so it sits beautifully below the mobile sticky topbar (approx 64-80px tall)
+    const offset = 110;
+    
+    // Check if screen is mobile (lg: scale in Tailwind is 1024px)
+    const isMobile = window.innerWidth < 1024;
+    
+    if (isMobile) {
+      let offsetTop = 0;
+      let curr: HTMLElement | null = element;
+      while (curr) {
+        offsetTop += curr.offsetTop;
+        curr = curr.offsetParent as HTMLElement | null;
+      }
+      window.scrollTo({
+        top: offsetTop - offset,
+        behavior: 'smooth'
+      });
+    } else if (container) {
+      const containerRect = container.getBoundingClientRect();
+      const elementRect = element.getBoundingClientRect();
+      const relativeTop = elementRect.top - containerRect.top;
+      
+      container.scrollTo({
+        top: container.scrollTop + relativeTop - offset,
+        behavior: 'smooth'
+      });
+    } else {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   // Quiz State
   const [activeTest, setActiveTest] = useState<PracticeTest | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -884,8 +920,8 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                       onClick={() => {
                         setShowCorrections(true);
                         setTimeout(() => {
-                          correctionsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }, 100);
+                          scrollToCorrections();
+                        }, 150);
                       }} 
                       className="flex-1 bg-brand-600 text-white px-8 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-brand-700 transition"
                     >
@@ -2014,7 +2050,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
         </div>
       </aside>
 
-      <main className={`flex-grow transition-all duration-500 lg:overflow-y-auto lg:h-screen ${
+      <main id="student-main-content" className={`flex-grow transition-all duration-500 lg:overflow-y-auto lg:h-screen ${
         activeTest 
           ? 'pt-2 sm:pt-10 px-2 sm:px-12 pb-6 sm:pb-24 lg:pt-6' 
           : 'pt-6 sm:pt-10 px-4 sm:px-12 pb-24'
