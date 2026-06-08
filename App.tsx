@@ -424,15 +424,14 @@ function App() {
               const upgradedTests = tests.map((dbTest: any) => {
                 const defaultTest = DEFAULT_PRACTICE_TESTS.find(t => t.id === dbTest.id);
                 if (defaultTest) {
-                  if (!dbTest.questions || dbTest.questions.length < defaultTest.questions.length) {
-                    console.log(`Auto-upgrading test ${dbTest.id} to curated DEFAULT_PRACTICE_TESTS list (${defaultTest.questions.length} items)`);
-                    return {
-                      ...dbTest,
-                      questions: defaultTest.questions,
-                      duration: defaultTest.duration || dbTest.duration,
-                      difficulty: defaultTest.difficulty || dbTest.difficulty
-                    };
-                  }
+                  // Always override with fresh curated title, duration, difficulty and questions from defaultTest
+                  return {
+                    ...dbTest,
+                    title: defaultTest.title,
+                    duration: defaultTest.duration,
+                    difficulty: defaultTest.difficulty,
+                    questions: defaultTest.questions
+                  };
                 }
                 return dbTest;
               });

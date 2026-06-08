@@ -1104,7 +1104,7 @@ export const DEFAULT_PRACTICE_TESTS = [
   {
     id: "premium_cat_foundation_mock",
     title: "NCLEX-RN Foundation Mock Exam",
-    duration: "45 Minutes",
+    duration: "120 Minutes",
     difficulty: "easy" as const,
     questions: [
       {
@@ -2301,7 +2301,7 @@ export const DEFAULT_PRACTICE_TESTS = [
   {
     id: "premium_cat_integration_mock",
     title: "NCLEX-RN Interdisciplinary Integration Mock",
-    duration: "60 Minutes",
+    duration: "120 Minutes",
     difficulty: "medium" as const,
     questions: [
       {
@@ -3499,7 +3499,7 @@ export const DEFAULT_PRACTICE_TESTS = [
   {
     id: "premium_cat_mastery_mock",
     title: "NCLEX-RN Clinical Mastery Mock Exam",
-    duration: "90 Minutes",
+    duration: "120 Minutes",
     difficulty: "hard" as const,
     questions: [
       {
