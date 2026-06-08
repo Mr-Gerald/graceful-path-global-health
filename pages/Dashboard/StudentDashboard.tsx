@@ -207,6 +207,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   const [showCertificate, setShowCertificate] = useState<boolean>(false);
   const [isDownloading, setIsDownloading] = useState<boolean>(false);
   const certificateRef = useRef<HTMLDivElement>(null);
+  const correctionsRef = useRef<HTMLDivElement>(null);
 
   // Quiz State
   const [activeTest, setActiveTest] = useState<PracticeTest | null>(null);
@@ -879,7 +880,17 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onClick={() => setShowCorrections(true)} className="flex-1 bg-brand-600 text-white px-8 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-brand-700 transition">View Corrections</button>
+                    <button 
+                      onClick={() => {
+                        setShowCorrections(true);
+                        setTimeout(() => {
+                          correctionsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 100);
+                      }} 
+                      className="flex-1 bg-brand-600 text-white px-8 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-brand-700 transition"
+                    >
+                      View Corrections
+                    </button>
                     <button 
                       onClick={() => {
                         setCurrentQuestionIndex(0);
@@ -897,7 +908,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                 </div>
 
                 {showCorrections && (
-                  <div className="mt-12 space-y-8 animate-in slide-in-from-bottom-5 duration-500">
+                  <div ref={correctionsRef} className="mt-12 space-y-8 animate-in slide-in-from-bottom-5 duration-500">
                     <h3 className="text-2xl font-serif font-bold text-slate-900 px-4">Detailed Correction Review</h3>
                     {activeTest.questions.slice(0, !user.hasPaidLive ? 15 : activeTest.questions.length).map((q, i) => (
                       <div key={q.id} className="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm">
