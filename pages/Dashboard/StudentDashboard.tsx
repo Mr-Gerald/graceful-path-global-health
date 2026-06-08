@@ -1011,10 +1011,17 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
 
           const q = activeTest.questions[currentQuestionIndex];
           return (
-            <div className="animate-in fade-in duration-500 max-w-4xl mx-auto py-6">
-              <header className="flex items-center justify-between mb-12">
-                 <div className="flex items-center gap-2">
-                    <button onClick={() => setActiveTest(null)} className="p-3 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition" title="Close"><X className="w-5 h-5 text-slate-500" /></button>
+            <div className="animate-in fade-in duration-500 max-w-4xl mx-auto py-2 sm:py-6">
+              <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4 sm:mb-10 bg-slate-100/50 sm:bg-transparent p-2.5 sm:p-0 rounded-2xl sm:rounded-none">
+                <div className="flex items-center justify-between w-full sm:w-auto gap-2">
+                  <div className="flex items-center gap-1.5 animate-in fade-in duration-300">
+                    <button 
+                      onClick={() => setActiveTest(null)} 
+                      className="p-2 sm:p-3 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition shadow-sm" 
+                      title="Close"
+                    >
+                      <X className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" />
+                    </button>
                     <button 
                       onClick={() => {
                         if (confirm("Are you sure you want to restart this practice exam from question 1? All current answers will be reset.")) {
@@ -1024,42 +1031,44 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                           localStorage.removeItem(`practice_active_session_v1_${user.id}`);
                         }
                       }}
-                      className="flex items-center gap-1.5 p-3 bg-white border border-slate-200 text-slate-600 rounded-xl hover:bg-slate-50 font-bold text-xs uppercase tracking-wider transition"
+                      className="flex items-center gap-1 p-2 sm:p-3 bg-white border border-slate-200 text-slate-600 rounded-xl hover:bg-slate-50 font-bold text-[10px] sm:text-xs uppercase tracking-wider transition shadow-sm"
                     >
-                      <RefreshCw className="w-3.5 h-3.5" /> Restart
+                      <RefreshCw className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Restart
                     </button>
-                 </div>
-                 <div className="text-center">
-                    <p className="text-[10px] font-black text-brand-600 uppercase tracking-widest mb-1">{activeTest.title}</p>
-                    <div className="flex items-center gap-2">
-                      <div className="h-1.5 w-48 bg-slate-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-brand-500 transition-all duration-300" style={{width: `${((currentQuestionIndex + 1) / (!user.hasPaidLive ? Math.min(15, activeTest.questions.length) : activeTest.questions.length)) * 100}%`}}></div>
-                      </div>
-                      <span className="text-[10px] font-black text-slate-400">{currentQuestionIndex + 1} / {!user.hasPaidLive ? Math.min(15, activeTest.questions.length) : activeTest.questions.length}</span>
-                    </div>
-                 </div>
-                 <div className="p-3 bg-slate-900 text-white rounded-xl font-mono text-xs flex items-center">
-                   <Clock className="w-3.5 h-3.5 mr-2 text-brand-400" /> {activeTest.duration}
-                 </div>
-              </header>
-
-              <div className="bg-white p-10 sm:p-16 rounded-[4rem] border-2 border-brand-50 shadow-2xl relative">
-                <div className="mb-12">
-                  <span className="bg-brand-100 text-brand-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 inline-block">Clinical Case Scenario</span>
-                  <h2 className="text-2xl sm:text-3xl font-serif font-bold text-slate-900 leading-tight">{q.question}</h2>
+                  </div>
+                  <div className="p-2 sm:p-3 bg-slate-900 text-white rounded-xl font-mono text-[10px] sm:text-xs flex items-center shadow-sm">
+                    <Clock className="w-3.5 h-3.5 mr-1.5 text-brand-400" /> {activeTest.duration}
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-4 mb-12">
+                <div className="flex-1 text-center w-full">
+                  <p className="text-[9px] sm:text-[10px] font-black text-brand-600 uppercase tracking-widest mb-1 truncate max-w-full px-2">{activeTest.title}</p>
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="h-1 sm:h-1.5 w-full sm:w-48 max-w-[185px] bg-slate-200 rounded-full overflow-hidden">
+                      <div className="h-full bg-brand-500 transition-all duration-300" style={{width: `${((currentQuestionIndex + 1) / (!user.hasPaidLive ? Math.min(15, activeTest.questions.length) : activeTest.questions.length)) * 100}%`}}></div>
+                    </div>
+                    <span className="text-[9px] sm:text-[10px] font-black text-slate-400 flex-shrink-0">{currentQuestionIndex + 1} / {!user.hasPaidLive ? Math.min(15, activeTest.questions.length) : activeTest.questions.length}</span>
+                  </div>
+                </div>
+              </header>
+
+              <div className="bg-white p-4 sm:p-10 md:p-16 rounded-3xl sm:rounded-[3rem] border-2 border-brand-50 shadow-xl relative">
+                <div className="mb-4 sm:mb-10">
+                  <span className="bg-brand-100 text-brand-600 px-3 py-1 rounded-full text-[9px] sm:text-[10px] font-black uppercase tracking-widest mb-2 sm:mb-6 inline-block">Clinical Case Scenario</span>
+                  <h2 className="text-base sm:text-2xl md:text-3xl font-serif font-bold text-slate-900 leading-snug">{q.question}</h2>
+                </div>
+
+                <div className="grid grid-cols-1 gap-2.5 sm:gap-4 mb-4 sm:mb-10">
                   {(q.options || []).map((opt, idx) => (
                     <button 
                       key={idx}
                       onClick={() => handleSelectOption(idx)}
-                      className={`w-full p-6 text-left rounded-[1.5rem] border-2 transition-all duration-300 flex items-center group ${userAnswers[q.id] === idx ? 'bg-brand-600 border-brand-600 text-white shadow-xl shadow-brand-100' : 'bg-slate-50 border-slate-100 text-slate-600 hover:border-brand-300'}`}
+                      className={`w-full py-2.5 px-3 sm:p-6 text-left rounded-xl sm:rounded-[1.5rem] border-2 transition-all duration-300 flex items-center group ${userAnswers[q.id] === idx ? 'bg-brand-600 border-brand-600 text-white shadow-xl shadow-brand-100' : 'bg-slate-50 border-slate-100 text-slate-600 hover:border-brand-300'}`}
                     >
-                      <span className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-xs mr-6 transition ${userAnswers[q.id] === idx ? 'bg-white/20' : 'bg-white shadow-sm group-hover:bg-brand-50'}`}>
+                      <span className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center font-black text-xs sm:text-sm mr-2.5 sm:mr-6 transition flex-shrink-0 ${userAnswers[q.id] === idx ? 'bg-white/20' : 'bg-white shadow-sm group-hover:bg-brand-50'}`}>
                         {String.fromCharCode(65 + idx)}
                       </span>
-                      <span className="text-base font-bold">{opt}</span>
+                      <span className="text-xs sm:text-base font-bold leading-snug break-words flex-grow">{opt}</span>
                     </button>
                   ))}
                 </div>
@@ -1067,7 +1076,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                 <button 
                   onClick={handleNextQuestion}
                   disabled={userAnswers[q.id] === undefined}
-                  className="w-full py-6 bg-slate-900 text-white font-black text-sm uppercase tracking-[0.2em] rounded-2xl hover:bg-black transition-all shadow-xl disabled:opacity-30 disabled:cursor-not-allowed"
+                  className="w-full py-3.5 sm:py-6 bg-slate-900 text-white font-black text-xs sm:text-sm uppercase tracking-[0.2em] rounded-xl sm:rounded-2xl hover:bg-black transition-all shadow-xl disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                   {currentQuestionIndex === activeTest.questions.length - 1 ? 'Finish Exam' : 'Confirm & Next Question'}
                 </button>
@@ -1994,7 +2003,15 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
         </div>
       </aside>
 
-      <main className="flex-grow pt-6 sm:pt-10 px-4 sm:px-12 pb-24 lg:overflow-y-auto lg:h-screen transition-all duration-500"><div className="max-w-6xl mx-auto">{renderView()}</div></main>
+      <main className={`flex-grow transition-all duration-500 lg:overflow-y-auto lg:h-screen ${
+        activeTest 
+          ? 'pt-2 sm:pt-10 px-2 sm:px-12 pb-6 sm:pb-24 lg:pt-6' 
+          : 'pt-6 sm:pt-10 px-4 sm:px-12 pb-24'
+      }`}>
+        <div className="max-w-6xl mx-auto">
+          {renderView()}
+        </div>
+      </main>
 
       {/* Profile Picture Zoom Modal */}
       {zoomedAvatar && (
