@@ -250,7 +250,6 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
   const [earnedBadge, setEarnedBadge] = useState<string | null>(null);
   const [showCertificate, setShowCertificate] = useState<boolean>(false);
   const [isDownloading, setIsDownloading] = useState<boolean>(false);
-  const [showDownloadMenu, setShowDownloadMenu] = useState<boolean>(false);
   const certificateRef = useRef<HTMLDivElement>(null);
   const correctionsRef = useRef<HTMLDivElement>(null);
 
@@ -556,7 +555,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
     }, 250);
   };
 
-  const downloadCertificate = async (format: 'png' | 'pdf' = 'png') => {
+  const downloadCertificate = async () => {
     if (!certificateRef.current) return;
     setIsDownloading(true);
     try {
@@ -567,27 +566,10 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
         logging: false
       });
       const image = canvas.toDataURL("image/png", 1.0);
-      
-      if (format === 'pdf') {
-        const { jsPDF } = await import('jspdf');
-        // Match the certificate visual dimensions exactly for a perfect high-res landscape page output
-        const width = canvas.width / 2;
-        const height = canvas.height / 2;
-        
-        const pdf = new jsPDF({
-          orientation: 'landscape',
-          unit: 'px',
-          format: [width, height]
-        });
-        
-        pdf.addImage(image, 'PNG', 0, 0, width, height, undefined, 'FAST');
-        pdf.save(`NCLEX-Mastery-Certificate-${user.name.replace(/\s+/g, '-')}.pdf`);
-      } else {
-        const link = document.createElement('a');
-        link.download = `NCLEX-Mastery-Certificate-${user.name.replace(/\s+/g, '-')}.png`;
-        link.href = image;
-        link.click();
-      }
+      const link = document.createElement('a');
+      link.download = `NCLEX-Mastery-Certificate-${user.name.replace(/\s+/g, '-')}.png`;
+      link.href = image;
+      link.click();
     } catch (err) {
       console.error("Download failed:", err);
       setCustomNotification({
@@ -927,64 +909,22 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                     </div>
                   </div>
                   
-                  <div className="flex flex-col sm:flex-row gap-4 relative">
-                    <div 
-                      className="flex-1 relative"
-                      onMouseLeave={() => setShowDownloadMenu(false)}
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <button 
+                      onClick={downloadCertificate}
+                      disabled={isDownloading}
+                      className="flex-1 py-4 md:py-6 bg-brand-600 text-white font-black text-xs md:text-sm uppercase tracking-widest rounded-2xl hover:bg-brand-700 transition shadow-xl flex items-center justify-center group disabled:opacity-50"
                     >
-                      <button 
-                        onClick={() => setShowDownloadMenu(!showDownloadMenu)}
-                        disabled={isDownloading}
-                        className="w-full py-4 md:py-6 bg-brand-600 text-white font-black text-xs md:text-sm uppercase tracking-widest rounded-2xl hover:bg-brand-700 transition shadow-xl flex items-center justify-center group disabled:opacity-50"
-                      >
-                        {isDownloading ? (
-                          <span className="flex items-center">
-                            <Clock className="w-5 h-5 mr-3 animate-spin" /> Generating...
-                          </span>
-                        ) : (
-                          <span className="flex items-center">
-                            <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" /> Download Certificate <ChevronDown className="w-4 h-4 ml-2" />
-                          </span>
-                        )}
-                      </button>
-                      
-                      {showDownloadMenu && !isDownloading && (
-                        <div className="absolute left-0 right-0 bottom-full mb-3 bg-white rounded-2xl border border-slate-100 shadow-2xl p-2.5 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
-                          <button
-                            onClick={() => {
-                              setShowDownloadMenu(false);
-                              downloadCertificate('pdf');
-                            }}
-                            className="w-full text-left px-4 py-3 hover:bg-slate-50 rounded-xl flex items-center gap-3 transition"
-                          >
-                            <div className="bg-rose-50 p-2.5 rounded-xl text-rose-500">
-                              <FileText className="w-5 h-5" />
-                            </div>
-                            <div>
-                              <p className="text-xs md:text-sm font-bold text-slate-800">Save as PDF Document (.pdf)</p>
-                              <p className="text-[10px] text-slate-400">Official document format for printing & sharing</p>
-                            </div>
-                          </button>
-                          
-                          <button
-                            onClick={() => {
-                              setShowDownloadMenu(false);
-                              downloadCertificate('png');
-                            }}
-                            className="w-full text-left px-4 py-3 hover:bg-slate-50 rounded-xl flex items-center gap-3 transition mt-1"
-                          >
-                            <div className="bg-brand-50 p-2.5 rounded-xl text-brand-600">
-                              <Sparkles className="w-5 h-5" />
-                            </div>
-                            <div>
-                              <p className="text-xs md:text-sm font-bold text-slate-800">Save as PNG Image (.png)</p>
-                              <p className="text-[10px] text-slate-400">High-resolution image for portfolios & devices</p>
-                            </div>
-                          </button>
-                        </div>
+                      {isDownloading ? (
+                        <span className="flex items-center">
+                          <Clock className="w-5 h-5 mr-3 animate-spin" /> Generating...
+                        </span>
+                      ) : (
+                        <span className="flex items-center">
+                          <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" /> Download Official Certificate
+                        </span>
                       )}
-                    </div>
-                    
+                    </button>
                     <button 
                       onClick={() => window.print()}
                       className="flex-1 py-4 md:py-6 bg-slate-900 text-white font-black text-xs md:text-sm uppercase tracking-widest rounded-2xl hover:bg-black transition shadow-xl flex items-center justify-center group"
