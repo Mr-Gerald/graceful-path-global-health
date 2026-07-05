@@ -14,6 +14,7 @@ import { StudyCalendar } from '../../components/StudyCalender';
 import { PassPointMock } from '../../components/PassPointMock';
 import { supabase } from '../../services/supabaseClient';
 import { COUNTRY_LIST } from '../../constants';
+import { DIRECTOR_SIGNATURE } from '../../services/signature';
 
 interface StudentDashboardProps {
   user: User;
@@ -844,7 +845,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                           {/* Director's Signature Image */}
                           <div className="absolute -top-6 md:-top-16 left-2 md:left-8 w-16 md:w-44 h-10 md:h-20 pointer-events-none select-none">
                             <img 
-                              src="/director_signature.png" 
+                              src={DIRECTOR_SIGNATURE} 
                               alt="Academy Director Signature" 
                               className="w-full h-full object-contain mix-blend-multiply"
                               referrerPolicy="no-referrer"
