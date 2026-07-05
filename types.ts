@@ -21,6 +21,7 @@ export interface User {
   isApproved?: boolean;
   hasCertificate?: boolean;
   badges?: string[];
+  certificateIssuedAt?: string;
 }
 
 export interface Course {

@@ -132,26 +132,69 @@ const getRelativeTime = (dateInput: string | Date) => {
   }
 };
 
-const getIssueDate = (user: User) => {
+const getIssueDate = (user: User, notifications: any[]) => {
   try {
-    let date: Date;
-    if (user.enrolledDate) {
-      date = new Date(user.enrolledDate);
-    } else {
-      // Deterministic date based on user.id to keep it completely stable across refreshes
-      let hash = 0;
-      const userId = user.id || 'default';
-      for (let i = 0; i < userId.length; i++) {
-        hash = userId.charCodeAt(i) + ((hash << 5) - hash);
+    // Layer 1: Look for a "Certificate Issued!" notification to get the precise real-world db timestamp
+    if (notifications && notifications.length > 0) {
+      const certNotification = notifications.find(n => 
+        n.title === "Certificate Issued!" || 
+        n.title?.toLowerCase().includes("certificate issued")
+      );
+      if (certNotification && certNotification.created_at) {
+        const date = new Date(certNotification.created_at);
+        if (!isNaN(date.getTime())) {
+          return date.toLocaleDateString('en-US', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric'
+          });
+        }
       }
-      const dayOffset = Math.abs(hash) % 28 + 1; // 1 to 28
-      date = new Date(2026, 3, dayOffset); // April 2026 hash
     }
-    
+
+    // Layer 2: Check if there is a certificateIssuedAt property on the user object
+    if (user.certificateIssuedAt) {
+      const date = new Date(user.certificateIssuedAt);
+      if (!isNaN(date.getTime())) {
+        return date.toLocaleDateString('en-US', {
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric'
+        });
+      }
+    }
+
+    // Layer 3: Check localStorage as a browser-persistent fallback to prevent changing on page reloads
+    const localKey = `certificate_issued_date_v1_${user.id}`;
+    const savedDate = localStorage.getItem(localKey);
+    if (savedDate) {
+      const date = new Date(savedDate);
+      if (!isNaN(date.getTime())) {
+        return date.toLocaleDateString('en-US', {
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric'
+        });
+      }
+    }
+
+    // Layer 4: Fall back to deterministic date based on user.id to keep it completely stable across sessions
+    let date: Date;
+    let hash = 0;
+    const userId = user.id || 'default';
+    for (let i = 0; i < userId.length; i++) {
+      hash = userId.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const dayOffset = Math.abs(hash) % 28 + 1; // 1 to 28
+    date = new Date(2026, 3, dayOffset); // April 2026 hash
+
     if (isNaN(date.getTime())) {
       date = new Date();
     }
     
+    // Save to localStorage to guarantee stability
+    localStorage.setItem(localKey, date.toISOString());
+
     return date.toLocaleDateString('en-US', {
       month: 'long',
       day: 'numeric',
@@ -857,7 +900,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                         </div>
                         <div className="text-center pb-1 md:pb-4">
                           <p className="text-[7px] md:text-xs font-black text-slate-400 uppercase tracking-widest mb-1 md:mb-3 font-sans">Date of Issue</p>
-                          <p className="text-[10px] md:text-lg font-serif font-bold text-brand-700">{getIssueDate(user)}</p>
+                          <p className="text-[10px] md:text-lg font-serif font-bold text-brand-700">{getIssueDate(user, notifications)}</p>
                         </div>
                         <div className="bg-brand-50 p-1.5 md:p-6 rounded-lg md:rounded-2xl border border-brand-100 flex items-center justify-center shadow-inner">
                           <ShieldCheck className="w-5 h-5 md:w-16 md:h-16 text-brand-500" />

@@ -175,7 +175,8 @@ function App() {
         isApproved: data.is_approved,
         hasCertificate: data.has_certificate,
         badges: data.badges,
-        enrolledDate: data.enrolled_date
+        enrolledDate: data.enrolled_date,
+        certificateIssuedAt: data.certificate_issued_at || data.updated_at
       };
       setCurrentUser(user);
       
@@ -233,7 +234,8 @@ function App() {
         isApproved: d.is_approved,
         hasCertificate: d.has_certificate,
         badges: d.badges || [],
-        enrolledDate: d.enrolled_date
+        enrolledDate: d.enrolled_date,
+        certificateIssuedAt: d.certificate_issued_at || d.updated_at
       }));
       setAllStudents(mapped);
     }
@@ -833,9 +835,27 @@ function App() {
   };
 
   const handleApproveCertificate = async (userId: string) => {
-    const { error } = await supabase.from('profiles').update({ has_certificate: true }).eq('id', userId);
+    const nowIso = new Date().toISOString();
+    // Try to update has_certificate and certificate_issued_at together
+    let { error } = await supabase.from('profiles').update({ 
+      has_certificate: true, 
+      certificate_issued_at: nowIso 
+    } as any).eq('id', userId);
+    
+    // Fallback if column does not exist (e.g. error code 42703 or message contains 'column')
+    if (error && (error.message?.includes('column') || error.code === '42703')) {
+      const fallbackResult = await supabase.from('profiles').update({ has_certificate: true }).eq('id', userId);
+      error = fallbackResult.error;
+    }
+
     if (!error) {
-      if (currentUser?.id === userId) setCurrentUser({ ...currentUser, hasCertificate: true });
+      if (currentUser?.id === userId) {
+        setCurrentUser({ 
+          ...currentUser, 
+          hasCertificate: true,
+          certificateIssuedAt: nowIso
+        });
+      }
       addNotification("Certificate Issued!", "Your official NCLEX Mastery Certificate is now available in your dashboard.", userId);
       await fetchAllStudents();
     } else {
