@@ -844,7 +844,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                           {/* Director's Signature Image */}
                           <div className="absolute -top-6 md:-top-16 left-2 md:left-8 w-16 md:w-44 h-10 md:h-20 pointer-events-none select-none">
                             <img 
-                              src="/director_signature.jpg" 
+                              src="/director_signature.png" 
                               alt="Academy Director Signature" 
                               className="w-full h-full object-contain mix-blend-multiply"
                               referrerPolicy="no-referrer"
