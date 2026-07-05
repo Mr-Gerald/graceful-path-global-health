@@ -840,7 +840,16 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                       </div>
                       
                       <div className="flex justify-between items-end mt-6 md:mt-12">
-                        <div className="text-left">
+                        <div className="text-left relative">
+                          {/* Director's Signature Image */}
+                          <div className="absolute -top-6 md:-top-16 left-2 md:left-8 w-16 md:w-44 h-10 md:h-20 pointer-events-none select-none">
+                            <img 
+                              src="/director_signature.jpg" 
+                              alt="Academy Director Signature" 
+                              className="w-full h-full object-contain mix-blend-multiply"
+                              referrerPolicy="no-referrer"
+                            />
+                          </div>
                           <div className="w-20 md:w-64 h-px bg-slate-300 mb-1 md:mb-4"></div>
                           <p className="text-[10px] md:text-xl font-bold text-slate-900">Academy Director</p>
                           <p className="text-[7px] md:text-xs font-black text-slate-400 uppercase tracking-widest">Graceful Path Global Health</p>
