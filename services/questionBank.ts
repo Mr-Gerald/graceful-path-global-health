@@ -585,6 +585,342 @@ export const PERMANENT_QUESTION_BANK: NCLEXQuestion[] = [
     explanation: "Brachytherapy involves active internal radiation emission. Safety concepts (Time, Distance, Shielding) mandate: private room, lead shielding, a dosimeter badge worn by staff, maximum 30 minutes of direct contact per nurse per 8-hour shift, and keeping a 6-foot distance from the active source. Pregnant nurses or visitors, and children under 18, are strictly prohibited from entering.",
     difficulty: "hard",
     domain: "Reduction of Risk Potential"
+  },
+  {
+    id: "new_add_1",
+    question: "A client admitted with severe major depressive disorder has been expressing feelings of hopelessness and active suicidal ideation. During the morning assessment, the nurse notes that the client is suddenly smiling, exceptionally energetic, and reports that 'everything is finally resolved.' What is the nurse's priority action?",
+    options: [
+      "Congratulate the client on their rapid progress and document the positive response to antidepressant therapy",
+      "Request a decreased level of observation from the healthcare provider to foster the client's independence",
+      "Increase observation and place the client on a strict one-on-one constant suicidal watch immediately",
+      "Encourage the client's family to bring in personal belongings to decorate the room"
+    ],
+    correctAnswer: 2,
+    explanation: "A sudden, drastic improvement in mood and energy levels in a severely depressed or suicidal client is a major warning sign. It often indicates that the client has finalized a suicide plan and feels a sense of relief because they have resolved to carry it out. The nurse's immediate priority is to ensure safety by initiating strict one-on-one observation.",
+    difficulty: "hard",
+    domain: "Psychosocial Integrity"
+  },
+  {
+    id: "new_add_2",
+    question: "A client diagnosed with bipolar disorder is prescribed Lithium Carbonate. Which dietary instruction is most critical for the nurse to emphasize to prevent lithium toxicity?",
+    options: [
+      "Maintain a consistent, adequate daily intake of dietary sodium and fluids",
+      "Strictly limit dietary sodium intake to less than 1,000 mg per day",
+      "Avoid high-potassium foods such as bananas and orange juice",
+      "Drink at least 4 to 5 liters of carbonated beverages daily to enhance medication absorption"
+    ],
+    correctAnswer: 0,
+    explanation: "Lithium is a salt that is chemically similar to sodium. If sodium intake is restricted or if the client becomes dehydrated (e.g., through excessive sweating, vomiting, or diarrhea), the kidneys will reabsorb lithium instead of sodium, leading to dangerously toxic lithium levels. Clients must maintain normal, consistent sodium and fluid intake.",
+    difficulty: "medium",
+    domain: "Psychosocial Integrity"
+  },
+  {
+    id: "new_add_3",
+    question: "A client diagnosed with schizophrenia is sitting in the day room and starts pointing at the wall, shouting, 'Get those crawling fire beetles away from me! They are burning my skin!' What is the nurse's most therapeutic response?",
+    options: [
+      "I do not see any fire beetles on the wall, but I understand that seeing them is very frightening to you. I am here with you.",
+      "There are absolutely no beetles on the wall. You are just having an active visual hallucination.",
+      "Let's move to another room so that the fire beetles cannot reach your skin.",
+      "Why do you think the beetles are trying to burn you? Let's talk about it."
+    ],
+    correctAnswer: 0,
+    explanation: "When managing hallucinations, the nurse must present reality without validating the hallucination, while simultaneously acknowledging the client's feelings and anxiety. Telling the client that there are no beetles present (presenting reality) while validating their fear and offering supportive presence is therapeutic. Arguing or playing along (moving rooms) are non-therapeutic.",
+    difficulty: "hard",
+    domain: "Psychosocial Integrity"
+  },
+  {
+    id: "new_add_4",
+    question: "A nurse is planning post-operative care for a client who underwent a total hip arthroplasty via a posterior approach. Which intervention should the nurse include to prevent joint dislocation?",
+    options: [
+      "Keep the affected leg adducted across the body's midline at all times",
+      "Place an abduction pillow or wedge between the client's legs while turning or resting",
+      "Encourage the client to bend forward at the waist to put on socks and shoes",
+      "Maintain the client's hip in a flexed position greater than 90 degrees in a low chair"
+    ],
+    correctAnswer: 1,
+    explanation: "Following a posterior total hip arthroplasty, the client is at high risk of joint dislocation. To prevent this, the nurse must avoid hip adduction, hip internal rotation, and hip flexion beyond 90 degrees. Placing an abduction pillow between the client's legs maintains the joint in a neutral, safe position.",
+    difficulty: "hard",
+    domain: "Basic Care and Comfort"
+  },
+  {
+    id: "new_add_5",
+    question: "A client receiving continuous Total Parenteral Nutrition (TPN) via a central venous catheter has their infusion bag run dry before the next bag is delivered from the pharmacy. Which action should the nurse perform immediately to prevent severe rebound hypoglycemia?",
+    options: [
+      "Flush the central catheter line with heparin and lock it until the new TPN bag arrives",
+      "Infuse 10% Dextrose in Water (D10W) via an infusion pump at the same rate as the TPN",
+      "Administer a rapid subcutaneous bolus of regular insulin",
+      "Slowly infuse a 0.45% Normal Saline maintenance solution"
+    ],
+    correctAnswer: 1,
+    explanation: "TPN contains high concentrations of glucose, causing the client's pancreas to continuously secrete elevated levels of insulin. If TPN is stopped abruptly, the high circulating insulin levels can cause severe, life-threatening rebound hypoglycemia. To prevent this, the nurse must immediately infuse 10% Dextrose in Water (D10W) at the same rate until the next TPN bag is available.",
+    difficulty: "hard",
+    domain: "Basic Care and Comfort"
+  },
+  {
+    id: "new_add_6",
+    question: "The nurse is preparing to assist a client with severe dysphagia secondary to a recent stroke with their evening meal. Which feeding precaution should the nurse implement?",
+    options: [
+      "Instruct the client to tilt their head backward when swallowing to allow gravity to assist",
+      "Provide a straw for all thin liquids to ensure controlled consumption",
+      "Position the client in a high-Fowler's position and instruct them to tuck their chin to their chest when swallowing",
+      "Feed the client rapidly to prevent the food from cooling"
+    ],
+    correctAnswer: 2,
+    explanation: "To prevent aspiration in a client with dysphagia, the client should be positioned upright (90 degrees / high-Fowler's) and taught the chin-tuck maneuver. Tucking the chin down toward the chest during swallowing closes the epiglottis, protecting the airway and directing the food safely into the esophagus. Thin liquids and straws are strictly avoided as they increase aspiration risk.",
+    difficulty: "medium",
+    domain: "Basic Care and Comfort"
+  },
+  {
+    id: "new_add_7",
+    question: "A client is admitted with a severe gastrointestinal infection confirmed as Clostridium difficile. Which transmission-based precaution and safety protocol must the nurse strictly follow?",
+    options: [
+      "Place the client in a private room and cleanse hands with an alcohol-based rub upon exiting",
+      "Place the client in a private room, wear gown and gloves, and wash hands strictly with soap and water after care",
+      "Place the client in a negative-pressure airflow room and wear an N95 respirator mask",
+      "Wear sterile gloves and surgical masks, and allow the client to share a room with a stable post-op client"
+    ],
+    correctAnswer: 1,
+    explanation: "Clostridium difficile is transmitted via contact with bacterial spores, which are highly resistant to alcohol-based hand sanitizers. Contact precautions require a private room, disposable gown, and gloves. Hands must be washed with soap and water, as the mechanical friction and water wash away the spores from the skin surface.",
+    difficulty: "hard",
+    domain: "Safe and Effective Care Environment - Safety and Infection Control"
+  },
+  {
+    id: "new_add_8",
+    question: "The nurse is admitting a client with suspected active pulmonary tuberculosis. Which protective equipment and room placement are required for patient care?",
+    options: [
+      "Standard private room with a surgical mask worn by the nurse",
+      "An airborne infection isolation room (AIIR) with negative pressure, and an N95 respirator mask worn by the nurse",
+      "A positive-pressure protective isolation room and a sterile gown and gloves",
+      "A semi-private room with a portable HEPA filter at the bedside"
+    ],
+    correctAnswer: 1,
+    explanation: "Active pulmonary tuberculosis is caused by Mycobacterium tuberculosis, which is transmitted via the airborne route. It requires an airborne infection isolation room (AIIR) equipped with negative air pressure venting (at least 6-12 air exchanges per hour) and the use of a fit-tested N95 respirator mask (or PAPR) by healthcare workers entering the room.",
+    difficulty: "hard",
+    domain: "Safe and Effective Care Environment - Safety and Infection Control"
+  },
+  {
+    id: "new_add_9",
+    question: "A client is identified as having a severe, documented latex allergy. Which foods should the nurse instruct the client to avoid due to high potential for cross-reactive allergic responses?",
+    options: [
+      "Apples, oranges, and strawberries",
+      "Bananas, avocados, kiwis, and chestnuts",
+      "Beef, pork, and poultry",
+      "Shellfish, salmon, and cod"
+    ],
+    correctAnswer: 1,
+    explanation: "Clients with severe latex allergies often experience cross-reactivity with certain foods that contain proteins structurally similar to natural rubber latex. These include bananas, avocados, kiwis, chestnuts, passion fruits, and tomatoes. Safe clinical protocols require identifying and restricting these items from the diet.",
+    difficulty: "medium",
+    domain: "Safe and Effective Care Environment - Safety and Infection Control"
+  },
+  {
+    id: "new_add_10",
+    question: "A client who had a plaster cast applied to a fractured right tibia 4 hours ago reports excruciating, throbbing right leg pain. The nurse administers the prescribed maximum dose of IV morphine, but the client reports no pain relief. Upon assessment, the right foot is cool to the touch, pale, and has a weak pedal pulse. What is the nurse's immediate priority action?",
+    options: [
+      "Elevate the right leg high above the heart level on multiple pillows",
+      "Apply a heating pad directly to the cast to promote blood flow",
+      "Notify the healthcare provider immediately of suspected compartment syndrome and prepare for cast bivalving",
+      "Reassure the client that bone fracture pain is expected to be severe and reassess in 2 hours"
+    ],
+    correctAnswer: 2,
+    explanation: "Compartment syndrome is a surgical emergency characterized by increased pressure within a muscle compartment, leading to ischemia. Classic signs include severe pain unrelieved by narcotics, pallor, pulselessness, paresthesia, and cool skin. The leg must NOT be elevated above heart level, as this decreases arterial perfusion. The nurse must notify the provider immediately, as a fasciotomy or cast bivalving is urgently required.",
+    difficulty: "hard",
+    domain: "Reduction of Risk Potential"
+  },
+  {
+    id: "new_add_11",
+    question: "A client with a history of a high thoracic spinal cord injury (T4) reports a sudden onset of a severe, throbbing headache. The nurse notes extreme sweating and flushing on the face and neck, severe nasal congestion, and a blood pressure of 210/115 mmHg. What represents the nurse's priority action?",
+    options: [
+      "Administer a prescribed dose of oral acetaminophen for the headache",
+      "Place the client in a flat, supine position and apply warm blankets",
+      "Immediately elevate the head of the bed to a high-upright (90-degree) position and check for bladder distension",
+      "Contact the physical therapist to assist the client with range of motion exercises"
+    ],
+    correctAnswer: 2,
+    explanation: "Autonomic dysreflexia is a life-threatening emergency in spinal cord injuries above T6. It is triggered by noxious stimuli below the injury (usually a distended bladder, fecal impaction, or tight clothing), leading to massive sympathetic outflow and severe hypertension. The nurse must first sit the client up immediately (to promote orthostatic pressure reduction) and then investigate/remove the noxious stimulus (e.g., kinked catheter or fecal impaction).",
+    difficulty: "hard",
+    domain: "Reduction of Risk Potential"
+  },
+  {
+    id: "new_add_12",
+    question: "A client receiving a continuous intravenous heparin infusion for a pulmonary embolism has their platelet count drop from a baseline of 280,000/mm³ to 110,000/mm³ over a 48-hour period. What represents the nurse's priority action?",
+    options: [
+      "Increase the heparin infusion rate to ensure therapeutic anticoagulation",
+      "Stop the heparin infusion immediately, notify the provider of suspected Heparin-Induced Thrombocytopenia (HIT), and anticipate starting argatroban",
+      "Prepare to administer a transfusion of packed red blood cells",
+      "Document the platelet count as an expected side effect of heparin and continue the infusion"
+    ],
+    correctAnswer: 1,
+    explanation: "Heparin-Induced Thrombocytopenia (HIT) is a severe, immune-mediated reaction to heparin that causes a rapid drop in platelets (typically a 50% or greater decrease from baseline) combined with a paradoxically high risk of venous and arterial thrombosis. The infusion must be stopped immediately and alternative non-heparin anticoagulation (such as argatroban or bivalirudin) initiated.",
+    difficulty: "medium",
+    domain: "Reduction of Risk Potential"
+  },
+  {
+    id: "new_add_13",
+    question: "A client is prescribed both an albuterol inhaler (a short-acting beta2-agonist) and a beclomethasone inhaler (an inhaled corticosteroid) for asthma management. Which instruction should the nurse provide regarding the administration sequence?",
+    options: [
+      "Administer the beclomethasone first, wait 5 minutes, then administer the albuterol",
+      "Administer the albuterol first, wait 5 minutes, administer the beclomethasone, and then rinse your mouth thoroughly with water",
+      "Mix both medications together in a single nebulizer cup and inhale them simultaneously",
+      "Inhale both medications rapidly back-to-back, then swallow 8 ounces of warm milk"
+    ],
+    correctAnswer: 1,
+    explanation: "The bronchodilator (albuterol) must be administered FIRST to open up the bronchial passages, allowing for deeper and more effective penetration of the anti-inflammatory corticosteroid (beclomethasone) administered 5 minutes later. The client must rinse their mouth with water and spit it out after the corticosteroid to prevent oral candidiasis (thrush).",
+    difficulty: "hard",
+    domain: "Pharmacological and Parenteral Therapies"
+  },
+  {
+    id: "new_add_14",
+    question: "A client is receiving intravenous Phenytoin for the management of generalized tonic-clonic seizures. The nurse notes that the client's current therapeutic serum phenytoin level is reported as 24 mcg/mL. Which assessment finding should the nurse anticipate?",
+    options: [
+      "Severe generalized body rash with peeling skin",
+      "Nystagmus, slurred speech, ataxia, and confusion",
+      "Hyperactive deep tendon reflexes and severe muscle spasms",
+      "Hypertensive crisis with a blood pressure of 180/100 mmHg"
+    ],
+    correctAnswer: 1,
+    explanation: "The therapeutic serum level for phenytoin is 10 to 20 mcg/mL. A level of 24 mcg/mL represents phenytoin toxicity. Common signs of phenytoin toxicity are neurological in nature and include horizontal nystagmus, ataxia (loss of balance), slurred speech, lethargy, and confusion. Gingival hyperplasia is a chronic side effect, not an acute indicator of acute toxicity.",
+    difficulty: "medium",
+    domain: "Pharmacological and Parenteral Therapies"
+  },
+  {
+    id: "new_add_15",
+    question: "The nurse is reinforcing education for a client who has been newly prescribed sublingual nitroglycerin tablets for stable angina. Which statement by the client indicates a correct understanding of the teaching?",
+    options: [
+      "I should swallow the tablet immediately with a full glass of warm water",
+      "If my chest pain is not relieved 5 minutes after taking the first tablet, I should immediately call 911 and then take a second tablet",
+      "I can take up to 6 tablets, 15 minutes apart, before contacting my healthcare provider",
+      "I should keep the tablets in a clear, plastic container on my kitchen counter so I can see them"
+    ],
+    correctAnswer: 1,
+    explanation: "For sublingual nitroglycerin: if chest pain is unrelieved or worsens 5 minutes after the first dose, the client must call 911 immediately, then take a second dose. They can take a maximum of 3 doses (5 minutes apart). The medication is light-sensitive and must be kept in its original dark glass bottle with a tight metal cap.",
+    difficulty: "medium",
+    domain: "Pharmacological and Parenteral Therapies"
+  },
+  {
+    id: "new_add_16",
+    question: "Following a blunt chest wall trauma, a client develops sudden-onset respiratory distress. The nurse notes absent breath sounds on the left side, tracheal deviation to the right side, hyperresonance on percussion of the left chest, and severe hypotension. What is the nurse's priority intervention?",
+    options: [
+      "Obtain an immediate 12-lead EKG and prepare to administer sublingual nitroglycerin",
+      "Perform deep endotracheal suctioning and assist the client to lie flat",
+      "Notify the provider immediately and prepare for emergency needle decompression and chest tube insertion",
+      "Administer a prescribed dose of intravenous loop diuretics to clear pleural fluid"
+    ],
+    correctAnswer: 2,
+    explanation: "The client is demonstrating classic signs of a tension pneumothorax, which is a life-threatening medical emergency. Air enters the pleural space on inspiration but cannot escape, causing lung collapse and a mediastinal shift (tracheal deviation) that compresses the heart and great vessels, leading to severe obstructive shock (hypotension). Immediate needle decompression (followed by chest tube insertion) is required to relieve the pressure.",
+    difficulty: "hard",
+    domain: "Physiological Adaptation"
+  },
+  {
+    id: "new_add_17",
+    question: "The nurse enters a client's room and notes that the cardiac monitor displays a rapid, chaotic, irregular waving rhythm without identifiable P waves or QRS complexes. The client is unresponsive, pulseless, and apneic. What is the nurse's priority action?",
+    options: [
+      "Administer a prescribed intravenous dose of adenosine as a rapid push",
+      "Perform a synchronized cardioversion at 100 joules on the defibrillator",
+      "Initiate immediate cardiopulmonary resuscitation (CPR) and prepare to deliver an unsynchronized defibrillator shock",
+      "Call the pharmacy to request a continuous infusion of amiodarone"
+    ],
+    correctAnswer: 2,
+    explanation: "The rhythm displayed is Ventricular Fibrillation (V-Fib), a lethal dysrhythmia characterized by chaotic, non-functional ventricular quivering. The absolute priority is immediate cardiopulmonary resuscitation (CPR) combined with rapid, unsynchronized defibrillation to restore a perfusing rhythm. Adenosine is used for supraventricular tachycardias. Synchronized cardioversion is contraindicated for V-Fib because there are no R waves to sync to.",
+    difficulty: "hard",
+    domain: "Physiological Adaptation"
+  },
+  {
+    id: "new_add_18",
+    question: "A client is admitted to the medical unit with an acute exacerbation of pancreatitis. Which position of comfort should the nurse suggest to help relieve the client's severe abdominal and radiating back pain?",
+    options: [
+      "Flat, supine position with legs fully extended",
+      "Fetal position, side-lying, or sitting upright leaning forward with knees drawn to the chest",
+      "Prone position with a pillow under the pelvis",
+      "Trendelenburg position with the feet elevated 30 degrees"
+    ],
+    correctAnswer: 1,
+    explanation: "Pain in acute pancreatitis is caused by auto-digestion and retroperitoneal inflammation. The flat supine position stretches the peritoneum and worsens back pain. Positions that flex the trunk and draw the knees up (fetal position, side-lying, or sitting upright and leaning forward) relieve tension on the retroperitoneal space and are highly effective in reducing pancreatic pain.",
+    difficulty: "medium",
+    domain: "Physiological Adaptation"
+  },
+  {
+    id: "new_add_19",
+    question: "A charge nurse is managing the assignments for a medical-surgical floor. Which client should be assigned to the Registered Nurse (RN) instead of an experienced Licensed Practical Nurse (LPN)?",
+    options: [
+      "A client who is post-operative day 2 from a hernia repair and requires assistance with initial oral medication teaching",
+      "A client admitted with chronic respiratory failure who requires routine tracheostomy suctioning and dressing changes",
+      "A client newly admitted from the Emergency Department with unstable, fluctuating vital signs and a suspected gastrointestinal bleed",
+      "A client diagnosed with stable osteoarthritis who requires scheduled subcutaneous injections of enoxaparin"
+    ],
+    correctAnswer: 2,
+    explanation: "RNs must be assigned clients who are unstable, require complex clinical assessment, or need initial formulation of care/evaluations. A newly admitted client with a suspected active gastrointestinal bleed and fluctuating vital signs is unstable and requires the advanced assessment, judgment, and intervention of an RN. Stable tasks (dressing changes, enoxaparin injections, LPN-level teaching review) can be assigned to an LPN.",
+    difficulty: "medium",
+    domain: "Safe and Effective Care Environment - Management of Care"
+  },
+  {
+    id: "new_add_20",
+    question: "The nurse is administering a unit of packed red blood cells to a client. Within the first 10 minutes of the transfusion, the client develops a sudden fever, reports severe lower back pain, becomes dyspneic, and is visibly shivering. What is the nurse's priority sequence of actions?",
+    options: [
+      "Slow down the transfusion rate, check the client's temperature, and call the physician",
+      "Stop the transfusion immediately, disconnect the tubing at the hub, infuse Normal Saline via new tubing to maintain vein patency, and notify the blood bank",
+      "Administer prescribed acetaminophen and continue the transfusion under close observation",
+      "Remove the IV catheter immediately and place a cold compress over the insertion site"
+    ],
+    correctAnswer: 1,
+    explanation: "The client is showing signs of an acute hemolytic transfusion reaction (fever, chills, severe lower back/flank pain, dyspnea), which is a life-threatening emergency. The nurse must stop the transfusion immediately to prevent further infusing of incompatible blood, disconnect the entire tubing from the IV hub, and flush with normal saline using NEW tubing to preserve the line. The blood bag and tubing must be sent back to the blood bank.",
+    difficulty: "hard",
+    domain: "Reduction of Risk Potential"
+  },
+  {
+    id: "new_add_21",
+    question: "A client with diagnosed graves' disease (hyperthyroidism) is admitted with a high fever (104.2 F), extreme tachycardia (pulse 155 beats/minute), agitation, and severe diaphoresis. The nurse suspects a thyroid storm. Which intervention is strictly contraindicated for hyperthermia management in this client?",
+    options: [
+      "Applying cooling blankets and ice packs to the axilla and groin",
+      "Administering prescribed Acetaminophen",
+      "Administering prescribed Aspirin (acetylsalicylic acid) to lower the body temperature",
+      "Initiating an intravenous infusion of chilled normal saline as prescribed"
+    ],
+    correctAnswer: 2,
+    explanation: "In a thyroid storm, Aspirin (salicylates) is strictly contraindicated. Aspirin displaces thyroid hormone (T3/T4) from its binding proteins (thyroid-binding globulin), resulting in a sudden increase in free, active thyroid hormone levels, which worsens the hypermetabolic crisis. Acetaminophen, cooling blankets, and chilled fluids are acceptable cooling methods.",
+    difficulty: "hard",
+    domain: "Physiological Adaptation"
+  },
+  {
+    id: "new_add_22",
+    question: "A client is admitted with suspected digoxin toxicity. The nurse reviews the client's morning laboratory results. Which electrolyte imbalance is most critical for the nurse to identify as a potentiating factor for digoxin toxicity and associated dysrhythmias?",
+    options: [
+      "Hypernatremia (Serum Sodium of 152 mEq/L)",
+      "Hypokalemia (Serum Potassium of 2.8 mEq/L)",
+      "Hypercalcemia (Serum Calcium of 11.5 mg/dL)",
+      "Hypophosphatemia (Serum Phosphorus of 1.8 mg/dL)"
+    ],
+    correctAnswer: 1,
+    explanation: "Hypokalemia (low potassium) is the most critical potentiating factor for digoxin toxicity. Digoxin binds to the sodium-potassium ATPase pump in myocardial cells. When potassium levels are low, there is less competition for the binding sites, allowing more digoxin to bind, which increases the therapeutic effect to toxic levels and triggers dangerous ventricular dysrhythmias.",
+    difficulty: "hard",
+    domain: "Pharmacological and Parenteral Therapies"
+  },
+  {
+    id: "new_add_23",
+    question: "The nurse is teaching a client with chronic obstructive pulmonary disease (COPD) about pursed-lip breathing. What is the primary physiological benefit of this breathing technique?",
+    options: [
+      "It increases the rapid intake of atmospheric nitrogen",
+      "It prevents alveolar collapse (air trapping) by maintaining positive airway pressure during exhalation",
+      "It decreases the strength and tone of the diaphragm muscle",
+      "It forces carbon dioxide to dissolve directly into the pleural fluid"
+    ],
+    correctAnswer: 1,
+    explanation: "Pursed-lip breathing creates mild resistance to exhalation, which generates positive airway pressure in the airways. This keeps the bronchioles and alveoli open longer during expiration, preventing early airway collapse and reducing carbon dioxide retention (air trapping) typical in COPD.",
+    difficulty: "easy",
+    domain: "Basic Care and Comfort"
+  },
+  {
+    id: "new_add_24",
+    question: "The nurse has completed caring for a client in contact isolation. Which sequence represents the correct, safe order for removing Personal Protective Equipment (PPE)?",
+    options: [
+      "Remove mask, wash hands, remove gown, then remove gloves",
+      "Remove gown and gloves together, perform hand hygiene, then remove goggles/face shield, and lastly remove mask",
+      "Remove gloves, remove gown, perform hand hygiene, and then remove mask upon exiting",
+      "Remove mask first, then gloves, then gown, and wash hands last"
+    ],
+    correctAnswer: 1,
+    explanation: "To prevent contamination, PPE should be removed from most contaminated to least contaminated. The correct sequence is to remove gloves and gown first (often rolled together to prevent touching the clean side), perform hand hygiene if hands are contaminated, remove protective eyewear (goggles/face shield), and finally remove the mask/respirator after leaving the patient's room, followed by final hand hygiene.",
+    difficulty: "easy",
+    domain: "Safe and Effective Care Environment - Safety and Infection Control"
   }
 ];
 

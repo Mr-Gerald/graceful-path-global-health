@@ -474,84 +474,113 @@ export const geminiService = {
     domain: string,
     avoidConcepts: string[]
   ): Promise<{ id: string; question: string; options: string[]; correctAnswer: number; explanation: string; difficulty: 'easy' | 'medium' | 'hard' }> {
-    try {
-      // 1. Attempt lookup in the permanent offline Question Bank first to prevent any repetition and ensure zero latency
-      const targetDomain = getDomainForDay(day);
-      let candidates = PERMANENT_QUESTION_BANK.filter(q => 
-        q.domain === targetDomain && 
-        q.difficulty === difficulty
-      );
+    const targetDomain = getDomainForDay(day);
 
-      if (candidates.length === 0) {
-        // Fall back to just matching the desired difficulty level
-        candidates = PERMANENT_QUESTION_BANK.filter(q => q.difficulty === difficulty);
-      }
+    const isAttempted = (q: any) => {
+      return avoidConcepts.some(avoid => {
+        const cleanAvoid = avoid.trim().toLowerCase();
+        const cleanQId = q.id.trim().toLowerCase();
+        const cleanQText = q.question.trim().toLowerCase();
 
-      // Filter out already attempted questions to avoid repetition
-      const unattempted = candidates.filter(q => 
-        !avoidConcepts.some(avoid => {
-          const cleanAvoid = avoid.trim().toLowerCase();
-          const cleanQ = q.question.trim().toLowerCase();
-          if (cleanAvoid === q.id.toLowerCase()) return true;
-          if (cleanQ === cleanAvoid) return true;
-          // Apply a realistic threshold only if avoid length is sufficient
-          if (cleanAvoid.length >= 35) {
-            return cleanQ.includes(cleanAvoid) || cleanAvoid.includes(cleanQ);
-          }
-          // Fall back to 20 character exact stems if length is medium
-          if (cleanAvoid.length >= 20) {
-            return cleanQ.startsWith(cleanAvoid) || cleanAvoid.startsWith(cleanQ);
-          }
-          return false;
-        })
-      );
+        // 1. Direct ID match
+        if (cleanAvoid === cleanQId) return true;
 
-      if (unattempted.length > 0) {
-        const chosen = unattempted[Math.floor(Math.random() * unattempted.length)];
-        return {
-          id: chosen.id,
-          question: chosen.question,
-          options: [...chosen.options],
-          correctAnswer: chosen.correctAnswer,
-          explanation: chosen.explanation,
-          difficulty: chosen.difficulty
-        };
-      }
+        // 2. Direct question text match
+        if (cleanAvoid === cleanQText) return true;
 
-      // If matches of that specific difficulty are exhausted, look for ANY unattempted question in our 30+ question bank
-      const generalUnattempted = PERMANENT_QUESTION_BANK.filter(q => 
-        !avoidConcepts.some(avoid => {
-          const cleanAvoid = avoid.trim().toLowerCase();
-          const cleanQ = q.question.trim().toLowerCase();
-          if (cleanAvoid === q.id.toLowerCase()) return true;
-          if (cleanQ === cleanAvoid) return true;
-          if (cleanAvoid.length >= 35) {
-            return cleanQ.includes(cleanAvoid) || cleanAvoid.includes(cleanQ);
-          }
-          if (cleanAvoid.length >= 20) {
-            return cleanQ.startsWith(cleanAvoid) || cleanAvoid.startsWith(cleanQ);
-          }
-          return false;
-        })
-      );
+        // 3. Substring match to catch truncated/partial comparisons (length >= 15)
+        if (cleanAvoid.length >= 15) {
+          if (cleanQText.includes(cleanAvoid) || cleanAvoid.includes(cleanQText)) return true;
+        }
 
-      if (generalUnattempted.length > 0) {
-        const chosen = generalUnattempted[Math.floor(Math.random() * generalUnattempted.length)];
-        return {
-          id: chosen.id,
-          question: chosen.question,
-          options: [...chosen.options],
-          correctAnswer: chosen.correctAnswer,
-          explanation: chosen.explanation,
-          difficulty: chosen.difficulty
-        };
-      }
+        return false;
+      });
+    };
 
-      // 2. If the permanent bank is fully exhausted, generate a tailored clinic-grade question instantly offline
-      return generateDynamicQuestion(day, difficulty, avoidConcepts);
-    } catch (err) {
-      console.warn("Gemini adaptive CAT generator fallback triggered:", err);
-      return generateDynamicQuestion(day, difficulty, avoidConcepts);
+    // LEVEL 1: Same Domain + Same Difficulty
+    let level1Candidates = PERMANENT_QUESTION_BANK.filter(q => 
+      q.domain === targetDomain && 
+      q.difficulty === difficulty &&
+      !isAttempted(q)
+    );
+    if (level1Candidates.length > 0) {
+      const chosen = level1Candidates[Math.floor(Math.random() * level1Candidates.length)];
+      return {
+        id: chosen.id,
+        question: chosen.question,
+        options: [...chosen.options],
+        correctAnswer: chosen.correctAnswer,
+        explanation: chosen.explanation,
+        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+      };
     }
+
+    // LEVEL 2: Same Domain + Any Difficulty
+    let level2Candidates = PERMANENT_QUESTION_BANK.filter(q => 
+      q.domain === targetDomain && 
+      !isAttempted(q)
+    );
+    if (level2Candidates.length > 0) {
+      const chosen = level2Candidates[Math.floor(Math.random() * level2Candidates.length)];
+      return {
+        id: chosen.id,
+        question: chosen.question,
+        options: [...chosen.options],
+        correctAnswer: chosen.correctAnswer,
+        explanation: chosen.explanation,
+        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+      };
+    }
+
+    // LEVEL 3: Any Domain + Same Difficulty
+    let level3Candidates = PERMANENT_QUESTION_BANK.filter(q => 
+      q.difficulty === difficulty && 
+      !isAttempted(q)
+    );
+    if (level3Candidates.length > 0) {
+      const chosen = level3Candidates[Math.floor(Math.random() * level3Candidates.length)];
+      return {
+        id: chosen.id,
+        question: chosen.question,
+        options: [...chosen.options],
+        correctAnswer: chosen.correctAnswer,
+        explanation: chosen.explanation,
+        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+      };
+    }
+
+    // LEVEL 4: Any Domain + Any Difficulty
+    let level4Candidates = PERMANENT_QUESTION_BANK.filter(q => 
+      !isAttempted(q)
+    );
+    if (level4Candidates.length > 0) {
+      const chosen = level4Candidates[Math.floor(Math.random() * level4Candidates.length)];
+      return {
+        id: chosen.id,
+        question: chosen.question,
+        options: [...chosen.options],
+        correctAnswer: chosen.correctAnswer,
+        explanation: chosen.explanation,
+        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+      };
+    }
+
+    // LEVEL 5: Last Resort Fallback (Resetting avoid list for target domain)
+    // This only occurs if the student has exhausted the entire question bank.
+    let level5Candidates = PERMANENT_QUESTION_BANK.filter(q => 
+      q.domain === targetDomain
+    );
+    if (level5Candidates.length === 0) {
+      level5Candidates = PERMANENT_QUESTION_BANK;
+    }
+    const chosen = level5Candidates[Math.floor(Math.random() * level5Candidates.length)];
+    return {
+      id: chosen.id,
+      question: chosen.question,
+      options: [...chosen.options],
+      correctAnswer: chosen.correctAnswer,
+      explanation: chosen.explanation,
+      difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+    };
   }
 };
