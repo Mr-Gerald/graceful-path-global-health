@@ -402,12 +402,19 @@ export const geminiService = {
       try {
         const batchQuestions = await callWithKeyRotation(async (ai) => {
           if (onProgress) onProgress(`📝 Generating Question ${i + 1} of ${count}...`);
+          
+          // Build a list of already generated question texts to avoid
+          const existingScenarios = allQuestions.map(q => q.question).join('\n');
+          const avoidInstruction = existingScenarios 
+            ? `\nCRITICAL: DO NOT repeat, rephrase, or generate scenarios similar to these existing questions:\n${existingScenarios}` 
+            : '';
+
           const response = await ai.models.generateContent({
             model: 'gemini-3.1-flash-preview',
             contents: `Generate 1 NCLEX-style multiple choice question on the topic: ${topic}. 
             Difficulty level: ${difficulty}. 
             This is question ${i + 1} of ${count}.
-            The question must have 4 options, 1 correct answer (index 0-3), and a detailed clinical rationale/explanation.`,
+            The question must have 4 options, 1 correct answer (index 0-3), and a detailed clinical rationale/explanation.${avoidInstruction}`,
             config: {
               responseMimeType: 'application/json',
               responseSchema: {
@@ -447,8 +454,18 @@ export const geminiService = {
         }
       } catch (error) {
         console.warn(`Failed to generate live question ${i + 1}, picking from standard question bank:`, error);
-        const list = FALLBACK_QUESTION_BANK[difficulty] || FALLBACK_QUESTION_BANK['medium'];
-        const chosen = list[Math.floor(Math.random() * list.length)];
+        
+        // Filter standard fallback questions to prevent duplicates with what we have already generated
+        const baseList = FALLBACK_QUESTION_BANK[difficulty] || FALLBACK_QUESTION_BANK['medium'];
+        const list = baseList.filter(fb => 
+          !allQuestions.some(existing => 
+            existing.question.trim().toLowerCase() === fb.question.trim().toLowerCase() ||
+            existing.id === fb.id
+          )
+        );
+        
+        const activeList = list.length > 0 ? list : baseList;
+        const chosen = activeList[Math.floor(Math.random() * activeList.length)];
         const formattedQ = {
           ...chosen,
           id: Date.now().toString() + Math.random().toString(36).substr(2, 9),

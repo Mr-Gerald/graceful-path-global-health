@@ -3,28 +3,34 @@ import { Menu, X, User as UserIcon, LogIn, PhoneCall, MessageCircle, LogOut, Glo
 import { NAV_LINKS } from '../constants';
 import { BrandingAssets, NavLink, UserRole, GlobalLinks } from '../types';
 
-export const Logo = ({ className, src }: { className?: string, src?: string }) => (
-  <div className={`flex flex-col items-center cursor-pointer group scale-95 md:scale-100 ${className || ''}`} onClick={() => window.location.hash = '/'} id="logo-container">
-    <img 
-      src={src || "/logo.png"} 
-      alt="Graceful Path Logo" 
-      className="h-9 w-auto mb-0.5 transform group-hover:scale-110 transition duration-500 rounded-lg animate-fade-in" 
-      crossOrigin="anonymous"
-      referrerPolicy="no-referrer"
-      id="logo-image"
-      onError={(e) => {
-        const target = e.target as HTMLImageElement;
-        target.src = "https://ui-avatars.com/api/?name=GP&background=0284c7&color=fff";
-      }}
-    />
-    <h1 className="text-lg font-black text-[#0c4a6e] tracking-tight leading-none text-nowrap">Graceful path</h1>
-    <div className="flex items-center w-full mt-1 px-0.5">
-      <div className="flex-1 h-[1px] bg-[#0ea5e9] opacity-40"></div>
-      <span className="px-1.5 text-[7px] font-black text-[#0ea5e9] tracking-[0.2em] uppercase text-nowrap">GLOBAL HEALTH</span>
-      <div className="flex-1 h-[1px] bg-[#0ea5e9] opacity-40"></div>
+export const Logo = ({ className, src }: { className?: string, src?: string }) => {
+  const isExternal = src && src.startsWith('http');
+  const crossOriginProp = isExternal ? "anonymous" : undefined;
+
+  return (
+    <div className={`flex flex-col items-center cursor-pointer group scale-95 md:scale-100 ${className || ''}`} onClick={() => window.location.hash = '/'} id="logo-container">
+      <img 
+        src={src || "/logo.png"} 
+        alt="Graceful Path Logo" 
+        className="h-9 w-auto mb-0.5 transform group-hover:scale-110 transition duration-500 rounded-lg animate-fade-in" 
+        crossOrigin={crossOriginProp}
+        referrerPolicy="no-referrer"
+        id="logo-image"
+        onError={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.removeAttribute('crossorigin');
+          target.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMDI4NGM3IiAvPjxwYXRoIGQ9Ik01MCAxNSBMODAgMjUgVjU1IEM4MCA3MiA2NyA4NSA1MCA5MCBDMzMgODUgMjAgNTUgVjI1IEw1MCAxNSBaIiBmaWxsPSIjMDM2OWExIiAvPjxwYXRoIGQ9Ik01MCAzMCBWNzAgTTMwIDUwIEg3MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiAvPjxwYXRoIGQ9Ik0yNSA1MCBINDAgTDQ1IDM1IEw1NSA2NSBMNjAgNTAgSDc1IiBzdHJva2U9IiNiYWU2ZmQiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPjwvc3ZnPg==";
+        }}
+      />
+      <h1 className="text-lg font-black text-[#0c4a6e] tracking-tight leading-none text-nowrap">Graceful path</h1>
+      <div className="flex items-center w-full mt-1 px-0.5">
+        <div className="flex-1 h-[1px] bg-[#0ea5e9] opacity-40"></div>
+        <span className="px-1.5 text-[7px] font-black text-[#0ea5e9] tracking-[0.2em] uppercase text-nowrap">GLOBAL HEALTH</span>
+        <div className="flex-1 h-[1px] bg-[#0ea5e9] opacity-40"></div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 interface LayoutProps {
   children: React.ReactNode;

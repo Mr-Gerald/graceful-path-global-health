@@ -314,7 +314,7 @@ export const Home: React.FC<HomeProps> = ({
             </div>
             <div className="mt-16 lg:mt-0 relative">
               <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group">
-                <img src={branding.heroImage} alt="Professional Nurses" className="w-full h-auto group-hover:scale-105 transition duration-1000" />
+                <img src={branding.heroImage} alt="Professional Nurses" className="w-full h-auto group-hover:scale-105 transition duration-1000" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
               </div>
               <div className="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 bg-white p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl z-20 border border-gray-100 max-w-[200px] md:max-w-[240px]">
@@ -403,6 +403,7 @@ export const Home: React.FC<HomeProps> = ({
                   src={branding.founderImage} 
                   alt="Founder Uchenna Amakor" 
                   className="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105" 
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-10 left-10 text-white border-l-4 border-brand-500 pl-6">
@@ -519,7 +520,7 @@ export const Home: React.FC<HomeProps> = ({
           <div className="lg:grid lg:grid-cols-2 lg:gap-24 items-center">
             <div className="mb-12 lg:mb-0 relative">
               <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white bg-white">
-                <img src={branding.aboutImage} alt="Graceful Path Leadership" className="w-full h-auto object-cover" />
+                <img src={branding.aboutImage} alt="Graceful Path Leadership" className="w-full h-auto object-cover" referrerPolicy="no-referrer" />
               </div>
             </div>
             <div>
@@ -567,7 +568,7 @@ export const Home: React.FC<HomeProps> = ({
                 <button onClick={() => onNavigate(currentUser ? '/dashboard' : '/login')} className="w-fit bg-slate-900 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-black transition shadow-2xl animate-soft-pulse">Start Your Success Story</button>
               </div>
               <div className="relative h-[450px] lg:h-auto overflow-hidden group">
-                <img src={branding.tutorImage} alt="Tutor Eniola Ayokunmi" className="absolute inset-0 w-full h-full object-cover object-center transition duration-1000 group-hover:scale-105" />
+                <img src={branding.tutorImage} alt="Tutor Eniola Ayokunmi" className="absolute inset-0 w-full h-full object-cover object-center transition duration-1000 group-hover:scale-105" referrerPolicy="no-referrer" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>
                 <div className="absolute bottom-10 left-10 text-white border-l-4 border-brand-500 pl-6">
                   <p className="text-2xl font-bold uppercase tracking-tight">Registered Nurse, Educator.</p>
@@ -676,6 +677,7 @@ export const Home: React.FC<HomeProps> = ({
                   src={branding.spotlightImage} 
                   alt="Graceful Path Success Story" 
                   className="w-full h-auto object-cover" 
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-brand-900/30 to-transparent"></div>
               </div>
