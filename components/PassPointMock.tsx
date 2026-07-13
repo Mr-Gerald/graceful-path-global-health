@@ -275,16 +275,16 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
 
     // 2. Check clinical ending rules of CAT!
     // NCLEX style CAT ends dynamically:
-    // Minimum check limit: 15 questions for standard diagnostic, or 85 questions for full state.
+    // Minimum check limit: 15 questions for standard diagnostic, or 25 questions for early adaptive confidence check.
     // Let's implement an adaptive, beautiful ending:
     // If they reach 15 questions, we allow voluntary submissions, but we also can automatically end if competency is extremely clear!
     // Let's set the automatic threshold:
     // Automatic pass: theta >= 4 (Highly consistent competence)
     // Automatic fail: theta <= -4 (Consistent correction required)
-    // Absolute limit: 150 questions
+    // Absolute limit: 50 questions
     
     const nextQNum = currQNum + 1;
-    const shouldEndExamAuto = (nextQNum > 85 && (newTheta >= 4 || newTheta <= -4)) || (nextQNum > 150);
+    const shouldEndExamAuto = (nextQNum > 25 && (newTheta >= 4 || newTheta <= -4)) || (nextQNum > 50);
 
     if (shouldEndExamAuto) {
       handleCompleteExam(false, nextAnswers, newTheta);
@@ -383,7 +383,7 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
     const newResult: AttemptResult = {
       day: selectedDay,
       theta: finalTheta,
-      maxQuestions: 150,
+      maxQuestions: 50,
       totalAnswered: Object.keys(finalAnswers).length,
       status: finalStatus,
       date: new Date().toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }),
@@ -449,7 +449,7 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-200">Adaptive CAT Engine</h4>
-                  <p className="text-sm text-slate-400 mt-1">Difficulty auto-calibrates between 85 and 150 items as you log responses, mirroring the actual NCLEX-RN.</p>
+                  <p className="text-sm text-slate-400 mt-1">Difficulty auto-calibrates between 15 and 50 items as you log responses, mirroring the actual NCLEX-RN.</p>
                 </div>
               </div>
 
@@ -692,7 +692,7 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                     <Clock className="w-4 h-4" />
                   </div>
                   <p>
-                    <b>Stamina Constraint:</b> Plan for 85-150 items. The test completes automatically once we have determined your standard licensure probability with 95% confidence bounds.
+                    <b>Stamina Constraint:</b> Plan for 15-50 items. The test completes automatically once we have determined your standard licensure probability with 95% confidence bounds.
                   </p>
                 </div>
 

@@ -426,7 +426,7 @@ function App() {
             if (course) setCourseContent(course);
             if (tests && Array.isArray(tests) && tests.length > 0) {
               const upgradedTests = tests.map((dbTest: any) => {
-                const defaultTest = DEFAULT_PRACTICE_TESTS.find(t => t.id === dbTest.id);
+                const defaultTest = DEFAULT_PRACTICE_TESTS.find((t: any) => t.id === dbTest.id);
                 if (defaultTest) {
                   // Always override with fresh curated title, duration, difficulty and questions from defaultTest
                   return {
@@ -439,7 +439,7 @@ function App() {
                 }
                 return dbTest;
               });
-              const brandNewTests = DEFAULT_PRACTICE_TESTS.filter(dt => !upgradedTests.some(ut => ut.id === dt.id));
+              const brandNewTests = DEFAULT_PRACTICE_TESTS.filter((dt: any) => !upgradedTests.some((ut: any) => ut.id === dt.id));
               setPracticeTests([...upgradedTests, ...brandNewTests]);
             } else {
               setPracticeTests(DEFAULT_PRACTICE_TESTS);

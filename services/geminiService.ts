@@ -514,6 +514,56 @@ export const geminiService = {
       });
     };
 
+    // Prioritize Day-Specific static questions first to guarantee zero cross-day duplication
+    const dayQuestions = PERMANENT_QUESTION_BANK.filter(q => q.id.startsWith(`day_${day}_`));
+
+    if (dayQuestions.length > 0) {
+      // LEVEL 1: Same Day + Same Difficulty (Adaptive Choice)
+      let level1Candidates = dayQuestions.filter(q => 
+        q.difficulty === difficulty &&
+        !isAttempted(q)
+      );
+      if (level1Candidates.length > 0) {
+        const chosen = level1Candidates[Math.floor(Math.random() * level1Candidates.length)];
+        return {
+          id: chosen.id,
+          question: chosen.question,
+          options: [...chosen.options],
+          correctAnswer: chosen.correctAnswer,
+          explanation: chosen.explanation,
+          difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+        };
+      }
+
+      // LEVEL 2: Same Day + Any Difficulty (Adaptive Choice Fallback)
+      let level2Candidates = dayQuestions.filter(q => 
+        !isAttempted(q)
+      );
+      if (level2Candidates.length > 0) {
+        const chosen = level2Candidates[Math.floor(Math.random() * level2Candidates.length)];
+        return {
+          id: chosen.id,
+          question: chosen.question,
+          options: [...chosen.options],
+          correctAnswer: chosen.correctAnswer,
+          explanation: chosen.explanation,
+          difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+        };
+      }
+
+      // LEVEL 3: Any Question from this Day (Exhaustion Fallback)
+      const chosen = dayQuestions[Math.floor(Math.random() * dayQuestions.length)];
+      return {
+        id: chosen.id,
+        question: chosen.question,
+        options: [...chosen.options],
+        correctAnswer: chosen.correctAnswer,
+        explanation: chosen.explanation,
+        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+      };
+    }
+
+    // fallback if no day-specific questions exist (defensive backup)
     // LEVEL 1: Same Domain + Same Difficulty
     let level1Candidates = PERMANENT_QUESTION_BANK.filter(q => 
       q.domain === targetDomain && 
@@ -582,22 +632,15 @@ export const geminiService = {
       };
     }
 
-    // LEVEL 5: Last Resort Fallback (Resetting avoid list for target domain)
-    // This only occurs if the student has exhausted the entire question bank.
-    let level5Candidates = PERMANENT_QUESTION_BANK.filter(q => 
-      q.domain === targetDomain
-    );
-    if (level5Candidates.length === 0) {
-      level5Candidates = PERMANENT_QUESTION_BANK;
-    }
-    const chosen = level5Candidates[Math.floor(Math.random() * level5Candidates.length)];
+    // LEVEL 5: Last Resort Fallback (Dynamic Procedural Generation to prevent repeating seen questions)
+    const dynamicQ = generateDynamicQuestion(day, difficulty, avoidConcepts);
     return {
-      id: chosen.id,
-      question: chosen.question,
-      options: [...chosen.options],
-      correctAnswer: chosen.correctAnswer,
-      explanation: chosen.explanation,
-      difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+      id: dynamicQ.id,
+      question: dynamicQ.question,
+      options: [...dynamicQ.options],
+      correctAnswer: dynamicQ.correctAnswer,
+      explanation: dynamicQ.explanation,
+      difficulty: dynamicQ.difficulty as 'easy' | 'medium' | 'hard'
     };
   }
 };
