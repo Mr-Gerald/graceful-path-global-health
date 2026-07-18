@@ -16,8 +16,6 @@ export const Logo = ({ className, src }: { className?: string, src?: string }) =
           const target = e.target as HTMLImageElement;
           if (target.src !== window.location.origin + "/logo.png" && target.src !== "/logo.png") {
             target.src = "/logo.png";
-          } else {
-            target.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIwIiBmaWxsPSIjMDI4NGM3IiAvPjxwYXRoIGQ9Ik01MCAxNSBMODAgMjUgVjU1IEM4MCA3MiA2NyA4NSA1MCA5MCBDMzMgODUgMjAgNTUgVjI1IEw1MCAxNSBaIiBmaWxsPSIjMDM2OWExIiAvPjxwYXRoIGQ9Ik01MCAzMCBWNzAgTTMwIDUwIEg3MCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiAvPjxwYXRoIGQ9Ik0yNSA1MCBINDAgTDQ1IDM1IEw1NSA2NSBMNjAgNTAgSDc1IiBzdHJva2U9IiNiYWU2ZmQiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiAvPjwvc3ZnPg==";
           }
         }}
       />

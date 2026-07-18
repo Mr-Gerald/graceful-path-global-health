@@ -494,7 +494,9 @@ export const geminiService = {
     const targetDomain = getDomainForDay(day);
 
     const isAttempted = (q: any) => {
+      if (!avoidConcepts || avoidConcepts.length === 0) return false;
       return avoidConcepts.some(avoid => {
+        if (!avoid) return false;
         const cleanAvoid = avoid.trim().toLowerCase();
         const cleanQId = q.id.trim().toLowerCase();
         const cleanQText = q.question.trim().toLowerCase();
@@ -515,7 +517,7 @@ export const geminiService = {
     };
 
     // Prioritize Day-Specific static questions first to guarantee zero cross-day duplication
-    const dayQuestions = PERMANENT_QUESTION_BANK.filter(q => q.id.startsWith(`day_${day}_`));
+    const dayQuestions = PERMANENT_QUESTION_BANK.filter(q => q.id.startsWith(`day_${day}_q_`));
 
     if (dayQuestions.length > 0) {
       // LEVEL 1: Same Day + Same Difficulty (Adaptive Choice)

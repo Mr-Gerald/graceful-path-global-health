@@ -2,8 +2,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
   Users, BookOpen, Settings, Plus, LogOut, LayoutDashboard, Trash2, Send, X, 
-  Upload, Menu, Globe, Phone, MessageCircle, Video, FileText, Calendar, ShieldAlert, Edit2, Check, Image, Key, Lock, Camera, Star, Zap, CheckCircle, CheckCircle2, ChevronRight, Save, File, BarChart3, Sparkles, AlertCircle, Info
+  Upload, Menu, Globe, Phone, MessageCircle, Video, FileText, Calendar, ShieldAlert, Edit2, Check, Image, Key, Lock, Camera, Star, Zap, CheckCircle, CheckCircle2, ChevronRight, Save, File, BarChart3, Sparkles, AlertCircle, Info, ShieldCheck
 } from 'lucide-react';
+import html2canvas from 'html2canvas';
+import { DIRECTOR_SIGNATURE } from '../../services/signature';
 import { BrandingAssets, Review, PracticeTest, QuizQuestion, User, Module, Lesson, NavLink, GlobalLinks } from '../../types';
 import { Logo } from '../../components/Layout';
 import { supabase } from '../../services/supabaseClient';
@@ -135,6 +137,51 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     } finally {
       setProcessingId(null);
     }
+  };
+
+  // Student Certificate Download
+  const [downloadingCertUserId, setDownloadingCertUserId] = useState<string | null>(null);
+  const [certificateTargetUser, setCertificateTargetUser] = useState<User | null>(null);
+  const adminCertRef = useRef<HTMLDivElement>(null);
+
+  const getCertificateIssueDate = (u: User) => {
+    if (u.certificateIssuedAt) {
+      const date = new Date(u.certificateIssuedAt);
+      return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    }
+    return new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  };
+
+  const downloadStudentCertificate = async (u: User) => {
+    setDownloadingCertUserId(u.id);
+    setCertificateTargetUser(u);
+    
+    // Give React some time to render the off-screen certificate elements
+    setTimeout(async () => {
+      if (!adminCertRef.current) {
+        setDownloadingCertUserId(null);
+        setCertificateTargetUser(null);
+        return;
+      }
+      try {
+        const canvas = await (html2canvas as any)(adminCertRef.current, {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: '#ffffff',
+          logging: false
+        });
+        const image = canvas.toDataURL("image/png", 1.0);
+        const link = document.createElement('a');
+        link.download = `NCLEX-Mastery-Certificate-${u.name.replace(/\s+/g, '-')}.png`;
+        link.href = image;
+        link.click();
+      } catch (err) {
+        console.error("Failed to generate student certificate PNG:", err);
+      } finally {
+        setDownloadingCertUserId(null);
+        setCertificateTargetUser(null);
+      }
+    }, 250);
   };
 
   // Admin Security
@@ -412,15 +459,33 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                               </button>
                             )}
                             {u.hasCertificate ? (
-                              <button 
-                                disabled={processingId === u.id}
-                                onClick={() => handleAction(u.id, () => onRevokeCertificate(u.id), 'Certificate revoked')} 
-                                className="px-3 py-1 bg-brand-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full border border-brand-600 hover:bg-red-600 transition text-center group disabled:opacity-50"
-                              >
-                                <span className={processingId === u.id ? 'hidden' : 'group-hover:hidden'}>Certificate Issued</span>
-                                <span className={processingId === u.id ? 'hidden' : 'hidden group-hover:inline'}>Revoke Certificate</span>
-                                {processingId === u.id && 'Processing...'}
-                              </button>
+                              <div className="flex items-center gap-2">
+                                <button 
+                                  disabled={processingId === u.id}
+                                  onClick={() => handleAction(u.id, () => onRevokeCertificate(u.id), 'Certificate revoked')} 
+                                  className="px-3 py-1 bg-brand-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full border border-brand-600 hover:bg-red-600 transition text-center group disabled:opacity-50"
+                                >
+                                  <span className={processingId === u.id ? 'hidden' : 'group-hover:hidden'}>Certificate Issued</span>
+                                  <span className={processingId === u.id ? 'hidden' : 'hidden group-hover:inline'}>Revoke Certificate</span>
+                                  {processingId === u.id && 'Processing...'}
+                                </button>
+                                <button
+                                  disabled={downloadingCertUserId !== null}
+                                  onClick={() => downloadStudentCertificate(u)}
+                                  className="px-3 py-1 bg-emerald-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full border border-emerald-600 hover:bg-emerald-700 transition flex items-center gap-1 disabled:opacity-50"
+                                  title="Download Certificate"
+                                >
+                                  {downloadingCertUserId === u.id ? (
+                                    <>
+                                      <Sparkles className="w-3 h-3 animate-spin" /> Preparing...
+                                    </>
+                                  ) : (
+                                    <>
+                                      <Upload className="w-3 h-3 rotate-180" /> Download
+                                    </>
+                                  )}
+                                </button>
+                              </div>
                             ) : (
                               <button 
                                 disabled={processingId === u.id}
@@ -1325,6 +1390,71 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             >
               Acknowledge
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* Off-screen certificate generator template */}
+      {certificateTargetUser && (
+        <div className="absolute left-[-9999px] top-[-9999px] pointer-events-none select-none">
+          <div 
+            id="admin-print-certificate-area"
+            ref={adminCertRef}
+            className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-2xl relative flex flex-col justify-center overflow-visible"
+            style={{ width: '1000px', height: '700px' }}
+          >
+            <div className="absolute inset-0 bg-brand-50/10 rounded-[2.5rem]"></div>
+            {/* Decorative Corner Elements */}
+            <div className="absolute top-0 left-0 w-32 h-32 border-t-8 border-l-8 border-brand-200 m-8 rounded-tl-[2rem]"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 border-t-8 border-r-8 border-brand-200 m-8 rounded-tr-[2rem]"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 border-b-8 border-l-8 border-brand-200 m-8 rounded-bl-[2rem]"></div>
+            <div className="absolute bottom-0 right-0 w-32 h-32 border-b-8 border-r-8 border-brand-200 m-8 rounded-br-[2rem]"></div>
+
+            <div className="relative z-10 border-[4px] border-brand-100 p-12 rounded-[2rem] text-center flex flex-col justify-between h-full">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <Logo src={branding?.logo} />
+                </div>
+                <div className="text-right">
+                  <p className="text-xs font-black text-brand-600 uppercase tracking-widest">Certificate ID</p>
+                  <p className="text-sm font-bold text-slate-400">GP-{certificateTargetUser.id.slice(0, 8).toUpperCase()}</p>
+                </div>
+              </div>
+              
+              <div className="py-2">
+                <h3 className="text-5xl font-serif font-bold text-slate-900 mb-4 leading-tight">Certificate of Mastery</h3>
+                <p className="text-xl text-slate-500 font-medium mb-6">This is to certify that</p>
+                <h4 className="text-5xl font-serif font-bold text-brand-600 mb-6 border-b-4 border-brand-100 inline-block px-12 pb-3">{certificateTargetUser.name}</h4>
+                <p className="text-lg text-slate-500 font-medium leading-relaxed max-w-2xl mx-auto">
+                  Has successfully completed the comprehensive NCLEX Mastery Program at Graceful Path Global Health Academy, 
+                  demonstrating exceptional clinical reasoning and professional nursing competence.
+                </p>
+              </div>
+              
+              <div className="flex justify-between items-end mt-6">
+                <div className="text-left relative">
+                  {/* Director's Signature Image */}
+                  <div className="absolute -top-16 left-8 w-44 h-20 pointer-events-none select-none">
+                    <img 
+                      src={DIRECTOR_SIGNATURE} 
+                      alt="Academy Director Signature" 
+                      className="w-full h-full object-contain mix-blend-multiply"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  <div className="w-64 h-px bg-slate-300 mb-4"></div>
+                  <p className="text-xl font-bold text-slate-900">Academy Director</p>
+                  <p className="text-xs font-black text-slate-400 uppercase tracking-widest">Graceful Path Global Health</p>
+                </div>
+                <div className="text-center pb-4">
+                  <p className="text-xs font-black text-slate-400 uppercase tracking-widest mb-3 font-sans">Date of Issue</p>
+                  <p className="text-lg font-serif font-bold text-brand-700">{getCertificateIssueDate(certificateTargetUser)}</p>
+                </div>
+                <div className="bg-brand-50 p-6 rounded-2xl border border-brand-100 flex items-center justify-center shadow-inner">
+                  <ShieldCheck className="w-16 h-16 text-brand-500" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}

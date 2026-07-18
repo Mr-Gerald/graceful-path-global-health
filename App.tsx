@@ -372,31 +372,30 @@ function App() {
           const targetAbout = '/about_team.jpg';
           const targetSpotlight = '/spotlight_success.jpg';
 
-          const resolveCustomOrFallback = (val: string | undefined, targetDefault: string, oldIdKeywords: string[], isImportantBrandAsset?: boolean) => {
+          const resolveCustomOrFallback = (val: string | undefined, targetDefault: string, oldIdKeywords: string[]) => {
             if (!val || val.trim() === '') return targetDefault;
-            if (val.startsWith('data:')) return val; // Base64 data strings are strictly custom user configs
+            const trimmed = val.trim();
+            if (trimmed.startsWith('data:')) return trimmed; // Base64 data strings are strictly custom user configs
             
-            if (isImportantBrandAsset) {
-              if (val === '/logo.png' || val === '/favicon.png' || val === '/favicon.ico') {
-                return val;
+            // Allow any standard HTTP/HTTPS or local root paths
+            if (trimmed.startsWith('http://') || trimmed.startsWith('https://') || trimmed.startsWith('/') || trimmed.startsWith('.')) {
+              // Check if it's a known expired default URL from older template instances
+              const isOldTemplateAsset = oldIdKeywords.some(kw => trimmed.toLowerCase().includes(kw));
+              if (isOldTemplateAsset) {
+                return targetDefault;
               }
-              return targetDefault;
+              return trimmed;
             }
             
-            // Check if it's a known expired default URL from older template instances
-            const isOldTemplateAsset = oldIdKeywords.some(kw => val.toLowerCase().includes(kw));
-            if (isOldTemplateAsset) {
-              return targetDefault;
-            }
-            return val;
+            return targetDefault;
           };
 
           const expiredKeywords = ['637892089', 'flos2-2', 'flos3-1', 'flos2-1', 'flos3-2', 'fbcdn', 'scontent', 'facebook', 'unsplash'];
 
           const upgraded = {
             ...branding,
-            logo: resolveCustomOrFallback(branding.logo, targetLogo, expiredKeywords, true),
-            favicon: resolveCustomOrFallback(branding.favicon, targetFavicon, expiredKeywords, true),
+            logo: resolveCustomOrFallback(branding.logo, targetLogo, expiredKeywords),
+            favicon: resolveCustomOrFallback(branding.favicon, targetFavicon, expiredKeywords),
             heroImage: resolveCustomOrFallback(branding.heroImage, targetHero, expiredKeywords),
             founderImage: resolveCustomOrFallback(branding.founderImage, targetFounder, expiredKeywords),
             tutorImage: resolveCustomOrFallback(branding.tutorImage, targetTutor, expiredKeywords),
