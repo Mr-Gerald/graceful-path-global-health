@@ -462,6 +462,8 @@ function App() {
     }
   };
 
+  const isDirtyRef = React.useRef(false);
+
   const latestConfig = React.useRef({
     brandingAssets,
     globalLinks,
@@ -482,7 +484,10 @@ function App() {
       geminiKeys,
       examDate
     };
-  }, [brandingAssets, globalLinks, courseContent, practiceTests, materials, geminiKeys, examDate]);
+    if (hasLoadedInitialData) {
+      isDirtyRef.current = true;
+    }
+  }, [brandingAssets, globalLinks, courseContent, practiceTests, materials, geminiKeys, examDate, hasLoadedInitialData]);
 
   const saveSiteConfig = async () => {
     if (currentUser?.role !== UserRole.ADMIN || !hasLoadedInitialData) return;
@@ -523,6 +528,7 @@ function App() {
       
       console.log("Site configuration persisted successfully.");
       setSaveError(null);
+      isDirtyRef.current = false;
     } catch (err: any) {
       console.error("Failed to persist site configuration:", err);
       const friendlyMsg = err.message || 'Unknown network or schema error';
@@ -535,12 +541,12 @@ function App() {
   };
 
   useEffect(() => {
-    if (currentUser?.role === UserRole.ADMIN && hasLoadedInitialData) {
+    if (currentUser?.role === UserRole.ADMIN && hasLoadedInitialData && isDirtyRef.current) {
       const timer = setTimeout(() => {
         saveSiteConfig().catch(err => {
           console.warn("Background site-config auto-save failed but caught gracefully:", err);
         });
-      }, 2000); // Debounce auto-save
+      }, 3000); // Debounce auto-save (3 seconds for mobile network friendly saves)
       return () => clearTimeout(timer);
     }
   }, [brandingAssets, globalLinks, courseContent, practiceTests, materials, examDate, geminiKeys, currentUser, hasLoadedInitialData]);
