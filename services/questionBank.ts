@@ -40,6 +40,88 @@ export function getDomainForDay(day: number): string {
 }
 
 // Offline-safe fallback in the extreme edge case of pool exhaustion (e.g., student attempting more than 50 questions in a day)
+export function isHighlySimilar(str1: string, str2: string): boolean {
+  const clean1 = str1.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, "");
+  const clean2 = str2.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, "");
+  
+  const words1 = clean1.split(/\s+/).filter(w => w.length > 2);
+  const words2 = clean2.split(/\s+/).filter(w => w.length > 2);
+  
+  if (words1.length === 0 || words2.length === 0) return false;
+  
+  const set1 = new Set(words1);
+  const set2 = new Set(words2);
+  
+  let intersectCount = 0;
+  for (const w of set1) {
+    if (set2.has(w)) {
+      intersectCount++;
+    }
+  }
+  
+  const similarity = intersectCount / Math.min(set1.size, set2.size);
+  return similarity > 0.65;
+}
+
+export function getDiverseStaticQuestions(
+  count: number,
+  options?: { difficulty?: 'easy' | 'medium' | 'hard'; domain?: string }
+): NCLEXQuestion[] {
+  const candidates = [...ALL_STATIC_DAY_QUESTIONS];
+  
+  // Deterministic pseudo-random seed shuffle to guarantee stable but highly diverse order without performance jitter
+  let seed = 42;
+  const randomSeed = () => {
+    const x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+  };
+
+  for (let i = candidates.length - 1; i > 0; i--) {
+    const j = Math.floor(randomSeed() * (i + 1));
+    const temp = candidates[i];
+    candidates[i] = candidates[j];
+    candidates[j] = temp;
+  }
+
+  const selected: NCLEXQuestion[] = [];
+
+  for (const q of candidates) {
+    if (selected.length >= count) break;
+
+    if (options?.difficulty && q.difficulty !== options.difficulty) {
+      continue;
+    }
+
+    if (options?.domain && q.domain !== options.domain) {
+      continue;
+    }
+
+    // Check high similarity
+    const isSimilarToAnySelected = selected.some(sel => 
+      isHighlySimilar(sel.question, q.question)
+    );
+
+    if (!isSimilarToAnySelected) {
+      selected.push(q);
+    }
+  }
+
+  // Fallback to fill up if strict diversity filter is too selective
+  if (selected.length < count) {
+    for (const q of candidates) {
+      if (selected.length >= count) break;
+      if (options?.difficulty && q.difficulty !== options.difficulty) continue;
+      if (options?.domain && q.domain !== options.domain) continue;
+      
+      if (!selected.some(sel => sel.id === q.id)) {
+        selected.push(q);
+      }
+    }
+  }
+
+  return selected;
+}
+
 export function generateDynamicQuestion(day: number, difficulty: 'easy' | 'medium' | 'hard', avoidConcepts: string[] = []): NCLEXQuestion {
   const isAttempted = (q: any) => {
     if (!avoidConcepts || avoidConcepts.length === 0) return false;
@@ -48,7 +130,12 @@ export function generateDynamicQuestion(day: number, difficulty: 'easy' | 'mediu
       const cleanAvoid = avoid.trim().toLowerCase();
       const cleanQId = q.id.trim().toLowerCase();
       const cleanQText = q.question.trim().toLowerCase();
-      return cleanAvoid === cleanQId || cleanAvoid === cleanQText || (cleanAvoid.length >= 15 && (cleanQText.includes(cleanAvoid) || cleanAvoid.includes(cleanQText)));
+      
+      if (cleanAvoid === cleanQId || cleanAvoid === cleanQText) return true;
+      if (cleanAvoid.length >= 15 && (cleanQText.includes(cleanAvoid) || cleanAvoid.includes(cleanQText))) return true;
+      
+      // Also prevent similarity matching
+      return isHighlySimilar(cleanAvoid, cleanQText);
     });
   };
 
@@ -66,21 +153,21 @@ export const DEFAULT_PRACTICE_TESTS = [
     title: "NCLEX-RN Comprehensive Diagnostic Exam",
     duration: 120, // 2 hours
     difficulty: "medium",
-    questions: ALL_STATIC_DAY_QUESTIONS.filter(q => q.id.startsWith("day_28_q_"))
+    questions: getDiverseStaticQuestions(50)
   },
   {
     id: "pharmacology_sprint",
     title: "Pharmacological & Parenteral Therapies Sprint",
     duration: 60, // 1 hour
     difficulty: "hard",
-    questions: ALL_STATIC_DAY_QUESTIONS.filter(q => q.id.startsWith("day_29_q_")).slice(0, 30)
+    questions: getDiverseStaticQuestions(30, { difficulty: 'hard', domain: 'Pharmacological and Parenteral Therapies' })
   },
   {
     id: "management_of_care",
     title: "Safe & Effective Care: Management of Care Challenge",
     duration: 45, // 45 minutes
     difficulty: "easy",
-    questions: ALL_STATIC_DAY_QUESTIONS.filter(q => q.id.startsWith("day_30_q_")).slice(0, 25)
+    questions: getDiverseStaticQuestions(25, { difficulty: 'easy', domain: 'Safe and Effective Care Environment - Management of Care' })
   }
 ];
 

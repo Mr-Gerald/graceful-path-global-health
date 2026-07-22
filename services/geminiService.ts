@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { supabase } from './supabaseClient';
 
-import { PERMANENT_QUESTION_BANK, getDomainForDay, generateDynamicQuestion } from './questionBank';
+import { PERMANENT_QUESTION_BANK, getDomainForDay, generateDynamicQuestion, isHighlySimilar } from './questionBank';
 
 // Use multiple possible environment variables for the API key to ensure compatibility
 // Use multiple possible environment variables for the API key to ensure compatibility
@@ -512,6 +512,9 @@ export const geminiService = {
           if (cleanQText.includes(cleanAvoid) || cleanAvoid.includes(cleanQText)) return true;
         }
 
+        // 4. Word-based similarity check to exclude duplicate/templated questions
+        if (isHighlySimilar(avoid, q.question)) return true;
+
         return false;
       });
     };
@@ -552,58 +555,15 @@ export const geminiService = {
           difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
         };
       }
-
-      // LEVEL 3: Any Question from this Day (Exhaustion Fallback)
-      const chosen = dayQuestions[Math.floor(Math.random() * dayQuestions.length)];
-      return {
-        id: chosen.id,
-        question: chosen.question,
-        options: [...chosen.options],
-        correctAnswer: chosen.correctAnswer,
-        explanation: chosen.explanation,
-        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
-      };
     }
 
-    // fallback if no day-specific questions exist (defensive backup)
-    // LEVEL 1: Same Domain + Same Difficulty
-    let level1Candidates = PERMANENT_QUESTION_BANK.filter(q => 
+    // If day-specific questions are fully exhausted of non-similar candidates,
+    // seamlessly fall back to other questions in the 1,500 question pool of PERMANENT_QUESTION_BANK
+
+    // LEVEL 3: Same Domain + Same Difficulty
+    let level3Candidates = PERMANENT_QUESTION_BANK.filter(q => 
       q.domain === targetDomain && 
       q.difficulty === difficulty &&
-      !isAttempted(q)
-    );
-    if (level1Candidates.length > 0) {
-      const chosen = level1Candidates[Math.floor(Math.random() * level1Candidates.length)];
-      return {
-        id: chosen.id,
-        question: chosen.question,
-        options: [...chosen.options],
-        correctAnswer: chosen.correctAnswer,
-        explanation: chosen.explanation,
-        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
-      };
-    }
-
-    // LEVEL 2: Same Domain + Any Difficulty
-    let level2Candidates = PERMANENT_QUESTION_BANK.filter(q => 
-      q.domain === targetDomain && 
-      !isAttempted(q)
-    );
-    if (level2Candidates.length > 0) {
-      const chosen = level2Candidates[Math.floor(Math.random() * level2Candidates.length)];
-      return {
-        id: chosen.id,
-        question: chosen.question,
-        options: [...chosen.options],
-        correctAnswer: chosen.correctAnswer,
-        explanation: chosen.explanation,
-        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
-      };
-    }
-
-    // LEVEL 3: Any Domain + Same Difficulty
-    let level3Candidates = PERMANENT_QUESTION_BANK.filter(q => 
-      q.difficulty === difficulty && 
       !isAttempted(q)
     );
     if (level3Candidates.length > 0) {
@@ -618,8 +578,9 @@ export const geminiService = {
       };
     }
 
-    // LEVEL 4: Any Domain + Any Difficulty
+    // LEVEL 4: Same Domain + Any Difficulty
     let level4Candidates = PERMANENT_QUESTION_BANK.filter(q => 
+      q.domain === targetDomain && 
       !isAttempted(q)
     );
     if (level4Candidates.length > 0) {
@@ -634,7 +595,40 @@ export const geminiService = {
       };
     }
 
-    // LEVEL 5: Last Resort Fallback (Dynamic Procedural Generation to prevent repeating seen questions)
+    // LEVEL 5: Any Domain + Same Difficulty
+    let level5Candidates = PERMANENT_QUESTION_BANK.filter(q => 
+      q.difficulty === difficulty && 
+      !isAttempted(q)
+    );
+    if (level5Candidates.length > 0) {
+      const chosen = level5Candidates[Math.floor(Math.random() * level5Candidates.length)];
+      return {
+        id: chosen.id,
+        question: chosen.question,
+        options: [...chosen.options],
+        correctAnswer: chosen.correctAnswer,
+        explanation: chosen.explanation,
+        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+      };
+    }
+
+    // LEVEL 6: Any Domain + Any Difficulty
+    let level6Candidates = PERMANENT_QUESTION_BANK.filter(q => 
+      !isAttempted(q)
+    );
+    if (level6Candidates.length > 0) {
+      const chosen = level6Candidates[Math.floor(Math.random() * level6Candidates.length)];
+      return {
+        id: chosen.id,
+        question: chosen.question,
+        options: [...chosen.options],
+        correctAnswer: chosen.correctAnswer,
+        explanation: chosen.explanation,
+        difficulty: chosen.difficulty as 'easy' | 'medium' | 'hard'
+      };
+    }
+
+    // LEVEL 7: Last Resort Fallback (Dynamic Procedural Generation to prevent repeating seen questions)
     const dynamicQ = generateDynamicQuestion(day, difficulty, avoidConcepts);
     return {
       id: dynamicQ.id,
