@@ -2,11 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 // @ts-ignore
 import html2canvas from 'html2canvas';
+import { jsPDF } from 'jspdf';
 import { 
   LayoutDashboard, BookOpen, Video, FileText, Calendar, Award, BarChart3, ChevronRight, 
   PlayCircle, Clock, ChevronLeft, Sparkles, ExternalLink, LogOut, Bell, CheckCircle2, 
   Lock, Download, Star, MessageCircle, X, Menu, Trash2, Heart, ShieldCheck, Zap, Globe, CreditCard,
-  User as UserIcon, Camera, Key, Mail, Phone, AtSign, Edit2, Upload as UploadIcon, ChevronDown, CheckCircle, AlertCircle, Info, RefreshCw
+  User as UserIcon, Camera, Key, Mail, Phone, AtSign, Edit2, Upload as UploadIcon, ChevronDown, CheckCircle, AlertCircle, Info, RefreshCw,
+  Share2, Printer, Image as ImageIcon
 } from 'lucide-react';
 import { User, PracticeTest, QuizQuestion, Notification, Module, Lesson, NavLink, GlobalLinks, BrandingAssets } from '../../types';
 import { Logo } from '../../components/Layout';
@@ -555,12 +557,56 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
     }, 250);
   };
 
-  const downloadCertificate = async () => {
+  // 1. Save Certificate as high-res PDF Document
+  const downloadCertificatePDF = async () => {
     if (!certificateRef.current) return;
     setIsDownloading(true);
     try {
       const canvas = await (html2canvas as any)(certificateRef.current, {
-        scale: 2, // Higher quality
+        scale: 3, // Ultra high crisp resolution for PDF printing
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        logging: false
+      });
+      const imgData = canvas.toDataURL("image/png", 1.0);
+      
+      // Create landscape A4 PDF document (297mm x 210mm)
+      const pdf = new jsPDF({
+        orientation: 'landscape',
+        unit: 'mm',
+        format: 'a4'
+      });
+      
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      pdf.save(`NCLEX-Mastery-Certificate-${user.name.replace(/\s+/g, '-')}.pdf`);
+
+      setCustomNotification({
+        title: "PDF Saved Successfully",
+        message: "Your official NCLEX Mastery Certificate has been saved as a PDF document to your device.",
+        type: "success"
+      });
+    } catch (err) {
+      console.error("PDF generation failed:", err);
+      setCustomNotification({
+        title: "PDF Generation Issue",
+        message: "Could not create PDF document. Please try Save as Image or Print Certificate.",
+        type: "error"
+      });
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  // 2. Save Certificate as High-Res Image PNG
+  const downloadCertificatePNG = async () => {
+    if (!certificateRef.current) return;
+    setIsDownloading(true);
+    try {
+      const canvas = await (html2canvas as any)(certificateRef.current, {
+        scale: 3,
         useCORS: true,
         backgroundColor: '#ffffff',
         logging: false
@@ -571,12 +617,56 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
       link.href = image;
       link.click();
     } catch (err) {
-      console.error("Download failed:", err);
+      console.error("Download PNG failed:", err);
       setCustomNotification({
         title: "Download Issue",
-        message: "Failed to download certificate. Please try again or use the Print Certificate option.",
+        message: "Failed to download image. Please try Save as PDF or Print Certificate option.",
         type: "error"
       });
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  // 3. Mobile Native Share Sheet (Save to Files / Google Drive / Photos)
+  const shareCertificateDocument = async () => {
+    if (!certificateRef.current) return;
+    setIsDownloading(true);
+    try {
+      const canvas = await (html2canvas as any)(certificateRef.current, {
+        scale: 3,
+        useCORS: true,
+        backgroundColor: '#ffffff',
+        logging: false
+      });
+      
+      const imgData = canvas.toDataURL("image/png", 1.0);
+      const pdf = new jsPDF({
+        orientation: 'landscape',
+        unit: 'mm',
+        format: 'a4'
+      });
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      const pdfBlob = pdf.output('blob');
+      
+      const fileName = `NCLEX-Mastery-Certificate-${user.name.replace(/\s+/g, '-')}.pdf`;
+      const pdfFile = new File([pdfBlob], fileName, { type: 'application/pdf' });
+
+      if (navigator.share && navigator.canShare && navigator.canShare({ files: [pdfFile] })) {
+        await navigator.share({
+          title: 'NCLEX Mastery Certificate of Completion',
+          text: `Official NCLEX-RN Mastery Certificate issued to ${user.name} by Graceful Path Global Health Academy.`,
+          files: [pdfFile]
+        });
+      } else {
+        // Fallback directly to PDF download
+        pdf.save(fileName);
+      }
+    } catch (err) {
+      console.error("Share document failed:", err);
+      await downloadCertificatePDF();
     } finally {
       setIsDownloading(false);
     }
@@ -909,27 +999,44 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                     </div>
                   </div>
                   
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     <button 
-                      onClick={downloadCertificate}
+                      onClick={downloadCertificatePDF}
                       disabled={isDownloading}
-                      className="flex-1 py-4 md:py-6 bg-brand-600 text-white font-black text-xs md:text-sm uppercase tracking-widest rounded-2xl hover:bg-brand-700 transition shadow-xl flex items-center justify-center group disabled:opacity-50"
+                      className="py-4 md:py-5 bg-brand-600 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-brand-700 transition shadow-xl flex items-center justify-center group disabled:opacity-50"
                     >
                       {isDownloading ? (
                         <span className="flex items-center">
-                          <Clock className="w-5 h-5 mr-3 animate-spin" /> Generating...
+                          <Clock className="w-5 h-5 mr-2 animate-spin" /> Generating...
                         </span>
                       ) : (
                         <span className="flex items-center">
-                          <Download className="w-5 h-5 mr-3 group-hover:animate-bounce" /> Download Official Certificate
+                          <FileText className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /> Save as PDF Document
                         </span>
                       )}
                     </button>
+
+                    <button 
+                      onClick={downloadCertificatePNG}
+                      disabled={isDownloading}
+                      className="py-4 md:py-5 bg-white border-2 border-brand-200 text-brand-700 font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-brand-50 transition shadow-md flex items-center justify-center group disabled:opacity-50"
+                    >
+                      <ImageIcon className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform text-brand-600" /> Save as Image (PNG)
+                    </button>
+
+                    <button 
+                      onClick={shareCertificateDocument}
+                      disabled={isDownloading}
+                      className="py-4 md:py-5 bg-indigo-600 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-indigo-700 transition shadow-xl flex items-center justify-center group disabled:opacity-50"
+                    >
+                      <Share2 className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /> Save to Files / Drive / Photos
+                    </button>
+
                     <button 
                       onClick={() => window.print()}
-                      className="flex-1 py-4 md:py-6 bg-slate-900 text-white font-black text-xs md:text-sm uppercase tracking-widest rounded-2xl hover:bg-black transition shadow-xl flex items-center justify-center group"
+                      className="py-4 md:py-5 bg-slate-900 text-white font-black text-xs uppercase tracking-widest rounded-2xl hover:bg-black transition shadow-xl flex items-center justify-center group"
                     >
-                      <FileText className="w-5 h-5 mr-3" /> Print Certificate
+                      <Printer className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /> Print Certificate
                     </button>
                   </div>
                 </div>
