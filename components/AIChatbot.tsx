@@ -120,87 +120,108 @@ export const AIChatbot: React.FC<AIChatbotProps> = ({ links, currentUser, onNavi
   const generateLocalKnowledgeResponse = (userPrompt: string): { content: string; showWhatsapp: boolean } => {
     const clean = userPrompt.toLowerCase();
 
-    // 1. PassPoint / Mock Navigation
-    if (clean.includes('passpoint') || clean.includes('mock') || clean.includes('cat') || clean.includes('navigate') || clean.includes('exam')) {
+    // 1. Password Change / Account Security
+    if (clean.includes('password') || clean.includes('reset') || clean.includes('change pass') || clean.includes('forgot pass')) {
+      return {
+        content: `**Step-by-Step Guide: How to Change Your Password** 🔐\n\n` +
+          `**Option A: When You Are Logged In**\n` +
+          `1. Click **Settings** (or your profile icon) on the left sidebar navigation menu.\n` +
+          `2. Scroll to the **Security & Password** section.\n` +
+          `3. Type your new password into the **New Password** field.\n` +
+          `4. Click **Update Password** to apply your changes immediately.\n\n` +
+          `**Option B: When Logged Out or Forgotten Password**\n` +
+          `1. Click **Sign In** on the top right or open the login screen.\n` +
+          `2. Click the **"Forgot Password?"** link beneath the login fields.\n` +
+          `3. Enter your registered email address and click **"Send Password Reset Link"**.\n` +
+          `4. Check your email inbox, open the link, and enter your new password.\n\n` +
+          `*If you face any issues receiving the reset email, click below to contact our Admin on WhatsApp for instant assistance!*`,
+        showWhatsapp: true
+      };
+    }
+
+    // 2. PassPoint / Mock Navigation
+    if (clean.includes('passpoint') || clean.includes('mock') || clean.includes('cat') || clean.includes('navigate') || clean.includes('exam') || clean.includes('test')) {
       return {
         content: `**PassPoint Adaptive Mock CAT Navigation Guide** 🎓\n\n` +
-          `1. **Accessing the Exam**: Navigate to **Assessments** in the sidebar menu and select **PassPoint Mock**.\n` +
-          `2. **Adaptive Engine**: PassPoint mimics the real NCLEX-RN Computerized Adaptive Testing (CAT) algorithm, continuously adjusting question difficulty based on your accuracy.\n` +
-          `3. **Test Format**: Contains 50 to 75 questions with a realistic timer and clinical case scenario options.\n` +
-          `4. **Instant Rationales**: After every question, view detailed clinical rationale breakdowns to reinforce critical thinking.\n` +
-          `5. **Performance Diagnostic**: At the end of your test, inspect your passing probability and client needs domain scores.\n\n` +
-          `*Tip: Ensure you complete the exam without refreshing to preserve your full diagnostic report!*`,
+          `1. **Accessing the Exam**: Click **Assessments** or **PassPoint Mock** on the left sidebar.\n` +
+          `2. **Adaptive Engine**: Replicates official NCLEX Computerized Adaptive Testing (50 to 75 questions). Difficulty adjusts automatically as you answer.\n` +
+          `3. **Answering Questions**: Select your response and click **Confirm & Next**. You can also click **Previous** to review your selection before final submission.\n` +
+          `4. **Instant Rationales**: Receive comprehensive clinical explanations immediately after submitting answers.\n` +
+          `5. **Diagnostic Breakdown**: View your overall passing probability and performance across 8 NCLEX Client Needs categories at test completion.`,
         showWhatsapp: false
       };
     }
 
-    // 2. 30-Day NCLEX Mastery Course
-    if (clean.includes('30-day') || clean.includes('30 day') || clean.includes('course') || clean.includes('curriculum') || clean.includes('lesson')) {
+    // 3. 30-Day NCLEX Mastery Course
+    if (clean.includes('30-day') || clean.includes('30 day') || clean.includes('course') || clean.includes('curriculum') || clean.includes('lesson') || clean.includes('study plan')) {
       return {
-        content: `**30-Day NCLEX Mastery Course Overview** 📚\n\n` +
-          `• **Daily Structure**: 30 structured, high-yield days covering all official NCLEX client needs categories.\n` +
-          `• **Core Learning Materials**: Each module includes video lectures, clinical case notes, interactive flashcards, and end-of-day practice quizzes.\n` +
-          `• **Tracking**: Progress is automatically saved to your **Student Dashboard**.\n` +
-          `• **How to Start**: Click **Courses** on the navigation menu to access Day 1 or resume your current module.`,
+        content: `**30-Day NCLEX Mastery Course Overview & Navigation** 📚\n\n` +
+          `1. **Accessing Lessons**: Click **Courses** or **30-Day NCLEX** in the sidebar.\n` +
+          `2. **Daily Modules**: Select Day 1 through Day 30 to open video lectures, high-yield clinical summaries, interactive flashcards, and daily practice quizzes.\n` +
+          `3. **Tracking Progress**: Completed days and quiz scores automatically sync to your **Student Dashboard**.\n` +
+          `4. **Certificates**: Complete course requirements to unlock your official Certificate of Mastery.`,
         showWhatsapp: false
       };
     }
 
-    // 3. Premium Upgrade / Account Verification
-    if (clean.includes('upgrade') || clean.includes('premium') || clean.includes('payment') || clean.includes('plan') || clean.includes('cost')) {
+    // 4. Premium Upgrade / Payment Steps
+    if (clean.includes('upgrade') || clean.includes('premium') || clean.includes('payment') || clean.includes('pay') || clean.includes('pricing') || clean.includes('cost') || clean.includes('buy')) {
       return {
-        content: `**Upgrading to Premium Access** 💎\n\n` +
-          `• **Free Tier**: Grants access to basic sample questions and course overviews.\n` +
-          `• **Premium Membership Unlocks**:\n` +
-          `  - Unlimited PassPoint Adaptive Mock CAT attempts\n` +
-          `  - Full 30-Day NCLEX Repository & Study Guides\n` +
-          `  - Downloadable Certificates of Mastery\n` +
-          `  - Direct Academy Director Support\n\n` +
-          `• **How to Upgrade**: Go to your **Student Dashboard** and click **Upgrade to Premium**, or submit your proof of payment directly to our Administration team on WhatsApp for immediate account activation.`,
+        content: `**How to Upgrade to Premium Access** 💎\n\n` +
+          `1. **Navigate to Dashboard**: Click **Dashboard** and select **Upgrade to Premium**.\n` +
+          `2. **Choose Your Plan**: Select Monthly, 3-Month, or Lifetime Access.\n` +
+          `3. **Payment Method**: Choose Debit/Credit Card, M-Pesa, or Direct Bank Transfer.\n` +
+          `4. **Instant Activation**: Card payments activate instantly. For Bank Transfer or M-Pesa, take a screenshot of your receipt and click **Contact Admin on WhatsApp** below for instant manual account activation!`,
         showWhatsapp: true
       };
     }
 
-    // 4. Certificates
-    if (clean.includes('certificate') || clean.includes('cert') || clean.includes('completion') || clean.includes('graduate')) {
+    // 5. Certificates
+    if (clean.includes('certificate') || clean.includes('cert') || clean.includes('completion') || clean.includes('graduate') || clean.includes('download cert')) {
       return {
-        content: `**Earning Your Certificate of Mastery** 📜\n\n` +
-          `• **Requirements**: Achieve a 65%+ passing standard on the PassPoint Mock CAT or complete the 30-Day NCLEX Mastery Course.\n` +
-          `• **Accessing Your Certificate**: Navigate to **Dashboard** -> **Certificates** to view, download, or share your signed Academy credential.\n` +
-          `• **Verification**: Each certificate is individually signed by our Academy Director and verifiable online.`,
+        content: `**How to Qualify and Download Your Certificate** 📜\n\n` +
+          `1. **Qualification**: Score 65%+ on the PassPoint Mock CAT or complete the 30-Day NCLEX Course.\n` +
+          `2. **Downloading**: Go to **Dashboard** -> click the **Certificates** tab -> click **Download Certificate** to save your signed PNG credential.\n` +
+          `3. **Email Dispatch**: You can also ask our Admin team on WhatsApp or via the Dashboard to email your official certificate directly to your email address!`,
         showWhatsapp: false
       };
     }
 
-    // 5. Admin / Human Contact / Personal Account Help
-    if (clean.includes('admin') || clean.includes('human') || clean.includes('whatsapp') || clean.includes('contact') || clean.includes('personal account') || clean.includes('login issue') || clean.includes('password') || clean.includes('support')) {
+    // 6. Admin / Human Contact / Personal Account Support
+    if (clean.includes('admin') || clean.includes('human') || clean.includes('whatsapp') || clean.includes('contact') || clean.includes('personal account') || clean.includes('login issue') || clean.includes('support')) {
       return {
         content: `**Graceful Path Global Health Administration Support** 📲\n\n` +
-          `I am always here to assist you with nursing concepts, study plans, and platform guidance! For personal account changes, payment proof verification, or direct human support, our dedicated Academy Administrators are ready to help you on WhatsApp.\n\n` +
-          `Click the button below to start a direct chat with an Admin right now:`,
+          `Our dedicated Academy Administrators are available to assist you with:\n` +
+          `• Account email updates or profile changes\n` +
+          `• Manual payment verification & receipts\n` +
+          `• Certificate email dispatches\n` +
+          `• Direct 1-on-1 nursing guidance\n\n` +
+          `Click the button below to open a direct WhatsApp chat with an Admin right now:`,
         showWhatsapp: true
       };
     }
 
-    // 6. NCLEX Clinical Concepts (Prioritization / ABCs / Meds)
-    if (clean.includes('priorit') || clean.includes('abc') || clean.includes('maslow') || clean.includes('pharmacology') || clean.includes('drug') || clean.includes('math')) {
+    // 7. NCLEX Clinical Concepts (Prioritization / ABCs / Meds / Math)
+    if (clean.includes('priorit') || clean.includes('abc') || clean.includes('maslow') || clean.includes('pharmacology') || clean.includes('drug') || clean.includes('math') || clean.includes('nursing')) {
       return {
         content: `**NCLEX High-Yield Clinical Prioritization Rules** 🩺\n\n` +
-          `1. **Airway, Breathing, Circulation (ABCs)**: Airway obstruction (stridor, tracheostomy displacement) takes highest priority over all other symptoms.\n` +
-          `2. **Acute over Chronic**: An acute unexpected change (e.g., sudden confusion or drop in SpO2) requires immediate action over a stable chronic condition (e.g., baseline COPD dyspnea).\n` +
+          `1. **Airway, Breathing, Circulation (ABCs)**: Airway obstruction (stridor, tracheostomy displacement) takes top priority.\n` +
+          `2. **Acute over Chronic**: An acute unexpected change (e.g., sudden confusion or drop in SpO2) takes priority over a stable chronic condition (e.g., baseline COPD dyspnea).\n` +
           `3. **Unstable over Stable**: Prioritize client needs that are unpredictable or post-procedure.\n` +
-          `4. **Maslow's Hierarchy**: Address physical survival needs (oxygenation, circulation, hydration) before safety, anxiety, or pain (unless acute chest pain).`,
+          `4. **Maslow's Hierarchy**: Physical survival needs (oxygenation, circulation, hydration) precede safety, anxiety, or pain (unless acute chest pain).`,
         showWhatsapp: false
       };
     }
 
     // Default general response
     return {
-      content: `I am happy to assist you with that! At **Graceful Path Global Health**, we provide complete support for your NCLEX-RN exam journey.\n\n` +
-        `• **Need Platform Help?** Ask about PassPoint Mock CAT, the 30-Day Course, or Certificates.\n` +
-        `• **Need Clinical Review?** Ask me about pharmacology, prioritization, or nursing care concepts.\n` +
-        `• **Need Personal Account / Payment Support?** You can connect directly with our Human Administrator via WhatsApp anytime!`,
-      showWhatsapp: clean.includes('account') || clean.includes('help') || clean.includes('pay')
+      content: `I am happy to assist you! At **Graceful Path Global Health**, I can help you with all aspects of your NCLEX-RN preparation and academy membership:\n\n` +
+        `• **Password & Account**: Ask "How do I change my password?" for step-by-step instructions.\n` +
+        `• **PassPoint CAT Mock**: Ask "How do I take PassPoint Mock?" to view exam navigation guidance.\n` +
+        `• **30-Day Course**: Ask "How does the course work?" for daily study details.\n` +
+        `• **Certificates**: Ask "How do I download my certificate?"\n` +
+        `• **Human Admin Support**: Tap the WhatsApp button below anytime to chat with an Administrator!`,
+      showWhatsapp: true
     };
   };
 
