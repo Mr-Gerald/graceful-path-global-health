@@ -40,12 +40,23 @@ export function getDomainForDay(day: number): string {
 }
 
 // Offline-safe fallback in the extreme edge case of pool exhaustion (e.g., student attempting more than 50 questions in a day)
+// Refined similarity matcher ignoring common template stop-words to ensure true clinical uniqueness
+const CLINICAL_STOP_WORDS = new Set([
+  "client", "nurse", "year", "years", "old", "presenting", "action", "priority", "intervention",
+  "immediate", "following", "diagnosed", "with", "about", "which", "statement", "finding", "requires",
+  "order", "ordered", "administer", "doctor", "provider", "physician", "hospital", "medical",
+  "clinical", "unit", "admitted", "assessing", "assesses", "patient", "care", "plan", "appropriate"
+]);
+
 export function isHighlySimilar(str1: string, str2: string): boolean {
+  if (!str1 || !str2) return false;
+  if (str1 === str2) return true;
+
   const clean1 = str1.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, "");
   const clean2 = str2.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?"']/g, "");
   
-  const words1 = clean1.split(/\s+/).filter(w => w.length > 2);
-  const words2 = clean2.split(/\s+/).filter(w => w.length > 2);
+  const words1 = clean1.split(/\s+/).filter(w => w.length > 2 && !CLINICAL_STOP_WORDS.has(w));
+  const words2 = clean2.split(/\s+/).filter(w => w.length > 2 && !CLINICAL_STOP_WORDS.has(w));
   
   if (words1.length === 0 || words2.length === 0) return false;
   
@@ -60,7 +71,7 @@ export function isHighlySimilar(str1: string, str2: string): boolean {
   }
   
   const similarity = intersectCount / Math.min(set1.size, set2.size);
-  return similarity > 0.65;
+  return similarity > 0.80; // High threshold for true duplicate clinical scenarios
 }
 
 export function getDiverseStaticQuestions(

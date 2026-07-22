@@ -3,701 +3,701 @@ import { NCLEXQuestion } from "../questionBank";
 export const DAY_14_QUESTIONS: NCLEXQuestion[] = [
   {
     "id": "day_14_q_1",
-    "question": "A nurse is preparing to admit client Amir Garcia, 34 years old, with diagnosed bacterial Meningitis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "Client Elijah Clark, a 42-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q1)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Droplet precautions, requiring the use of standard surgical face mask upon entering within 3 feet and private room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of bacterial Meningitis requires strict adherence to Droplet precautions with specific equipment, such as standard surgical face mask upon entering within 3 feet and private room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_2",
-    "question": "A nurse is preparing to admit client Mateo Gonzalez, 53 years old, with diagnosed Clostridium difficile infection. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "The nurse is assessing James Allen, 49 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q2)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Contact precautions, requiring the use of disposable protective gown, clean gloves, and washing hands with soap and water.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of Clostridium difficile infection requires strict adherence to Contact precautions with specific equipment, such as disposable protective gown, clean gloves, and washing hands with soap and water.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_3",
-    "question": "A nurse is preparing to admit client Aisha Martin, 72 years old, with diagnosed active pulmonary Tuberculosis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "Client Noor Smith (56 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q3)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Airborne precautions, requiring the use of N95 respirator mask and private negative-pressure room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of active pulmonary Tuberculosis requires strict adherence to Airborne precautions with specific equipment, such as N95 respirator mask and private negative-pressure room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_4",
-    "question": "A nurse is preparing to admit client Sebastian Clark, 26 years old, with diagnosed bacterial Meningitis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "While conducting shift assessment on Kwame Davis (63 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q4)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Droplet precautions, requiring the use of standard surgical face mask upon entering within 3 feet and private room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of bacterial Meningitis requires strict adherence to Droplet precautions with specific equipment, such as standard surgical face mask upon entering within 3 feet and private room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_5",
-    "question": "A nurse is preparing to admit client Richard Allen, 45 years old, with diagnosed Clostridium difficile infection. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "A nurse is planning care for client Daniel Anderson, 70 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q5)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Contact precautions, requiring the use of disposable protective gown, clean gloves, and washing hands with soap and water.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of Clostridium difficile infection requires strict adherence to Contact precautions with specific equipment, such as disposable protective gown, clean gloves, and washing hands with soap and water.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_6",
-    "question": "A nurse is preparing to admit client Theresa Smith, 64 years old, with diagnosed active pulmonary Tuberculosis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "Client Marcus Perez, a 77-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q6)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Airborne precautions, requiring the use of N95 respirator mask and private negative-pressure room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of active pulmonary Tuberculosis requires strict adherence to Airborne precautions with specific equipment, such as N95 respirator mask and private negative-pressure room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_7",
-    "question": "A nurse is preparing to admit client Fatima Davis, 18 years old, with diagnosed bacterial Meningitis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "The nurse is assessing Dmitri Lewis, 19 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q7)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Droplet precautions, requiring the use of standard surgical face mask upon entering within 3 feet and private room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of bacterial Meningitis requires strict adherence to Droplet precautions with specific equipment, such as standard surgical face mask upon entering within 3 feet and private room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_8",
-    "question": "A nurse is preparing to admit client Hannah Anderson, 37 years old, with diagnosed Clostridium difficile infection. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "Client Liam Wright (26 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q8)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Contact precautions, requiring the use of disposable protective gown, clean gloves, and washing hands with soap and water.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of Clostridium difficile infection requires strict adherence to Contact precautions with specific equipment, such as disposable protective gown, clean gloves, and washing hands with soap and water.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_9",
-    "question": "A nurse is preparing to admit client Maya Perez, 56 years old, with diagnosed active pulmonary Tuberculosis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "While conducting shift assessment on Noah Williams (33 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q9)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Airborne precautions, requiring the use of N95 respirator mask and private negative-pressure room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of active pulmonary Tuberculosis requires strict adherence to Airborne precautions with specific equipment, such as N95 respirator mask and private negative-pressure room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_10",
-    "question": "A nurse is preparing to admit client Barbara Lewis, 75 years old, with diagnosed bacterial Meningitis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "A nurse is planning care for client David Martinez, 40 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q10)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Droplet precautions, requiring the use of standard surgical face mask upon entering within 3 feet and private room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of bacterial Meningitis requires strict adherence to Droplet precautions with specific equipment, such as standard surgical face mask upon entering within 3 feet and private room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_11",
-    "question": "A nurse is preparing to admit client Maria Wright, 29 years old, with diagnosed Clostridium difficile infection. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "Client Anya Taylor, a 47-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q11)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Contact precautions, requiring the use of disposable protective gown, clean gloves, and washing hands with soap and water.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of Clostridium difficile infection requires strict adherence to Contact precautions with specific equipment, such as disposable protective gown, clean gloves, and washing hands with soap and water.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_12",
-    "question": "A nurse is preparing to admit client Zahra Williams, 48 years old, with diagnosed active pulmonary Tuberculosis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "The nurse is assessing Tariq White, 54 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q12)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Airborne precautions, requiring the use of N95 respirator mask and private negative-pressure room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of active pulmonary Tuberculosis requires strict adherence to Airborne precautions with specific equipment, such as N95 respirator mask and private negative-pressure room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_13",
-    "question": "A nurse is preparing to admit client Siddharth Martinez, 67 years old, with diagnosed bacterial Meningitis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "Client Sebastian Walker (61 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q13)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Droplet precautions, requiring the use of standard surgical face mask upon entering within 3 feet and private room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of bacterial Meningitis requires strict adherence to Droplet precautions with specific equipment, such as standard surgical face mask upon entering within 3 feet and private room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_14",
-    "question": "A nurse is preparing to admit client Hiroshi Taylor, 21 years old, with diagnosed Clostridium difficile infection. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "While conducting shift assessment on Jackson Abara (68 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q14)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Contact precautions, requiring the use of disposable protective gown, clean gloves, and washing hands with soap and water.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of Clostridium difficile infection requires strict adherence to Contact precautions with specific equipment, such as disposable protective gown, clean gloves, and washing hands with soap and water.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_15",
-    "question": "A nurse is preparing to admit client Kiara White, 40 years old, with diagnosed active pulmonary Tuberculosis. What represents the absolute priority transmission-based precaution and PPE?",
+    "question": "A nurse is planning care for client Gabriel Jones, 75 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q15)",
     "options": [
-      "Apply standard precautions and place the client in any semi-private room.",
-      "Initiate Airborne precautions, requiring the use of N95 respirator mask and private negative-pressure room placement.",
-      "Use protective eyewear only and restrict all family visits.",
-      "Initiate basic precautions but allow the client to ambulate in public corridors."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Preventing nosocomial spread of active pulmonary Tuberculosis requires strict adherence to Airborne precautions with specific equipment, such as N95 respirator mask and private negative-pressure room placement.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_16",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "Client Aisha Lopez, a 82-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q16)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_17",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "The nurse is assessing Ethan Jackson, 24 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q17)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_18",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "Client Kofi Sanchez (31 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q18)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_19",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "While conducting shift assessment on Mateo Hall (38 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q19)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_20",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "A nurse is planning care for client Olga Tanaka, 45 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q20)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_21",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "Client Patricia Miller, a 52-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q21)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_22",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "The nurse is assessing Amir Wilson, 59 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q22)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_23",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "Client Sophia Lee (66 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q23)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_24",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "While conducting shift assessment on Grace Ramirez (73 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q24)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_25",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "A nurse is planning care for client Sarah King, 80 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q25)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_26",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "Client Carlos Johnson, a 22-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q26)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_27",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "The nurse is assessing Isabella Rodriguez, 29 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q27)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_28",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "Client Maya Thomas (36 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q28)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_29",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "While conducting shift assessment on Elena Thompson (43 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q29)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_30",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "A nurse is planning care for client Chinedu Robinson, 50 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q30)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_31",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "Client Hannah Baker, a 57-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q31)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_32",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "The nurse is assessing Leila Brown, 64 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q32)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_33",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "Client Emily Hernandez (71 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q33)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_34",
-    "question": "The nurse is preparing to perform the task of donning personal protective equipment (PPE) before entering a COVID isolation room. What is the correct clinical sequence to follow?",
+    "question": "While conducting shift assessment on Fatima Moore (78 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q34)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gown first, then Mask/Respirator, then Goggles/Face Shield, and finally Gloves last",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for donning PPE is gown, mask/respirator, goggles/face shield, and gloves to ensure complete protective coverage.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_35",
-    "question": "The nurse is preparing to perform the task of doffing personal protective equipment (PPE) when leaving a contact-droplet isolation room. What is the correct clinical sequence to follow?",
+    "question": "A nurse is planning care for client Mei Harris, 20 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q35)",
     "options": [
-      "Gloves first, then Mask, then Gown, then Goggles.",
-      "Mask first, then Gloves, then Goggles, then Gown.",
-      "Gloves first, then Gown, then Goggles/Face Shield, then Mask, and finally hand hygiene",
-      "Goggles first, then Gloves, then Gown, then Mask."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] The correct sequence for doffing is gloves, gown, goggles, mask/respirator, followed by thorough hand hygiene to prevent self-contamination.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_36",
-    "question": "The nurse is caring for client Zane Hernandez, 49 years old, who suddenly develops septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2. What is the nurse's absolute priority action?",
+    "question": "Client Amara Young, a 27-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q36)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2 require immediate life-saving intervention. administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_37",
-    "question": "The nurse is caring for client Olivia Moore, 68 years old, who suddenly develops malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity. What is the nurse's absolute priority action?",
+    "question": "The nurse is assessing Theresa Okonkwo, 34 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q37)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity require immediate life-saving intervention. halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_38",
-    "question": "The nurse is caring for client Sarah Harris, 22 years old, who suddenly develops recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible. What is the nurse's absolute priority action?",
+    "question": "Client Chen Garcia (41 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q38)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible require immediate life-saving intervention. cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_39",
-    "question": "The nurse is caring for client Kofi Young, 41 years old, who suddenly develops septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2. What is the nurse's absolute priority action?",
+    "question": "While conducting shift assessment on Lucas Gonzalez (48 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q39)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2 require immediate life-saving intervention. administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_40",
-    "question": "The nurse is caring for client Gabriel Okonkwo, 60 years old, who suddenly develops malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity. What is the nurse's absolute priority action?",
+    "question": "A nurse is planning care for client Kiara Martin, 55 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q40)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity require immediate life-saving intervention. halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_41",
-    "question": "The nurse is caring for client Tariq Garcia, 79 years old, who suddenly develops recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible. What is the nurse's absolute priority action?",
+    "question": "Client Linda Clark, a 62-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q41)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible require immediate life-saving intervention. cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_42",
-    "question": "The nurse is caring for client Noah Gonzalez, 33 years old, who suddenly develops septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2. What is the nurse's absolute priority action?",
+    "question": "The nurse is assessing Chloe Allen, 69 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q42)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2 require immediate life-saving intervention. administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_43",
-    "question": "The nurse is caring for client Andrew Martin, 52 years old, who suddenly develops malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity. What is the nurse's absolute priority action?",
+    "question": "Client Hiroshi Smith (76 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q43)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity require immediate life-saving intervention. halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_44",
-    "question": "The nurse is caring for client Emily Clark, 71 years old, who suddenly develops recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible. What is the nurse's absolute priority action?",
+    "question": "While conducting shift assessment on Olivia Davis (18 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q44)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible require immediate life-saving intervention. cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_45",
-    "question": "The nurse is caring for client Chinedu Allen, 25 years old, who suddenly develops septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2. What is the nurse's absolute priority action?",
+    "question": "A nurse is planning care for client Yuki Anderson, 25 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q45)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2 require immediate life-saving intervention. administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_46",
-    "question": "The nurse is caring for client Isabella Smith, 44 years old, who suddenly develops malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity. What is the nurse's absolute priority action?",
+    "question": "Client Siddharth Perez, a 32-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D14-Q46)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity require immediate life-saving intervention. halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_47",
-    "question": "The nurse is caring for client Grace Davis, 63 years old, who suddenly develops recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible. What is the nurse's absolute priority action?",
+    "question": "The nurse is assessing Zane Lewis, 39 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D14-Q47)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible require immediate life-saving intervention. cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_48",
-    "question": "The nurse is caring for client Patricia Anderson, 82 years old, who suddenly develops septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2. What is the nurse's absolute priority action?",
+    "question": "Client Christopher Wright (46 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D14-Q48)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as septic shock secondary to a severe urinary tract infection, with a blood pressure of 82/44 and lactate of 4.2 require immediate life-saving intervention. administer rapid intravenous crystalloid fluids at 30 mL/kg, obtain blood cultures, and administer broad-spectrum antibiotics within 1 hour is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_49",
-    "question": "The nurse is caring for client James Perez, 36 years old, who suddenly develops malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity. What is the nurse's absolute priority action?",
+    "question": "While conducting shift assessment on Zahra Williams (53 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D14-Q49)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as malignant hyperthermia during general anesthesia, with a temperature of 104F and muscle rigidity require immediate life-saving intervention. halt the volatile anesthetic, administer 100% oxygen, and prepare immediate intravenous dantrolene sodium is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   },
   {
     "id": "day_14_q_50",
-    "question": "The nurse is caring for client Yuki Lewis, 55 years old, who suddenly develops recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible. What is the nurse's absolute priority action?",
+    "question": "A nurse is planning care for client Omar Martinez, 60 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D14-Q50)",
     "options": [
-      "Instruct the client to sit upright and perform deep diaphragmatic breathing.",
-      "Document the event and re-evaluate during the next shift change.",
-      "Directly cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately.",
-      "Apply a tight abdominal binder or ice pack to stop the progression."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Emergencies such as recovering from abdominal surgery, and has sudden surgical wound evisceration where bowel loops are visible require immediate life-saving intervention. cover the exposed viscera with sterile towels saturated in sterile normal saline, keep the client NPO, and notify the surgeon immediately is the prioritized medical response.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Safety and Infection Control] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Safety and Infection Control"
   }

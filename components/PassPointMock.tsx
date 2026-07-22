@@ -234,8 +234,41 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
     }
   };
 
+  const handlePreviousQuestion = () => {
+    if (currQNum <= 1) return;
+    
+    // Save current selection before going back
+    const currentQ = questions[currQNum - 1];
+    let nextAnswers: Record<string, number> = { ...userAnswers };
+    if (selectedOpt !== null && currentQ) {
+      nextAnswers[currentQ.id] = selectedOpt;
+      setUserAnswers(nextAnswers);
+    }
+
+    const prevQNum = currQNum - 1;
+    setCurrQNum(prevQNum);
+    const prevQ = questions[prevQNum - 1];
+    setSelectedOpt(prevQ && nextAnswers[prevQ.id] !== undefined ? nextAnswers[prevQ.id] : null);
+  };
+
   const handleNextAdaptiveQuestion = async () => {
     if (selectedOpt === null || !selectedDay) return;
+
+    // If reviewing/editing a previous question
+    if (currQNum < questions.length) {
+      const currentQ = questions[currQNum - 1];
+      const nextAnswers: Record<string, number> = {
+        ...userAnswers,
+        [currentQ.id]: selectedOpt
+      };
+      setUserAnswers(nextAnswers);
+      
+      const nextQNum = currQNum + 1;
+      setCurrQNum(nextQNum);
+      const nextQ = questions[nextQNum - 1];
+      setSelectedOpt(nextQ && nextAnswers[nextQ.id] !== undefined ? nextAnswers[nextQ.id] : null);
+      return;
+    }
 
     const currentQ = questions[questions.length - 1];
     const isCorrect = selectedOpt === currentQ.correctAnswer;
@@ -820,13 +853,13 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
                     {/* Stem text */}
                     <div className="mb-4 sm:mb-10 animate-in fade-in duration-300">
                       <p className="text-slate-900 font-serif font-bold text-base sm:text-lg md:text-xl leading-relaxed">
-                        {questions[questions.length - 1]?.question}
+                        {questions[currQNum - 1]?.question}
                       </p>
                     </div>
 
                     {/* MC Options */}
                     <div className="space-y-2.5 sm:space-y-4 mb-4 sm:mb-10">
-                      {questions[questions.length - 1]?.options?.map((opt: string, idx: number) => {
+                      {questions[currQNum - 1]?.options?.map((opt: string, idx: number) => {
                         const isSelected = selectedOpt === idx;
                         return (
                           <button
@@ -853,16 +886,24 @@ export const PassPointMock: React.FC<PassPointMockProps> = ({ user, onClose, onU
 
                     {/* Bottom buttons panel */}
                     <div className="flex flex-col sm:flex-row gap-3 justify-between sm:items-center border-t border-slate-50 pt-4 sm:pt-6">
-                      <span className="text-[10px] sm:text-xs text-slate-400 font-mono text-center sm:text-left">
-                        Select a response, then submit to adapt
+                      <button
+                        onClick={handlePreviousQuestion}
+                        disabled={currQNum <= 1 || loadingQuestion}
+                        className="py-3 sm:py-3.5 px-5 bg-slate-100 disabled:opacity-30 disabled:pointer-events-none text-slate-700 font-extrabold text-xs uppercase tracking-wider rounded-xl hover:bg-slate-200 transition-all flex items-center justify-center gap-1.5 shadow-sm"
+                      >
+                        <ChevronLeft className="w-4 h-4" /> Previous
+                      </button>
+
+                      <span className="text-[10px] sm:text-xs text-slate-400 font-mono text-center">
+                        {currQNum < questions.length ? 'Reviewing previous item' : 'Select a response to adapt'}
                       </span>
 
                       <button
                         onClick={handleNextAdaptiveQuestion}
-                        disabled={selectedOpt === null}
-                        className="py-3 sm:py-4 px-6 sm:px-10 bg-brand-600 disabled:opacity-45 disabled:pointer-events-none text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-brand-700 transition-all shadow-md shadow-brand-100 flex items-center justify-center gap-2 w-full sm:w-auto"
+                        disabled={selectedOpt === null || loadingQuestion}
+                        className="py-3 sm:py-3.5 px-6 sm:px-8 bg-brand-600 disabled:opacity-45 disabled:pointer-events-none text-white font-black text-xs uppercase tracking-widest rounded-xl hover:bg-brand-700 transition-all shadow-md shadow-brand-100 flex items-center justify-center gap-2"
                       >
-                        Confirm & Next <ArrowRight className="w-4 h-4" />
+                        {currQNum < questions.length ? 'Save & Next' : 'Confirm & Next'} <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
                   </div>

@@ -3,701 +3,701 @@ import { NCLEXQuestion } from "../questionBank";
 export const DAY_8_QUESTIONS: NCLEXQuestion[] = [
   {
     "id": "day_8_q_1",
-    "question": "The psychiatric nurse is talking to client Andrew White, 26 years old, who says, \"There are hidden microphones in the wall and the government is watching me.\" What is the nurse's most therapeutic response?",
+    "question": "Client Zane Hall, a 41-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q1)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"I understand that you feel frightened, but I do not see any microphones in this room and you are safe here.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Presenting reality calmly without arguing or validating delusions is therapeutic.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_2",
-    "question": "The psychiatric nurse is talking to client Emily Walker, 45 years old, who says, \"My family never visits me and I feel completely alone in this hospital.\" What is the nurse's most therapeutic response?",
+    "question": "The nurse is assessing Christopher Tanaka, 48 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q2)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"You are feeling lonely because your family hasn't been here. Let's talk about how you'd like to reach out to them.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Acknowledging feelings and exploring coping strategies supports psychosocial integrity.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_3",
-    "question": "The psychiatric nurse is talking to client Chinedu Abara, 64 years old, who says, \"I'm so worried that my surgery won't go well and I'll never walk again.\" What is the nurse's most therapeutic response?",
+    "question": "Client Zahra Miller (55 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q3)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"It sounds like you are feeling really anxious about your recovery. Tell me more about what you are expecting.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Reflecting feelings and using open-ended questions encourages therapeutic dialogue.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_4",
-    "question": "The psychiatric nurse is talking to client Isabella Jones, 18 years old, who says, \"There are hidden microphones in the wall and the government is watching me.\" What is the nurse's most therapeutic response?",
+    "question": "While conducting shift assessment on Omar Wilson (62 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q4)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"I understand that you feel frightened, but I do not see any microphones in this room and you are safe here.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Presenting reality calmly without arguing or validating delusions is therapeutic.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_5",
-    "question": "The psychiatric nurse is talking to client Grace Lopez, 37 years old, who says, \"My family never visits me and I feel completely alone in this hospital.\" What is the nurse's most therapeutic response?",
+    "question": "A nurse is planning care for client Elijah Lee, 69 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q5)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"You are feeling lonely because your family hasn't been here. Let's talk about how you'd like to reach out to them.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Acknowledging feelings and exploring coping strategies supports psychosocial integrity.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_6",
-    "question": "The psychiatric nurse is talking to client Patricia Jackson, 56 years old, who says, \"I'm so worried that my surgery won't go well and I'll never walk again.\" What is the nurse's most therapeutic response?",
+    "question": "Client James Ramirez, a 76-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q6)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"It sounds like you are feeling really anxious about your recovery. Tell me more about what you are expecting.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Reflecting feelings and using open-ended questions encourages therapeutic dialogue.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_7",
-    "question": "The psychiatric nurse is talking to client James Sanchez, 75 years old, who says, \"There are hidden microphones in the wall and the government is watching me.\" What is the nurse's most therapeutic response?",
+    "question": "The nurse is assessing Noor King, 18 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q7)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"I understand that you feel frightened, but I do not see any microphones in this room and you are safe here.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Presenting reality calmly without arguing or validating delusions is therapeutic.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_8",
-    "question": "The psychiatric nurse is talking to client Yuki Hall, 29 years old, who says, \"My family never visits me and I feel completely alone in this hospital.\" What is the nurse's most therapeutic response?",
+    "question": "Client Kwame Johnson (25 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q8)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"You are feeling lonely because your family hasn't been here. Let's talk about how you'd like to reach out to them.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Acknowledging feelings and exploring coping strategies supports psychosocial integrity.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_9",
-    "question": "The psychiatric nurse is talking to client Chloe Tanaka, 48 years old, who says, \"I'm so worried that my surgery won't go well and I'll never walk again.\" What is the nurse's most therapeutic response?",
+    "question": "While conducting shift assessment on Daniel Rodriguez (32 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q9)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"It sounds like you are feeling really anxious about your recovery. Tell me more about what you are expecting.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Reflecting feelings and using open-ended questions encourages therapeutic dialogue.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_10",
-    "question": "The psychiatric nurse is talking to client Lucas Miller, 67 years old, who says, \"There are hidden microphones in the wall and the government is watching me.\" What is the nurse's most therapeutic response?",
+    "question": "A nurse is planning care for client Marcus Thomas, 39 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q10)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"I understand that you feel frightened, but I do not see any microphones in this room and you are safe here.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Presenting reality calmly without arguing or validating delusions is therapeutic.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_11",
-    "question": "The psychiatric nurse is talking to client Amara Wilson, 21 years old, who says, \"My family never visits me and I feel completely alone in this hospital.\" What is the nurse's most therapeutic response?",
+    "question": "Client Dmitri Thompson, a 46-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q11)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"You are feeling lonely because your family hasn't been here. Let's talk about how you'd like to reach out to them.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Acknowledging feelings and exploring coping strategies supports psychosocial integrity.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_12",
-    "question": "The psychiatric nurse is talking to client Jessica Lee, 40 years old, who says, \"I'm so worried that my surgery won't go well and I'll never walk again.\" What is the nurse's most therapeutic response?",
+    "question": "The nurse is assessing Liam Robinson, 53 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q12)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"It sounds like you are feeling really anxious about your recovery. Tell me more about what you are expecting.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Reflecting feelings and using open-ended questions encourages therapeutic dialogue.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_13",
-    "question": "The psychiatric nurse is talking to client David Ramirez, 59 years old, who says, \"There are hidden microphones in the wall and the government is watching me.\" What is the nurse's most therapeutic response?",
+    "question": "Client Noah Baker (60 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q13)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"I understand that you feel frightened, but I do not see any microphones in this room and you are safe here.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Presenting reality calmly without arguing or validating delusions is therapeutic.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_14",
-    "question": "The psychiatric nurse is talking to client Dmitri King, 78 years old, who says, \"My family never visits me and I feel completely alone in this hospital.\" What is the nurse's most therapeutic response?",
+    "question": "While conducting shift assessment on David Brown (67 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q14)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"You are feeling lonely because your family hasn't been here. Let's talk about how you'd like to reach out to them.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Acknowledging feelings and exploring coping strategies supports psychosocial integrity.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_15",
-    "question": "The psychiatric nurse is talking to client Kwame Johnson, 32 years old, who says, \"I'm so worried that my surgery won't go well and I'll never walk again.\" What is the nurse's most therapeutic response?",
+    "question": "A nurse is planning care for client Anya Hernandez, 74 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q15)",
     "options": [
-      "\"Don't worry, everything is going to be perfectly fine. You have excellent doctors.\"",
-      "\"It sounds like you are feeling really anxious about your recovery. Tell me more about what you are expecting.\"",
-      "\"Why do you think that? You shouldn't say things that aren't true.\"",
-      "\"I will call your doctor immediately to get a prescription for a sedative.\""
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Reflecting feelings and using open-ended questions encourages therapeutic dialogue.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_16",
-    "question": "The nurse is caring for client Elijah Rodriguez, 51 years old, who is admitted with severe depression and reports a sudden, unexplained elevation in mood and energy. What is the nurse's priority clinical intervention?",
+    "question": "Client Tariq Moore, a 81-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q16)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly conduct an immediate direct suicide assessment, asking if they have a plan and access to means.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. conduct an immediate direct suicide assessment, asking if they have a plan and access to means directly addresses the acute presentation of severe depression and reports a sudden, unexplained elevation in mood and energy.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_17",
-    "question": "The nurse is caring for client Christopher Thomas, 70 years old, who is admitted with schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others. What is the nurse's priority clinical intervention?",
+    "question": "The nurse is assessing Sebastian Harris, 23 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q17)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly ask directly what the voices are saying, reassure them of safety, and implement close monitoring.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. ask directly what the voices are saying, reassure them of safety, and implement close monitoring directly addresses the acute presentation of schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_18",
-    "question": "The nurse is caring for client Robert Thompson, 24 years old, who is admitted with bipolar mania and is pacing the halls, shouting, and disrupting other clients. What is the nurse's priority clinical intervention?",
+    "question": "Client Jackson Young (30 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q18)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm directly addresses the acute presentation of bipolar mania and is pacing the halls, shouting, and disrupting other clients.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_19",
-    "question": "The nurse is caring for client Amir Robinson, 43 years old, who is admitted with severe depression and reports a sudden, unexplained elevation in mood and energy. What is the nurse's priority clinical intervention?",
+    "question": "While conducting shift assessment on Gabriel Okonkwo (37 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q19)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly conduct an immediate direct suicide assessment, asking if they have a plan and access to means.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. conduct an immediate direct suicide assessment, asking if they have a plan and access to means directly addresses the acute presentation of severe depression and reports a sudden, unexplained elevation in mood and energy.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_20",
-    "question": "The nurse is caring for client Mateo Baker, 62 years old, who is admitted with schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others. What is the nurse's priority clinical intervention?",
+    "question": "A nurse is planning care for client Aisha Garcia, 44 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q20)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly ask directly what the voices are saying, reassure them of safety, and implement close monitoring.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. ask directly what the voices are saying, reassure them of safety, and implement close monitoring directly addresses the acute presentation of schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_21",
-    "question": "The nurse is caring for client Aisha Brown, 81 years old, who is admitted with bipolar mania and is pacing the halls, shouting, and disrupting other clients. What is the nurse's priority clinical intervention?",
+    "question": "Client Ethan Gonzalez, a 51-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q21)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm directly addresses the acute presentation of bipolar mania and is pacing the halls, shouting, and disrupting other clients.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_22",
-    "question": "The nurse is caring for client Sebastian Hernandez, 35 years old, who is admitted with severe depression and reports a sudden, unexplained elevation in mood and energy. What is the nurse's priority clinical intervention?",
+    "question": "The nurse is assessing Kofi Martin, 58 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q22)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly conduct an immediate direct suicide assessment, asking if they have a plan and access to means.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. conduct an immediate direct suicide assessment, asking if they have a plan and access to means directly addresses the acute presentation of severe depression and reports a sudden, unexplained elevation in mood and energy.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_23",
-    "question": "The nurse is caring for client Richard Moore, 54 years old, who is admitted with schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others. What is the nurse's priority clinical intervention?",
+    "question": "Client Mateo Clark (65 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q23)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly ask directly what the voices are saying, reassure them of safety, and implement close monitoring.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. ask directly what the voices are saying, reassure them of safety, and implement close monitoring directly addresses the acute presentation of schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_24",
-    "question": "The nurse is caring for client Theresa Harris, 73 years old, who is admitted with bipolar mania and is pacing the halls, shouting, and disrupting other clients. What is the nurse's priority clinical intervention?",
+    "question": "While conducting shift assessment on Olga Allen (72 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q24)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm directly addresses the acute presentation of bipolar mania and is pacing the halls, shouting, and disrupting other clients.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_25",
-    "question": "The nurse is caring for client Fatima Young, 27 years old, who is admitted with severe depression and reports a sudden, unexplained elevation in mood and energy. What is the nurse's priority clinical intervention?",
+    "question": "A nurse is planning care for client Patricia Smith, 79 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q25)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly conduct an immediate direct suicide assessment, asking if they have a plan and access to means.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. conduct an immediate direct suicide assessment, asking if they have a plan and access to means directly addresses the acute presentation of severe depression and reports a sudden, unexplained elevation in mood and energy.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_26",
-    "question": "The nurse is caring for client Hannah Okonkwo, 46 years old, who is admitted with schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others. What is the nurse's priority clinical intervention?",
+    "question": "Client Amir Davis, a 21-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q26)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly ask directly what the voices are saying, reassure them of safety, and implement close monitoring.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. ask directly what the voices are saying, reassure them of safety, and implement close monitoring directly addresses the acute presentation of schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_27",
-    "question": "The nurse is caring for client Maya Garcia, 65 years old, who is admitted with bipolar mania and is pacing the halls, shouting, and disrupting other clients. What is the nurse's priority clinical intervention?",
+    "question": "The nurse is assessing Sophia Anderson, 28 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q27)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm directly addresses the acute presentation of bipolar mania and is pacing the halls, shouting, and disrupting other clients.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_28",
-    "question": "The nurse is caring for client Barbara Gonzalez, 19 years old, who is admitted with severe depression and reports a sudden, unexplained elevation in mood and energy. What is the nurse's priority clinical intervention?",
+    "question": "Client Grace Perez (35 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q28)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly conduct an immediate direct suicide assessment, asking if they have a plan and access to means.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. conduct an immediate direct suicide assessment, asking if they have a plan and access to means directly addresses the acute presentation of severe depression and reports a sudden, unexplained elevation in mood and energy.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_29",
-    "question": "The nurse is caring for client Maria Martin, 38 years old, who is admitted with schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others. What is the nurse's priority clinical intervention?",
+    "question": "While conducting shift assessment on Sarah Lewis (42 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q29)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly ask directly what the voices are saying, reassure them of safety, and implement close monitoring.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. ask directly what the voices are saying, reassure them of safety, and implement close monitoring directly addresses the acute presentation of schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_30",
-    "question": "The nurse is caring for client Zahra Clark, 57 years old, who is admitted with bipolar mania and is pacing the halls, shouting, and disrupting other clients. What is the nurse's priority clinical intervention?",
+    "question": "A nurse is planning care for client Carlos Wright, 49 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q30)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm directly addresses the acute presentation of bipolar mania and is pacing the halls, shouting, and disrupting other clients.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_31",
-    "question": "The nurse is caring for client Siddharth Allen, 76 years old, who is admitted with severe depression and reports a sudden, unexplained elevation in mood and energy. What is the nurse's priority clinical intervention?",
+    "question": "Client Isabella Williams, a 56-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q31)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly conduct an immediate direct suicide assessment, asking if they have a plan and access to means.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. conduct an immediate direct suicide assessment, asking if they have a plan and access to means directly addresses the acute presentation of severe depression and reports a sudden, unexplained elevation in mood and energy.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_32",
-    "question": "The nurse is caring for client Hiroshi Smith, 30 years old, who is admitted with schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others. What is the nurse's priority clinical intervention?",
+    "question": "The nurse is assessing Maya Martinez, 63 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q32)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly ask directly what the voices are saying, reassure them of safety, and implement close monitoring.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. ask directly what the voices are saying, reassure them of safety, and implement close monitoring directly addresses the acute presentation of schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_33",
-    "question": "The nurse is caring for client Kiara Davis, 49 years old, who is admitted with bipolar mania and is pacing the halls, shouting, and disrupting other clients. What is the nurse's priority clinical intervention?",
+    "question": "Client Elena Taylor (70 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q33)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. guide the client to a quiet, low-stimulus area, offer a high-calorie portable snack, and remain calm directly addresses the acute presentation of bipolar mania and is pacing the halls, shouting, and disrupting other clients.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_34",
-    "question": "The nurse is caring for client Karen Anderson, 68 years old, who is admitted with severe depression and reports a sudden, unexplained elevation in mood and energy. What is the nurse's priority clinical intervention?",
+    "question": "While conducting shift assessment on Chinedu White (77 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q34)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly conduct an immediate direct suicide assessment, asking if they have a plan and access to means.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. conduct an immediate direct suicide assessment, asking if they have a plan and access to means directly addresses the acute presentation of severe depression and reports a sudden, unexplained elevation in mood and energy.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_35",
-    "question": "The nurse is caring for client Jackson Perez, 22 years old, who is admitted with schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others. What is the nurse's priority clinical intervention?",
+    "question": "A nurse is planning care for client Hannah Walker, 19 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q35)",
     "options": [
-      "Administer a physical restraint immediately to prevent any movement.",
-      "Directly ask directly what the voices are saying, reassure them of safety, and implement close monitoring.",
-      "Tell the client to stop their behavior or they will be locked in their room.",
-      "Ignore the symptoms as they are expected outcomes of the underlying pathology."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Psychosocial integrity and client safety require immediate intervention. ask directly what the voices are saying, reassure them of safety, and implement close monitoring directly addresses the acute presentation of schizophrenia and is experiencing active auditory command hallucinations telling them to hurt others.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_36",
-    "question": "The nurse is caring for client Anya Lewis, 41 years old, who is admitted for alcohol withdrawal and presents with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens). What is the nurse's priority nursing action?",
+    "question": "Client Leila Abara, a 26-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q36)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing alcohol withdrawal with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens) require close monitoring and targeted therapy. administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_37",
-    "question": "The nurse is caring for client Liam Wright, 60 years old, who is admitted for opioid withdrawal and presents with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches. What is the nurse's priority nursing action?",
+    "question": "The nurse is assessing Emily Jones, 33 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q37)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing opioid withdrawal with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches require close monitoring and targeted therapy. administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_38",
-    "question": "The nurse is caring for client Daniel Williams, 79 years old, who is admitted for severe anorexia nervosa and presents with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension. What is the nurse's priority nursing action?",
+    "question": "Client Fatima Lopez (40 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q38)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing severe anorexia nervosa with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension require close monitoring and targeted therapy. monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_39",
-    "question": "The nurse is caring for client Matthew Martinez, 33 years old, who is admitted for alcohol withdrawal and presents with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens). What is the nurse's priority nursing action?",
+    "question": "While conducting shift assessment on Mei Jackson (47 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q39)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing alcohol withdrawal with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens) require close monitoring and targeted therapy. administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_40",
-    "question": "The nurse is caring for client Elena Taylor, 52 years old, who is admitted for opioid withdrawal and presents with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches. What is the nurse's priority nursing action?",
+    "question": "A nurse is planning care for client Amara Sanchez, 54 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q40)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing opioid withdrawal with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches require close monitoring and targeted therapy. administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_41",
-    "question": "The nurse is caring for client Carlos White, 71 years old, who is admitted for severe anorexia nervosa and presents with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension. What is the nurse's priority nursing action?",
+    "question": "Client Theresa Hall, a 61-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q41)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing severe anorexia nervosa with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension require close monitoring and targeted therapy. monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_42",
-    "question": "The nurse is caring for client Sophia Walker, 25 years old, who is admitted for alcohol withdrawal and presents with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens). What is the nurse's priority nursing action?",
+    "question": "The nurse is assessing Chen Tanaka, 68 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q42)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing alcohol withdrawal with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens) require close monitoring and targeted therapy. administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_43",
-    "question": "The nurse is caring for client Olga Abara, 44 years old, who is admitted for opioid withdrawal and presents with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches. What is the nurse's priority nursing action?",
+    "question": "Client Lucas Miller (75 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q43)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing opioid withdrawal with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches require close monitoring and targeted therapy. administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_44",
-    "question": "The nurse is caring for client Ethan Jones, 63 years old, who is admitted for severe anorexia nervosa and presents with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension. What is the nurse's priority nursing action?",
+    "question": "While conducting shift assessment on Kiara Wilson (82 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q44)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing severe anorexia nervosa with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension require close monitoring and targeted therapy. monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_45",
-    "question": "The nurse is caring for client Joseph Lopez, 82 years old, who is admitted for alcohol withdrawal and presents with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens). What is the nurse's priority nursing action?",
+    "question": "A nurse is planning care for client Linda Lee, 24 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q45)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing alcohol withdrawal with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens) require close monitoring and targeted therapy. administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_46",
-    "question": "The nurse is caring for client Linda Jackson, 36 years old, who is admitted for opioid withdrawal and presents with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches. What is the nurse's priority nursing action?",
+    "question": "Client Chloe Ramirez, a 31-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D8-Q46)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing opioid withdrawal with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches require close monitoring and targeted therapy. administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_47",
-    "question": "The nurse is caring for client Chen Sanchez, 55 years old, who is admitted for severe anorexia nervosa and presents with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension. What is the nurse's priority nursing action?",
+    "question": "The nurse is assessing Hiroshi King, 38 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D8-Q47)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing severe anorexia nervosa with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension require close monitoring and targeted therapy. monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_48",
-    "question": "The nurse is caring for client Mei Hall, 74 years old, who is admitted for alcohol withdrawal and presents with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens). What is the nurse's priority nursing action?",
+    "question": "Client Olivia Johnson (45 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D8-Q48)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing alcohol withdrawal with tactile hallucinations, heavy sweating, and severe tremors (suspected delirium tremens) require close monitoring and targeted therapy. administer prescribed scheduled benzodiazepines, keep the room quiet and well-lit, and monitor vitals frequently ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_49",
-    "question": "The nurse is caring for client Leila Tanaka, 28 years old, who is admitted for opioid withdrawal and presents with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches. What is the nurse's priority nursing action?",
+    "question": "While conducting shift assessment on Yuki Rodriguez (52 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D8-Q49)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing opioid withdrawal with pupillary dilation, severe abdominal cramps, rhinorrhea, and intense muscle aches require close monitoring and targeted therapy. administer prescribed clonidine or methadone, provide warm blankets, and monitor fluid balance ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   },
   {
     "id": "day_8_q_50",
-    "question": "The nurse is caring for client Susan Miller, 47 years old, who is admitted for severe anorexia nervosa and presents with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension. What is the nurse's priority nursing action?",
+    "question": "A nurse is planning care for client Siddharth Thomas, 59 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D8-Q50)",
     "options": [
-      "Discharge the client to outpatient counseling immediately.",
-      "Instruct the client's family to monitor all symptoms at home.",
-      "Directly monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome.",
-      "Administer standard intravenous fluids at a rapid rate of 250 mL/hour."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Psychosocial Integrity] Clients experiencing severe anorexia nervosa with a body mass index (BMI) of 14, bradycardia of 42 beats/minute, and orthostatic hypotension require close monitoring and targeted therapy. monitor meal consumption closely, supervise restroom visits for 1 hour post-meals, and monitor electrolytes for refeeding syndrome ensures physiological and psychological stability during acute stress.",
+    "explanation": "[NCLEX Category: Psychosocial Integrity] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Psychosocial Integrity"
   }

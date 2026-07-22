@@ -3,701 +3,701 @@ import { NCLEXQuestion } from "../questionBank";
 export const DAY_10_QUESTIONS: NCLEXQuestion[] = [
   {
     "id": "day_10_q_1",
-    "question": "The nurse is reviewing laboratory blood gas results for client Chen Moore, 72 years old. The report shows: pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "Client Gabriel Walker, a 63-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q1)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Alkalosis and clinically instruct the client to breathe slowly and synchronize breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L indicate Respiratory Alkalosis. The correct nursing management is to instruct the client to breathe slowly and synchronize breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_2",
-    "question": "The nurse is reviewing laboratory blood gas results for client Mei Harris, 26 years old. The report shows: pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "The nurse is assessing Aisha Abara, 70 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q2)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Metabolic Acidosis and clinically assess blood sugars for diabetic ketoacidosis and check kidney function.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L indicate Metabolic Acidosis. The correct nursing management is to assess blood sugars for diabetic ketoacidosis and check kidney function to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_3",
-    "question": "The nurse is reviewing laboratory blood gas results for client Leila Young, 45 years old. The report shows: pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "Client Ethan Jones (77 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q3)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Acidosis and clinically administer oxygen and encourage coughing and deep breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L indicate Respiratory Acidosis. The correct nursing management is to administer oxygen and encourage coughing and deep breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_4",
-    "question": "The nurse is reviewing laboratory blood gas results for client Susan Okonkwo, 64 years old. The report shows: pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "While conducting shift assessment on Kofi Lopez (19 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q4)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Alkalosis and clinically instruct the client to breathe slowly and synchronize breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L indicate Respiratory Alkalosis. The correct nursing management is to instruct the client to breathe slowly and synchronize breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_5",
-    "question": "The nurse is reviewing laboratory blood gas results for client Marcus Garcia, 18 years old. The report shows: pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "A nurse is planning care for client Mateo Jackson, 26 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q5)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Metabolic Acidosis and clinically assess blood sugars for diabetic ketoacidosis and check kidney function.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L indicate Metabolic Acidosis. The correct nursing management is to assess blood sugars for diabetic ketoacidosis and check kidney function to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_6",
-    "question": "The nurse is reviewing laboratory blood gas results for client Noor Gonzalez, 37 years old. The report shows: pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "Client Olga Sanchez, a 33-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q6)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Acidosis and clinically administer oxygen and encourage coughing and deep breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L indicate Respiratory Acidosis. The correct nursing management is to administer oxygen and encourage coughing and deep breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_7",
-    "question": "The nurse is reviewing laboratory blood gas results for client Omar Martin, 56 years old. The report shows: pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "The nurse is assessing Patricia Hall, 40 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q7)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Alkalosis and clinically instruct the client to breathe slowly and synchronize breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L indicate Respiratory Alkalosis. The correct nursing management is to instruct the client to breathe slowly and synchronize breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_8",
-    "question": "The nurse is reviewing laboratory blood gas results for client Zane Clark, 75 years old. The report shows: pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "Client Amir Tanaka (47 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q8)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Metabolic Acidosis and clinically assess blood sugars for diabetic ketoacidosis and check kidney function.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L indicate Metabolic Acidosis. The correct nursing management is to assess blood sugars for diabetic ketoacidosis and check kidney function to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_9",
-    "question": "The nurse is reviewing laboratory blood gas results for client Olivia Allen, 29 years old. The report shows: pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "While conducting shift assessment on Sophia Miller (54 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q9)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Acidosis and clinically administer oxygen and encourage coughing and deep breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L indicate Respiratory Acidosis. The correct nursing management is to administer oxygen and encourage coughing and deep breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_10",
-    "question": "The nurse is reviewing laboratory blood gas results for client Sarah Smith, 48 years old. The report shows: pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "A nurse is planning care for client Grace Wilson, 61 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q10)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Alkalosis and clinically instruct the client to breathe slowly and synchronize breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L indicate Respiratory Alkalosis. The correct nursing management is to instruct the client to breathe slowly and synchronize breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_11",
-    "question": "The nurse is reviewing laboratory blood gas results for client Kofi Davis, 67 years old. The report shows: pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "Client Sarah Lee, a 68-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q11)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Metabolic Acidosis and clinically assess blood sugars for diabetic ketoacidosis and check kidney function.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L indicate Metabolic Acidosis. The correct nursing management is to assess blood sugars for diabetic ketoacidosis and check kidney function to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_12",
-    "question": "The nurse is reviewing laboratory blood gas results for client Gabriel Anderson, 21 years old. The report shows: pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "The nurse is assessing Carlos Ramirez, 75 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q12)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Acidosis and clinically administer oxygen and encourage coughing and deep breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L indicate Respiratory Acidosis. The correct nursing management is to administer oxygen and encourage coughing and deep breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_13",
-    "question": "The nurse is reviewing laboratory blood gas results for client Tariq Perez, 40 years old. The report shows: pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "Client Isabella King (82 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q13)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Alkalosis and clinically instruct the client to breathe slowly and synchronize breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.48, PaCO2 28 mmHg, HCO3 25 mEq/L indicate Respiratory Alkalosis. The correct nursing management is to instruct the client to breathe slowly and synchronize breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_14",
-    "question": "The nurse is reviewing laboratory blood gas results for client Noah Lewis, 59 years old. The report shows: pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "While conducting shift assessment on Maya Johnson (24 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q14)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Metabolic Acidosis and clinically assess blood sugars for diabetic ketoacidosis and check kidney function.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.32, PaCO2 38 mmHg, HCO3 16 mEq/L indicate Metabolic Acidosis. The correct nursing management is to assess blood sugars for diabetic ketoacidosis and check kidney function to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_15",
-    "question": "The nurse is reviewing laboratory blood gas results for client Andrew Wright, 78 years old. The report shows: pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L. How should the nurse interpret and manage these clinical findings?",
+    "question": "A nurse is planning care for client Elena Rodriguez, 31 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q15)",
     "options": [
-      "Interpret as fully compensated metabolic alkalosis and notify the provider.",
-      "Diagnose as Respiratory Acidosis and clinically administer oxygen and encourage coughing and deep breathing.",
-      "Consider this a normal finding and request a follow-up lab tomorrow.",
-      "Interpret as mixed respiratory acidosis and prepare for immediate dialysis."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The values of pH 7.31, PaCO2 52 mmHg, HCO3 24 mEq/L indicate Respiratory Acidosis. The correct nursing management is to administer oxygen and encourage coughing and deep breathing to correct the gas exchange.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_16",
-    "question": "The cardiovascular unit nurse notes client Emily Williams, 32 years old, has Atrial Fibrillation with a rapid ventricular response of 142 beats/minute and dizziness. What represents the nurse's priority action?",
+    "question": "Client Chinedu Thomas, a 38-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q16)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_17",
-    "question": "The cardiovascular unit nurse notes client Chinedu Martinez, 51 years old, has third-degree (complete) atrioventricular heart block with bradycardia of 28 beats/minute. What represents the nurse's priority action?",
+    "question": "The nurse is assessing Hannah Thompson, 45 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q17)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_18",
-    "question": "The cardiovascular unit nurse notes client Isabella Taylor, 70 years old, has sudden onset of ventricular fibrillation on telemetry. What represents the nurse's priority action?",
+    "question": "Client Leila Robinson (52 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q18)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_19",
-    "question": "The cardiovascular unit nurse notes client Grace White, 24 years old, has Atrial Fibrillation with a rapid ventricular response of 142 beats/minute and dizziness. What represents the nurse's priority action?",
+    "question": "While conducting shift assessment on Emily Baker (59 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q19)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_20",
-    "question": "The cardiovascular unit nurse notes client Patricia Walker, 43 years old, has third-degree (complete) atrioventricular heart block with bradycardia of 28 beats/minute. What represents the nurse's priority action?",
+    "question": "A nurse is planning care for client Fatima Brown, 66 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q20)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_21",
-    "question": "The cardiovascular unit nurse notes client James Abara, 62 years old, has sudden onset of ventricular fibrillation on telemetry. What represents the nurse's priority action?",
+    "question": "Client Mei Hernandez, a 73-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q21)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_22",
-    "question": "The cardiovascular unit nurse notes client Yuki Jones, 81 years old, has Atrial Fibrillation with a rapid ventricular response of 142 beats/minute and dizziness. What represents the nurse's priority action?",
+    "question": "The nurse is assessing Amara Moore, 80 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q22)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_23",
-    "question": "The cardiovascular unit nurse notes client Chloe Lopez, 35 years old, has third-degree (complete) atrioventricular heart block with bradycardia of 28 beats/minute. What represents the nurse's priority action?",
+    "question": "Client Theresa Harris (22 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q23)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_24",
-    "question": "The cardiovascular unit nurse notes client Lucas Jackson, 54 years old, has sudden onset of ventricular fibrillation on telemetry. What represents the nurse's priority action?",
+    "question": "While conducting shift assessment on Chen Young (29 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q24)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_25",
-    "question": "The cardiovascular unit nurse notes client Amara Sanchez, 73 years old, has Atrial Fibrillation with a rapid ventricular response of 142 beats/minute and dizziness. What represents the nurse's priority action?",
+    "question": "A nurse is planning care for client Lucas Okonkwo, 36 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q25)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_26",
-    "question": "The cardiovascular unit nurse notes client Jessica Hall, 27 years old, has third-degree (complete) atrioventricular heart block with bradycardia of 28 beats/minute. What represents the nurse's priority action?",
+    "question": "Client Kiara Garcia, a 43-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q26)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_27",
-    "question": "The cardiovascular unit nurse notes client David Tanaka, 46 years old, has sudden onset of ventricular fibrillation on telemetry. What represents the nurse's priority action?",
+    "question": "The nurse is assessing Linda Gonzalez, 50 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q27)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_28",
-    "question": "The cardiovascular unit nurse notes client Dmitri Miller, 65 years old, has Atrial Fibrillation with a rapid ventricular response of 142 beats/minute and dizziness. What represents the nurse's priority action?",
+    "question": "Client Chloe Martin (57 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q28)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_29",
-    "question": "The cardiovascular unit nurse notes client Kwame Wilson, 19 years old, has third-degree (complete) atrioventricular heart block with bradycardia of 28 beats/minute. What represents the nurse's priority action?",
+    "question": "While conducting shift assessment on Hiroshi Clark (64 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q29)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_30",
-    "question": "The cardiovascular unit nurse notes client Elijah Lee, 38 years old, has sudden onset of ventricular fibrillation on telemetry. What represents the nurse's priority action?",
+    "question": "A nurse is planning care for client Olivia Allen, 71 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q30)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_31",
-    "question": "The cardiovascular unit nurse notes client Christopher Ramirez, 57 years old, has Atrial Fibrillation with a rapid ventricular response of 142 beats/minute and dizziness. What represents the nurse's priority action?",
+    "question": "Client Yuki Smith, a 78-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q31)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_32",
-    "question": "The cardiovascular unit nurse notes client Robert King, 76 years old, has third-degree (complete) atrioventricular heart block with bradycardia of 28 beats/minute. What represents the nurse's priority action?",
+    "question": "The nurse is assessing Siddharth Davis, 20 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q32)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_33",
-    "question": "The cardiovascular unit nurse notes client Amir Johnson, 30 years old, has sudden onset of ventricular fibrillation on telemetry. What represents the nurse's priority action?",
+    "question": "Client Zane Anderson (27 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q33)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. immediately check responsiveness, activate the emergency response, and begin high-quality CPR and defibrillation ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_34",
-    "question": "The cardiovascular unit nurse notes client Mateo Rodriguez, 49 years old, has Atrial Fibrillation with a rapid ventricular response of 142 beats/minute and dizziness. What represents the nurse's priority action?",
+    "question": "While conducting shift assessment on Christopher Perez (34 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q34)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. assess blood pressure, obtain a 12-lead EKG, and prepare to administer prescribed diltiazem or beta-blockers ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_35",
-    "question": "The cardiovascular unit nurse notes client Aisha Thomas, 68 years old, has third-degree (complete) atrioventricular heart block with bradycardia of 28 beats/minute. What represents the nurse's priority action?",
+    "question": "A nurse is planning care for client Zahra Lewis, 41 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q35)",
     "options": [
-      "Document the rhythm and schedule a routine stress test for next week.",
-      "Directly obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing.",
-      "Ask the client to cough vigorously and place a cold washcloth on their forehead.",
-      "Turn off the telemetry alarms to prevent disturbing other unit clients."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Physiological Adaptation] Cardiac rhythm emergencies require rapid, highly coordinated intervention. obtain a transcutaneous pacemaker, assess hemodynamics, and prepare for immediate temporary pacing ensures safety and stabilizes hemodynamics under life-threatening arrhythmias.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_36",
-    "question": "The nurse is evaluating client Sebastian Thompson, 22 years old, who suddenly develops increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad). What is the nurse's absolute priority action?",
+    "question": "Client Omar Wright, a 48-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q36)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad) represents a critical medical emergency. The nurse must directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_37",
-    "question": "The nurse is evaluating client Richard Robinson, 41 years old, who suddenly develops autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache. What is the nurse's absolute priority action?",
+    "question": "The nurse is assessing Elijah Williams, 55 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q37)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache represents a critical medical emergency. The nurse must directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_38",
-    "question": "The nurse is evaluating client Theresa Baker, 60 years old, who suddenly develops acute respiratory distress with a sudden chest tube dislodgement from the pleural space. What is the nurse's absolute priority action?",
+    "question": "Client James Martinez (62 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q38)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of acute respiratory distress with a sudden chest tube dislodgement from the pleural space represents a critical medical emergency. The nurse must directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_39",
-    "question": "The nurse is evaluating client Fatima Brown, 79 years old, who suddenly develops increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad). What is the nurse's absolute priority action?",
+    "question": "While conducting shift assessment on Noor Taylor (69 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q39)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad) represents a critical medical emergency. The nurse must directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_40",
-    "question": "The nurse is evaluating client Hannah Hernandez, 33 years old, who suddenly develops autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache. What is the nurse's absolute priority action?",
+    "question": "A nurse is planning care for client Kwame White, 76 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q40)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache represents a critical medical emergency. The nurse must directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_41",
-    "question": "The nurse is evaluating client Maya Moore, 52 years old, who suddenly develops acute respiratory distress with a sudden chest tube dislodgement from the pleural space. What is the nurse's absolute priority action?",
+    "question": "Client Daniel Walker, a 18-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q41)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of acute respiratory distress with a sudden chest tube dislodgement from the pleural space represents a critical medical emergency. The nurse must directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_42",
-    "question": "The nurse is evaluating client Barbara Harris, 71 years old, who suddenly develops increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad). What is the nurse's absolute priority action?",
+    "question": "The nurse is assessing Marcus Abara, 25 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q42)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad) represents a critical medical emergency. The nurse must directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_43",
-    "question": "The nurse is evaluating client Maria Young, 25 years old, who suddenly develops autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache. What is the nurse's absolute priority action?",
+    "question": "Client Dmitri Jones (32 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q43)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache represents a critical medical emergency. The nurse must directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_44",
-    "question": "The nurse is evaluating client Zahra Okonkwo, 44 years old, who suddenly develops acute respiratory distress with a sudden chest tube dislodgement from the pleural space. What is the nurse's absolute priority action?",
+    "question": "While conducting shift assessment on Liam Lopez (39 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q44)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of acute respiratory distress with a sudden chest tube dislodgement from the pleural space represents a critical medical emergency. The nurse must directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_45",
-    "question": "The nurse is evaluating client Siddharth Garcia, 63 years old, who suddenly develops increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad). What is the nurse's absolute priority action?",
+    "question": "A nurse is planning care for client Noah Jackson, 46 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q45)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad) represents a critical medical emergency. The nurse must directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_46",
-    "question": "The nurse is evaluating client Hiroshi Gonzalez, 82 years old, who suddenly develops autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache. What is the nurse's absolute priority action?",
+    "question": "Client David Sanchez, a 53-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D10-Q46)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache represents a critical medical emergency. The nurse must directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_47",
-    "question": "The nurse is evaluating client Kiara Martin, 36 years old, who suddenly develops acute respiratory distress with a sudden chest tube dislodgement from the pleural space. What is the nurse's absolute priority action?",
+    "question": "The nurse is assessing Anya Hall, 60 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D10-Q47)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of acute respiratory distress with a sudden chest tube dislodgement from the pleural space represents a critical medical emergency. The nurse must directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_48",
-    "question": "The nurse is evaluating client Karen Clark, 55 years old, who suddenly develops increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad). What is the nurse's absolute priority action?",
+    "question": "Client Tariq Tanaka (67 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D10-Q48)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of increased intracranial pressure (ICP) following trauma, showing bradycardia and widening pulse pressure (Cushing's triad) represents a critical medical emergency. The nurse must directly elevate the head of the bed to 30 degrees, maintain neck alignment, administer mannitol, and avoid suctioning to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_49",
-    "question": "The nurse is evaluating client Jackson Allen, 74 years old, who suddenly develops autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache. What is the nurse's absolute priority action?",
+    "question": "While conducting shift assessment on Sebastian Miller (74 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D10-Q49)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of autonomic dysreflexia secondary to a T6 spinal cord injury, with a blood pressure of 190/100 and headache represents a critical medical emergency. The nurse must directly place the client in high Fowler's, check for bladder distension or catheter kink, assess for fecal impaction, and notify the provider to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   },
   {
     "id": "day_10_q_50",
-    "question": "The nurse is evaluating client Anya Smith, 28 years old, who suddenly develops acute respiratory distress with a sudden chest tube dislodgement from the pleural space. What is the nurse's absolute priority action?",
+    "question": "A nurse is planning care for client Jackson Wilson, 81 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D10-Q50)",
     "options": [
-      "Position the client in Trendelenburg position and apply heating pads.",
-      "Instruct the client to perform deep valsalva maneuvers.",
-      "Directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only.",
-      "Apply a tight compressive elastic bandage directly over the neck or chest."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Physiological Adaptation] The development of acute respiratory distress with a sudden chest tube dislodgement from the pleural space represents a critical medical emergency. The nurse must directly immediately seal the insertion site with a sterile occlusive petroleum gauze dressing taped on three sides only to stabilize the patient and prevent clinical failure.",
+    "explanation": "[NCLEX Category: Physiological Adaptation] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Physiological Adaptation"
   }

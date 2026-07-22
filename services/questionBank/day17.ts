@@ -3,701 +3,701 @@ import { NCLEXQuestion } from "../questionBank";
 export const DAY_17_QUESTIONS: NCLEXQuestion[] = [
   {
     "id": "day_17_q_1",
-    "question": "A physician prescribes Furosemide 40 mg/mcg orally daily for client Barbara Taylor, 38 years old. The pharmacy supplies Furosemide in 20 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "Client Maya Brown, a 75-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q1)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 40 mg / 20 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_2",
-    "question": "A physician prescribes Levothyroxine 150 mg/mcg orally daily for client Maria White, 57 years old. The pharmacy supplies Levothyroxine in 75 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "The nurse is assessing Elena Hernandez, 82 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q2)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 150 mcg / 75 mcg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_3",
-    "question": "A physician prescribes Metoprolol 100 mg/mcg orally daily for client Zahra Walker, 76 years old. The pharmacy supplies Metoprolol in 50 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "Client Chinedu Moore (24 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q3)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 100 mg / 50 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_4",
-    "question": "A physician prescribes Furosemide 40 mg/mcg orally daily for client Siddharth Abara, 30 years old. The pharmacy supplies Furosemide in 20 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "While conducting shift assessment on Hannah Harris (31 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q4)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 40 mg / 20 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_5",
-    "question": "A physician prescribes Levothyroxine 150 mg/mcg orally daily for client Hiroshi Jones, 49 years old. The pharmacy supplies Levothyroxine in 75 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "A nurse is planning care for client Leila Young, 38 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q5)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 150 mcg / 75 mcg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_6",
-    "question": "A physician prescribes Metoprolol 100 mg/mcg orally daily for client Kiara Lopez, 68 years old. The pharmacy supplies Metoprolol in 50 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "Client Emily Okonkwo, a 45-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q6)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 100 mg / 50 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_7",
-    "question": "A physician prescribes Furosemide 40 mg/mcg orally daily for client Karen Jackson, 22 years old. The pharmacy supplies Furosemide in 20 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "The nurse is assessing Fatima Garcia, 52 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q7)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 40 mg / 20 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_8",
-    "question": "A physician prescribes Levothyroxine 150 mg/mcg orally daily for client Jackson Sanchez, 41 years old. The pharmacy supplies Levothyroxine in 75 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "Client Mei Gonzalez (59 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q8)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 150 mcg / 75 mcg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_9",
-    "question": "A physician prescribes Metoprolol 100 mg/mcg orally daily for client Anya Hall, 60 years old. The pharmacy supplies Metoprolol in 50 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "While conducting shift assessment on Amara Martin (66 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q9)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 100 mg / 50 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_10",
-    "question": "A physician prescribes Furosemide 40 mg/mcg orally daily for client Liam Tanaka, 79 years old. The pharmacy supplies Furosemide in 20 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "A nurse is planning care for client Theresa Clark, 73 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q10)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 40 mg / 20 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_11",
-    "question": "A physician prescribes Levothyroxine 150 mg/mcg orally daily for client Daniel Miller, 33 years old. The pharmacy supplies Levothyroxine in 75 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "Client Chen Allen, a 80-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q11)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 150 mcg / 75 mcg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_12",
-    "question": "A physician prescribes Metoprolol 100 mg/mcg orally daily for client Matthew Wilson, 52 years old. The pharmacy supplies Metoprolol in 50 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "The nurse is assessing Lucas Smith, 22 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q12)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 100 mg / 50 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_13",
-    "question": "A physician prescribes Furosemide 40 mg/mcg orally daily for client Elena Lee, 71 years old. The pharmacy supplies Furosemide in 20 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "Client Kiara Davis (29 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q13)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 40 mg / 20 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_14",
-    "question": "A physician prescribes Levothyroxine 150 mg/mcg orally daily for client Carlos Ramirez, 25 years old. The pharmacy supplies Levothyroxine in 75 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "While conducting shift assessment on Linda Anderson (36 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q14)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 150 mcg / 75 mcg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_15",
-    "question": "A physician prescribes Metoprolol 100 mg/mcg orally daily for client Sophia King, 44 years old. The pharmacy supplies Metoprolol in 50 mg/mcg tablets. How many tablets should the nurse administer?",
+    "question": "A nurse is planning care for client Chloe Perez, 43 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q15)",
     "options": [
-      "1 tablet",
-      "2 tablets",
-      "3 tablets",
-      "0.5 tablets"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The calculation is: Desired dose / Available dose = 100 mg / 50 mg = 2 tablets.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_16",
-    "question": "The nurse is evaluating client Olga Johnson, 63 years old, who is taking Lithium carbonate. The client reports severe hand tremors, persistent diarrhea, and slurred speech. What is the nurse's priority action?",
+    "question": "Client Hiroshi Lewis, a 50-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q16)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the lithium dose, assess hydration indicators, and request a serum level.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Lithium carbonate toxicity (therapeutic level is exceeded). The nurse must immediately withhold the lithium dose, assess hydration indicators, and request a serum level to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_17",
-    "question": "The nurse is evaluating client Ethan Rodriguez, 82 years old, who is taking Phenytoin. The client reports severe uncontrolled nystagmus, ataxia, and slurred speech. What is the nurse's priority action?",
+    "question": "The nurse is assessing Olivia Wright, 57 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q17)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately hold the phenytoin dose, implement seizure precautions, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Phenytoin toxicity (therapeutic level is exceeded). The nurse must immediately hold the phenytoin dose, implement seizure precautions, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_18",
-    "question": "The nurse is evaluating client Joseph Thomas, 36 years old, who is taking Digoxin. The client reports yellow-green vision halos, nausea, and severe fatigue. What is the nurse's priority action?",
+    "question": "Client Yuki Williams (64 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q18)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the digoxin dose, check potassium levels, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Digoxin toxicity (therapeutic level is exceeded). The nurse must immediately withhold the digoxin dose, check potassium levels, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_19",
-    "question": "The nurse is evaluating client Linda Thompson, 55 years old, who is taking Lithium carbonate. The client reports severe hand tremors, persistent diarrhea, and slurred speech. What is the nurse's priority action?",
+    "question": "While conducting shift assessment on Siddharth Martinez (71 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q19)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the lithium dose, assess hydration indicators, and request a serum level.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Lithium carbonate toxicity (therapeutic level is exceeded). The nurse must immediately withhold the lithium dose, assess hydration indicators, and request a serum level to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_20",
-    "question": "The nurse is evaluating client Chen Robinson, 74 years old, who is taking Phenytoin. The client reports severe uncontrolled nystagmus, ataxia, and slurred speech. What is the nurse's priority action?",
+    "question": "A nurse is planning care for client Zane Taylor, 78 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q20)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately hold the phenytoin dose, implement seizure precautions, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Phenytoin toxicity (therapeutic level is exceeded). The nurse must immediately hold the phenytoin dose, implement seizure precautions, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_21",
-    "question": "The nurse is evaluating client Mei Baker, 28 years old, who is taking Digoxin. The client reports yellow-green vision halos, nausea, and severe fatigue. What is the nurse's priority action?",
+    "question": "Client Christopher White, a 20-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q21)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the digoxin dose, check potassium levels, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Digoxin toxicity (therapeutic level is exceeded). The nurse must immediately withhold the digoxin dose, check potassium levels, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_22",
-    "question": "The nurse is evaluating client Leila Brown, 47 years old, who is taking Lithium carbonate. The client reports severe hand tremors, persistent diarrhea, and slurred speech. What is the nurse's priority action?",
+    "question": "The nurse is assessing Zahra Walker, 27 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q22)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the lithium dose, assess hydration indicators, and request a serum level.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Lithium carbonate toxicity (therapeutic level is exceeded). The nurse must immediately withhold the lithium dose, assess hydration indicators, and request a serum level to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_23",
-    "question": "The nurse is evaluating client Susan Hernandez, 66 years old, who is taking Phenytoin. The client reports severe uncontrolled nystagmus, ataxia, and slurred speech. What is the nurse's priority action?",
+    "question": "Client Omar Abara (34 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q23)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately hold the phenytoin dose, implement seizure precautions, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Phenytoin toxicity (therapeutic level is exceeded). The nurse must immediately hold the phenytoin dose, implement seizure precautions, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_24",
-    "question": "The nurse is evaluating client Marcus Moore, 20 years old, who is taking Digoxin. The client reports yellow-green vision halos, nausea, and severe fatigue. What is the nurse's priority action?",
+    "question": "While conducting shift assessment on Elijah Jones (41 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q24)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the digoxin dose, check potassium levels, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Digoxin toxicity (therapeutic level is exceeded). The nurse must immediately withhold the digoxin dose, check potassium levels, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_25",
-    "question": "The nurse is evaluating client Noor Harris, 39 years old, who is taking Lithium carbonate. The client reports severe hand tremors, persistent diarrhea, and slurred speech. What is the nurse's priority action?",
+    "question": "A nurse is planning care for client James Lopez, 48 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q25)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the lithium dose, assess hydration indicators, and request a serum level.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Lithium carbonate toxicity (therapeutic level is exceeded). The nurse must immediately withhold the lithium dose, assess hydration indicators, and request a serum level to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_26",
-    "question": "The nurse is evaluating client Omar Young, 58 years old, who is taking Phenytoin. The client reports severe uncontrolled nystagmus, ataxia, and slurred speech. What is the nurse's priority action?",
+    "question": "Client Noor Jackson, a 55-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q26)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately hold the phenytoin dose, implement seizure precautions, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Phenytoin toxicity (therapeutic level is exceeded). The nurse must immediately hold the phenytoin dose, implement seizure precautions, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_27",
-    "question": "The nurse is evaluating client Zane Okonkwo, 77 years old, who is taking Digoxin. The client reports yellow-green vision halos, nausea, and severe fatigue. What is the nurse's priority action?",
+    "question": "The nurse is assessing Kwame Sanchez, 62 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q27)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the digoxin dose, check potassium levels, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Digoxin toxicity (therapeutic level is exceeded). The nurse must immediately withhold the digoxin dose, check potassium levels, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_28",
-    "question": "The nurse is evaluating client Olivia Garcia, 31 years old, who is taking Lithium carbonate. The client reports severe hand tremors, persistent diarrhea, and slurred speech. What is the nurse's priority action?",
+    "question": "Client Daniel Hall (69 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q28)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the lithium dose, assess hydration indicators, and request a serum level.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Lithium carbonate toxicity (therapeutic level is exceeded). The nurse must immediately withhold the lithium dose, assess hydration indicators, and request a serum level to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_29",
-    "question": "The nurse is evaluating client Sarah Gonzalez, 50 years old, who is taking Phenytoin. The client reports severe uncontrolled nystagmus, ataxia, and slurred speech. What is the nurse's priority action?",
+    "question": "While conducting shift assessment on Marcus Tanaka (76 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q29)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately hold the phenytoin dose, implement seizure precautions, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Phenytoin toxicity (therapeutic level is exceeded). The nurse must immediately hold the phenytoin dose, implement seizure precautions, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_30",
-    "question": "The nurse is evaluating client Kofi Martin, 69 years old, who is taking Digoxin. The client reports yellow-green vision halos, nausea, and severe fatigue. What is the nurse's priority action?",
+    "question": "A nurse is planning care for client Dmitri Miller, 18 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q30)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the digoxin dose, check potassium levels, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Digoxin toxicity (therapeutic level is exceeded). The nurse must immediately withhold the digoxin dose, check potassium levels, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_31",
-    "question": "The nurse is evaluating client Gabriel Clark, 23 years old, who is taking Lithium carbonate. The client reports severe hand tremors, persistent diarrhea, and slurred speech. What is the nurse's priority action?",
+    "question": "Client Liam Wilson, a 25-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q31)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the lithium dose, assess hydration indicators, and request a serum level.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Lithium carbonate toxicity (therapeutic level is exceeded). The nurse must immediately withhold the lithium dose, assess hydration indicators, and request a serum level to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_32",
-    "question": "The nurse is evaluating client Tariq Allen, 42 years old, who is taking Phenytoin. The client reports severe uncontrolled nystagmus, ataxia, and slurred speech. What is the nurse's priority action?",
+    "question": "The nurse is assessing Noah Lee, 32 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q32)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately hold the phenytoin dose, implement seizure precautions, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Phenytoin toxicity (therapeutic level is exceeded). The nurse must immediately hold the phenytoin dose, implement seizure precautions, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_33",
-    "question": "The nurse is evaluating client Noah Smith, 61 years old, who is taking Digoxin. The client reports yellow-green vision halos, nausea, and severe fatigue. What is the nurse's priority action?",
+    "question": "Client David Ramirez (39 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q33)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the digoxin dose, check potassium levels, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Digoxin toxicity (therapeutic level is exceeded). The nurse must immediately withhold the digoxin dose, check potassium levels, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_34",
-    "question": "The nurse is evaluating client Andrew Davis, 80 years old, who is taking Lithium carbonate. The client reports severe hand tremors, persistent diarrhea, and slurred speech. What is the nurse's priority action?",
+    "question": "While conducting shift assessment on Anya King (46 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q34)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately withhold the lithium dose, assess hydration indicators, and request a serum level.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Lithium carbonate toxicity (therapeutic level is exceeded). The nurse must immediately withhold the lithium dose, assess hydration indicators, and request a serum level to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_35",
-    "question": "The nurse is evaluating client Emily Anderson, 34 years old, who is taking Phenytoin. The client reports severe uncontrolled nystagmus, ataxia, and slurred speech. What is the nurse's priority action?",
+    "question": "A nurse is planning care for client Tariq Johnson, 53 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q35)",
     "options": [
-      "Increase the dose to treat the underlying condition.",
-      "Administer an over-the-counter antiemetic and reassess in 4 hours.",
-      "Immediately hold the phenytoin dose, implement seizure precautions, and notify the provider.",
-      "Instruct the client that these are expected transient side effects."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] The reported symptoms are classic indicators of Phenytoin toxicity (therapeutic level is exceeded). The nurse must immediately hold the phenytoin dose, implement seizure precautions, and notify the provider to prevent severe complications.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_36",
-    "question": "The nurse is managing the parenteral drug therapy for client Chinedu Perez, 53 years old, receiving Unfractionated Heparin. The nurse notes an aPTT of 118 seconds. What is the nurse's absolute priority action?",
+    "question": "Client Sebastian Rodriguez, a 60-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q36)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_37",
-    "question": "The nurse is managing the parenteral drug therapy for client Isabella Lewis, 72 years old, receiving Warfarin. The nurse notes an INR of 6.5 with visible hematuria. What is the nurse's absolute priority action?",
+    "question": "The nurse is assessing Jackson Thomas, 67 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q37)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_38",
-    "question": "The nurse is managing the parenteral drug therapy for client Grace Wright, 26 years old, receiving Potassium Chloride IV. The nurse notes serum potassium of 2.8 mEq/L. What is the nurse's absolute priority action?",
+    "question": "Client Gabriel Thompson (74 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q38)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_39",
-    "question": "The nurse is managing the parenteral drug therapy for client Patricia Williams, 45 years old, receiving Unfractionated Heparin. The nurse notes an aPTT of 118 seconds. What is the nurse's absolute priority action?",
+    "question": "While conducting shift assessment on Aisha Robinson (81 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q39)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_40",
-    "question": "The nurse is managing the parenteral drug therapy for client James Martinez, 64 years old, receiving Warfarin. The nurse notes an INR of 6.5 with visible hematuria. What is the nurse's absolute priority action?",
+    "question": "A nurse is planning care for client Ethan Baker, 23 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q40)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_41",
-    "question": "The nurse is managing the parenteral drug therapy for client Yuki Taylor, 18 years old, receiving Potassium Chloride IV. The nurse notes serum potassium of 2.8 mEq/L. What is the nurse's absolute priority action?",
+    "question": "Client Kofi Brown, a 30-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q41)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_42",
-    "question": "The nurse is managing the parenteral drug therapy for client Chloe White, 37 years old, receiving Unfractionated Heparin. The nurse notes an aPTT of 118 seconds. What is the nurse's absolute priority action?",
+    "question": "The nurse is assessing Mateo Hernandez, 37 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q42)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_43",
-    "question": "The nurse is managing the parenteral drug therapy for client Lucas Walker, 56 years old, receiving Warfarin. The nurse notes an INR of 6.5 with visible hematuria. What is the nurse's absolute priority action?",
+    "question": "Client Olga Moore (44 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q43)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_44",
-    "question": "The nurse is managing the parenteral drug therapy for client Amara Abara, 75 years old, receiving Potassium Chloride IV. The nurse notes serum potassium of 2.8 mEq/L. What is the nurse's absolute priority action?",
+    "question": "While conducting shift assessment on Patricia Harris (51 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q44)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_45",
-    "question": "The nurse is managing the parenteral drug therapy for client Jessica Jones, 29 years old, receiving Unfractionated Heparin. The nurse notes an aPTT of 118 seconds. What is the nurse's absolute priority action?",
+    "question": "A nurse is planning care for client Amir Young, 58 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q45)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_46",
-    "question": "The nurse is managing the parenteral drug therapy for client David Lopez, 48 years old, receiving Warfarin. The nurse notes an INR of 6.5 with visible hematuria. What is the nurse's absolute priority action?",
+    "question": "Client Sophia Okonkwo, a 65-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D17-Q46)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_47",
-    "question": "The nurse is managing the parenteral drug therapy for client Dmitri Jackson, 67 years old, receiving Potassium Chloride IV. The nurse notes serum potassium of 2.8 mEq/L. What is the nurse's absolute priority action?",
+    "question": "The nurse is assessing Grace Garcia, 72 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D17-Q47)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_48",
-    "question": "The nurse is managing the parenteral drug therapy for client Kwame Sanchez, 21 years old, receiving Unfractionated Heparin. The nurse notes an aPTT of 118 seconds. What is the nurse's absolute priority action?",
+    "question": "Client Sarah Gonzalez (79 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D17-Q48)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. stop the heparin infusion immediately, assess for active bleeding, and expect to administer protamine sulfate is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_49",
-    "question": "The nurse is managing the parenteral drug therapy for client Elijah Hall, 40 years old, receiving Warfarin. The nurse notes an INR of 6.5 with visible hematuria. What is the nurse's absolute priority action?",
+    "question": "While conducting shift assessment on Carlos Martin (21 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D17-Q49)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. withhold the warfarin dose, assess for active bleeding, and expect to administer Vitamin K antidote is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   },
   {
     "id": "day_17_q_50",
-    "question": "The nurse is managing the parenteral drug therapy for client Christopher Tanaka, 59 years old, receiving Potassium Chloride IV. The nurse notes serum potassium of 2.8 mEq/L. What is the nurse's absolute priority action?",
+    "question": "A nurse is planning care for client Isabella Clark, 28 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D17-Q50)",
     "options": [
-      "Increase the rate of infusion by twenty percent.",
-      "Administer the drug as scheduled and document the lab value.",
-      "Directly ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry.",
-      "Encourage increased fluid intake and re-evaluate the lab in 48 hours."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Safety and reduction of risk potential with high-alert medications require rapid correction of toxicities. ensure the infusion is diluted, run at a maximum rate of 10 mEq/hour through a central line, and monitor cardiac telemetry is essential to avoid severe adverse outcomes.",
+    "explanation": "[NCLEX Category: Pharmacological and Parenteral Therapies] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Pharmacological and Parenteral Therapies"
   }

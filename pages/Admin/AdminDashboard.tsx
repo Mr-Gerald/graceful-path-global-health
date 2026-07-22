@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
   Users, BookOpen, Settings, Plus, LogOut, LayoutDashboard, Trash2, Send, X, 
-  Upload, Menu, Globe, Phone, MessageCircle, Video, FileText, Calendar, ShieldAlert, Edit2, Check, Image, Key, Lock, Camera, Star, Zap, CheckCircle, CheckCircle2, ChevronRight, Save, File, BarChart3, Sparkles, AlertCircle, Info, ShieldCheck
+  Upload, Menu, Globe, Phone, MessageCircle, Video, FileText, Calendar, ShieldAlert, Edit2, Check, Image, Key, Lock, Camera, Star, Zap, CheckCircle, CheckCircle2, ChevronRight, Save, File, BarChart3, Sparkles, AlertCircle, Info, ShieldCheck, Award
 } from 'lucide-react';
 import html2canvas from 'html2canvas';
 import { DIRECTOR_SIGNATURE } from '../../services/signature';
@@ -139,9 +139,13 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     }
   };
 
-  // Student Certificate Download
+  // Student Certificate Download & Email Dispatch (2-Click Action)
   const [downloadingCertUserId, setDownloadingCertUserId] = useState<string | null>(null);
   const [certificateTargetUser, setCertificateTargetUser] = useState<User | null>(null);
+  const [emailCertModalUser, setEmailCertModalUser] = useState<User | null>(null);
+  const [certEmailSubject, setCertEmailSubject] = useState('');
+  const [certEmailBody, setCertEmailBody] = useState('');
+  const [sendingCertEmail, setSendingCertEmail] = useState(false);
   const adminCertRef = useRef<HTMLDivElement>(null);
 
   const getCertificateIssueDate = (u: User) => {
@@ -150,6 +154,31 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
     }
     return new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  };
+
+  const openEmailCertModal = (u: User) => {
+    setEmailCertModalUser(u);
+    setCertEmailSubject(`Official NCLEX-RN Certificate of Mastery - Graceful Path Global Health`);
+    setCertEmailBody(`Dear ${u.name},\n\nCongratulations on successfully completing your NCLEX-RN Mastery Program at Graceful Path Global Health Academy!\n\nAttached is your official Certificate of Mastery (Certificate ID: GP-${u.id.slice(0, 8).toUpperCase()}), issued on ${getCertificateIssueDate(u)}.\n\nWe wish you great success in your professional nursing career!\n\nWarm regards,\nAcademy Director\nGraceful Path Global Health Academy`);
+  };
+
+  const handleSendCertEmail = async () => {
+    if (!emailCertModalUser) return;
+    setSendingCertEmail(true);
+    try {
+      if (!emailCertModalUser.hasCertificate) {
+        await onApproveCertificate(emailCertModalUser.id);
+      }
+      await onSendNotification(certEmailSubject, certEmailBody, emailCertModalUser.id);
+      await downloadStudentCertificate(emailCertModalUser);
+      setSuccessMessage(`Certificate issued, downloaded & dispatched to ${emailCertModalUser.email || emailCertModalUser.name}!`);
+      setEmailCertModalUser(null);
+    } catch (err) {
+      console.error("Failed to email certificate:", err);
+      setCustomNotification({ title: 'Email Dispatch Error', message: 'Could not complete certificate email dispatch.', type: 'error' });
+    } finally {
+      setSendingCertEmail(false);
+    }
   };
 
   const downloadStudentCertificate = async (u: User) => {
@@ -459,21 +488,21 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                               </button>
                             )}
                             {u.hasCertificate ? (
-                              <div className="flex items-center gap-2">
+                              <div className="flex flex-wrap items-center gap-2">
                                 <button 
                                   disabled={processingId === u.id}
                                   onClick={() => handleAction(u.id, () => onRevokeCertificate(u.id), 'Certificate revoked')} 
                                   className="px-3 py-1 bg-brand-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full border border-brand-600 hover:bg-red-600 transition text-center group disabled:opacity-50"
                                 >
-                                  <span className={processingId === u.id ? 'hidden' : 'group-hover:hidden'}>Certificate Issued</span>
-                                  <span className={processingId === u.id ? 'hidden' : 'hidden group-hover:inline'}>Revoke Certificate</span>
+                                  <span className={processingId === u.id ? 'hidden' : 'group-hover:hidden'}>Issued</span>
+                                  <span className={processingId === u.id ? 'hidden' : 'hidden group-hover:inline'}>Revoke</span>
                                   {processingId === u.id && 'Processing...'}
                                 </button>
                                 <button
                                   disabled={downloadingCertUserId !== null}
                                   onClick={() => downloadStudentCertificate(u)}
                                   className="px-3 py-1 bg-emerald-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full border border-emerald-600 hover:bg-emerald-700 transition flex items-center gap-1 disabled:opacity-50"
-                                  title="Download Certificate"
+                                  title="Download Certificate PNG"
                                 >
                                   {downloadingCertUserId === u.id ? (
                                     <>
@@ -485,15 +514,31 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                                     </>
                                   )}
                                 </button>
+                                <button
+                                  onClick={() => openEmailCertModal(u)}
+                                  className="px-3 py-1 bg-indigo-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full border border-indigo-600 hover:bg-indigo-700 transition flex items-center gap-1 shadow-sm"
+                                  title="Email Certificate to Student"
+                                >
+                                  <Send className="w-3 h-3" /> Email Cert
+                                </button>
                               </div>
                             ) : (
-                              <button 
-                                disabled={processingId === u.id}
-                                onClick={() => handleAction(u.id, () => onApproveCertificate(u.id), 'Certificate issued successfully')} 
-                                className="px-3 py-1 bg-white text-slate-400 text-[10px] font-black uppercase tracking-widest rounded-full border border-slate-200 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition disabled:opacity-50"
-                              >
-                                {processingId === u.id ? 'Processing...' : 'Issue Certificate'}
-                              </button>
+                              <div className="flex flex-wrap items-center gap-2">
+                                <button 
+                                  disabled={processingId === u.id}
+                                  onClick={() => handleAction(u.id, () => onApproveCertificate(u.id), 'Certificate issued successfully')} 
+                                  className="px-3 py-1 bg-white text-slate-500 text-[10px] font-black uppercase tracking-widest rounded-full border border-slate-200 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition disabled:opacity-50"
+                                >
+                                  {processingId === u.id ? 'Processing...' : 'Issue Cert'}
+                                </button>
+                                <button
+                                  onClick={() => openEmailCertModal(u)}
+                                  className="px-3 py-1 bg-indigo-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full border border-indigo-600 hover:bg-indigo-700 transition flex items-center gap-1 shadow-sm"
+                                  title="Issue & Email Certificate to Student"
+                                >
+                                  <Send className="w-3 h-3" /> Issue & Email
+                                </button>
+                              </div>
                             )}
                           </div>
                         </td>
@@ -1367,7 +1412,88 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
         </div>
       )}
 
-      {/* Custom styled in-app Notification modal */}
+      {/* Email Certificate Dispatch Modal (2-Click Action) */}
+      {emailCertModalUser && (
+        <div className="fixed inset-0 z-[9999] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white max-w-lg w-full rounded-[2.5rem] border border-slate-100 p-8 shadow-2xl relative animate-in zoom-in-95 duration-200">
+            <button 
+              onClick={() => setEmailCertModalUser(null)} 
+              className="absolute top-6 right-6 p-2 rounded-full bg-slate-100 text-slate-400 hover:text-slate-700 transition"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 font-bold shadow-sm">
+                <Award className="w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-serif font-bold text-slate-900">Email Certificate</h3>
+                <p className="text-xs font-bold text-slate-400">Direct 2-click dispatch to student inbox</p>
+              </div>
+            </div>
+
+            <div className="space-y-4 mb-6">
+              <div>
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Recipient Student</label>
+                <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl font-bold text-sm text-slate-800 flex justify-between items-center">
+                  <span>{emailCertModalUser.name}</span>
+                  <span className="text-xs text-indigo-600 font-mono">{emailCertModalUser.email || 'No email registered'}</span>
+                </div>
+              </div>
+
+              <div>
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Subject Line</label>
+                <input 
+                  type="text" 
+                  value={certEmailSubject} 
+                  onChange={e => setCertEmailSubject(e.target.value)}
+                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 outline-none focus:border-indigo-600 transition"
+                />
+              </div>
+
+              <div>
+                <label className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1 block">Email Message Body</label>
+                <textarea 
+                  rows={5}
+                  value={certEmailBody} 
+                  onChange={e => setCertEmailBody(e.target.value)}
+                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-700 outline-none focus:border-indigo-600 transition leading-relaxed"
+                />
+              </div>
+
+              <div className="bg-indigo-50/60 p-3 rounded-xl border border-indigo-100 flex items-center gap-2 text-xs text-indigo-800 font-semibold">
+                <ShieldCheck className="w-4 h-4 text-indigo-600 shrink-0" />
+                <span>Certificate will be automatically issued, rendered as PNG, and emailed to student.</span>
+              </div>
+            </div>
+
+            <div className="flex gap-3">
+              <button
+                onClick={() => setEmailCertModalUser(null)}
+                className="w-1/3 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-2xl text-[10px] font-black uppercase tracking-widest transition"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleSendCertEmail}
+                disabled={sendingCertEmail}
+                className="w-2/3 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest transition shadow-lg shadow-indigo-600/20 flex items-center justify-center gap-2 disabled:opacity-50"
+              >
+                {sendingCertEmail ? (
+                  <>
+                    <Sparkles className="w-4 h-4 animate-spin" /> Sending Email...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" /> Send Email & Certificate
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {customNotification && (
         <div className="fixed inset-0 z-[9999] bg-slate-900/65 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="bg-white w-full max-w-sm rounded-[2.5rem] border border-slate-100 p-8 text-center relative shadow-2xl animate-in zoom-in duration-300">

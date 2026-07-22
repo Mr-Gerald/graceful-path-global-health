@@ -3,701 +3,701 @@ import { NCLEXQuestion } from "../questionBank";
 export const DAY_1_QUESTIONS: NCLEXQuestion[] = [
   {
     "id": "day_1_q_1",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Mateo Harris, 60 years old, is admitted and stable. Which action is most appropriate to delegate to the Licensed Practical Nurse (LPN)?",
+    "question": "Client Fatima Martin, a 29-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q1)",
     "options": [
-      "Administering a continuous intravenous push cardiac medication",
-      "Performing the task of administering scheduled routine oral medications",
-      "Educating a newly diagnosed diabetic on insulin self-injection",
-      "Performing the initial physical assessment on a post-operative patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] LPNs can administer routine medications (oral, subcutaneous, intramuscular) and care for stable clients with predictable outcomes. RNs retain responsibility for intravenous push medications, initial assessments, and teaching.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_2",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Aisha Young, 79 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "The nurse is assessing Mei Clark, 36 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q2)",
     "options": [
-      "Developing a mobility plan for a paralyzed client",
-      "Assisting the stable client with hallway ambulation",
-      "Performing clinical assessment on post-fall client",
-      "Evaluating range of motion in physical therapy"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Assisting a stable, ambulatory client with assistive devices is a routine task that does not require professional nursing evaluation and can be safely delegated to UAPs.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_3",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Sebastian Okonkwo, 33 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "Client Amara Allen (43 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q3)",
     "options": [
-      "Teaching a client about high-fiber foods",
-      "Performing the task of obtaining routine vital signs and measuring post-void residuals",
-      "Formulating a diabetic meal plan",
-      "Assessing a newly admitted chest pain patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAPs can perform basic, non-invasive, routine tasks with predictable outcomes. Assessments, education, and complex nursing plans require Registered Nurse (RN) clinical judgment.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_4",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Richard Garcia, 52 years old, is admitted and stable. Which action is most appropriate to delegate to the Licensed Practical Nurse (LPN)?",
+    "question": "While conducting shift assessment on Theresa Smith (50 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q4)",
     "options": [
-      "Administering a continuous intravenous push cardiac medication",
-      "Performing the task of administering scheduled routine oral medications",
-      "Educating a newly diagnosed diabetic on insulin self-injection",
-      "Performing the initial physical assessment on a post-operative patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] LPNs can administer routine medications (oral, subcutaneous, intramuscular) and care for stable clients with predictable outcomes. RNs retain responsibility for intravenous push medications, initial assessments, and teaching.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_5",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Theresa Gonzalez, 71 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "A nurse is planning care for client Chen Davis, 57 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q5)",
     "options": [
-      "Developing a mobility plan for a paralyzed client",
-      "Assisting the stable client with hallway ambulation",
-      "Performing clinical assessment on post-fall client",
-      "Evaluating range of motion in physical therapy"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Assisting a stable, ambulatory client with assistive devices is a routine task that does not require professional nursing evaluation and can be safely delegated to UAPs.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_6",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Fatima Martin, 25 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "Client Lucas Anderson, a 64-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q6)",
     "options": [
-      "Teaching a client about high-fiber foods",
-      "Performing the task of obtaining routine vital signs and measuring post-void residuals",
-      "Formulating a diabetic meal plan",
-      "Assessing a newly admitted chest pain patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAPs can perform basic, non-invasive, routine tasks with predictable outcomes. Assessments, education, and complex nursing plans require Registered Nurse (RN) clinical judgment.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_7",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Hannah Clark, 44 years old, is admitted and stable. Which action is most appropriate to delegate to the Licensed Practical Nurse (LPN)?",
+    "question": "The nurse is assessing Kiara Perez, 71 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q7)",
     "options": [
-      "Administering a continuous intravenous push cardiac medication",
-      "Performing the task of administering scheduled routine oral medications",
-      "Educating a newly diagnosed diabetic on insulin self-injection",
-      "Performing the initial physical assessment on a post-operative patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] LPNs can administer routine medications (oral, subcutaneous, intramuscular) and care for stable clients with predictable outcomes. RNs retain responsibility for intravenous push medications, initial assessments, and teaching.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_8",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Maya Allen, 63 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "Client Linda Lewis (78 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q8)",
     "options": [
-      "Developing a mobility plan for a paralyzed client",
-      "Assisting the stable client with hallway ambulation",
-      "Performing clinical assessment on post-fall client",
-      "Evaluating range of motion in physical therapy"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Assisting a stable, ambulatory client with assistive devices is a routine task that does not require professional nursing evaluation and can be safely delegated to UAPs.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_9",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Barbara Smith, 82 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "While conducting shift assessment on Chloe Wright (20 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q9)",
     "options": [
-      "Teaching a client about high-fiber foods",
-      "Performing the task of obtaining routine vital signs and measuring post-void residuals",
-      "Formulating a diabetic meal plan",
-      "Assessing a newly admitted chest pain patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAPs can perform basic, non-invasive, routine tasks with predictable outcomes. Assessments, education, and complex nursing plans require Registered Nurse (RN) clinical judgment.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_10",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Maria Davis, 36 years old, is admitted and stable. Which action is most appropriate to delegate to the Licensed Practical Nurse (LPN)?",
+    "question": "A nurse is planning care for client Hiroshi Williams, 27 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q10)",
     "options": [
-      "Administering a continuous intravenous push cardiac medication",
-      "Performing the task of administering scheduled routine oral medications",
-      "Educating a newly diagnosed diabetic on insulin self-injection",
-      "Performing the initial physical assessment on a post-operative patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] LPNs can administer routine medications (oral, subcutaneous, intramuscular) and care for stable clients with predictable outcomes. RNs retain responsibility for intravenous push medications, initial assessments, and teaching.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_11",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Zahra Anderson, 55 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "Client Olivia Martinez, a 34-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q11)",
     "options": [
-      "Developing a mobility plan for a paralyzed client",
-      "Assisting the stable client with hallway ambulation",
-      "Performing clinical assessment on post-fall client",
-      "Evaluating range of motion in physical therapy"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Assisting a stable, ambulatory client with assistive devices is a routine task that does not require professional nursing evaluation and can be safely delegated to UAPs.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_12",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Siddharth Perez, 74 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "The nurse is assessing Yuki Taylor, 41 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q12)",
     "options": [
-      "Teaching a client about high-fiber foods",
-      "Performing the task of obtaining routine vital signs and measuring post-void residuals",
-      "Formulating a diabetic meal plan",
-      "Assessing a newly admitted chest pain patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAPs can perform basic, non-invasive, routine tasks with predictable outcomes. Assessments, education, and complex nursing plans require Registered Nurse (RN) clinical judgment.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_13",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Hiroshi Lewis, 28 years old, is admitted and stable. Which action is most appropriate to delegate to the Licensed Practical Nurse (LPN)?",
+    "question": "Client Siddharth White (48 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q13)",
     "options": [
-      "Administering a continuous intravenous push cardiac medication",
-      "Performing the task of administering scheduled routine oral medications",
-      "Educating a newly diagnosed diabetic on insulin self-injection",
-      "Performing the initial physical assessment on a post-operative patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] LPNs can administer routine medications (oral, subcutaneous, intramuscular) and care for stable clients with predictable outcomes. RNs retain responsibility for intravenous push medications, initial assessments, and teaching.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_14",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Kiara Wright, 47 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "While conducting shift assessment on Zane Walker (55 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q14)",
     "options": [
-      "Developing a mobility plan for a paralyzed client",
-      "Assisting the stable client with hallway ambulation",
-      "Performing clinical assessment on post-fall client",
-      "Evaluating range of motion in physical therapy"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Assisting a stable, ambulatory client with assistive devices is a routine task that does not require professional nursing evaluation and can be safely delegated to UAPs.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_15",
-    "question": "A nurse is planning shift assignments on a busy medical unit. Client Karen Williams, 66 years old, is admitted and stable. Which action is most appropriate to delegate to the Unlicensed Assistive Personnel (UAP)?",
+    "question": "A nurse is planning care for client Christopher Abara, 62 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q15)",
     "options": [
-      "Teaching a client about high-fiber foods",
-      "Performing the task of obtaining routine vital signs and measuring post-void residuals",
-      "Formulating a diabetic meal plan",
-      "Assessing a newly admitted chest pain patient"
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAPs can perform basic, non-invasive, routine tasks with predictable outcomes. Assessments, education, and complex nursing plans require Registered Nurse (RN) clinical judgment.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_16",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "Client Zahra Jones, a 69-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q16)",
     "options": [
-      "Client Jackson Martinez, 20 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_17",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "The nurse is assessing Omar Lopez, 76 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q17)",
     "options": [
-      "Client Anya Taylor, 39 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_18",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "Client Elijah Jackson (18 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q18)",
     "options": [
-      "Client Liam White, 58 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_19",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "While conducting shift assessment on James Sanchez (25 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q19)",
     "options": [
-      "Client Daniel Walker, 77 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_20",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "A nurse is planning care for client Noor Hall, 32 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q20)",
     "options": [
-      "Client Matthew Abara, 31 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_21",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "Client Kwame Tanaka, a 39-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q21)",
     "options": [
-      "Client Elena Jones, 50 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_22",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "The nurse is assessing Daniel Miller, 46 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q22)",
     "options": [
-      "Client Carlos Lopez, 69 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_23",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "Client Marcus Wilson (53 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q23)",
     "options": [
-      "Client Sophia Jackson, 23 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_24",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "While conducting shift assessment on Dmitri Lee (60 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q24)",
     "options": [
-      "Client Olga Sanchez, 42 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_25",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "A nurse is planning care for client Liam Ramirez, 67 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q25)",
     "options": [
-      "Client Ethan Hall, 61 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_26",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "Client Noah King, a 74-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q26)",
     "options": [
-      "Client Joseph Tanaka, 80 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_27",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "The nurse is assessing David Johnson, 81 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q27)",
     "options": [
-      "Client Linda Miller, 34 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_28",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "Client Anya Rodriguez (23 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q28)",
     "options": [
-      "Client Chen Wilson, 53 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_29",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "While conducting shift assessment on Tariq Thomas (30 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q29)",
     "options": [
-      "Client Mei Lee, 72 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_30",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "A nurse is planning care for client Sebastian Thompson, 37 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q30)",
     "options": [
-      "Client Leila Ramirez, 26 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_31",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "Client Jackson Robinson, a 44-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q31)",
     "options": [
-      "Client Susan King, 45 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_32",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "The nurse is assessing Gabriel Baker, 51 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q32)",
     "options": [
-      "Client Marcus Johnson, 64 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_33",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "Client Aisha Brown (58 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q33)",
     "options": [
-      "Client Noor Rodriguez, 18 years old, who is stable with chronic COPD with a stable oxygen saturation of 91% on 2L nasal cannula.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_34",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "While conducting shift assessment on Ethan Hernandez (65 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q34)",
     "options": [
-      "Client Omar Thomas, 37 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with acute appendicitis reporting a sudden, complete relief of abdominal pain.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden relief of pain in acute appendicitis suggests rupture of the appendix, which can quickly lead to peritonitis, sepsis, and hemodynamic shock.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_35",
-    "question": "The charge nurse is prioritizing clinical assessments for four clients on the medical-surgical floor. Which client should the nurse assess first?",
+    "question": "A nurse is planning care for client Kofi Moore, 72 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q35)",
     "options": [
-      "Client Zane Thompson, 56 years old, who is stable with type 2 diabetes with a fasting blood glucose level of 148 mg/dL.",
-      "A client admitted 3 days ago receiving routine oral physical therapy.",
-      "A client presenting with post-operative day 1 hip replacement reporting sudden-onset confusion, dyspnea, and petechiae across the chest.",
-      "A client requesting discharge educational materials before scheduled noon release."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] This client displays classic symptoms of Fat Embolism Syndrome (FES)—a medical emergency requiring rapid oxygenation and clinical rescue.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_36",
-    "question": "The nurse is caring for client Olivia Robinson, 75 years old, who refuses to sign the surgical consent form and expresses concern over planned risks. What is the nurse's priority legal and ethical action?",
+    "question": "Client Mateo Harris, a 79-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q36)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold the consent, notify the surgeon immediately, and document the refusal.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Informed consent must be obtained by the performing surgeon; the nurse acts as witness but cannot explain surgical risks.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_37",
-    "question": "The nurse is caring for client Sarah Baker, 29 years old, who is noted to have an active Do Not Resuscitate (DNR) order, but the family is verbally demanding CPR be performed. What is the nurse's priority legal and ethical action?",
+    "question": "The nurse is assessing Olga Young, 21 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q37)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold cardiopulmonary resuscitation (CPR) and provide supportive comfort care in accordance with the legal order.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] An active, legally valid DNR order represents the client's direct medical wishes and cannot be verbally overridden by family members.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_38",
-    "question": "The nurse is caring for client Kofi Brown, 48 years old, who wishes to leave the hospital Against Medical Advice (AMA) before completing therapy. What is the nurse's priority legal and ethical action?",
+    "question": "Client Patricia Okonkwo (28 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q38)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly explain the immediate risks of leaving, notify the provider, and request the client sign the AMA form.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Competent adult clients retain autonomy and can choose to leave AMA; the nurse must educate on risks and facilitate the release form.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_39",
-    "question": "The nurse is caring for client Gabriel Hernandez, 67 years old, who refuses to sign the surgical consent form and expresses concern over planned risks. What is the nurse's priority legal and ethical action?",
+    "question": "While conducting shift assessment on Amir Garcia (35 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q39)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold the consent, notify the surgeon immediately, and document the refusal.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Informed consent must be obtained by the performing surgeon; the nurse acts as witness but cannot explain surgical risks.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_40",
-    "question": "The nurse is caring for client Tariq Moore, 21 years old, who is noted to have an active Do Not Resuscitate (DNR) order, but the family is verbally demanding CPR be performed. What is the nurse's priority legal and ethical action?",
+    "question": "A nurse is planning care for client Sophia Gonzalez, 42 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q40)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold cardiopulmonary resuscitation (CPR) and provide supportive comfort care in accordance with the legal order.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] An active, legally valid DNR order represents the client's direct medical wishes and cannot be verbally overridden by family members.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_41",
-    "question": "The nurse is caring for client Noah Harris, 40 years old, who wishes to leave the hospital Against Medical Advice (AMA) before completing therapy. What is the nurse's priority legal and ethical action?",
+    "question": "Client Grace Martin, a 49-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q41)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly explain the immediate risks of leaving, notify the provider, and request the client sign the AMA form.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Competent adult clients retain autonomy and can choose to leave AMA; the nurse must educate on risks and facilitate the release form.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_42",
-    "question": "The nurse is caring for client Andrew Young, 59 years old, who refuses to sign the surgical consent form and expresses concern over planned risks. What is the nurse's priority legal and ethical action?",
+    "question": "The nurse is assessing Sarah Clark, 56 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q42)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold the consent, notify the surgeon immediately, and document the refusal.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Informed consent must be obtained by the performing surgeon; the nurse acts as witness but cannot explain surgical risks.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_43",
-    "question": "The nurse is caring for client Emily Okonkwo, 78 years old, who is noted to have an active Do Not Resuscitate (DNR) order, but the family is verbally demanding CPR be performed. What is the nurse's priority legal and ethical action?",
+    "question": "Client Carlos Allen (63 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q43)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold cardiopulmonary resuscitation (CPR) and provide supportive comfort care in accordance with the legal order.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] An active, legally valid DNR order represents the client's direct medical wishes and cannot be verbally overridden by family members.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_44",
-    "question": "The nurse is caring for client Chinedu Garcia, 32 years old, who wishes to leave the hospital Against Medical Advice (AMA) before completing therapy. What is the nurse's priority legal and ethical action?",
+    "question": "While conducting shift assessment on Isabella Smith (70 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q44)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly explain the immediate risks of leaving, notify the provider, and request the client sign the AMA form.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Competent adult clients retain autonomy and can choose to leave AMA; the nurse must educate on risks and facilitate the release form.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_45",
-    "question": "The nurse is caring for client Isabella Gonzalez, 51 years old, who refuses to sign the surgical consent form and expresses concern over planned risks. What is the nurse's priority legal and ethical action?",
+    "question": "A nurse is planning care for client Maya Davis, 77 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q45)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold the consent, notify the surgeon immediately, and document the refusal.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Informed consent must be obtained by the performing surgeon; the nurse acts as witness but cannot explain surgical risks.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_46",
-    "question": "The nurse is caring for client Grace Martin, 70 years old, who is noted to have an active Do Not Resuscitate (DNR) order, but the family is verbally demanding CPR be performed. What is the nurse's priority legal and ethical action?",
+    "question": "Client Elena Anderson, a 19-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D1-Q46)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold cardiopulmonary resuscitation (CPR) and provide supportive comfort care in accordance with the legal order.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] An active, legally valid DNR order represents the client's direct medical wishes and cannot be verbally overridden by family members.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_47",
-    "question": "The nurse is caring for client Patricia Clark, 24 years old, who wishes to leave the hospital Against Medical Advice (AMA) before completing therapy. What is the nurse's priority legal and ethical action?",
+    "question": "The nurse is assessing Chinedu Perez, 26 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D1-Q47)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly explain the immediate risks of leaving, notify the provider, and request the client sign the AMA form.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Competent adult clients retain autonomy and can choose to leave AMA; the nurse must educate on risks and facilitate the release form.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_48",
-    "question": "The nurse is caring for client James Allen, 43 years old, who refuses to sign the surgical consent form and expresses concern over planned risks. What is the nurse's priority legal and ethical action?",
+    "question": "Client Hannah Lewis (33 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D1-Q48)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold the consent, notify the surgeon immediately, and document the refusal.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Informed consent must be obtained by the performing surgeon; the nurse acts as witness but cannot explain surgical risks.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_49",
-    "question": "The nurse is caring for client Yuki Smith, 62 years old, who is noted to have an active Do Not Resuscitate (DNR) order, but the family is verbally demanding CPR be performed. What is the nurse's priority legal and ethical action?",
+    "question": "While conducting shift assessment on Leila Wright (40 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D1-Q49)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly withhold cardiopulmonary resuscitation (CPR) and provide supportive comfort care in accordance with the legal order.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] An active, legally valid DNR order represents the client's direct medical wishes and cannot be verbally overridden by family members.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   },
   {
     "id": "day_1_q_50",
-    "question": "The nurse is caring for client Chloe Davis, 81 years old, who wishes to leave the hospital Against Medical Advice (AMA) before completing therapy. What is the nurse's priority legal and ethical action?",
+    "question": "A nurse is planning care for client Emily Williams, 47 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D1-Q50)",
     "options": [
-      "Force the client to comply to prevent any clinical harm.",
-      "Instruct the UAP to handle the situation and document the event.",
-      "Directly explain the immediate risks of leaving, notify the provider, and request the client sign the AMA form.",
-      "Reassure the family and override the client's direct personal choices."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Competent adult clients retain autonomy and can choose to leave AMA; the nurse must educate on risks and facilitate the release form.",
+    "explanation": "[NCLEX Category: Safe and Effective Care Environment - Management of Care] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Safe and Effective Care Environment - Management of Care"
   }

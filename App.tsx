@@ -41,14 +41,24 @@ function App() {
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
   const [examDate, setExamDate] = useState('April 25, 2026');
-  const [brandingAssets, setBrandingAssets] = useState<BrandingAssets>({
-    founderImage: '/founder_profile.jpg',
-    tutorImage: '/tutor_profile.jpg',
-    heroImage: '/hero_nclex.jpg',
-    spotlightImage: '/spotlight_success.jpg',
-    aboutImage: '/about_team.jpg',
-    favicon: '/favicon.png',
-    logo: '/logo.png'
+  const [brandingAssets, setBrandingAssets] = useState<BrandingAssets>(() => {
+    try {
+      const cached = localStorage.getItem('graceful_branding_assets');
+      if (cached) {
+        return JSON.parse(cached);
+      }
+    } catch (e) {
+      console.warn("Failed to parse cached branding assets:", e);
+    }
+    return {
+      founderImage: '/founder_profile.jpg',
+      tutorImage: '/tutor_profile.jpg',
+      heroImage: '/hero_nclex.jpg',
+      spotlightImage: '/spotlight_success.jpg',
+      aboutImage: '/about_team.jpg',
+      favicon: '/favicon.png',
+      logo: '/logo.png'
+    };
   });
 
   const [globalLinks, setGlobalLinks] = useState<GlobalLinks>({
@@ -390,7 +400,7 @@ function App() {
             return targetDefault;
           };
 
-          const expiredKeywords = ['637892089', 'flos2-2', 'flos3-1', 'flos2-1', 'flos3-2', 'fbcdn', 'scontent', 'facebook', 'unsplash'];
+          const expiredKeywords = ['637892089', 'flos2-2', 'flos3-1', 'flos2-1', 'flos3-2', 'fbcdn', 'scontent', 'facebook'];
 
           const upgraded = {
             ...branding,
@@ -402,7 +412,15 @@ function App() {
             aboutImage: resolveCustomOrFallback(branding.aboutImage, targetAbout, expiredKeywords),
             spotlightImage: resolveCustomOrFallback(branding.spotlightImage, targetSpotlight, expiredKeywords)
           };
-          setBrandingAssets(prev => ({ ...prev, ...upgraded }));
+          setBrandingAssets(prev => {
+            const next = { ...prev, ...upgraded };
+            try {
+              localStorage.setItem('graceful_branding_assets', JSON.stringify(next));
+            } catch (e) {
+              console.warn("Failed to save branding assets to localStorage cache:", e);
+            }
+            return next;
+          });
         }
         if (links) setGlobalLinks(links);
         if (edate) setExamDate(edate.date || 'April 25, 2026');
@@ -524,6 +542,12 @@ function App() {
             throw insertError;
           }
         }
+      }
+      
+      try {
+        localStorage.setItem('graceful_branding_assets', JSON.stringify(currentConfig.brandingAssets));
+      } catch (e) {
+        console.warn("Failed to update localStorage branding cache:", e);
       }
       
       console.log("Site configuration persisted successfully.");
@@ -1193,7 +1217,7 @@ function App() {
   return (
     <Layout userRole={currentUser?.role} onNavigate={navigate} currentPath={currentPath} links={globalLinks} branding={brandingAssets}>
       {renderContent()}
-      <AIChatbot />
+      <AIChatbot links={globalLinks} currentUser={currentUser} onNavigate={navigate} />
       
       {/* Logout Confirmation Modal */}
       {showLogoutConfirm && (

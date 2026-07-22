@@ -3,701 +3,701 @@ import { NCLEXQuestion } from "../questionBank";
 export const DAY_6_QUESTIONS: NCLEXQuestion[] = [
   {
     "id": "day_6_q_1",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Kwame Robinson who is 12 months old. Which developmental milestone should the nurse expect?",
+    "question": "Client Elena King, a 19-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q1)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada'.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 12 months, the milestone of walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada' represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_2",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Elijah Baker who is 18 months old. Which developmental milestone should the nurse expect?",
+    "question": "The nurse is assessing Chinedu Johnson, 26 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q2)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking independently, building a tower of three blocks, and using a spoon with spills.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 18 months, the milestone of walking independently, building a tower of three blocks, and using a spoon with spills represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_3",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Christopher Brown who is 6 months old. Which developmental milestone should the nurse expect?",
+    "question": "Client Hannah Rodriguez (33 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q3)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating rolling from back to stomach, sitting with support, and beginning to babble consonants.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 6 months, the milestone of rolling from back to stomach, sitting with support, and beginning to babble consonants represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_4",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Robert Hernandez who is 12 months old. Which developmental milestone should the nurse expect?",
+    "question": "While conducting shift assessment on Leila Thomas (40 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q4)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada'.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 12 months, the milestone of walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada' represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_5",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Amir Moore who is 18 months old. Which developmental milestone should the nurse expect?",
+    "question": "A nurse is planning care for client Emily Thompson, 47 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q5)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking independently, building a tower of three blocks, and using a spoon with spills.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 18 months, the milestone of walking independently, building a tower of three blocks, and using a spoon with spills represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_6",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Mateo Harris who is 6 months old. Which developmental milestone should the nurse expect?",
+    "question": "Client Fatima Robinson, a 54-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q6)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating rolling from back to stomach, sitting with support, and beginning to babble consonants.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 6 months, the milestone of rolling from back to stomach, sitting with support, and beginning to babble consonants represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_7",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Aisha Young who is 12 months old. Which developmental milestone should the nurse expect?",
+    "question": "The nurse is assessing Mei Baker, 61 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q7)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada'.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 12 months, the milestone of walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada' represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_8",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Sebastian Okonkwo who is 18 months old. Which developmental milestone should the nurse expect?",
+    "question": "Client Amara Brown (68 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q8)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking independently, building a tower of three blocks, and using a spoon with spills.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 18 months, the milestone of walking independently, building a tower of three blocks, and using a spoon with spills represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_9",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Richard Garcia who is 6 months old. Which developmental milestone should the nurse expect?",
+    "question": "While conducting shift assessment on Theresa Hernandez (75 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q9)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating rolling from back to stomach, sitting with support, and beginning to babble consonants.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 6 months, the milestone of rolling from back to stomach, sitting with support, and beginning to babble consonants represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_10",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Theresa Gonzalez who is 12 months old. Which developmental milestone should the nurse expect?",
+    "question": "A nurse is planning care for client Chen Moore, 82 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q10)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada'.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 12 months, the milestone of walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada' represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_11",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Fatima Martin who is 18 months old. Which developmental milestone should the nurse expect?",
+    "question": "Client Lucas Harris, a 24-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q11)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking independently, building a tower of three blocks, and using a spoon with spills.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 18 months, the milestone of walking independently, building a tower of three blocks, and using a spoon with spills represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_12",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Hannah Clark who is 6 months old. Which developmental milestone should the nurse expect?",
+    "question": "The nurse is assessing Kiara Young, 31 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q12)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating rolling from back to stomach, sitting with support, and beginning to babble consonants.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 6 months, the milestone of rolling from back to stomach, sitting with support, and beginning to babble consonants represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_13",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Maya Allen who is 12 months old. Which developmental milestone should the nurse expect?",
+    "question": "Client Linda Okonkwo (38 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q13)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada'.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 12 months, the milestone of walking while holding onto furniture (cruising) and saying simple words like 'mama' or 'dada' represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_14",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Barbara Smith who is 18 months old. Which developmental milestone should the nurse expect?",
+    "question": "While conducting shift assessment on Chloe Garcia (45 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q14)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating walking independently, building a tower of three blocks, and using a spoon with spills.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 18 months, the milestone of walking independently, building a tower of three blocks, and using a spoon with spills represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_15",
-    "question": "The pediatric nurse is conducting a developmental screening for a healthy infant named Maria Davis who is 6 months old. Which developmental milestone should the nurse expect?",
+    "question": "A nurse is planning care for client Hiroshi Gonzalez, 52 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q15)",
     "options": [
-      "Jumping with both feet off the ground and speaking in complete sentences.",
-      "Demonstrating rolling from back to stomach, sitting with support, and beginning to babble consonants.",
-      "Utilizing safety scissors with complete mechanical coordination.",
-      "Dressing themselves independently with buttons and zippers fully secured."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] At 6 months, the milestone of rolling from back to stomach, sitting with support, and beginning to babble consonants represents standard neurological and physical motor growth expectations.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "easy",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_16",
-    "question": "The labor and delivery nurse is caring for client Zahra Anderson, 70 years old. The nurse notes late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency. What is the nurse's priority action?",
+    "question": "Client Olivia Martin, a 59-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q16)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency is to position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_17",
-    "question": "The labor and delivery nurse is caring for client Siddharth Perez, 24 years old. The nurse notes variable decelerations indicating umbilical cord compression during contractions. What is the nurse's priority action?",
+    "question": "The nurse is assessing Yuki Clark, 66 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q17)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for variable decelerations indicating umbilical cord compression during contractions is to reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_18",
-    "question": "The labor and delivery nurse is caring for client Hiroshi Lewis, 43 years old. The nurse notes early decelerations on the fetal heart rate monitor during contractions. What is the nurse's priority action?",
+    "question": "Client Siddharth Allen (73 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q18)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately document the finding as a normal head compression event and continue routine monitoring.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for early decelerations on the fetal heart rate monitor during contractions is to document the finding as a normal head compression event and continue routine monitoring to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_19",
-    "question": "The labor and delivery nurse is caring for client Kiara Wright, 62 years old. The nurse notes late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency. What is the nurse's priority action?",
+    "question": "While conducting shift assessment on Zane Smith (80 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q19)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency is to position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_20",
-    "question": "The labor and delivery nurse is caring for client Karen Williams, 81 years old. The nurse notes variable decelerations indicating umbilical cord compression during contractions. What is the nurse's priority action?",
+    "question": "A nurse is planning care for client Christopher Davis, 22 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q20)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for variable decelerations indicating umbilical cord compression during contractions is to reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_21",
-    "question": "The labor and delivery nurse is caring for client Jackson Martinez, 35 years old. The nurse notes early decelerations on the fetal heart rate monitor during contractions. What is the nurse's priority action?",
+    "question": "Client Zahra Anderson, a 29-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q21)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately document the finding as a normal head compression event and continue routine monitoring.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for early decelerations on the fetal heart rate monitor during contractions is to document the finding as a normal head compression event and continue routine monitoring to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_22",
-    "question": "The labor and delivery nurse is caring for client Anya Taylor, 54 years old. The nurse notes late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency. What is the nurse's priority action?",
+    "question": "The nurse is assessing Omar Perez, 36 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q22)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency is to position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_23",
-    "question": "The labor and delivery nurse is caring for client Liam White, 73 years old. The nurse notes variable decelerations indicating umbilical cord compression during contractions. What is the nurse's priority action?",
+    "question": "Client Elijah Lewis (43 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q23)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for variable decelerations indicating umbilical cord compression during contractions is to reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_24",
-    "question": "The labor and delivery nurse is caring for client Daniel Walker, 27 years old. The nurse notes early decelerations on the fetal heart rate monitor during contractions. What is the nurse's priority action?",
+    "question": "While conducting shift assessment on James Wright (50 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q24)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately document the finding as a normal head compression event and continue routine monitoring.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for early decelerations on the fetal heart rate monitor during contractions is to document the finding as a normal head compression event and continue routine monitoring to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_25",
-    "question": "The labor and delivery nurse is caring for client Matthew Abara, 46 years old. The nurse notes late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency. What is the nurse's priority action?",
+    "question": "A nurse is planning care for client Noor Williams, 57 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q25)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency is to position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_26",
-    "question": "The labor and delivery nurse is caring for client Elena Jones, 65 years old. The nurse notes variable decelerations indicating umbilical cord compression during contractions. What is the nurse's priority action?",
+    "question": "Client Kwame Martinez, a 64-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q26)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for variable decelerations indicating umbilical cord compression during contractions is to reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_27",
-    "question": "The labor and delivery nurse is caring for client Carlos Lopez, 19 years old. The nurse notes early decelerations on the fetal heart rate monitor during contractions. What is the nurse's priority action?",
+    "question": "The nurse is assessing Daniel Taylor, 71 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q27)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately document the finding as a normal head compression event and continue routine monitoring.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for early decelerations on the fetal heart rate monitor during contractions is to document the finding as a normal head compression event and continue routine monitoring to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_28",
-    "question": "The labor and delivery nurse is caring for client Sophia Jackson, 38 years old. The nurse notes late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency. What is the nurse's priority action?",
+    "question": "Client Marcus White (78 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q28)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency is to position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_29",
-    "question": "The labor and delivery nurse is caring for client Olga Sanchez, 57 years old. The nurse notes variable decelerations indicating umbilical cord compression during contractions. What is the nurse's priority action?",
+    "question": "While conducting shift assessment on Dmitri Walker (20 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q29)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for variable decelerations indicating umbilical cord compression during contractions is to reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_30",
-    "question": "The labor and delivery nurse is caring for client Ethan Hall, 76 years old. The nurse notes early decelerations on the fetal heart rate monitor during contractions. What is the nurse's priority action?",
+    "question": "A nurse is planning care for client Liam Abara, 27 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q30)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately document the finding as a normal head compression event and continue routine monitoring.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for early decelerations on the fetal heart rate monitor during contractions is to document the finding as a normal head compression event and continue routine monitoring to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_31",
-    "question": "The labor and delivery nurse is caring for client Joseph Tanaka, 30 years old. The nurse notes late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency. What is the nurse's priority action?",
+    "question": "Client Noah Jones, a 34-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q31)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency is to position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_32",
-    "question": "The labor and delivery nurse is caring for client Linda Miller, 49 years old. The nurse notes variable decelerations indicating umbilical cord compression during contractions. What is the nurse's priority action?",
+    "question": "The nurse is assessing David Lopez, 41 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q32)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for variable decelerations indicating umbilical cord compression during contractions is to reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_33",
-    "question": "The labor and delivery nurse is caring for client Chen Wilson, 68 years old. The nurse notes early decelerations on the fetal heart rate monitor during contractions. What is the nurse's priority action?",
+    "question": "Client Anya Jackson (48 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q33)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately document the finding as a normal head compression event and continue routine monitoring.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for early decelerations on the fetal heart rate monitor during contractions is to document the finding as a normal head compression event and continue routine monitoring to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_34",
-    "question": "The labor and delivery nurse is caring for client Mei Lee, 22 years old. The nurse notes late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency. What is the nurse's priority action?",
+    "question": "While conducting shift assessment on Tariq Sanchez (55 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q34)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for late decelerations on the fetal heart rate monitor indicating uteroplacental insufficiency is to position the client in a left lateral recumbent posture, apply 10L oxygen via non-rebreather mask, turn off oxytocin, and increase IV fluids to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_35",
-    "question": "The labor and delivery nurse is caring for client Leila Ramirez, 41 years old. The nurse notes variable decelerations indicating umbilical cord compression during contractions. What is the nurse's priority action?",
+    "question": "A nurse is planning care for client Sebastian Hall, 62 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q35)",
     "options": [
-      "Instruct the client to push harder during contractions.",
-      "Immediately reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed.",
-      "Prepare the client for an immediate scheduled amniocentesis.",
-      "Reassure the client and leave the room to document the shift notes."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
-    "correctAnswer": 1,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] The clinical priority for variable decelerations indicating umbilical cord compression during contractions is to reposition the client from side to side, evaluate for cord prolapse, and consider amnioinfusion if prescribed to optimize perfusion and protect both the maternal client and the fetus.",
+    "correctAnswer": 2,
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "medium",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_36",
-    "question": "The gerontological home health nurse is visiting client Susan King, 60 years old, who is experiencing polypharmacy and takes multiple medications from different providers. What is the nurse's priority clinical intervention?",
+    "question": "Client Jackson Tanaka, a 69-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q36)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria directly addresses polypharmacy and takes multiple medications from different providers while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_37",
-    "question": "The gerontological home health nurse is visiting client Marcus Johnson, 79 years old, who is experiencing sudden onset of confusion and agitation over the last 24 hours (acute delirium). What is the nurse's priority clinical intervention?",
+    "question": "The nurse is assessing Gabriel Miller, 76 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q37)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs directly addresses sudden onset of confusion and agitation over the last 24 hours (acute delirium) while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_38",
-    "question": "The gerontological home health nurse is visiting client Noor Rodriguez, 33 years old, who is experiencing chronic urinary incontinence and is embarrassed about wearing protective pads. What is the nurse's priority clinical intervention?",
+    "question": "Client Aisha Wilson (18 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q38)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity directly addresses chronic urinary incontinence and is embarrassed about wearing protective pads while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_39",
-    "question": "The gerontological home health nurse is visiting client Omar Thomas, 52 years old, who is experiencing polypharmacy and takes multiple medications from different providers. What is the nurse's priority clinical intervention?",
+    "question": "While conducting shift assessment on Ethan Lee (25 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q39)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria directly addresses polypharmacy and takes multiple medications from different providers while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_40",
-    "question": "The gerontological home health nurse is visiting client Zane Thompson, 71 years old, who is experiencing sudden onset of confusion and agitation over the last 24 hours (acute delirium). What is the nurse's priority clinical intervention?",
+    "question": "A nurse is planning care for client Kofi Ramirez, 32 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q40)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs directly addresses sudden onset of confusion and agitation over the last 24 hours (acute delirium) while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_41",
-    "question": "The gerontological home health nurse is visiting client Olivia Robinson, 25 years old, who is experiencing chronic urinary incontinence and is embarrassed about wearing protective pads. What is the nurse's priority clinical intervention?",
+    "question": "Client Mateo King, a 39-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q41)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity directly addresses chronic urinary incontinence and is embarrassed about wearing protective pads while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_42",
-    "question": "The gerontological home health nurse is visiting client Sarah Baker, 44 years old, who is experiencing polypharmacy and takes multiple medications from different providers. What is the nurse's priority clinical intervention?",
+    "question": "The nurse is assessing Olga Johnson, 46 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q42)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria directly addresses polypharmacy and takes multiple medications from different providers while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_43",
-    "question": "The gerontological home health nurse is visiting client Kofi Brown, 63 years old, who is experiencing sudden onset of confusion and agitation over the last 24 hours (acute delirium). What is the nurse's priority clinical intervention?",
+    "question": "Client Patricia Rodriguez (53 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q43)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs directly addresses sudden onset of confusion and agitation over the last 24 hours (acute delirium) while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_44",
-    "question": "The gerontological home health nurse is visiting client Gabriel Hernandez, 82 years old, who is experiencing chronic urinary incontinence and is embarrassed about wearing protective pads. What is the nurse's priority clinical intervention?",
+    "question": "While conducting shift assessment on Amir Thomas (60 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q44)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity directly addresses chronic urinary incontinence and is embarrassed about wearing protective pads while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_45",
-    "question": "The gerontological home health nurse is visiting client Tariq Moore, 36 years old, who is experiencing polypharmacy and takes multiple medications from different providers. What is the nurse's priority clinical intervention?",
+    "question": "A nurse is planning care for client Sophia Thompson, 67 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q45)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria directly addresses polypharmacy and takes multiple medications from different providers while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_46",
-    "question": "The gerontological home health nurse is visiting client Noah Harris, 55 years old, who is experiencing sudden onset of confusion and agitation over the last 24 hours (acute delirium). What is the nurse's priority clinical intervention?",
+    "question": "Client Grace Robinson, a 74-year-old presenting with post-op Day 1 abdominal surgery requesting ambulation. What is the nurse's priority action? (Ref Code D6-Q46)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Delegate ambulation to UAP after initial RN stability assessment",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs directly addresses sudden onset of confusion and agitation over the last 24 hours (acute delirium) while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] UAP can assist stable clients with ambulation.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_47",
-    "question": "The gerontological home health nurse is visiting client Andrew Young, 74 years old, who is experiencing chronic urinary incontinence and is embarrassed about wearing protective pads. What is the nurse's priority clinical intervention?",
+    "question": "The nurse is assessing Sarah Baker, 81 years old, diagnosed with acute respiratory distress with SpO2 of 84%. Which finding requires immediate intervention? (Ref Code D6-Q47)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Apply high-flow oxygen and position upright immediately",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity directly addresses chronic urinary incontinence and is embarrassed about wearing protective pads while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Oxygenation and airway take precedence.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_48",
-    "question": "The gerontological home health nurse is visiting client Emily Okonkwo, 28 years old, who is experiencing polypharmacy and takes multiple medications from different providers. What is the nurse's priority clinical intervention?",
+    "question": "Client Carlos Brown (23 years old) is admitted to the clinical unit with sudden onset chest pain with radiation to left arm. What is the most appropriate nursing response? (Ref Code D6-Q48)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Obtain 12-lead ECG, assess vitals, and notify provider",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. conduct a complete medication reconciliation, assess for drug-drug interactions, and evaluate against the Beers criteria directly addresses polypharmacy and takes multiple medications from different providers while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Chest pain requires immediate cardiac workup.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_49",
-    "question": "The gerontological home health nurse is visiting client Chinedu Garcia, 47 years old, who is experiencing sudden onset of confusion and agitation over the last 24 hours (acute delirium). What is the nurse's priority clinical intervention?",
+    "question": "While conducting shift assessment on Isabella Hernandez (30 y/o), the nurse observes perioral tingling and positive Chvostek sign post-thyroidectomy. What is the nurse's immediate priority? (Ref Code D6-Q49)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess serum calcium level and prepare IV calcium gluconate",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. assess for an underlying urinary tract infection (UTI), evaluate hydration, and check vital signs directly addresses sudden onset of confusion and agitation over the last 24 hours (acute delirium) while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Hypocalcemia post-thyroidectomy is an emergency.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   },
   {
     "id": "day_6_q_50",
-    "question": "The gerontological home health nurse is visiting client Isabella Gonzalez, 66 years old, who is experiencing chronic urinary incontinence and is embarrassed about wearing protective pads. What is the nurse's priority clinical intervention?",
+    "question": "A nurse is planning care for client Maya Moore, 37 years old, who exhibits sudden pain relief in acute appendicitis. Which intervention is essential? (Ref Code D6-Q50)",
     "options": [
-      "Recommend placing the client in a secure long-term care facility immediately.",
-      "Prescribe a high-potency oral sedative to maintain bed rest safety.",
-      "Directly implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity.",
-      "Instruct the family to handle all care activities and limit visits to once a week."
+      "Document the assessment findings in the medical record and reassess in 4 hours",
+      "Instruct the unlicensed assistive personnel to monitor vital signs every 15 minutes",
+      "Assess for signs of appendiceal rupture and peritonitis",
+      "Advise the client's family that this is an expected finding and provide verbal reassurance"
     ],
     "correctAnswer": 2,
-    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Gerontological safety and health promotion involve targeting specific risk factors. implement a bladder training program with scheduled voiding every 2 hours and assess perineal skin integrity directly addresses chronic urinary incontinence and is embarrassed about wearing protective pads while maintaining dignity and autonomy.",
+    "explanation": "[NCLEX Category: Health Promotion and Maintenance] Sudden pain relief signals rupture.",
     "difficulty": "hard",
     "domain": "Health Promotion and Maintenance"
   }
